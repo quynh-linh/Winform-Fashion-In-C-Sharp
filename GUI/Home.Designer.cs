@@ -31,23 +31,25 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.iconButtonCustomer = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.buttonCategory = new FontAwesome.Sharp.IconButton();
-            this.buttonProducts = new FontAwesome.Sharp.IconButton();
-            this.buttonAddProduct = new FontAwesome.Sharp.IconButton();
-            this.buttonOder = new FontAwesome.Sharp.IconButton();
-            this.buttonCarts = new FontAwesome.Sharp.IconButton();
-            this.buttonHome = new FontAwesome.Sharp.IconButton();
+            this.btnCustomer = new FontAwesome.Sharp.IconButton();
+            this.btnPermission = new FontAwesome.Sharp.IconButton();
+            this.btnAccount = new FontAwesome.Sharp.IconButton();
+            this.btnSale = new FontAwesome.Sharp.IconButton();
+            this.btnSupplier = new FontAwesome.Sharp.IconButton();
+            this.btnExportBill = new FontAwesome.Sharp.IconButton();
+            this.btnImportBill = new FontAwesome.Sharp.IconButton();
+            this.btnBill = new FontAwesome.Sharp.IconButton();
+            this.btnCategory = new FontAwesome.Sharp.IconButton();
+            this.btnProducts = new FontAwesome.Sharp.IconButton();
+            this.btnAddProduct = new FontAwesome.Sharp.IconButton();
+            this.btnSell = new FontAwesome.Sharp.IconButton();
+            this.btnCart = new FontAwesome.Sharp.IconButton();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.btnLogoHome = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDateNow = new System.Windows.Forms.Label();
@@ -60,32 +62,39 @@ namespace GUI
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.Pages = new Bunifu.UI.WinForms.BunifuPages();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).BeginInit();
+            this.Pages.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.iconButtonCustomer);
-            this.panelMenu.Controls.Add(this.iconButton8);
-            this.panelMenu.Controls.Add(this.iconButton7);
-            this.panelMenu.Controls.Add(this.iconButton6);
-            this.panelMenu.Controls.Add(this.iconButton5);
-            this.panelMenu.Controls.Add(this.iconButton4);
-            this.panelMenu.Controls.Add(this.iconButton3);
-            this.panelMenu.Controls.Add(this.iconButton2);
-            this.panelMenu.Controls.Add(this.buttonCategory);
-            this.panelMenu.Controls.Add(this.buttonProducts);
-            this.panelMenu.Controls.Add(this.buttonAddProduct);
-            this.panelMenu.Controls.Add(this.buttonOder);
-            this.panelMenu.Controls.Add(this.buttonCarts);
-            this.panelMenu.Controls.Add(this.buttonHome);
+            this.panelMenu.Controls.Add(this.btnCustomer);
+            this.panelMenu.Controls.Add(this.btnPermission);
+            this.panelMenu.Controls.Add(this.btnAccount);
+            this.panelMenu.Controls.Add(this.btnSale);
+            this.panelMenu.Controls.Add(this.btnSupplier);
+            this.panelMenu.Controls.Add(this.btnExportBill);
+            this.panelMenu.Controls.Add(this.btnImportBill);
+            this.panelMenu.Controls.Add(this.btnBill);
+            this.panelMenu.Controls.Add(this.btnCategory);
+            this.panelMenu.Controls.Add(this.btnProducts);
+            this.panelMenu.Controls.Add(this.btnAddProduct);
+            this.panelMenu.Controls.Add(this.btnSell);
+            this.panelMenu.Controls.Add(this.btnCart);
+            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -93,361 +102,361 @@ namespace GUI
             this.panelMenu.Size = new System.Drawing.Size(220, 713);
             this.panelMenu.TabIndex = 0;
             // 
-            // iconButtonCustomer
+            // btnCustomer
             // 
-            this.iconButtonCustomer.BackColor = System.Drawing.Color.Black;
-            this.iconButtonCustomer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButtonCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonCustomer.FlatAppearance.BorderSize = 0;
-            this.iconButtonCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonCustomer.ForeColor = System.Drawing.Color.White;
-            this.iconButtonCustomer.IconChar = FontAwesome.Sharp.IconChar.PersonMilitaryPointing;
-            this.iconButtonCustomer.IconColor = System.Drawing.Color.White;
-            this.iconButtonCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonCustomer.IconSize = 40;
-            this.iconButtonCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonCustomer.Location = new System.Drawing.Point(0, 665);
-            this.iconButtonCustomer.Name = "iconButtonCustomer";
-            this.iconButtonCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButtonCustomer.Size = new System.Drawing.Size(220, 45);
-            this.iconButtonCustomer.TabIndex = 14;
-            this.iconButtonCustomer.Text = "Khách hàng";
-            this.iconButtonCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonCustomer.UseVisualStyleBackColor = false;
-            this.iconButtonCustomer.Click += new System.EventHandler(this.iconButtonCustomerClick);
+            this.btnCustomer.BackColor = System.Drawing.Color.Black;
+            this.btnCustomer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.PersonMilitaryPointing;
+            this.btnCustomer.IconColor = System.Drawing.Color.White;
+            this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCustomer.IconSize = 40;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 665);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(220, 45);
+            this.btnCustomer.TabIndex = 14;
+            this.btnCustomer.Text = "Khách hàng";
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // iconButton8
+            // btnPermission
             // 
-            this.iconButton8.BackColor = System.Drawing.Color.Black;
-            this.iconButton8.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.White;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.FontAwesomeFlag;
-            this.iconButton8.IconColor = System.Drawing.Color.White;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 40;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 620);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton8.Size = new System.Drawing.Size(220, 45);
-            this.iconButton8.TabIndex = 13;
-            this.iconButton8.Text = "Quyền";
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = false;
-            this.iconButton8.Click += new System.EventHandler(this.btnpermissionClick);
+            this.btnPermission.BackColor = System.Drawing.Color.Black;
+            this.btnPermission.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnPermission.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPermission.FlatAppearance.BorderSize = 0;
+            this.btnPermission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermission.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPermission.ForeColor = System.Drawing.Color.White;
+            this.btnPermission.IconChar = FontAwesome.Sharp.IconChar.FontAwesomeFlag;
+            this.btnPermission.IconColor = System.Drawing.Color.White;
+            this.btnPermission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPermission.IconSize = 40;
+            this.btnPermission.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPermission.Location = new System.Drawing.Point(0, 620);
+            this.btnPermission.Name = "btnPermission";
+            this.btnPermission.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnPermission.Size = new System.Drawing.Size(220, 45);
+            this.btnPermission.TabIndex = 13;
+            this.btnPermission.Text = "Quyền";
+            this.btnPermission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPermission.UseVisualStyleBackColor = false;
+            this.btnPermission.Click += new System.EventHandler(this.btnPermission_Click);
             // 
-            // iconButton7
+            // btnAccount
             // 
-            this.iconButton7.BackColor = System.Drawing.Color.Black;
-            this.iconButton7.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.UserShield;
-            this.iconButton7.IconColor = System.Drawing.Color.White;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 40;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 575);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton7.Size = new System.Drawing.Size(220, 45);
-            this.iconButton7.TabIndex = 12;
-            this.iconButton7.Text = "Tài khoản";
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = false;
-            this.iconButton7.Click += new System.EventHandler(this.btnAccountClicks);
+            this.btnAccount.BackColor = System.Drawing.Color.Black;
+            this.btnAccount.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.UserShield;
+            this.btnAccount.IconColor = System.Drawing.Color.White;
+            this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAccount.IconSize = 40;
+            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.Location = new System.Drawing.Point(0, 575);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAccount.Size = new System.Drawing.Size(220, 45);
+            this.btnAccount.TabIndex = 12;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccount.UseVisualStyleBackColor = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
-            // iconButton6
+            // btnSale
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.Black;
-            this.iconButton6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 40;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 530);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton6.Size = new System.Drawing.Size(220, 45);
-            this.iconButton6.TabIndex = 11;
-            this.iconButton6.Text = "Khuyễn mãi";
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.btndiscountClicks);
+            this.btnSale.BackColor = System.Drawing.Color.Black;
+            this.btnSale.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSale.FlatAppearance.BorderSize = 0;
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.ForeColor = System.Drawing.Color.White;
+            this.btnSale.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
+            this.btnSale.IconColor = System.Drawing.Color.White;
+            this.btnSale.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSale.IconSize = 40;
+            this.btnSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSale.Location = new System.Drawing.Point(0, 530);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSale.Size = new System.Drawing.Size(220, 45);
+            this.btnSale.TabIndex = 11;
+            this.btnSale.Text = "Khuyễn mãi";
+            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
-            // iconButton5
+            // btnSupplier
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.Black;
-            this.iconButton5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.TruckField;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 40;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 485);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton5.Size = new System.Drawing.Size(220, 45);
-            this.iconButton5.TabIndex = 10;
-            this.iconButton5.Text = "Nhà cung cấp";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.btnNCCClick);
+            this.btnSupplier.BackColor = System.Drawing.Color.Black;
+            this.btnSupplier.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSupplier.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSupplier.FlatAppearance.BorderSize = 0;
+            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplier.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.ForeColor = System.Drawing.Color.White;
+            this.btnSupplier.IconChar = FontAwesome.Sharp.IconChar.TruckField;
+            this.btnSupplier.IconColor = System.Drawing.Color.White;
+            this.btnSupplier.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSupplier.IconSize = 40;
+            this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupplier.Location = new System.Drawing.Point(0, 485);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSupplier.Size = new System.Drawing.Size(220, 45);
+            this.btnSupplier.TabIndex = 10;
+            this.btnSupplier.Text = "Nhà cung cấp";
+            this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSupplier.UseVisualStyleBackColor = false;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
-            // iconButton4
+            // btnExportBill
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.Black;
-            this.iconButton4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 40;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 440);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton4.Size = new System.Drawing.Size(220, 45);
-            this.iconButton4.TabIndex = 9;
-            this.iconButton4.Text = "Phiếu xuất";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.btnPXClick);
+            this.btnExportBill.BackColor = System.Drawing.Color.Black;
+            this.btnExportBill.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExportBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExportBill.FlatAppearance.BorderSize = 0;
+            this.btnExportBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportBill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportBill.ForeColor = System.Drawing.Color.White;
+            this.btnExportBill.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
+            this.btnExportBill.IconColor = System.Drawing.Color.White;
+            this.btnExportBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportBill.IconSize = 40;
+            this.btnExportBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportBill.Location = new System.Drawing.Point(0, 440);
+            this.btnExportBill.Name = "btnExportBill";
+            this.btnExportBill.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnExportBill.Size = new System.Drawing.Size(220, 45);
+            this.btnExportBill.TabIndex = 9;
+            this.btnExportBill.Text = "Phiếu xuất";
+            this.btnExportBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportBill.UseVisualStyleBackColor = false;
+            this.btnExportBill.Click += new System.EventHandler(this.btnExportBill_Click);
             // 
-            // iconButton3
+            // btnImportBill
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.Black;
-            this.iconButton3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.FileImport;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 40;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 395);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton3.Size = new System.Drawing.Size(220, 45);
-            this.iconButton3.TabIndex = 8;
-            this.iconButton3.Text = "Phiếu nhập";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.btnPN_click);
+            this.btnImportBill.BackColor = System.Drawing.Color.Black;
+            this.btnImportBill.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnImportBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImportBill.FlatAppearance.BorderSize = 0;
+            this.btnImportBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportBill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportBill.ForeColor = System.Drawing.Color.White;
+            this.btnImportBill.IconChar = FontAwesome.Sharp.IconChar.FileImport;
+            this.btnImportBill.IconColor = System.Drawing.Color.White;
+            this.btnImportBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportBill.IconSize = 40;
+            this.btnImportBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportBill.Location = new System.Drawing.Point(0, 395);
+            this.btnImportBill.Name = "btnImportBill";
+            this.btnImportBill.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnImportBill.Size = new System.Drawing.Size(220, 45);
+            this.btnImportBill.TabIndex = 8;
+            this.btnImportBill.Text = "Phiếu nhập";
+            this.btnImportBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImportBill.UseVisualStyleBackColor = false;
+            this.btnImportBill.Click += new System.EventHandler(this.btnImportBill_Click);
             // 
-            // iconButton2
+            // btnBill
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.Black;
-            this.iconButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 350);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton2.Size = new System.Drawing.Size(220, 45);
-            this.iconButton2.TabIndex = 7;
-            this.iconButton2.Text = "Hóa đơn";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconbtnBill_Click);
+            this.btnBill.BackColor = System.Drawing.Color.Black;
+            this.btnBill.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBill.FlatAppearance.BorderSize = 0;
+            this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBill.ForeColor = System.Drawing.Color.White;
+            this.btnBill.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.btnBill.IconColor = System.Drawing.Color.White;
+            this.btnBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBill.IconSize = 40;
+            this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBill.Location = new System.Drawing.Point(0, 350);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnBill.Size = new System.Drawing.Size(220, 45);
+            this.btnBill.TabIndex = 7;
+            this.btnBill.Text = "Hóa đơn";
+            this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
-            // buttonCategory
+            // btnCategory
             // 
-            this.buttonCategory.BackColor = System.Drawing.Color.Black;
-            this.buttonCategory.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCategory.FlatAppearance.BorderSize = 0;
-            this.buttonCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCategory.ForeColor = System.Drawing.Color.White;
-            this.buttonCategory.IconChar = FontAwesome.Sharp.IconChar.Navicon;
-            this.buttonCategory.IconColor = System.Drawing.Color.White;
-            this.buttonCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonCategory.IconSize = 40;
-            this.buttonCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCategory.Location = new System.Drawing.Point(0, 305);
-            this.buttonCategory.Name = "buttonCategory";
-            this.buttonCategory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.buttonCategory.Size = new System.Drawing.Size(220, 45);
-            this.buttonCategory.TabIndex = 6;
-            this.buttonCategory.Text = "Loại sản phẩm";
-            this.buttonCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCategory.UseVisualStyleBackColor = false;
-            this.buttonCategory.Click += new System.EventHandler(this.buttonSetting_Click);
+            this.btnCategory.BackColor = System.Drawing.Color.Black;
+            this.btnCategory.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.ForeColor = System.Drawing.Color.White;
+            this.btnCategory.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            this.btnCategory.IconColor = System.Drawing.Color.White;
+            this.btnCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCategory.IconSize = 40;
+            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategory.Location = new System.Drawing.Point(0, 305);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCategory.Size = new System.Drawing.Size(220, 45);
+            this.btnCategory.TabIndex = 6;
+            this.btnCategory.Text = "Loại sản phẩm";
+            this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
-            // buttonProducts
+            // btnProducts
             // 
-            this.buttonProducts.BackColor = System.Drawing.Color.Black;
-            this.buttonProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonProducts.FlatAppearance.BorderSize = 0;
-            this.buttonProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProducts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProducts.ForeColor = System.Drawing.Color.White;
-            this.buttonProducts.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
-            this.buttonProducts.IconColor = System.Drawing.Color.White;
-            this.buttonProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonProducts.IconSize = 40;
-            this.buttonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonProducts.Location = new System.Drawing.Point(0, 260);
-            this.buttonProducts.Name = "buttonProducts";
-            this.buttonProducts.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.buttonProducts.Size = new System.Drawing.Size(220, 45);
-            this.buttonProducts.TabIndex = 5;
-            this.buttonProducts.Text = "Sản phẩm";
-            this.buttonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonProducts.UseVisualStyleBackColor = false;
-            this.buttonProducts.Click += new System.EventHandler(this.buttonChart_Click);
+            this.btnProducts.BackColor = System.Drawing.Color.Black;
+            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProducts.FlatAppearance.BorderSize = 0;
+            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducts.ForeColor = System.Drawing.Color.White;
+            this.btnProducts.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
+            this.btnProducts.IconColor = System.Drawing.Color.White;
+            this.btnProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProducts.IconSize = 40;
+            this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducts.Location = new System.Drawing.Point(0, 260);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnProducts.Size = new System.Drawing.Size(220, 45);
+            this.btnProducts.TabIndex = 5;
+            this.btnProducts.Text = "Sản phẩm";
+            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProducts.UseVisualStyleBackColor = false;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
-            // buttonAddProduct
+            // btnAddProduct
             // 
-            this.buttonAddProduct.BackColor = System.Drawing.Color.Black;
-            this.buttonAddProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAddProduct.FlatAppearance.BorderSize = 0;
-            this.buttonAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddProduct.ForeColor = System.Drawing.Color.White;
-            this.buttonAddProduct.IconChar = FontAwesome.Sharp.IconChar.UsersRectangle;
-            this.buttonAddProduct.IconColor = System.Drawing.Color.White;
-            this.buttonAddProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonAddProduct.IconSize = 40;
-            this.buttonAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddProduct.Location = new System.Drawing.Point(0, 215);
-            this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.buttonAddProduct.Size = new System.Drawing.Size(220, 45);
-            this.buttonAddProduct.TabIndex = 4;
-            this.buttonAddProduct.Text = "Nhập hàng";
-            this.buttonAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddProduct.UseVisualStyleBackColor = false;
-            this.buttonAddProduct.Click += new System.EventHandler(this.buttonCustomer_Click);
+            this.btnAddProduct.BackColor = System.Drawing.Color.Black;
+            this.btnAddProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.IconChar = FontAwesome.Sharp.IconChar.UsersRectangle;
+            this.btnAddProduct.IconColor = System.Drawing.Color.White;
+            this.btnAddProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddProduct.IconSize = 40;
+            this.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddProduct.Location = new System.Drawing.Point(0, 215);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAddProduct.Size = new System.Drawing.Size(220, 45);
+            this.btnAddProduct.TabIndex = 4;
+            this.btnAddProduct.Text = "Nhập hàng";
+            this.btnAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // buttonOder
+            // btnSell
             // 
-            this.buttonOder.BackColor = System.Drawing.Color.Black;
-            this.buttonOder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonOder.FlatAppearance.BorderSize = 0;
-            this.buttonOder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOder.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOder.ForeColor = System.Drawing.Color.White;
-            this.buttonOder.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
-            this.buttonOder.IconColor = System.Drawing.Color.White;
-            this.buttonOder.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonOder.IconSize = 40;
-            this.buttonOder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOder.Location = new System.Drawing.Point(0, 170);
-            this.buttonOder.Name = "buttonOder";
-            this.buttonOder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.buttonOder.Size = new System.Drawing.Size(220, 45);
-            this.buttonOder.TabIndex = 3;
-            this.buttonOder.Text = "Bán hàng";
-            this.buttonOder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonOder.UseVisualStyleBackColor = false;
-            this.buttonOder.Click += new System.EventHandler(this.buttonOder_Click);
+            this.btnSell.BackColor = System.Drawing.Color.Black;
+            this.btnSell.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSell.FlatAppearance.BorderSize = 0;
+            this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSell.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.ForeColor = System.Drawing.Color.White;
+            this.btnSell.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            this.btnSell.IconColor = System.Drawing.Color.White;
+            this.btnSell.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSell.IconSize = 40;
+            this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSell.Location = new System.Drawing.Point(0, 170);
+            this.btnSell.Name = "btnSell";
+            this.btnSell.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSell.Size = new System.Drawing.Size(220, 45);
+            this.btnSell.TabIndex = 3;
+            this.btnSell.Text = "Bán hàng";
+            this.btnSell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSell.UseVisualStyleBackColor = false;
+            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
             // 
-            // buttonCarts
+            // btnCart
             // 
-            this.buttonCarts.BackColor = System.Drawing.Color.Black;
-            this.buttonCarts.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCarts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCarts.FlatAppearance.BorderSize = 0;
-            this.buttonCarts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCarts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCarts.ForeColor = System.Drawing.Color.White;
-            this.buttonCarts.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.buttonCarts.IconColor = System.Drawing.Color.White;
-            this.buttonCarts.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonCarts.IconSize = 40;
-            this.buttonCarts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCarts.Location = new System.Drawing.Point(0, 125);
-            this.buttonCarts.Name = "buttonCarts";
-            this.buttonCarts.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.buttonCarts.Size = new System.Drawing.Size(220, 45);
-            this.buttonCarts.TabIndex = 2;
-            this.buttonCarts.Text = "Giỏ hàng";
-            this.buttonCarts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCarts.UseVisualStyleBackColor = false;
-            this.buttonCarts.Click += new System.EventHandler(this.buttonCarts_Click);
+            this.btnCart.BackColor = System.Drawing.Color.Black;
+            this.btnCart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCart.FlatAppearance.BorderSize = 0;
+            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCart.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.ForeColor = System.Drawing.Color.White;
+            this.btnCart.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.btnCart.IconColor = System.Drawing.Color.White;
+            this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCart.IconSize = 40;
+            this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCart.Location = new System.Drawing.Point(0, 125);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCart.Size = new System.Drawing.Size(220, 45);
+            this.btnCart.TabIndex = 2;
+            this.btnCart.Text = "Giỏ hàng";
+            this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCart.UseVisualStyleBackColor = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
-            // buttonHome
+            // btnHome
             // 
-            this.buttonHome.BackColor = System.Drawing.Color.Black;
-            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.buttonHome.IconColor = System.Drawing.Color.White;
-            this.buttonHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonHome.IconSize = 40;
-            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(0, 80);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.buttonHome.Size = new System.Drawing.Size(220, 45);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.Text = "Trang chủ";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            this.btnHome.BackColor = System.Drawing.Color.Black;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnHome.IconColor = System.Drawing.Color.White;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.IconSize = 40;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 80);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnHome.Size = new System.Drawing.Size(220, 45);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.Black;
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelLogo.Controls.Add(this.btnHome);
+            this.panelLogo.Controls.Add(this.btnLogoHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 80);
             this.panelLogo.TabIndex = 0;
             // 
-            // btnHome
+            // btnLogoHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Black;
-            this.btnHome.Image = global::GUI.Properties.Resources.logo;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(220, 80);
-            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHome.TabIndex = 0;
-            this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnLogoHome.BackColor = System.Drawing.Color.Black;
+            this.btnLogoHome.Image = global::GUI.Properties.Resources.logo;
+            this.btnLogoHome.Location = new System.Drawing.Point(0, 0);
+            this.btnLogoHome.Name = "btnLogoHome";
+            this.btnLogoHome.Size = new System.Drawing.Size(220, 80);
+            this.btnLogoHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogoHome.TabIndex = 0;
+            this.btnLogoHome.TabStop = false;
+            this.btnLogoHome.Click += new System.EventHandler(this.btnLogoHome_Click);
             // 
             // notifyIcon1
             // 
@@ -510,6 +519,7 @@ namespace GUI
             this.btnProfileCustommer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnProfileCustommer.TabIndex = 7;
             this.btnProfileCustommer.TabStop = false;
+            this.btnProfileCustommer.Click += new System.EventHandler(this.btnProfileCustommer_Click);
             // 
             // lblTimeNow
             // 
@@ -608,18 +618,83 @@ namespace GUI
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Pages
+            // 
+            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.Pages.AllowTransitions = false;
+            this.Pages.Controls.Add(this.tabPage1);
+            this.Pages.Controls.Add(this.tabPage2);
+            this.Pages.Controls.Add(this.tabPage3);
+            this.Pages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pages.Location = new System.Drawing.Point(220, 80);
+            this.Pages.Multiline = true;
+            this.Pages.Name = "Pages";
+            this.Pages.Page = this.tabPage3;
+            this.Pages.PageIndex = 2;
+            this.Pages.PageName = "tabPage3";
+            this.Pages.PageTitle = "Giỏ hàng";
+            this.Pages.SelectedIndex = 0;
+            this.Pages.Size = new System.Drawing.Size(911, 633);
+            this.Pages.TabIndex = 2;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Pages.Transition = animation1;
+            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(903, 607);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Trang chủ";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(903, 607);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Bán hàng";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::GUI.Properties.Resources.posterMLL;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 80);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(911, 633);
+            this.pictureBox1.Size = new System.Drawing.Size(897, 601);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Thistle;
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(903, 607);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Giỏ hàng";
             // 
             // Home
             // 
@@ -627,7 +702,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1131, 713);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Pages);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(900, 500);
@@ -637,10 +712,12 @@ namespace GUI
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).EndInit();
+            this.Pages.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -651,13 +728,13 @@ namespace GUI
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private FontAwesome.Sharp.IconButton buttonHome;
-        private FontAwesome.Sharp.IconButton buttonProducts;
-        private FontAwesome.Sharp.IconButton buttonAddProduct;
-        private FontAwesome.Sharp.IconButton buttonOder;
-        private FontAwesome.Sharp.IconButton buttonCarts;
-        private FontAwesome.Sharp.IconButton buttonCategory;
-        private System.Windows.Forms.PictureBox btnHome;
+        private FontAwesome.Sharp.IconButton btnHome;
+        private FontAwesome.Sharp.IconButton btnProducts;
+        private FontAwesome.Sharp.IconButton btnAddProduct;
+        private FontAwesome.Sharp.IconButton btnSell;
+        private FontAwesome.Sharp.IconButton btnCart;
+        private FontAwesome.Sharp.IconButton btnCategory;
+        private System.Windows.Forms.PictureBox btnLogoHome;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconCurrentChildForm;
         private System.Windows.Forms.Label lblTitleChildForm;
@@ -666,17 +743,22 @@ namespace GUI
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.Label lblNameCustommer;
         private System.Windows.Forms.PictureBox btnProfileCustommer;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton btnBill;
+        private FontAwesome.Sharp.IconButton btnSupplier;
+        private FontAwesome.Sharp.IconButton btnExportBill;
+        private FontAwesome.Sharp.IconButton btnImportBill;
+        private FontAwesome.Sharp.IconButton btnPermission;
+        private FontAwesome.Sharp.IconButton btnAccount;
+        private FontAwesome.Sharp.IconButton btnSale;
         private System.Windows.Forms.Label lblDateNow;
         private System.Windows.Forms.Label lblTimeNow;
-        private IconButton iconButtonCustomer;
+        private IconButton btnCustomer;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private Bunifu.UI.WinForms.BunifuPages Pages;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

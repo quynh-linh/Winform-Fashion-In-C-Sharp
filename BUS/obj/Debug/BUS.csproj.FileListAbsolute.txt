@@ -31,3 +31,14 @@ C:\c#\Winform-Fashion-Manager-C-Sharp-\BUS\obj\Debug\BUS.csproj.CoreCompileInput
 C:\c#\Winform-Fashion-Manager-C-Sharp-\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\c#\Winform-Fashion-Manager-C-Sharp-\BUS\obj\Debug\BUS.dll
 C:\c#\Winform-Fashion-Manager-C-Sharp-\BUS\obj\Debug\BUS.pdb
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\BUS.dll
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\BUS.pdb
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DAO.dll
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DTO.dll
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DAO.pdb
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DTO.pdb
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.dll
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.pdb

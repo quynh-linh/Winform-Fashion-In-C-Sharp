@@ -25,7 +25,7 @@ namespace GUI
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, 45);
             panelMenu.Controls.Add(leftBorderBtn);
             //Form
             this.Text = string.Empty;
@@ -42,6 +42,14 @@ namespace GUI
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color color7 = Color.FromArgb(0, 255, 255);
+            public static Color color8 = Color.FromArgb(219, 112, 147);
+            public static Color color9 = Color.FromArgb(255, 160, 122);
+            public static Color color10 = Color.FromArgb(255, 182, 193);
+            public static Color color11 = Color.FromArgb(0, 255, 0);
+            public static Color color12 = Color.FromArgb(255, 165, 0);
+            public static Color color13 = Color.FromArgb(255, 255, 0);
+            public static Color color14 = Color.FromArgb(238, 130, 238);
 
         }
 
@@ -95,35 +103,7 @@ namespace GUI
             form.Dock = DockStyle.Fill;
             
         }
-        //private void buttonCart_Click(object sender, EventArgs e)
-        //{
-            //OpenChildForm(new form)
-        //    
-        //}
-        private void buttonOder_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color3);
-        }
-
-        private void buttonCustomer_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color4);
-        }
-
-        private void buttonChart_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color5);
-        }
-
-        private void buttonSetting_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color6);
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
+       
 
         private void Reset()
         {
@@ -178,18 +158,7 @@ namespace GUI
             timer1.Start();
         }
 
-        private void iconCurrentChildForm_Click(object sender, EventArgs e)
-        {
-            LoginGUI lg = new LoginGUI();
-            lg.Show();
-           
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void lblDateNow_Click(object sender, EventArgs e)
         {
 
@@ -200,59 +169,88 @@ namespace GUI
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnLogoHome_Click(object sender, EventArgs e)
         {
-
+            Reset();
         }
 
-        private void buttonCarts_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color2);
-        }
-
-        private void iconbtnBill_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color5);
-        }
-
-        private void btnPN_click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color3);
-        }
-
-        private void btnPXClick(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color2);
-        }
-
-        private void btnNCCClick(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color1);
+            Pages.SetPage(((Control)sender).Text);
         }
 
-        private void btndiscountClicks(object sender, EventArgs e)
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color2);
+            Pages.SetPage(((Control)sender).Text);
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color3);
+            Pages.SetPage(((Control)sender).Text);
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color4);
         }
 
-        private void btnAccountClicks(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color3);
-        }
-
-        private void btnpermissionClick(object sender, EventArgs e)
+        private void btnProducts_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color5);
         }
 
-        private void iconButtonCustomerClick(object sender, EventArgs e)
+        private void btnCategory_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColor.color2);
+            ActivateButton(sender, RGBColor.color6);
         }
 
-        private void buttonHome_Click(object sender, EventArgs e)
+        private void btnBill_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColor.color1);
+            ActivateButton(sender, RGBColor.color7);
+        }
+
+        private void btnImportBill_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color8);
+        }
+
+        private void btnExportBill_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color9);
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color10);
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color11);
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color12);
+        }
+
+        private void btnPermission_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color13);
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color14);
+        }
+
+        private void btnProfileCustommer_Click(object sender, EventArgs e)
+        {
+            LoginGUI lg = new LoginGUI();
+            lg.Show();
         }
     }
 }
