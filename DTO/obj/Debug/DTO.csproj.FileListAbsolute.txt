@@ -1,0 +1,12 @@
+D:\C#\QuanLyThoiTrang\DTO\bin\Debug\DTO.dll
+D:\C#\QuanLyThoiTrang\DTO\bin\Debug\DTO.pdb
+D:\C#\QuanLyThoiTrang\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\C#\QuanLyThoiTrang\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\C#\QuanLyThoiTrang\DTO\obj\Debug\DTO.dll
+D:\C#\QuanLyThoiTrang\DTO\obj\Debug\DTO.pdb
+C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\bin\Debug\DTO.dll
+C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\bin\Debug\DTO.pdb
+C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.dll
+C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.pdb
