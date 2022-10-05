@@ -177,19 +177,19 @@ namespace GUI
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color1);
-            Pages.SetPage(((Control)sender).Text);
+           
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color2);
-            Pages.SetPage(((Control)sender).Text);
+           
         }
 
         private void btnSell_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color3);
-            Pages.SetPage(((Control)sender).Text);
+           
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
