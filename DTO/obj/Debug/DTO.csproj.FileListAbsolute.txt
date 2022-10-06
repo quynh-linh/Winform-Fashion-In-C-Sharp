@@ -10,3 +10,9 @@ C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.csproj.AssemblyReferenc
 C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.dll
 C:\c#\Winform-Fashion-Manager-C-Sharp-\DTO\obj\Debug\DTO.pdb
+C:\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\DTO.dll
+C:\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\DTO.pdb
+C:\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.dll
+C:\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.pdb

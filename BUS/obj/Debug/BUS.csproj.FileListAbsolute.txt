@@ -42,3 +42,14 @@ C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CoreCompileIn
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.dll
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.pdb
+C:\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\BUS.dll
+C:\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\BUS.pdb
+C:\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DAO.dll
+C:\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DTO.dll
+C:\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DAO.pdb
+C:\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DTO.pdb
+C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.dll
+C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.pdb

@@ -486,7 +486,6 @@ namespace GUI
             this.lblDateNow.TabIndex = 4;
             this.lblDateNow.Text = "date";
             this.lblDateNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDateNow.Click += new System.EventHandler(this.lblDateNow_Click);
             // 
             // lblNameCustommer
             // 
@@ -525,7 +524,6 @@ namespace GUI
             this.lblTimeNow.TabIndex = 2;
             this.lblTimeNow.Text = "time";
             this.lblTimeNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTimeNow.Click += new System.EventHandler(this.lblTimeNow_Click);
             // 
             // btnMaximize
             // 

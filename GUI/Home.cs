@@ -32,6 +32,7 @@ namespace GUI
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            ActivateButton(btnHome, RGBColor.color1);
         }
         //Structs
         private struct RGBColor
@@ -73,7 +74,9 @@ namespace GUI
                 leftBorderBtn.BringToFront();
                 //icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                //iconCurrentChildForm.IconColor = Color.FromArgb(255,255,255);
                 iconCurrentChildForm.IconColor = color;
+                lblTitleChildForm.Text = currentBtn.Text;
             }
         }
         //
@@ -92,7 +95,7 @@ namespace GUI
 
         private void OpenChildForm(Form form)
         {
-            if(currentChildForm != null)
+            if (currentChildForm != null)
             {
                 //open only form
                 currentChildForm.Close();
@@ -101,17 +104,17 @@ namespace GUI
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            
+            pictureBox1.Controls.Add(form);
+            form.Show();
+
         }
-       
 
         private void Reset()
         {
-            DisableButon();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.Violet;
-            lblTitleChildForm.Text = "Home";
+            ActivateButton(btnHome, RGBColor.color1);
+            pictureBox1.Image = GUI.Properties.Resources.posterMLL;
+            if(currentChildForm!=null)
+                currentChildForm.Close();
         }
 
         // Drag Form
@@ -158,17 +161,6 @@ namespace GUI
             timer1.Start();
         }
 
-        
-        private void lblDateNow_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTimeNow_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogoHome_Click(object sender, EventArgs e)
         {
             Reset();
@@ -177,19 +169,19 @@ namespace GUI
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color1);
-           
+            pictureBox1.Image = GUI.Properties.Resources.posterMLL;
+            if (currentChildForm != null)
+                currentChildForm.Close();
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color2);
-           
         }
 
         private void btnSell_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color3);
-           
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -205,6 +197,7 @@ namespace GUI
         private void btnCategory_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color6);
+            OpenChildForm(new CategoryGUI());
         }
 
         private void btnBill_Click(object sender, EventArgs e)
