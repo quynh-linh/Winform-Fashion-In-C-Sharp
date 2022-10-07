@@ -213,6 +213,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -231,6 +232,12 @@
     </Compile>
     <Compile Include="CategoryGUI.Designer.cs">
       <DependentUpon>CategoryGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartGUI.Designer.cs">
+      <DependentUpon>ChartGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -254,6 +261,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CategoryGUI.resx">
       <DependentUpon>CategoryGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartGUI.resx">
+      <DependentUpon>ChartGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

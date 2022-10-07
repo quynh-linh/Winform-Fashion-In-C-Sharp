@@ -245,5 +245,16 @@ namespace GUI
             LoginGUI lg = new LoginGUI();
             lg.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color13);
+            OpenChildForm(new ChartGUI());
+        }
     }
 }

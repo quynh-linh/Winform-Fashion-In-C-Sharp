@@ -26,5 +26,15 @@ namespace GUI
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
+        private void CategoryGUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

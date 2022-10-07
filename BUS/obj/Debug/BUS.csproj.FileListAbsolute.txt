@@ -53,3 +53,14 @@ C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.dll
 C:\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\bin\Debug\BUS.dll
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\bin\Debug\BUS.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\bin\Debug\DAO.dll
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\bin\Debug\DTO.dll
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\bin\Debug\DAO.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\bin\Debug\DTO.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.dll
+C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.pdb

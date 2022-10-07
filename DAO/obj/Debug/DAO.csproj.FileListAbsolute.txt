@@ -43,3 +43,12 @@ C:\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.dll
 C:\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\bin\Debug\DAO.dll
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\bin\Debug\DAO.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\bin\Debug\DTO.dll
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\bin\Debug\DTO.pdb
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.dll
+C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.pdb
