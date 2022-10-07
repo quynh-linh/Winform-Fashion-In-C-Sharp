@@ -187,6 +187,7 @@ namespace GUI
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color4);
+            OpenChildForm(new ImportProductsGUI());
         }
 
         private void btnProducts_Click(object sender, EventArgs e)

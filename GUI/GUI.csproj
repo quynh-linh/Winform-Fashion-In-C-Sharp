@@ -257,6 +257,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportProductsGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportProductsGUI.Designer.cs">
+      <DependentUpon>ImportProductsGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportProductsGUI.resx">
+      <DependentUpon>ImportProductsGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
@@ -356,6 +365,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Documents-Folder-Sakura-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Dialog-Remove-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
