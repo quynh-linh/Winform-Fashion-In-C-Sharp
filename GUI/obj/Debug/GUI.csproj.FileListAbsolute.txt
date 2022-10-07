@@ -220,3 +220,7 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.pdb
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BrandGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.CustomerGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ImportProductsGUI.resources
+C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BrandGUI.resources
+C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartGUI.resources
+C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.CustomerGUI.resources
+C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ImportProductsGUI.resources
