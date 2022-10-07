@@ -227,6 +227,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrandGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrandGUI.Designer.cs">
+      <DependentUpon>BrandGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     </Compile>
     <Compile Include="ChartGUI.Designer.cs">
       <DependentUpon>ChartGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerGUI.Designer.cs">
+      <DependentUpon>CustomerGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -259,11 +271,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BrandGUI.resx">
+      <DependentUpon>BrandGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryGUI.resx">
       <DependentUpon>CategoryGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartGUI.resx">
       <DependentUpon>ChartGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerGUI.resx">
+      <DependentUpon>CustomerGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

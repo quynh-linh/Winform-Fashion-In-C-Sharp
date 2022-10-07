@@ -217,3 +217,5 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.Fody.CopyLocal.ca
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.exe
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BrandGUI.resources
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.CustomerGUI.resources

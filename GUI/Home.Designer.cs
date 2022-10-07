@@ -233,7 +233,7 @@ namespace GUI
             this.btnSupplier.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSupplier.Size = new System.Drawing.Size(220, 45);
             this.btnSupplier.TabIndex = 10;
-            this.btnSupplier.Text = "Nhà cung cấp";
+            this.btnSupplier.Text = "Thương hiệu";
             this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSupplier.UseVisualStyleBackColor = false;
             this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);

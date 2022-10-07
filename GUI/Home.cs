@@ -219,6 +219,7 @@ namespace GUI
         private void btnSupplier_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color10);
+            OpenChildForm(new BrandGUI());
         }
 
         private void btnSale_Click(object sender, EventArgs e)
@@ -239,6 +240,7 @@ namespace GUI
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color14);
+            OpenChildForm(new CustomerGUI());
         }
 
         private void btnProfileCustommer_Click(object sender, EventArgs e)
