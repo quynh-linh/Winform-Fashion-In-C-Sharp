@@ -22,3 +22,9 @@ C:\Users\huhba\OneDrive\Desktop\Test\DTO\obj\Debug\DTO.csproj.AssemblyReference.
 C:\Users\huhba\OneDrive\Desktop\Test\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\huhba\OneDrive\Desktop\Test\DTO\obj\Debug\DTO.dll
 C:\Users\huhba\OneDrive\Desktop\Test\DTO\obj\Debug\DTO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\DTO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\DTO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.pdb

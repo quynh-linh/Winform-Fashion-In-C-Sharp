@@ -52,3 +52,12 @@ C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.
 C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.dll
 C:\Users\huhba\OneDrive\Desktop\Test\DAO\obj\Debug\DAO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DAO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DAO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DTO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DTO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.pdb

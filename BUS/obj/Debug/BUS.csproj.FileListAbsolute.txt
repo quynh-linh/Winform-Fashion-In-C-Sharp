@@ -64,3 +64,14 @@ C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.
 C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.dll
 C:\Users\huhba\OneDrive\Desktop\Test\BUS\obj\Debug\BUS.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\BUS.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\BUS.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DAO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DTO.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DAO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\DTO.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\BUS\obj\Debug\BUS.pdb
