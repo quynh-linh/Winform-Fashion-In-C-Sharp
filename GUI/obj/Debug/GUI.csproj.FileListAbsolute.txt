@@ -340,3 +340,11 @@ C:\c#\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\System.Text.Encoding.CodePages.xm
 C:\c#\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\System.Threading.AccessControl.xml
 C:\c#\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.Fody.CopyLocal.cache
 C:\c#\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Add_Or_Fix_RoleGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BrandGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartHomeGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartProductGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.CustomerGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ImportProductsGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.RoleGUI.resources

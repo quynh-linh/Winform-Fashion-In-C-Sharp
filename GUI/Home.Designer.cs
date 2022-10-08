@@ -38,8 +38,6 @@ namespace GUI
             this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.btnSale = new FontAwesome.Sharp.IconButton();
             this.btnSupplier = new FontAwesome.Sharp.IconButton();
-            this.btnExportBill = new FontAwesome.Sharp.IconButton();
-            this.btnImportBill = new FontAwesome.Sharp.IconButton();
             this.btnBill = new FontAwesome.Sharp.IconButton();
             this.btnCategory = new FontAwesome.Sharp.IconButton();
             this.btnProducts = new FontAwesome.Sharp.IconButton();
@@ -81,8 +79,6 @@ namespace GUI
             this.panelMenu.Controls.Add(this.btnAccount);
             this.panelMenu.Controls.Add(this.btnSale);
             this.panelMenu.Controls.Add(this.btnSupplier);
-            this.panelMenu.Controls.Add(this.btnExportBill);
-            this.panelMenu.Controls.Add(this.btnImportBill);
             this.panelMenu.Controls.Add(this.btnBill);
             this.panelMenu.Controls.Add(this.btnCategory);
             this.panelMenu.Controls.Add(this.btnProducts);
@@ -110,10 +106,10 @@ namespace GUI
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 40;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 665);
+            this.iconButton1.Location = new System.Drawing.Point(0, 655);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 45);
+            this.iconButton1.Size = new System.Drawing.Size(220, 53);
             this.iconButton1.TabIndex = 15;
             this.iconButton1.Text = "Thống kê";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,7 +130,7 @@ namespace GUI
             this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCustomer.IconSize = 40;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 620);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 610);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCustomer.Size = new System.Drawing.Size(220, 45);
@@ -158,10 +154,10 @@ namespace GUI
             this.btnPermission.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPermission.IconSize = 40;
             this.btnPermission.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPermission.Location = new System.Drawing.Point(0, 575);
+            this.btnPermission.Location = new System.Drawing.Point(0, 557);
             this.btnPermission.Name = "btnPermission";
             this.btnPermission.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPermission.Size = new System.Drawing.Size(220, 45);
+            this.btnPermission.Size = new System.Drawing.Size(220, 53);
             this.btnPermission.TabIndex = 13;
             this.btnPermission.Text = "Quyền";
             this.btnPermission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,10 +178,10 @@ namespace GUI
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAccount.IconSize = 40;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(0, 530);
+            this.btnAccount.Location = new System.Drawing.Point(0, 504);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAccount.Size = new System.Drawing.Size(220, 45);
+            this.btnAccount.Size = new System.Drawing.Size(220, 53);
             this.btnAccount.TabIndex = 12;
             this.btnAccount.Text = "Tài khoản";
             this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -206,10 +202,10 @@ namespace GUI
             this.btnSale.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSale.IconSize = 40;
             this.btnSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSale.Location = new System.Drawing.Point(0, 485);
+            this.btnSale.Location = new System.Drawing.Point(0, 451);
             this.btnSale.Name = "btnSale";
             this.btnSale.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnSale.Size = new System.Drawing.Size(220, 45);
+            this.btnSale.Size = new System.Drawing.Size(220, 53);
             this.btnSale.TabIndex = 11;
             this.btnSale.Text = "Khuyễn mãi";
             this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -230,63 +226,15 @@ namespace GUI
             this.btnSupplier.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSupplier.IconSize = 40;
             this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 440);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 398);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnSupplier.Size = new System.Drawing.Size(220, 45);
+            this.btnSupplier.Size = new System.Drawing.Size(220, 53);
             this.btnSupplier.TabIndex = 10;
             this.btnSupplier.Text = "Thương hiệu";
             this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSupplier.UseVisualStyleBackColor = false;
             this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
-            // 
-            // btnExportBill
-            // 
-            this.btnExportBill.BackColor = System.Drawing.Color.Black;
-            this.btnExportBill.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExportBill.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExportBill.FlatAppearance.BorderSize = 0;
-            this.btnExportBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportBill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportBill.ForeColor = System.Drawing.Color.White;
-            this.btnExportBill.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.btnExportBill.IconColor = System.Drawing.Color.White;
-            this.btnExportBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExportBill.IconSize = 40;
-            this.btnExportBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportBill.Location = new System.Drawing.Point(0, 395);
-            this.btnExportBill.Name = "btnExportBill";
-            this.btnExportBill.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnExportBill.Size = new System.Drawing.Size(220, 45);
-            this.btnExportBill.TabIndex = 9;
-            this.btnExportBill.Text = "Phiếu xuất";
-            this.btnExportBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExportBill.UseVisualStyleBackColor = false;
-            this.btnExportBill.Click += new System.EventHandler(this.btnExportBill_Click);
-            // 
-            // btnImportBill
-            // 
-            this.btnImportBill.BackColor = System.Drawing.Color.Black;
-            this.btnImportBill.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnImportBill.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImportBill.FlatAppearance.BorderSize = 0;
-            this.btnImportBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportBill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportBill.ForeColor = System.Drawing.Color.White;
-            this.btnImportBill.IconChar = FontAwesome.Sharp.IconChar.FileImport;
-            this.btnImportBill.IconColor = System.Drawing.Color.White;
-            this.btnImportBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImportBill.IconSize = 40;
-            this.btnImportBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportBill.Location = new System.Drawing.Point(0, 350);
-            this.btnImportBill.Name = "btnImportBill";
-            this.btnImportBill.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnImportBill.Size = new System.Drawing.Size(220, 45);
-            this.btnImportBill.TabIndex = 8;
-            this.btnImportBill.Text = "Phiếu nhập";
-            this.btnImportBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImportBill.UseVisualStyleBackColor = false;
-            this.btnImportBill.Click += new System.EventHandler(this.btnImportBill_Click);
             // 
             // btnBill
             // 
@@ -302,10 +250,10 @@ namespace GUI
             this.btnBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBill.IconSize = 40;
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(0, 305);
+            this.btnBill.Location = new System.Drawing.Point(0, 345);
             this.btnBill.Name = "btnBill";
             this.btnBill.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnBill.Size = new System.Drawing.Size(220, 45);
+            this.btnBill.Size = new System.Drawing.Size(220, 53);
             this.btnBill.TabIndex = 7;
             this.btnBill.Text = "Hóa đơn";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -326,10 +274,10 @@ namespace GUI
             this.btnCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCategory.IconSize = 40;
             this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategory.Location = new System.Drawing.Point(0, 260);
+            this.btnCategory.Location = new System.Drawing.Point(0, 292);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCategory.Size = new System.Drawing.Size(220, 45);
+            this.btnCategory.Size = new System.Drawing.Size(220, 53);
             this.btnCategory.TabIndex = 6;
             this.btnCategory.Text = "Loại sản phẩm";
             this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -349,10 +297,10 @@ namespace GUI
             this.btnProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProducts.IconSize = 40;
             this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.Location = new System.Drawing.Point(0, 215);
+            this.btnProducts.Location = new System.Drawing.Point(0, 239);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnProducts.Size = new System.Drawing.Size(220, 45);
+            this.btnProducts.Size = new System.Drawing.Size(220, 53);
             this.btnProducts.TabIndex = 5;
             this.btnProducts.Text = "Sản phẩm";
             this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -372,10 +320,10 @@ namespace GUI
             this.btnAddProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddProduct.IconSize = 40;
             this.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddProduct.Location = new System.Drawing.Point(0, 170);
+            this.btnAddProduct.Location = new System.Drawing.Point(0, 186);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAddProduct.Size = new System.Drawing.Size(220, 45);
+            this.btnAddProduct.Size = new System.Drawing.Size(220, 53);
             this.btnAddProduct.TabIndex = 4;
             this.btnAddProduct.Text = "Nhập hàng";
             this.btnAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -395,10 +343,10 @@ namespace GUI
             this.btnSell.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSell.IconSize = 40;
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSell.Location = new System.Drawing.Point(0, 125);
+            this.btnSell.Location = new System.Drawing.Point(0, 133);
             this.btnSell.Name = "btnSell";
             this.btnSell.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnSell.Size = new System.Drawing.Size(220, 45);
+            this.btnSell.Size = new System.Drawing.Size(220, 53);
             this.btnSell.TabIndex = 3;
             this.btnSell.Text = "Bán hàng";
             this.btnSell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -421,7 +369,7 @@ namespace GUI
             this.btnHome.Location = new System.Drawing.Point(0, 80);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnHome.Size = new System.Drawing.Size(220, 45);
+            this.btnHome.Size = new System.Drawing.Size(220, 53);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Trang chủ";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -680,8 +628,6 @@ namespace GUI
         private System.Windows.Forms.Timer timer1;
         private FontAwesome.Sharp.IconButton btnBill;
         private FontAwesome.Sharp.IconButton btnSupplier;
-        private FontAwesome.Sharp.IconButton btnExportBill;
-        private FontAwesome.Sharp.IconButton btnImportBill;
         private FontAwesome.Sharp.IconButton btnPermission;
         private FontAwesome.Sharp.IconButton btnAccount;
         private FontAwesome.Sharp.IconButton btnSale;

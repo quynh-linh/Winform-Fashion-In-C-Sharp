@@ -25,7 +25,7 @@ namespace GUI
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 45);
+            leftBorderBtn.Size = new Size(7, 53);
             panelMenu.Controls.Add(leftBorderBtn);
             //Form
             this.Text = string.Empty;
