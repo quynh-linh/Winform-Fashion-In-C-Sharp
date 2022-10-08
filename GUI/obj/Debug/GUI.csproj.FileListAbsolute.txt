@@ -351,3 +351,5 @@ C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.RoleGUI.resources
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BillGui.resources
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_ExportGui.resources
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_ImportGui.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.SellGui.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Sell_Item.resources

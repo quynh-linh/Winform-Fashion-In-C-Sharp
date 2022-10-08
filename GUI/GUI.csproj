@@ -325,11 +325,11 @@
     <Compile Include="UC_Bill_ImportGui.Designer.cs">
       <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Sell_ItemGui.cs">
+    <Compile Include="UC_Sell_Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Sell_ItemGui.Designer.cs">
-      <DependentUpon>UC_Sell_ItemGui.cs</DependentUpon>
+    <Compile Include="UC_Sell_Item.Designer.cs">
+      <DependentUpon>UC_Sell_Item.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Add_Or_Fix_RoleGUI.resx">
       <DependentUpon>Add_Or_Fix_RoleGUI.cs</DependentUpon>
@@ -381,11 +381,17 @@
     <EmbeddedResource Include="RoleGUI.resx">
       <DependentUpon>RoleGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SellGui.resx">
+      <DependentUpon>SellGui.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Bill_ExportGui.resx">
       <DependentUpon>UC_Bill_ExportGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Bill_ImportGui.resx">
       <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Sell_Item.resx">
+      <DependentUpon>UC_Sell_Item.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -458,6 +464,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons_exportexcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_fashion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addcart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
