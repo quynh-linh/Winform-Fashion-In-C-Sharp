@@ -61,12 +61,14 @@ namespace GUI
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.panelDestop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).BeginInit();
+            this.panelDestop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -608,17 +610,27 @@ namespace GUI
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panelDestop
+            // 
+            this.panelDestop.Controls.Add(this.pictureBox1);
+            this.panelDestop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDestop.Location = new System.Drawing.Point(220, 80);
+            this.panelDestop.Name = "panelDestop";
+            this.panelDestop.Size = new System.Drawing.Size(808, 633);
+            this.panelDestop.TabIndex = 2;
+            this.panelDestop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::GUI.Properties.Resources.posterMLL;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(808, 633);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Home
             // 
@@ -626,7 +638,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1028, 713);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panelDestop);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(900, 499);
@@ -640,6 +652,7 @@ namespace GUI
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).EndInit();
+            this.panelDestop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -676,7 +689,8 @@ namespace GUI
         private System.Windows.Forms.Label lblTimeNow;
         private IconButton btnCustomer;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private IconButton iconButton1;
+        private System.Windows.Forms.Panel panelDestop;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

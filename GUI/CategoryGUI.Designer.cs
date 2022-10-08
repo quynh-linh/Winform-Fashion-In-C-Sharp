@@ -34,6 +34,7 @@
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +46,6 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -132,6 +132,20 @@
             this.label3.Size = new System.Drawing.Size(158, 21);
             this.label3.TabIndex = 13;
             this.label3.Text = "Danh sách danh mục";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 100;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(790, 348);
+            this.dataGridView1.TabIndex = 0;
             // 
             // guna2Button6
             // 
@@ -293,20 +307,6 @@
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 100;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(790, 348);
-            this.dataGridView1.TabIndex = 0;
             // 
             // CategoryGUI
             // 

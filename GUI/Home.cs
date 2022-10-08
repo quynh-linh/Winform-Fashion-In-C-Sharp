@@ -104,9 +104,9 @@ namespace GUI
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            pictureBox1.Controls.Add(form);
+            panelDestop.Controls.Add(form);
+            pictureBox1.Hide();
             form.Show();
-
         }
 
         private void Reset()
@@ -259,6 +259,16 @@ namespace GUI
         {
             ActivateButton(sender, RGBColor.color13);
             OpenChildForm(new ChartGUI());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
