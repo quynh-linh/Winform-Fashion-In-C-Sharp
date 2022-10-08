@@ -419,3 +419,8 @@ C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.ChartCustomerGUI.resource
 C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.ChartStaffGUI.resources
 C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.AccountGUI.resources
 C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.AccountAddOrUpdateGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.AccountAddOrUpdateGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.AccountGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartCustomerGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartStaffGUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Sell_DetailGUI.resources
