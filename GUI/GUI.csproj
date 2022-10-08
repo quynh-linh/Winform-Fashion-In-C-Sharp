@@ -233,6 +233,12 @@
     <Compile Include="Add_Or_Fix_RoleGUI.Designer.cs">
       <DependentUpon>Add_Or_Fix_RoleGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillGui.Designer.cs">
+      <DependentUpon>BillGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="BrandGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,8 +307,35 @@
     <Compile Include="RoleGUI.Designer.cs">
       <DependentUpon>RoleGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellGui.Designer.cs">
+      <DependentUpon>SellGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Bill_ExportGui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Bill_ExportGui.Designer.cs">
+      <DependentUpon>UC_Bill_ExportGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Bill_ImportGui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Bill_ImportGui.Designer.cs">
+      <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Sell_ItemGui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Sell_ItemGui.Designer.cs">
+      <DependentUpon>UC_Sell_ItemGui.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_Or_Fix_RoleGUI.resx">
       <DependentUpon>Add_Or_Fix_RoleGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillGui.resx">
+      <DependentUpon>BillGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrandGUI.resx">
       <DependentUpon>BrandGUI.cs</DependentUpon>
@@ -347,6 +380,12 @@
     </Compile>
     <EmbeddedResource Include="RoleGUI.resx">
       <DependentUpon>RoleGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Bill_ExportGui.resx">
+      <DependentUpon>UC_Bill_ExportGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Bill_ImportGui.resx">
+      <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -413,6 +452,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Apps-Dialog-Remove-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons_exportexcel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

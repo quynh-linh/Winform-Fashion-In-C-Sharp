@@ -143,6 +143,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons_exportexcel {
+            get {
+                object obj = ResourceManager.GetObject("icons_exportexcel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -166,6 +176,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap posterMLL {
             get {
                 object obj = ResourceManager.GetObject("posterMLL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print_icon {
+            get {
+                object obj = ResourceManager.GetObject("print_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

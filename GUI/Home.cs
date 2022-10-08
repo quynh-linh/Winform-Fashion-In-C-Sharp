@@ -205,6 +205,7 @@ namespace GUI
         private void btnBill_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color7);
+            OpenChildForm(new BillGui());
         }
 
         private void btnImportBill_Click(object sender, EventArgs e)
