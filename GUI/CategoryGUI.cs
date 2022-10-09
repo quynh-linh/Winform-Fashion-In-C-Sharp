@@ -23,11 +23,6 @@ namespace GUI
         public CategoryGUI()
         {
             InitializeComponent();
-            //Form
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             string[] item = new string[] {"AK0", "Áo Khoác"};
             list.Add(item);
             item = new string[] { "QT0", "Quần Tây" };
@@ -64,30 +59,42 @@ namespace GUI
             string temp = s.Normalize(NormalizationForm.FormD);
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox2.Text == null)
+            if ( string.IsNullOrEmpty(guna2TextBox2.Text) )
             {
                 MessageBox.Show("Text is null!!!!");
             }
             else
+            { 
+                string[] item = new string[] { guna2TextBox1.Text, guna2TextBox2.Text.Trim() };
+                list.Add(item);
+            }
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            string Name = utf8Convert3(guna2TextBox2.Text.Trim() + "");
+            string Id = "";
+
+            if (!string.IsNullOrEmpty(Name))
             {
-                string Name = utf8Convert3(guna2TextBox2.Text+"");
                 //Gán Id = chữ cái đầu của Name
-                string Id = Name[0].ToString().ToUpper();
+                Id = Name[0].ToString().ToUpper();
                 int num = 0;
 
-                //Duyệt chuỗi nếu gặp khoảng cách thì nối chuỗi Id vs kí tự phía sau
-                //khoảng cách
-                for(int i=0; i< Name.Length; i++ ){
-                    if (Name[i].ToString() ==" ")
+                //Duyệt chuỗi nối Id
+                for (int i = 1; i < Name.Length; i++)
+                {
+                    if (Name[i - 1].ToString() == " ")
                     {
-                        Id += Name[i + 1].ToString().ToUpper();
+                        Id += Name[i].ToString().ToUpper();
                     }
                 }
                 string check_Id;
                 //check Id có trùng vs các Id đã tồn tại hay k
-                for(int i=0; i< list.Count(); i++)
+                for (int i = 0; i < list.Count(); i++)
                 {
                     check_Id = Id + num + "";
                     if (check_Id == list[i][0])
@@ -95,11 +102,10 @@ namespace GUI
                         num++;
                     }
                 }
-                Id = Id + num +"";
-                string[] item = new string[] { Id, guna2TextBox2.Text };
-                list.Add(item);
+                Id = Id + num + "";
                 guna2TextBox1.Text = Id;
             }
+            else guna2TextBox1.Text = "";
         }
     }
 }

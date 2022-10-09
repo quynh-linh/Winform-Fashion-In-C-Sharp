@@ -224,3 +224,5 @@ C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BrandGUI.resources
 C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartGUI.resources
 C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.CustomerGUI.resources
 C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ImportProductsGUI.resources
+C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.RoleGUI.resources
+C:\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Add_Or_Fix_RoleGUI.resources

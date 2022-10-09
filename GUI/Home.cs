@@ -236,6 +236,7 @@ namespace GUI
         private void btnPermission_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color13);
+            OpenChildForm(new RoleGUI());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
