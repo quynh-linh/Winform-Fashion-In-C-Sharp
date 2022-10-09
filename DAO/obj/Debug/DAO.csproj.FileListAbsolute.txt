@@ -61,3 +61,12 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.dll
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.pdb
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\bin\Debug\DAO.dll
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\bin\Debug\DAO.pdb
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\bin\Debug\DTO.dll
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\bin\Debug\DTO.pdb
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.dll
+C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.pdb
