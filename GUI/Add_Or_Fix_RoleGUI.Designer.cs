@@ -221,6 +221,7 @@
             // comboBox13
             // 
             this.comboBox13.BackColor = System.Drawing.Color.White;
+            this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox13.Enabled = false;
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Items.AddRange(new object[] {
@@ -249,10 +250,12 @@
             this.guna2CheckBox13.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox13.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox13.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox13.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox12
             // 
             this.comboBox12.BackColor = System.Drawing.Color.White;
+            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox12.Enabled = false;
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Items.AddRange(new object[] {
@@ -281,10 +284,12 @@
             this.guna2CheckBox12.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox12.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox12.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox12.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox11
             // 
             this.comboBox11.BackColor = System.Drawing.Color.White;
+            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox11.Enabled = false;
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Items.AddRange(new object[] {
@@ -313,10 +318,12 @@
             this.guna2CheckBox11.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox11.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox11.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox11.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox10
             // 
             this.comboBox10.BackColor = System.Drawing.Color.White;
+            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox10.Enabled = false;
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
@@ -345,10 +352,12 @@
             this.guna2CheckBox10.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox10.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox10.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox10.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox9
             // 
             this.comboBox9.BackColor = System.Drawing.Color.White;
+            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.Enabled = false;
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Items.AddRange(new object[] {
@@ -377,10 +386,12 @@
             this.guna2CheckBox9.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox9.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox9.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox9.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox8
             // 
             this.comboBox8.BackColor = System.Drawing.Color.White;
+            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox8.Enabled = false;
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
@@ -409,10 +420,12 @@
             this.guna2CheckBox8.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox8.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox8.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox8.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox7
             // 
             this.comboBox7.BackColor = System.Drawing.Color.White;
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.Enabled = false;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
@@ -441,10 +454,12 @@
             this.guna2CheckBox7.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox7.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox7.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox6
             // 
             this.comboBox6.BackColor = System.Drawing.Color.White;
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.Enabled = false;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
@@ -473,10 +488,12 @@
             this.guna2CheckBox6.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox6.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox6.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox5
             // 
             this.comboBox5.BackColor = System.Drawing.Color.White;
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
@@ -505,10 +522,12 @@
             this.guna2CheckBox5.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox5.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox5.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox4
             // 
             this.comboBox4.BackColor = System.Drawing.Color.White;
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.Enabled = false;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
@@ -537,10 +556,12 @@
             this.guna2CheckBox4.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox4.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox4.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.White;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
@@ -569,10 +590,12 @@
             this.guna2CheckBox3.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox3.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox3.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -601,10 +624,12 @@
             this.guna2CheckBox2.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox2.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox2.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -633,6 +658,7 @@
             this.guna2CheckBox1.UncheckedState.BorderRadius = 1;
             this.guna2CheckBox1.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // guna2HtmlLabel1
             // 

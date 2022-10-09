@@ -70,3 +70,12 @@ C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.ca
 C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.dll
 C:\Users\huhba\OneDrive\Desktop\wf\DAO\obj\Debug\DAO.pdb
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DAO.dll
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DAO.pdb
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DTO.dll
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\DTO.pdb
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.dll
+C:\c#\Winform-Fashion-In-C-Sharp\DAO\obj\Debug\DAO.pdb
