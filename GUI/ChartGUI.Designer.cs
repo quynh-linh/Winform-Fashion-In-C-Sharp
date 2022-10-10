@@ -207,6 +207,7 @@
             this.iconButton7.TabIndex = 5;
             this.iconButton7.Text = "Nhân viên";
             this.iconButton7.UseVisualStyleBackColor = false;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
             // iconButton6
             // 
@@ -220,6 +221,7 @@
             this.iconButton6.TabIndex = 4;
             this.iconButton6.Text = "Khách hàng";
             this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // iconButton5
             // 

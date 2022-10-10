@@ -54,5 +54,15 @@ namespace GUI
         {
             OpenChildForm(new ChartHomeGUI());
         }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartCustomerGUI());
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartStaffGUI());
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -42,11 +43,16 @@
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelChildForm.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChildForm
@@ -69,12 +75,25 @@
             this.guna2Panel5.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel5.BorderRadius = 10;
             this.guna2Panel5.BorderThickness = 4;
+            this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.Controls.Add(this.textBox5);
             this.guna2Panel5.Controls.Add(this.textBox6);
             this.guna2Panel5.Location = new System.Drawing.Point(10, 109);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(307, 341);
             this.guna2Panel5.TabIndex = 9;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.profile;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 91);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(142, 151);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 6;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // textBox5
             // 
@@ -105,6 +124,7 @@
             this.guna2Panel4.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel4.BorderRadius = 10;
             this.guna2Panel4.BorderThickness = 5;
+            this.guna2Panel4.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel4.Controls.Add(this.textBox3);
             this.guna2Panel4.Controls.Add(this.textBox4);
             this.guna2Panel4.Location = new System.Drawing.Point(361, 109);
@@ -141,6 +161,7 @@
             this.guna2Panel6.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel6.BorderRadius = 10;
             this.guna2Panel6.BorderThickness = 5;
+            this.guna2Panel6.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel6.Controls.Add(this.textBox7);
             this.guna2Panel6.Controls.Add(this.textBox8);
             this.guna2Panel6.Location = new System.Drawing.Point(713, 109);
@@ -218,6 +239,30 @@
             this.iconButton1.Text = "Tổng";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox3.Image = global::GUI.Properties.Resources.profile;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(18, 91);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(142, 151);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 7;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.profile;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(16, 91);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(142, 151);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 8;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // ChartHomeGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,11 +275,14 @@
             this.panelChildForm.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
             this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +303,8 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

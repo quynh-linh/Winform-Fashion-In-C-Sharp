@@ -251,6 +251,12 @@
     <Compile Include="CategoryGUI.Designer.cs">
       <DependentUpon>CategoryGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChartCustomerGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartCustomerGUI.Designer.cs">
+      <DependentUpon>ChartCustomerGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChartGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,12 @@
     </Compile>
     <Compile Include="ChartProductGUI.Designer.cs">
       <DependentUpon>ChartProductGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartStaffGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartStaffGUI.Designer.cs">
+      <DependentUpon>ChartStaffGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerGUI.cs">
       <SubType>Form</SubType>
@@ -343,6 +355,9 @@
     <EmbeddedResource Include="CategoryGUI.resx">
       <DependentUpon>CategoryGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartCustomerGUI.resx">
+      <DependentUpon>ChartCustomerGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartGUI.resx">
       <DependentUpon>ChartGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChartProductGUI.resx">
       <DependentUpon>ChartProductGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartStaffGUI.resx">
+      <DependentUpon>ChartStaffGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerGUI.resx">
       <DependentUpon>CustomerGUI.cs</DependentUpon>
@@ -473,6 +491,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_addcart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\product_avt.png" />
+    <Content Include="Resources\staff_avt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

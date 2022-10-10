@@ -24,26 +24,10 @@ namespace GUI
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
-            loadData("PRODUCT");
-        }
-        private void loadData(String type)
-        {
-            if (type.Equals("PRODUCT"))
-            {
-                chartProduct.Series["Quantity"].Points.AddXY("Tháng 9", 120);
-                chartProduct.Series["Quantity"].Points.AddXY("Tháng 10", 110);
-                chartProduct.Series["Quantity"].Points.AddXY("Tháng 11", 156);
-                chartProduct.Series["Quantity"].Points.AddXY("Tháng 12", 100);
-            }
-            else if (type.Equals("STAFF"))
-            {
-
-            }
-            else if (type.Equals("CUSTOMER"))
-            {
-
-            }
+            chartProduct.Series["Quantity"].Points.AddXY("Tháng 9", 120);
+            chartProduct.Series["Quantity"].Points.AddXY("Tháng 10", 110);
+            chartProduct.Series["Quantity"].Points.AddXY("Tháng 11", 156);
+            chartProduct.Series["Quantity"].Points.AddXY("Tháng 12", 100);
         }
     }
 }
