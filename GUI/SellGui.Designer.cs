@@ -35,7 +35,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.FlpSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.TbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.TbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.uC_Sell_Item1 = new GUI.UC_Sell_Item();
             this.uC_Sell_Item2 = new GUI.UC_Sell_Item();
             this.uC_Sell_Item3 = new GUI.UC_Sell_Item();
@@ -201,31 +201,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Sản Phẩm";
             // 
-            // TbSearch
-            // 
-            this.TbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbSearch.BorderColor = System.Drawing.Color.Fuchsia;
-            this.TbSearch.BorderRadius = 15;
-            this.TbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TbSearch.DefaultText = "Tìm kiếm";
-            this.TbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbSearch.IconRight = global::GUI.Properties.Resources.icon_search;
-            this.TbSearch.IconRightOffset = new System.Drawing.Point(15, 0);
-            this.TbSearch.Location = new System.Drawing.Point(58, 35);
-            this.TbSearch.Name = "TbSearch";
-            this.TbSearch.PasswordChar = '\0';
-            this.TbSearch.PlaceholderText = "";
-            this.TbSearch.SelectedText = "";
-            this.TbSearch.Size = new System.Drawing.Size(374, 36);
-            this.TbSearch.TabIndex = 1;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -286,7 +261,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button1.BorderColor = System.Drawing.Color.Fuchsia;
             this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.BorderThickness = 2;
             this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -295,7 +270,8 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.HotPink;
             this.guna2Button1.Location = new System.Drawing.Point(14, 88);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(266, 66);
@@ -316,7 +292,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.HotPink;
             this.guna2Button2.Location = new System.Drawing.Point(234, 33);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(52, 27);
@@ -408,6 +384,31 @@
             this.label2.Size = new System.Drawing.Size(118, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Đơn Hàng";
+            // 
+            // TbSearch
+            // 
+            this.TbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TbSearch.BorderColor = System.Drawing.Color.Fuchsia;
+            this.TbSearch.BorderRadius = 15;
+            this.TbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TbSearch.DefaultText = "Tìm kiếm";
+            this.TbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TbSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TbSearch.IconRight = global::GUI.Properties.Resources.icon_search;
+            this.TbSearch.IconRightOffset = new System.Drawing.Point(15, 0);
+            this.TbSearch.Location = new System.Drawing.Point(58, 35);
+            this.TbSearch.Name = "TbSearch";
+            this.TbSearch.PasswordChar = '\0';
+            this.TbSearch.PlaceholderText = "";
+            this.TbSearch.SelectedText = "";
+            this.TbSearch.Size = new System.Drawing.Size(374, 36);
+            this.TbSearch.TabIndex = 1;
             // 
             // uC_Sell_Item1
             // 
