@@ -172,6 +172,7 @@ namespace GUI
             pictureBox1.Image = GUI.Properties.Resources.posterMLL;
             if (currentChildForm != null)
                 currentChildForm.Close();
+            pictureBox1.Show();
         }
 
         private void btnCart_Click(object sender, EventArgs e)

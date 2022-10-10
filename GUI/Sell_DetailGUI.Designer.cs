@@ -590,7 +590,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Sell_DetailGUI";
-            this.Text = "select";
             this.ResumeLayout(false);
             this.PerformLayout();
 
