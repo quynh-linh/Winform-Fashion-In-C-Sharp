@@ -417,3 +417,5 @@ C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.exe
 C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.pdb
 C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.ChartCustomerGUI.resources
 C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.ChartStaffGUI.resources
+C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.AccountGUI.resources
+C:\Users\huhba\OneDrive\Desktop\QLIT\GUI\obj\Debug\GUI.AccountAddOrUpdateGUI.resources

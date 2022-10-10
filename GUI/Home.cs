@@ -233,6 +233,7 @@ namespace GUI
         private void btnAccount_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color12);
+            OpenChildForm(new AccountGUI());
         }
 
         private void btnPermission_Click(object sender, EventArgs e)

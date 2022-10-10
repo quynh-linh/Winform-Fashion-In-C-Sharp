@@ -28,5 +28,15 @@ namespace GUI
             Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Fix Permission", "Sửa");
             a.Show();
         }
+
+        private void RoleGUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

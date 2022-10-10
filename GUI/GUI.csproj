@@ -227,6 +227,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountAddOrUpdateGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAddOrUpdateGUI.Designer.cs">
+      <DependentUpon>AccountAddOrUpdateGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountGUI.Designer.cs">
+      <DependentUpon>AccountGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add_Or_Fix_RoleGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +355,12 @@
     <Compile Include="UC_Sell_Item.Designer.cs">
       <DependentUpon>UC_Sell_Item.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountAddOrUpdateGUI.resx">
+      <DependentUpon>AccountAddOrUpdateGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountGUI.resx">
+      <DependentUpon>AccountGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_Or_Fix_RoleGUI.resx">
       <DependentUpon>Add_Or_Fix_RoleGUI.cs</DependentUpon>
     </EmbeddedResource>
