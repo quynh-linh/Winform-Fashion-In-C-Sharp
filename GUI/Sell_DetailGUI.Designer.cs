@@ -87,7 +87,7 @@
             // guna2TextBox1
             // 
             this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2TextBox1.BorderRadius = 10;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
@@ -110,7 +110,7 @@
             // guna2TextBox2
             // 
             this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2TextBox2.BorderRadius = 10;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox2.DefaultText = "";
@@ -160,7 +160,7 @@
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconButton1.IconColor = System.Drawing.Color.Fuchsia;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.Location = new System.Drawing.Point(166, 163);
             this.iconButton1.Name = "iconButton1";
@@ -197,7 +197,7 @@
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton2.IconColor = System.Drawing.Color.Fuchsia;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.Location = new System.Drawing.Point(327, 163);
             this.iconButton2.Name = "iconButton2";
@@ -234,7 +234,7 @@
             this.guna2RadioButton1.TabIndex = 10;
             this.guna2RadioButton1.Text = "   S";
             this.guna2RadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
             this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
@@ -256,7 +256,7 @@
             this.guna2RadioButton2.TabIndex = 11;
             this.guna2RadioButton2.Text = "   L";
             this.guna2RadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
             this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
@@ -278,7 +278,7 @@
             this.guna2RadioButton3.TabIndex = 12;
             this.guna2RadioButton3.Text = "   M";
             this.guna2RadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.guna2RadioButton3.UncheckedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2RadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2RadioButton3.UncheckedState.BorderThickness = 2;
             this.guna2RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
@@ -322,7 +322,7 @@
             // guna2TextBox7
             // 
             this.guna2TextBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox7.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2TextBox7.BorderRadius = 10;
             this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox7.DefaultText = "";
@@ -357,7 +357,7 @@
             // guna2TextBox8
             // 
             this.guna2TextBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox8.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2TextBox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2TextBox8.BorderRadius = 10;
             this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox8.DefaultText = "";
@@ -464,7 +464,7 @@
             // 
             this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2ComboBox1.BorderRadius = 10;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -484,7 +484,7 @@
             // 
             this.guna2ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2ComboBox2.BorderRadius = 10;
             this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -504,7 +504,7 @@
             // 
             this.guna2ComboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2ComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2ComboBox3.BorderRadius = 10;
             this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -524,7 +524,7 @@
             // 
             this.guna2ComboBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.BorderColor = System.Drawing.Color.Fuchsia;
+            this.guna2ComboBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.guna2ComboBox4.BorderRadius = 10;
             this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

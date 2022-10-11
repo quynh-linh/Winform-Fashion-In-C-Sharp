@@ -126,16 +126,13 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>899, 33</value>
-  </data>
-  <data name="guna2Button6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>674, 27</value>
   </data>
   <data name="guna2Button6.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>267, 246</value>
+    <value>200, 200</value>
   </data>
   <data name="guna2Button6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 49</value>
+    <value>121, 40</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="guna2Button6.TabIndex" type="System.Int32, mscorlib">
@@ -163,16 +160,13 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>685, 33</value>
-  </data>
-  <data name="guna2Button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>514, 27</value>
   </data>
   <data name="guna2Button2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>267, 246</value>
+    <value>200, 200</value>
   </data>
   <data name="guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 49</value>
+    <value>121, 40</value>
   </data>
   <data name="guna2Button2.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -199,16 +193,13 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 33</value>
-  </data>
-  <data name="guna2Button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>349, 27</value>
   </data>
   <data name="guna2Button3.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>267, 246</value>
+    <value>200, 200</value>
   </data>
   <data name="guna2Button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 49</value>
+    <value>121, 40</value>
   </data>
   <data name="guna2Button3.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -235,16 +226,13 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 33</value>
-  </data>
-  <data name="guna2Button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>175, 27</value>
   </data>
   <data name="guna2Button4.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>267, 246</value>
+    <value>200, 200</value>
   </data>
   <data name="guna2Button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 49</value>
+    <value>121, 40</value>
   </data>
   <data name="guna2Button4.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -271,16 +259,13 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 33</value>
-  </data>
-  <data name="guna2Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>10, 27</value>
   </data>
   <data name="guna2Button1.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>267, 246</value>
+    <value>200, 200</value>
   </data>
   <data name="guna2Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 49</value>
+    <value>121, 40</value>
   </data>
   <data name="guna2Button1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -306,11 +291,8 @@
   <data name="guna2Panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="guna2Panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
   <data name="guna2Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 139</value>
+    <value>807, 113</value>
   </data>
   <data name="guna2Panel3.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -400,16 +382,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 77</value>
-  </data>
-  <data name="guna2DataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>10, 63</value>
   </data>
   <data name="guna2DataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1047, 484</value>
+    <value>785, 393</value>
   </data>
   <data name="guna2DataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -430,13 +409,10 @@
     <value>Top, Right</value>
   </data>
   <data name="guna2ImageButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1003, 15</value>
-  </data>
-  <data name="guna2ImageButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>752, 12</value>
   </data>
   <data name="guna2ImageButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 34</value>
+    <value>43, 28</value>
   </data>
   <data name="guna2ImageButton1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -460,16 +436,16 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="guna2TextBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 15</value>
+    <value>528, 12</value>
   </data>
   <data name="guna2TextBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="guna2TextBox3.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>400, 34</value>
+    <value>300, 28</value>
   </data>
   <data name="guna2TextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 34</value>
+    <value>223, 28</value>
   </data>
   <data name="guna2TextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -496,13 +472,10 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 18</value>
-  </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>12, 15</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 28</value>
+    <value>153, 21</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -523,13 +496,10 @@
     <value>3</value>
   </data>
   <data name="guna2Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 147</value>
-  </data>
-  <data name="guna2Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>0, 119</value>
   </data>
   <data name="guna2Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 572</value>
+    <value>807, 465</value>
   </data>
   <data name="guna2Panel2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -550,13 +520,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 721</value>
+    <value>807, 586</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AccountGUI</value>

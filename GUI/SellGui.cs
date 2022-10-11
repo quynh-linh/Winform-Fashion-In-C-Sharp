@@ -22,5 +22,10 @@ namespace GUI
             Sell_DetailGUI sell_DetailGUI = new Sell_DetailGUI();
             sell_DetailGUI.Show();
         }
+
+        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

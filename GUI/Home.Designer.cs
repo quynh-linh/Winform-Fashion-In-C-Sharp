@@ -391,7 +391,7 @@ namespace GUI
             // btnLogoHome
             // 
             this.btnLogoHome.BackColor = System.Drawing.Color.Black;
-            this.btnLogoHome.Image = global::GUI.Properties.Resources.logo;
+            this.btnLogoHome.Image = global::GUI.Properties.Resources.mll_logo;
             this.btnLogoHome.Location = new System.Drawing.Point(0, 0);
             this.btnLogoHome.Name = "btnLogoHome";
             this.btnLogoHome.Size = new System.Drawing.Size(220, 80);
@@ -482,7 +482,7 @@ namespace GUI
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btnMaximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(196)))));
+            this.btnMaximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
             this.btnMaximize.Location = new System.Drawing.Point(767, 3);
@@ -499,7 +499,7 @@ namespace GUI
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(196)))));
+            this.btnMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
             this.btnMinimize.Location = new System.Drawing.Point(745, 3);
@@ -516,7 +516,7 @@ namespace GUI
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
-            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(196)))));
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 20;
             this.btnExit.Location = new System.Drawing.Point(789, 3);
@@ -544,7 +544,7 @@ namespace GUI
             this.iconCurrentChildForm.FlatAppearance.BorderSize = 0;
             this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(196)))));
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 32;
             this.iconCurrentChildForm.Location = new System.Drawing.Point(22, 18);

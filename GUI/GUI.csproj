@@ -529,6 +529,7 @@
     <None Include="Resources\icon_addcart.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mll_logo.png" />
     <Content Include="Resources\product_avt.png" />
     <Content Include="Resources\staff_avt.png" />
   </ItemGroup>

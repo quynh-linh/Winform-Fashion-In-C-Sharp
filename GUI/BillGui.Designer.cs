@@ -112,7 +112,7 @@
             // TbSearch
             // 
             this.TbSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TbSearch.BorderColor = System.Drawing.Color.Fuchsia;
+            this.TbSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.TbSearch.BorderRadius = 15;
             this.TbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TbSearch.DefaultText = "Tìm kiếm";
