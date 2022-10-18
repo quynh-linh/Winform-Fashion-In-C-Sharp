@@ -44,6 +44,7 @@
     <Compile Include="AccountDTO.cs" />
     <Compile Include="BrandDTO.cs" />
     <Compile Include="CategoryDTO.cs" />
+    <Compile Include="CustomerDTO.cs" />
     <Compile Include="DiscountDTO.cs" />
     <Compile Include="OrderDTO.cs" />
     <Compile Include="Order_DetailDTO.cs" />

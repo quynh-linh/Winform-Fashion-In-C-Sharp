@@ -440,3 +440,11 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Sell_DetailGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_ExportGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_ImportGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Sell_Item.resources
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\BUS.dll.config
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\DAO.dll.config
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\MySql.Data.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\Google.Protobuf.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\Renci.SshNet.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Compression.LZ4.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Hash.xxHash.xml
