@@ -151,9 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
+    <Compile Include="BrandDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="MySQLConnection.cs" />
+    <Compile Include="productDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

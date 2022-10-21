@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrandBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

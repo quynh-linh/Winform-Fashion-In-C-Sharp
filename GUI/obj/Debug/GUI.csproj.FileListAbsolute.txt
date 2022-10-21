@@ -448,3 +448,11 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Compression.LZ4.Streams
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\Renci.SshNet.xml
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Compression.LZ4.xml
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\BUS.dll.config
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\DAO.dll.config
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\MySql.Data.xml
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\Google.Protobuf.xml
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\Renci.SshNet.xml
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\K4os.Hash.xxHash.xml

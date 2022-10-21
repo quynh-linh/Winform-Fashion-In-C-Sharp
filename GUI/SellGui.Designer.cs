@@ -791,6 +791,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "SellGui";
             this.Text = "SellGui";
+            this.Load += new System.EventHandler(this.SellGui_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
