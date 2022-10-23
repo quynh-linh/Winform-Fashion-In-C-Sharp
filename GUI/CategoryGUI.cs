@@ -143,11 +143,13 @@ namespace GUI
         {
             txt_Id_Category.Text = "";
             txt_Name_Category.Text = "";
+            txt_Search.Text = "";
         }
 
         //Nút tạo mã
         private void create_Id_Click(object sender, EventArgs e)
         {
+            reloaddatagridView();
             string Id = "CT";
             int num = 0;
 
