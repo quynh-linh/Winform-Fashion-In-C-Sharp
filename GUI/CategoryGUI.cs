@@ -1,111 +1,193 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Windows.Media;
-using FontAwesome.Sharp;
-using TheArtOfDevHtmlRenderer.Adapters.Entities;
-using Color = System.Drawing.Color;
-using System.Collections;
-using System.Text.RegularExpressions;
-using System.Windows.Documents;
+using BUS;
+using DTO;
 
 namespace GUI
 {
     public partial class CategoryGUI : Form
     {
+        CategoryBUS categoryBUS = new CategoryBUS();
         public CategoryGUI()
         {
             InitializeComponent();
-            string[] item = new string[] {"AK0", "Áo Khoác"};
-            list.Add(item);
-            item = new string[] { "QT0", "Quần Tây" };
-            list.Add(item);
         }
 
-        List<string[]> list = new List<string[]>();
-
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void CategoryGUI_Load(object sender, EventArgs e)
         {
-
+            dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Hàm chuyển chuỗi có dấu thành không dấu
-        //VD: Áo khoác đẹp --> Ao khoac dep
-        public static string utf8Convert3(string s)
-        {
-            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
-            string temp = s.Normalize(NormalizationForm.FormD);
-            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            if ( string.IsNullOrEmpty(guna2TextBox2.Text) )
+            if (string.IsNullOrEmpty(txt_Name_Category.Text))
             {
-                MessageBox.Show("Text is null!!!!");
+                MessageBox.Show("Vui lòng nhập đủ dữ liệu");
+            }
+            else if (string.IsNullOrEmpty(txt_Id_Category.Text))
+            {
+                MessageBox.Show("Vui lòng tạo mã");
             }
             else
-            { 
-                string[] item = new string[] { guna2TextBox1.Text, guna2TextBox2.Text.Trim() };
-                list.Add(item);
+            {
+                //Kiểm tra tên trùng
+                string name = txt_Name_Category.Text;
+                bool flag = true;
+                for (int i = 0; i < dataGridViewCategory.Rows.Count; i++)
+                {
+                    if (name == dataGridViewCategory.Rows[i].Cells[1].FormattedValue.ToString())
+                    {
+                        MessageBox.Show("Tên loại sản phẩm đã tồn tại");
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if (flag)
+                {
+                    CategoryDTO categoryDTO = new CategoryDTO(txt_Id_Category.Text, txt_Name_Category.Text);
+
+                    if (categoryBUS.addCategory(categoryDTO))
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
+                        reloaddatagridView();
+                    }
+                    else MessageBox.Show("Thêm không thành công");
+                }
             }
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+
+        private void btn_Fix_Click(object sender, EventArgs e)
         {
-            string Name = utf8Convert3(guna2TextBox2.Text.Trim() + "");
-            string Id = "";
-
-            if (!string.IsNullOrEmpty(Name))
+            if (txt_Name_Category.Text != "")
             {
-                //Gán Id = chữ cái đầu của Name
-                Id = Name[0].ToString().ToUpper();
-                int num = 0;
+                String id = txt_Id_Category.Text;
+                String name = txt_Name_Category.Text;
 
-                //Duyệt chuỗi nối Id
-                for (int i = 1; i < Name.Length; i++)
+                CategoryDTO categoryDTO = new CategoryDTO(id, name);
+
+                if (categoryBUS.fixCategory(categoryDTO))
                 {
-                    if (Name[i - 1].ToString() == " ")
-                    {
-                        Id += Name[i].ToString().ToUpper();
-                    }
+                    MessageBox.Show("Cập nhật thành công");
+                    dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
+                    reloaddatagridView();
                 }
-                string check_Id;
-                //check Id có trùng vs các Id đã tồn tại hay k
-                for (int i = 0; i < list.Count(); i++)
+                else
                 {
-                    check_Id = Id + num + "";
-                    if (check_Id == list[i][0])
-                    {
-                        num++;
-                    }
+                    MessageBox.Show("Cập nhật ko thành công");
                 }
-                Id = Id + num + "";
-                guna2TextBox1.Text = Id;
             }
-            else guna2TextBox1.Text = "";
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đủ dữ liệu");
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dataGridViewCategory.SelectedCells.Count + "");
+            if (dataGridViewCategory.SelectedRows.Count > 0)
+            {
+                // Lấy row hiện tại
+                DataGridViewRow row = dataGridViewCategory.SelectedRows[0];
+                String ID = row.Cells[0].Value.ToString();
+
+                // Xóa
+                if (categoryBUS.deleteCategory(ID))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
+                    reloaddatagridView();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa ko thành công");
+                }
+            }
+            else if (dataGridViewCategory.SelectedCells.Count > 0)
+            {
+                //Lấy ô hiện tại
+                DataGridViewCell cell = dataGridViewCategory.SelectedCells[0];
+                string ID = cell.Value.ToString();
+
+                if (categoryBUS.deleteCategory(ID))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
+                    reloaddatagridView();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa ko thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn dòng muốn xóa");
+            }
+        }
+
+        private void dataGridViewCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridViewCategory.CurrentCell.Selected = true;
+            if (e.RowIndex != -1)
+            {
+                txt_Id_Category.Text = dataGridViewCategory.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
+                txt_Name_Category.Text = dataGridViewCategory.Rows[e.RowIndex].Cells["nameCategory"].FormattedValue.ToString();
+            }
+        }
+
+        private void reloaddatagridView()
+        {
+            txt_Id_Category.Text = "";
+            txt_Name_Category.Text = "";
+        }
+
+        //Nút tạo mã
+        private void create_Id_Click(object sender, EventArgs e)
+        {
+            string Id = "CT";
+            int num = 0;
+
+            //check Id có trùng vs các Id đã tồn tại hay k
+            string check_Id;
+            for (int i = 0; i < dataGridViewCategory.Rows.Count; i++)
+            {
+                check_Id = Id + num + "";
+                if (check_Id == dataGridViewCategory.Rows[i].Cells[0].FormattedValue.ToString())
+                    num++;
+            }
+            Id += num + "";
+            txt_Id_Category.Text = Id;
+        }
+
+        //Search
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string keyword = txt_Search.Text;
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                dataGridViewCategory.DataSource = categoryBUS.searchCategory(keyword);
+            }
+            else
+            {
+                dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
+            }
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txt_Search.Text;
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                dataGridViewCategory.DataSource = categoryBUS.searchCategory(keyword);
+            }
+            else
+            {
+                dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
+            }
         }
     }
 }

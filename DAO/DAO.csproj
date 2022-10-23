@@ -152,6 +152,7 @@
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
     <Compile Include="BrandDAO.cs" />
+    <Compile Include="CategoryDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="MySQLConnection.cs" />
     <Compile Include="productDAO.cs" />
