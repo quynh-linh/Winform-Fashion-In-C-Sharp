@@ -229,7 +229,7 @@ namespace GUI
         private void btnSale_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color11);
-            OpenChildForm(new SaleGui());
+            OpenChildForm(new DiscountGUI());
         }
 
         private void btnAccount_Click(object sender, EventArgs e)

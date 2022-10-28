@@ -424,7 +424,6 @@ C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.AccountGUI.resources
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartCustomerGUI.resources
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartStaffGUI.resources
 C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Sell_DetailGUI.resources
-C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.SaleGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.AccountAddOrUpdateGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.AccountGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Add_Or_Fix_RoleGUI.resources
@@ -536,3 +535,6 @@ C:\java\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Role_GUI.resources
 C:\java\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Permission_GUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Permission_GUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Role_GUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Permission_GUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Role_GUI.resources
+C:\Users\Qmanh\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.DiscountGUI.resources

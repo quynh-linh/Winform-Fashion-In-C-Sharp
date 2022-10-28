@@ -346,11 +346,11 @@
     <Compile Include="RoleGUI.Designer.cs">
       <DependentUpon>RoleGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaleGui.cs">
+    <Compile Include="DiscountGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaleGui.Designer.cs">
-      <DependentUpon>SaleGui.cs</DependentUpon>
+    <Compile Include="DiscountGUI.Designer.cs">
+      <DependentUpon>DiscountGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="SellGui.cs">
       <SubType>Form</SubType>
@@ -456,8 +456,8 @@
     <EmbeddedResource Include="RoleGUI.resx">
       <DependentUpon>RoleGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaleGui.resx">
-      <DependentUpon>SaleGui.cs</DependentUpon>
+    <EmbeddedResource Include="DiscountGUI.resx">
+      <DependentUpon>DiscountGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SellGui.resx">
       <DependentUpon>SellGui.cs</DependentUpon>
