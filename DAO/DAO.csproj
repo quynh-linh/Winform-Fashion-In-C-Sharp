@@ -154,6 +154,7 @@
     <Compile Include="BrandDAO.cs" />
     <Compile Include="CategoryDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
+    <Compile Include="LoginDAO.cs" />
     <Compile Include="MySQLConnection.cs" />
     <Compile Include="productDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
