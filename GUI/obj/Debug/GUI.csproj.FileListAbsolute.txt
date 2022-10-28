@@ -534,3 +534,5 @@ C:\java\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.exe
 C:\java\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.pdb
 C:\java\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Role_GUI.resources
 C:\java\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Permission_GUI.resources
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Permission_GUI.resources
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Role_GUI.resources

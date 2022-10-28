@@ -6,33 +6,39 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class ProductDTO
+    public class ProductDTO
     {
-        private int product_Id;
+        private string product_Id;
         private string product_Name;
         private double product_Price;
-        private int product_Raw_Quantity;
-        private int product_Discount_Id;
-        private int category_Id;
-        private int brand_Id;
+        private string image;
+        private string description;
+        private string brand_id;
+        private string category_Id;
+        private string size_id;
+        private int quantity;
 
-        public ProductDTO(int product_Id, string product_Name, double product_Price, int product_Raw_Quantity, int product_Discount_Id, int category_Id, int brand_Id)
+        public ProductDTO(string product_Id, string product_Name, double product_Price, string image, string description, string brand_id, string category_Id, string size_id, int quantity)
         {
             this.product_Id = product_Id;
             this.product_Name = product_Name;
             this.product_Price = product_Price;
-            this.product_Raw_Quantity = product_Raw_Quantity;
-            this.product_Discount_Id = product_Discount_Id;
+            this.image = image;
+            this.description = description;
+            this.brand_id = brand_id;
             this.category_Id = category_Id;
-            this.brand_Id = brand_Id;
+            this.size_id = size_id;
+            this.quantity = quantity;
         }
 
-        public int Product_Id { get => product_Id; set => product_Id = value; }
+        public string Product_Id { get => product_Id; set => product_Id = value; }
         public string Product_Name { get => product_Name; set => product_Name = value; }
         public double Product_Price { get => product_Price; set => product_Price = value; }
-        public int Product_Raw_Quantity { get => product_Raw_Quantity; set => product_Raw_Quantity = value; }
-        public int Product_Discount_Id { get => product_Discount_Id; set => product_Discount_Id = value; }
-        public int Category_Id { get => category_Id; set => category_Id = value; }
-        public int Brand_Id { get => brand_Id; set => brand_Id = value; }
+        public string Image { get => image; set => image = value; }
+        public string Description { get => description; set => description = value; }
+        public string Brand_id { get => brand_id; set => brand_id = value; }
+        public string Category_Id { get => category_Id; set => category_Id = value; }
+        public string Size_id { get => size_id; set => size_id = value; }
+        public int Quantity { get => quantity; set => quantity = value; }
     }
 }

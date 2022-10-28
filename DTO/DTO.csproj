@@ -50,7 +50,6 @@
     <Compile Include="Order_DetailDTO.cs" />
     <Compile Include="PermissionDTO.cs" />
     <Compile Include="ProductDTO.cs" />
-    <Compile Include="Product_DetailDTO.cs" />
     <Compile Include="Product_SizeDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleDTO.cs" />
