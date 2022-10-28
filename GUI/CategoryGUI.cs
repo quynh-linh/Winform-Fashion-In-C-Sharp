@@ -87,45 +87,12 @@ namespace GUI
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dataGridViewCategory.SelectedCells.Count + "");
-            if (dataGridViewCategory.SelectedRows.Count > 0)
+            if (MessageBox.Show("Bạn có chắc muốn xóa thể loại " + dataGridViewCategory.CurrentRow.Cells[1].Value.ToString() + "?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                // Lấy row hiện tại
-                DataGridViewRow row = dataGridViewCategory.SelectedRows[0];
-                String ID = row.Cells[0].Value.ToString();
-
-                // Xóa
-                if (categoryBUS.deleteCategory(ID))
-                {
-                    MessageBox.Show("Xóa thành công");
-                    dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
-                    reloaddatagridView();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa ko thành công");
-                }
-            }
-            else if (dataGridViewCategory.SelectedCells.Count > 0)
-            {
-                //Lấy ô hiện tại
-                DataGridViewCell cell = dataGridViewCategory.SelectedCells[0];
-                string ID = cell.Value.ToString();
-
-                if (categoryBUS.deleteCategory(ID))
-                {
-                    MessageBox.Show("Xóa thành công");
-                    dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
-                    reloaddatagridView();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa ko thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Hãy chọn dòng muốn xóa");
+                string Id = dataGridViewCategory.CurrentRow.Cells[0].Value.ToString();
+                categoryBUS.deleteCategory(Id);
+                dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
+                MessageBox.Show("Xóa thành công");
             }
         }
 
@@ -166,18 +133,6 @@ namespace GUI
         }
 
         //Search
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-            string keyword = txt_Search.Text;
-            if (!string.IsNullOrEmpty(keyword))
-            {
-                dataGridViewCategory.DataSource = categoryBUS.searchCategory(keyword);
-            }
-            else
-            {
-                dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
-            }
-        }
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {

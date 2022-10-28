@@ -157,6 +157,7 @@
     <Compile Include="MySQLConnection.cs" />
     <Compile Include="productDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleDAO.cs" />
     <Compile Include="SellDAO.cs" />
   </ItemGroup>
   <ItemGroup>

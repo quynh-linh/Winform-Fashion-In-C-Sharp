@@ -42,10 +42,6 @@
             this.guna2CheckBox12 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.guna2CheckBox11 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.guna2CheckBox10 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.guna2CheckBox9 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.guna2CheckBox8 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
@@ -97,9 +93,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 21);
+            this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Mã quyền";
+            this.label3.Text = "Mã vai trò";
             // 
             // guna2TextBox2
             // 
@@ -131,9 +127,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(280, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 21);
+            this.label2.Size = new System.Drawing.Size(85, 21);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Tên quyền";
+            this.label2.Text = "Tên vai trò";
             // 
             // guna2TextBox1
             // 
@@ -193,10 +189,6 @@
             this.guna2Panel4.Controls.Add(this.guna2CheckBox12);
             this.guna2Panel4.Controls.Add(this.comboBox11);
             this.guna2Panel4.Controls.Add(this.guna2CheckBox11);
-            this.guna2Panel4.Controls.Add(this.comboBox10);
-            this.guna2Panel4.Controls.Add(this.guna2CheckBox10);
-            this.guna2Panel4.Controls.Add(this.comboBox9);
-            this.guna2Panel4.Controls.Add(this.guna2CheckBox9);
             this.guna2Panel4.Controls.Add(this.comboBox8);
             this.guna2Panel4.Controls.Add(this.guna2CheckBox8);
             this.guna2Panel4.Controls.Add(this.comboBox7);
@@ -227,7 +219,7 @@
             this.comboBox13.Items.AddRange(new object[] {
             "Được thay đổi",
             "Chỉ được xem"});
-            this.comboBox13.Location = new System.Drawing.Point(122, 433);
+            this.comboBox13.Location = new System.Drawing.Point(122, 361);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(121, 21);
             this.comboBox13.TabIndex = 53;
@@ -241,7 +233,7 @@
             this.guna2CheckBox13.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.guna2CheckBox13.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox13.Location = new System.Drawing.Point(27, 433);
+            this.guna2CheckBox13.Location = new System.Drawing.Point(27, 361);
             this.guna2CheckBox13.Name = "guna2CheckBox13";
             this.guna2CheckBox13.Size = new System.Drawing.Size(72, 17);
             this.guna2CheckBox13.TabIndex = 52;
@@ -295,7 +287,7 @@
             this.comboBox11.Items.AddRange(new object[] {
             "Được thay đổi",
             "Chỉ được xem"});
-            this.comboBox11.Location = new System.Drawing.Point(122, 471);
+            this.comboBox11.Location = new System.Drawing.Point(122, 399);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(121, 21);
             this.comboBox11.TabIndex = 49;
@@ -309,7 +301,7 @@
             this.guna2CheckBox11.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.guna2CheckBox11.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox11.Location = new System.Drawing.Point(27, 471);
+            this.guna2CheckBox11.Location = new System.Drawing.Point(27, 399);
             this.guna2CheckBox11.Name = "guna2CheckBox11";
             this.guna2CheckBox11.Size = new System.Drawing.Size(57, 17);
             this.guna2CheckBox11.TabIndex = 48;
@@ -319,74 +311,6 @@
             this.guna2CheckBox11.UncheckedState.BorderThickness = 1;
             this.guna2CheckBox11.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2CheckBox11.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.BackColor = System.Drawing.Color.White;
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.Enabled = false;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Được thay đổi",
-            "Chỉ được xem"});
-            this.comboBox10.Location = new System.Drawing.Point(122, 397);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(121, 21);
-            this.comboBox10.TabIndex = 47;
-            // 
-            // guna2CheckBox10
-            // 
-            this.guna2CheckBox10.AutoSize = true;
-            this.guna2CheckBox10.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox10.CheckedState.BorderRadius = 1;
-            this.guna2CheckBox10.CheckedState.BorderThickness = 1;
-            this.guna2CheckBox10.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2CheckBox10.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox10.Location = new System.Drawing.Point(27, 397);
-            this.guna2CheckBox10.Name = "guna2CheckBox10";
-            this.guna2CheckBox10.Size = new System.Drawing.Size(76, 17);
-            this.guna2CheckBox10.TabIndex = 46;
-            this.guna2CheckBox10.Text = "Phiếu xuất";
-            this.guna2CheckBox10.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox10.UncheckedState.BorderRadius = 1;
-            this.guna2CheckBox10.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox10.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox10.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.BackColor = System.Drawing.Color.White;
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.Enabled = false;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Được thay đổi",
-            "Chỉ được xem"});
-            this.comboBox9.Location = new System.Drawing.Point(122, 360);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 21);
-            this.comboBox9.TabIndex = 45;
-            // 
-            // guna2CheckBox9
-            // 
-            this.guna2CheckBox9.AutoSize = true;
-            this.guna2CheckBox9.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox9.CheckedState.BorderRadius = 1;
-            this.guna2CheckBox9.CheckedState.BorderThickness = 1;
-            this.guna2CheckBox9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2CheckBox9.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox9.Location = new System.Drawing.Point(27, 360);
-            this.guna2CheckBox9.Name = "guna2CheckBox9";
-            this.guna2CheckBox9.Size = new System.Drawing.Size(80, 17);
-            this.guna2CheckBox9.TabIndex = 44;
-            this.guna2CheckBox9.Text = "Phiếu nhập";
-            this.guna2CheckBox9.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox9.UncheckedState.BorderRadius = 1;
-            this.guna2CheckBox9.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox9.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox9.CheckStateChanged += new System.EventHandler(this.guna2CheckBox1_CheckStateChanged_1);
             // 
             // comboBox8
             // 
@@ -738,6 +662,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(97, 32);
             this.guna2Button1.TabIndex = 24;
             this.guna2Button1.Text = "Hủy";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Add_Or_Fix_RoleGUI
             // 
@@ -781,10 +706,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox12;
         private System.Windows.Forms.ComboBox comboBox11;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox11;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox9;
         private System.Windows.Forms.ComboBox comboBox8;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox8;
         private System.Windows.Forms.ComboBox comboBox7;

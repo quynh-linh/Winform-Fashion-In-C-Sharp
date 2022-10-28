@@ -361,6 +361,18 @@
     <Compile Include="UC_Bill_ImportGui.Designer.cs">
       <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Permission_GUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Permission_GUI.Designer.cs">
+      <DependentUpon>UC_Permission_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Role_GUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Role_GUI.Designer.cs">
+      <DependentUpon>UC_Role_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Sell_Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -443,6 +455,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Bill_ImportGui.resx">
       <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Permission_GUI.resx">
+      <DependentUpon>UC_Permission_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Role_GUI.resx">
+      <DependentUpon>UC_Role_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Sell_Item.resx">
       <DependentUpon>UC_Sell_Item.cs</DependentUpon>
