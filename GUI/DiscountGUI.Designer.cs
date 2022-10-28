@@ -30,11 +30,6 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_discount = new System.Windows.Forms.DataGridView();
-            this.maDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sale_percent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.start_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.end_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +47,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_madiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.maDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sale_percent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.start_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.end_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_discount)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -79,7 +79,7 @@
             this.dgv_discount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_discount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maDiscount,
-            this.maProduct,
+            this.nameProduct,
             this.sale_percent,
             this.start_day,
             this.end_day});
@@ -88,41 +88,6 @@
             this.dgv_discount.Size = new System.Drawing.Size(865, 290);
             this.dgv_discount.TabIndex = 30;
             this.dgv_discount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_discount_CellClick);
-            // 
-            // maDiscount
-            // 
-            this.maDiscount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maDiscount.DataPropertyName = "maDiscount";
-            this.maDiscount.HeaderText = "Mã Giảm Giá";
-            this.maDiscount.Name = "maDiscount";
-            // 
-            // maProduct
-            // 
-            this.maProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maProduct.DataPropertyName = "maProduct";
-            this.maProduct.HeaderText = "Mã Sản Phẩm";
-            this.maProduct.Name = "maProduct";
-            // 
-            // sale_percent
-            // 
-            this.sale_percent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sale_percent.DataPropertyName = "sale_percent";
-            this.sale_percent.HeaderText = "Giảm Giá";
-            this.sale_percent.Name = "sale_percent";
-            // 
-            // start_day
-            // 
-            this.start_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.start_day.DataPropertyName = "start_day";
-            this.start_day.HeaderText = "Ngày Bắt Đầu";
-            this.start_day.Name = "start_day";
-            // 
-            // end_day
-            // 
-            this.end_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.end_day.DataPropertyName = "end_day";
-            this.end_day.HeaderText = "Ngày Kết Thúc";
-            this.end_day.Name = "end_day";
             // 
             // guna2ImageButton1
             // 
@@ -245,6 +210,7 @@
             this.btn_delete_discount.Size = new System.Drawing.Size(121, 40);
             this.btn_delete_discount.TabIndex = 33;
             this.btn_delete_discount.Text = "Xóa";
+            this.btn_delete_discount.Click += new System.EventHandler(this.btn_delete_discount_Click);
             // 
             // btn_edit_discount
             // 
@@ -264,6 +230,7 @@
             this.btn_edit_discount.Size = new System.Drawing.Size(121, 40);
             this.btn_edit_discount.TabIndex = 32;
             this.btn_edit_discount.Text = "Sửa";
+            this.btn_edit_discount.Click += new System.EventHandler(this.btn_edit_discount_Click);
             // 
             // btn_add_discount
             // 
@@ -377,9 +344,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(378, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 16);
+            this.label2.Size = new System.Drawing.Size(116, 16);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Mã Sản Phẩm :";
+            this.label2.Text = "Tên Sản Phẩm :";
             // 
             // tb_madiscount
             // 
@@ -414,6 +381,41 @@
             this.label1.Size = new System.Drawing.Size(119, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã Khuyễn Mãi :";
+            // 
+            // maDiscount
+            // 
+            this.maDiscount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maDiscount.DataPropertyName = "maDiscount";
+            this.maDiscount.HeaderText = "Mã Giảm Giá";
+            this.maDiscount.Name = "maDiscount";
+            // 
+            // nameProduct
+            // 
+            this.nameProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameProduct.DataPropertyName = "nameProduct";
+            this.nameProduct.HeaderText = "Tên Sản Phẩm";
+            this.nameProduct.Name = "nameProduct";
+            // 
+            // sale_percent
+            // 
+            this.sale_percent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sale_percent.DataPropertyName = "sale_percent";
+            this.sale_percent.HeaderText = "Giảm Giá";
+            this.sale_percent.Name = "sale_percent";
+            // 
+            // start_day
+            // 
+            this.start_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.start_day.DataPropertyName = "start_day";
+            this.start_day.HeaderText = "Ngày Bắt Đầu";
+            this.start_day.Name = "start_day";
+            // 
+            // end_day
+            // 
+            this.end_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.end_day.DataPropertyName = "end_day";
+            this.end_day.HeaderText = "Ngày Kết Thúc";
+            this.end_day.Name = "end_day";
             // 
             // DiscountGUI
             // 
@@ -453,12 +455,12 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.DataGridView dgv_discount;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2ComboBox cbb_maproduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDiscount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn sale_percent;
         private System.Windows.Forms.DataGridViewTextBoxColumn start_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn end_day;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2ComboBox cbb_maproduct;
     }
 }

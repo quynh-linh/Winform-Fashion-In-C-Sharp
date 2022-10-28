@@ -55,9 +55,7 @@ namespace GUI
 
         private void ProductsGUI_Load(object sender, EventArgs e)
         {
-            comboboxBrand.SelectedIndex = 0;
-            comboboxCategory.SelectedIndex = 0;
-            comboboxSize.SelectedIndex = 0;
+            
             loadCBBBrand();
             loadCBBCategory();
             loadCBBSize();
@@ -87,6 +85,9 @@ namespace GUI
             {
                 dataGridView.CurrentCell.Selected = true;
                 textBoxId.Text = dataGridView.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
+                comboboxBrand.Text = dataGridView.Rows[e.RowIndex].Cells["nameBrand"].FormattedValue.ToString();
+                comboboxCategory.Text = dataGridView.Rows[e.RowIndex].Cells["nameCate"].FormattedValue.ToString();
+                comboboxSize.Text = dataGridView.Rows[e.RowIndex].Cells["sizename"].FormattedValue.ToString();
                 textboxName.Text = dataGridView.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
                 textboxPrice.Text = dataGridView.Rows[e.RowIndex].Cells["price"].FormattedValue.ToString();
                 textboxQuantity.Text = dataGridView.Rows[e.RowIndex].Cells["quantity"].FormattedValue.ToString();

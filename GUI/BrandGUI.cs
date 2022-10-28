@@ -158,9 +158,12 @@ namespace GUI
 
         private void dgv_brand_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgv_brand.CurrentCell.Selected = true;
-            Txt_MaBrand.Text = dgv_brand.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
-            Txt_nameBrand.Text = dgv_brand.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
+           if(e.RowIndex != -1)
+            {
+                dgv_brand.CurrentCell.Selected = true;
+                Txt_MaBrand.Text = dgv_brand.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
+                Txt_nameBrand.Text = dgv_brand.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
+            }
         }
     }
 }

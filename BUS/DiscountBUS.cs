@@ -1,5 +1,6 @@
 ﻿using DAO;
 using DTO;
+using System;
 using System.Data;
 
 namespace BUS
@@ -24,5 +25,22 @@ namespace BUS
             }
             return false;
         }
+        public bool editDiscount(DiscountDTO dt)
+        {
+            if (dcDAO.editDiscount(dt))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool deleteDiscount(String id)
+        {
+            if (dcDAO.deleteDiscount(id))
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

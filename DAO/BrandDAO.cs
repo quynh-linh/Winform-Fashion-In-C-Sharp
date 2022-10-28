@@ -121,9 +121,9 @@ namespace DAO
                     return true;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                Console.Read();
+                Console.WriteLine(e.Message);
             }
             finally
             {
