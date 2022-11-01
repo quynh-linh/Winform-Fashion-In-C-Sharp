@@ -50,15 +50,9 @@ namespace BUS
             return new RoleDTO(role_Id, role_Name, role_Description);
         }
 
-        public Boolean check_Name(String name)
+        public Boolean check_Name(String name, string id)
         {
-            DataTable role_Name_From_DataTable = roleDAO.check_Name(name);
-            if(role_Name_From_DataTable.Rows.Count > 0)
-            {
-                string role_Name = role_Name_From_DataTable.Rows[0][1].ToString();
-                if (name == role_Name) return true;
-                return false;
-            }
+            if(roleDAO.check_Name(name, id).Rows.Count > 0) return true;
             return false;
         }
     }

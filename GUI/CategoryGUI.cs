@@ -66,23 +66,24 @@ namespace GUI
                 String id = txt_Id_Category.Text;
                 String name = txt_Name_Category.Text;
 
-                CategoryDTO categoryDTO = new CategoryDTO(id, name);
-
-                if (categoryBUS.fixCategory(categoryDTO))
+                if (categoryBUS.check_Name(id,name))
                 {
-                    MessageBox.Show("Cập nhật thành công");
-                    dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
-                    reloaddatagridView();
+                    MessageBox.Show("Tên loại sản phẩm đã tồn tại");
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật ko thành công");
+                    CategoryDTO categoryDTO = new CategoryDTO(id, name);
+
+                    if (categoryBUS.fixCategory(categoryDTO))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        dataGridViewCategory.DataSource = categoryBUS.getAllCategory(); // refresh datagridview
+                        reloaddatagridView();
+                    }
+                    else MessageBox.Show("Cập nhật ko thành công");
                 }
             }
-            else
-            {
-                MessageBox.Show("Vui lòng nhập đủ dữ liệu");
-            }
+            else MessageBox.Show("Vui lòng nhập đủ dữ liệu");
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)

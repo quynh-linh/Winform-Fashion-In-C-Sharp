@@ -133,5 +133,30 @@ namespace DAO
 
             return searchCategory;
         }
+
+        public DataTable check_Name(string id, string name)
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                conn.Open();
+                String sql = "select * from category where nameCategory = '"+ name +"' and id not in ('"+ id +"')";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(data);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return data;
+        }
     }
 }

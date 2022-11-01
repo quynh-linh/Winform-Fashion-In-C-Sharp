@@ -163,13 +163,13 @@ namespace DAO
             return role;
         }
 
-        public DataTable check_Name(string name)
+        public DataTable check_Name(string name, string id)
         {
             DataTable dataTable = new DataTable();
             try
             {
                 conn.Open();
-                String sql = "select * from role where role_name = '" + name + "' and role_name not in ('"+ name +"')";
+                String sql = "select * from role where role_name = '" + name + "' and id not in ('"+ id +"')";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(dataTable);

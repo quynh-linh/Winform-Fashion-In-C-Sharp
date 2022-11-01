@@ -105,7 +105,7 @@ namespace GUI
 
             if (String.IsNullOrEmpty(guna2TextBox2.Text))
                 MessageBox.Show("Tên vai trò không được bỏ trống ");
-            else if (roleBUS.check_Name(guna2TextBox2.Text))
+            else if (roleBUS.check_Name(guna2TextBox2.Text, guna2TextBox1.Text))
                 MessageBox.Show("Tên vai trò đã tồn tại ");
             else
             {

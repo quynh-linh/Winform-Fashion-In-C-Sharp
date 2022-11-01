@@ -36,5 +36,11 @@ namespace BUS
         {
             return categoryDAO.searchCategory(keyword);
         }
+
+        public Boolean check_Name(string id, string name)
+        {
+            if (categoryDAO.check_Name(id, name).Rows.Count > 0) return true;
+            return false;
+        }
     }
 }
