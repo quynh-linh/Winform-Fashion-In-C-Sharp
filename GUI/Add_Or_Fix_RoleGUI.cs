@@ -9,10 +9,12 @@ namespace GUI
     public partial class Add_Or_Fix_RoleGUI : Form
     {
         RoleBUS roleBUS = new RoleBUS();
-        public Add_Or_Fix_RoleGUI(string title, string btn_Title, string role_Id)
+        RoleGUI roleGUI ;
+        public Add_Or_Fix_RoleGUI(string title, string btn_Title, string role_Id, RoleGUI roleGUI)
         {
             InitializeComponent();
             import_Array();
+            this.roleGUI = roleGUI;
             this.Text = title;
             guna2Button2.Text = btn_Title;
             this.ControlBox = false;
@@ -137,6 +139,7 @@ namespace GUI
                         if (roleBUS.fixRole(roleDTO))
                         {
                             MessageBox.Show("Sửa thành công");
+                            roleGUI.dataGridView1.DataSource = roleBUS.getAllRole();
                             this.Dispose();
                         }
                         else MessageBox.Show(guna2TextBox1.Text +" " +guna2TextBox2.Text +" "+ role_Description);

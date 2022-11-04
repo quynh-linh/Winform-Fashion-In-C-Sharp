@@ -26,7 +26,7 @@ namespace GUI
             }
 
             string Id = "Q" + num;
-            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Add Permission","Thêm",Id);
+            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Add Permission","Thêm",Id, this);
             a.Show();
         }
 
@@ -35,7 +35,7 @@ namespace GUI
         {
             //Lấy ID dc chọn trong datagridview
             string Id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Fix Permission", "Sửa", Id);
+            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Fix Permission", "Sửa", Id, this);
             a.Show();
             dataGridView1.DataSource = roleBUS.getAllRole();
         }
