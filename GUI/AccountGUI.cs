@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,16 @@ namespace GUI
 {
     public partial class AccountGUI : Form
     {
+        private AccountDTO accountDTO;
+        private AccountBUS accountBUS = new AccountBUS();
         public AccountGUI()
         {
             InitializeComponent();
+          
+       
         }
+
+
 
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -29,7 +37,7 @@ namespace GUI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AccountAddOrUpdateGUI accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Add");
+            AccountAddOrUpdateGUI accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Add", null);
             accountAddOrUpdateGUI.Show();
         }
 
@@ -40,13 +48,26 @@ namespace GUI
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            AccountAddOrUpdateGUI accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Update");
+            AccountAddOrUpdateGUI accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Update", accountDTO);
             accountAddOrUpdateGUI.Show();
+        }
+
+        private void AccountGUI_Load(object sender, EventArgs e)
+        {
+            dataGridViewAccount.DataSource = accountBUS.getAllAccount();
+            DataGridViewRow row = dataGridViewAccount.Rows[0];
+            accountDTO = new AccountDTO(int.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), int.Parse(row.Cells[5].Value.ToString()));
+        }
+
+        private void dataGridViewAccount_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = dataGridViewAccount.Rows[rowIndex];
+            accountDTO = new AccountDTO(int.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), int.Parse(row.Cells[5].Value.ToString()));
         }
     }
 }

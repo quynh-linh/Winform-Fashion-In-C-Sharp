@@ -13,19 +13,16 @@ namespace DTO
         private string password;
         private string full_Name;
         private string email;
-        private string phone;
-        private int enabled;
         private int role_Id;
 
-        public AccountDTO(int account_Id, string user_Name, string password, string full_Name, string email, string phone, int enabled, int role_Id)
+        public AccountDTO() { }
+        public AccountDTO(int account_Id, string user_Name, string password, string full_Name, string email, int role_Id)
         {
             this.account_Id = account_Id;
             this.user_Name = user_Name;
             this.password = password;
             this.full_Name = full_Name;
             this.email = email;
-            this.phone = phone;
-            this.enabled = enabled;
             this.role_Id = role_Id;
         }
 
@@ -34,8 +31,11 @@ namespace DTO
         public string Password { get => password; set => password = value; }
         public string Full_Name { get => full_Name; set => full_Name = value; }
         public string Email { get => email; set => email = value; }
-        public string Phone { get => phone; set => phone = value; }
-        public int Enabled { get => enabled; set => enabled = value; }
         public int Role_Id { get => role_Id; set => role_Id = value; }
+
+        public override string ToString()
+        {
+            return base.ToString() + ": " + user_Name;
+        }
     }
 }

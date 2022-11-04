@@ -12,7 +12,7 @@ namespace BUS
     public class AccountBUS
     {
         private AccountDAO accountDao = new AccountDAO();
-        public DataTable getAllCategory()
+        public DataTable getAllAccount()
         {
             return accountDao.selectAllAccount();
         }
