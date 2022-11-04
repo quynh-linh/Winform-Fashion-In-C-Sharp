@@ -52,3 +52,9 @@ C:\java\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.AssemblyReference.ca
 C:\java\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\java\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.dll
 C:\java\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.pdb
+C:\Users\84768\Desktop\Thanh\DTO\bin\Debug\DTO.dll
+C:\Users\84768\Desktop\Thanh\DTO\bin\Debug\DTO.pdb
+C:\Users\84768\Desktop\Thanh\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\84768\Desktop\Thanh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\84768\Desktop\Thanh\DTO\obj\Debug\DTO.dll
+C:\Users\84768\Desktop\Thanh\DTO\obj\Debug\DTO.pdb

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountBUS.cs" />
     <Compile Include="BrandBUS.cs" />
     <Compile Include="CategoryBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
