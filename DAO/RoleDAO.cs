@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using DTO;
 using MySql.Data.MySqlClient;
 
@@ -170,6 +171,30 @@ namespace DAO
             {
                 conn.Open();
                 String sql = "select * from role where role_name = '" + name + "' and id not in ('"+ id +"')";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dataTable);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dataTable;
+        }
+
+        public DataTable get_Role_Name_From_Role_Id(String id)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select * from role where id = '" + id + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(dataTable);

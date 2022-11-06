@@ -60,14 +60,14 @@ namespace GUI
         {
             dataGridViewAccount.DataSource = accountBUS.getAllAccount();
             DataGridViewRow row = dataGridViewAccount.Rows[0];
-            accountDTO = new AccountDTO(int.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), int.Parse(row.Cells[5].Value.ToString()));
+            accountDTO = new AccountDTO(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(),row.Cells[5].Value.ToString());
         }
 
         private void dataGridViewAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
             DataGridViewRow row = dataGridViewAccount.Rows[rowIndex];
-            accountDTO = new AccountDTO(int.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), int.Parse(row.Cells[5].Value.ToString()));
+            accountDTO = new AccountDTO(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[5].Value.ToString());
         }
     }
 }

@@ -15,6 +15,8 @@ namespace GUI
     public partial class LoginGUI : Form
     {
         LoginBUS loginBUS = new LoginBUS();
+        AccountBUS account_BUS = new AccountBUS();
+
         public LoginGUI()
         {
             InitializeComponent();
@@ -35,11 +37,16 @@ namespace GUI
                 if (checkPassword(password) || checkUser(username))
                 {
                     String equal = loginBUS.checkLogin(username, password);
-                    MessageBox.Show(equal);
+                    if ( equal.Equals("Đăng nhập thành công"))
+                    {
+                        MessageBox.Show(equal);
+                        Home h = new Home(account_BUS.loginAccount(username, password));
+                        h.Show();
+                        SetVisibleCore(false);
+                    }
+                    else MessageBox.Show(equal);
                 }
-                Home h = new Home();
-                h.Show();
-                SetVisibleCore(false);
+
             }
 
         }

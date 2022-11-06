@@ -7,10 +7,20 @@ namespace GUI
     public partial class RoleGUI : Form
     {
         RoleBUS roleBUS = new RoleBUS();
-        public RoleGUI()
+        public RoleGUI(String role_Manipulative)
         {
             InitializeComponent();
             dataGridView1.DataSource = roleBUS.getAllRole();
+            if(role_Manipulative.Equals("Được thay đổi"))
+            {
+
+            }
+            else
+            {
+                guna2Button1.Enabled = false;
+                guna2Button4.Enabled = false;
+                guna2Button3.Enabled = false;
+            }
         }
 
         //btn Thêm

@@ -21,8 +21,10 @@ namespace DAO
                 // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
                 Console.WriteLine(SQL);
                 MySqlCommand cmd = new MySqlCommand(SQL, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
                 // Query và kiểm tra
-                if (cmd.ExecuteNonQuery() > 0)
+                if (reader.Read())
                     return true;
             }
             catch (Exception e)

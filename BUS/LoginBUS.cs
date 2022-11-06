@@ -16,11 +16,12 @@ namespace BUS
         }
         public string checkLogin(string username , string password)
         {
+            Console.WriteLine(loginDAO.login(username, password));
             if(loginDAO.login(username, password))
             {
                 return "Đăng nhập thành công";
             }
-            return "Đăng nhập thành công";
+            return "Đăng không thành công";
         }
     }
 }

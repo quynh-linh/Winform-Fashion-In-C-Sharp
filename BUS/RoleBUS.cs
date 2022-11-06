@@ -55,5 +55,12 @@ namespace BUS
             if(roleDAO.check_Name(name, id).Rows.Count > 0) return true;
             return false;
         }
+
+        public string get_Role_Name_From_Role_Id(String id)
+        {
+            DataTable data = roleDAO.get_Role_Name_From_Role_Id(id);
+            string name = data.Rows[0][1].ToString();
+            return name;
+        }
     }
 }

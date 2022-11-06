@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using BUS;
+using DTO;
 using FontAwesome.Sharp;
 using TheArtOfDevHtmlRenderer.Adapters.Entities;
 using Color = System.Drawing.Color;
@@ -21,9 +24,15 @@ namespace GUI
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public Home()
+        private RoleBUS role_BUS = new RoleBUS();
+        private AccountBUS account_BUS = new AccountBUS();
+        private AccountDTO account_DTO;
+        public Home(AccountDTO account_DTO)
         {
             InitializeComponent();
+            this.account_DTO = account_DTO;
+            lblNameCustommer.Text = account_DTO.Full_Name;
+            lbl_Role.Text = role_BUS.get_Role_Name_From_Role_Id(account_DTO.Role_Id);
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 53);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -200,6 +209,7 @@ namespace GUI
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
+
             ActivateButton(sender, RGBColor.color6);
             OpenChildForm(new CategoryGUI());
         }
@@ -240,10 +250,28 @@ namespace GUI
 
         private void btnPermission_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColor.color13);
-            OpenChildForm(new RoleGUI());
-        }
+            String description = role_BUS.get_Role_From_Id(account_DTO.Role_Id).Role_Desciption;
+            string[] description_Split = description.Split(new string[] { ", " }, StringSplitOptions.None);
+            String[] role;// Lưu trữ 1 tên quyền và khả năng thao tác của quyền đó
+            ArrayList role_Name = new ArrayList(); // Lưu trữ mảng tên quyền
+            ArrayList role_Manipulative = new ArrayList();// Lưu trữ mảng khả năng thao tác của các quyền
+            
+            //Thực hiện tách chuỗi và truyền data vào 2 mảng 
+            for (int i = 0; i < description_Split.Length; i++)
+            {
+                role = description_Split[i].Split(new string[] { " : " }, StringSplitOptions.None);
+                role_Name.Add(role[0]);
+                role_Manipulative.Add(role[1]);
+            }
 
+            if (role_Name.Contains("Quyền")){
+                int index = role_Name.IndexOf("Quyền");
+                ActivateButton(sender, RGBColor.color13);
+                OpenChildForm(new RoleGUI(role_Manipulative[index].ToString()));
+            }else 
+                MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");
+        }
+            
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color14);

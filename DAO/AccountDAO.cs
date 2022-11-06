@@ -133,5 +133,31 @@ namespace DAO
 
             return searchCategory;
         }
+
+        public DataTable loginAccount(String userName, String password)
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select * from account where username ='"+ userName +"' AND password ='" + password +"'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(data);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return data;
+        }
+
+       
     }
 }

@@ -129,6 +129,7 @@ namespace GUI
                     {
                         if (roleBUS.addRole(roleDTO))
                         {
+                            roleGUI.dataGridView1.DataSource = roleBUS.getAllRole();
                             MessageBox.Show("Thêm thành công");
                             this.Dispose();
                         }

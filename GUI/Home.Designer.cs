@@ -61,6 +61,7 @@ namespace GUI
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panelDestop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_Role = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).BeginInit();
@@ -408,6 +409,7 @@ namespace GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.lbl_Role);
             this.panel1.Controls.Add(this.lblDateNow);
             this.panel1.Controls.Add(this.lblNameCustommer);
             this.panel1.Controls.Add(this.btnProfileCustommer);
@@ -430,7 +432,7 @@ namespace GUI
             this.lblDateNow.AutoSize = true;
             this.lblDateNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateNow.ForeColor = System.Drawing.Color.White;
-            this.lblDateNow.Location = new System.Drawing.Point(449, 41);
+            this.lblDateNow.Location = new System.Drawing.Point(402, 47);
             this.lblDateNow.Name = "lblDateNow";
             this.lblDateNow.Size = new System.Drawing.Size(40, 21);
             this.lblDateNow.TabIndex = 4;
@@ -444,7 +446,7 @@ namespace GUI
             this.lblNameCustommer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.lblNameCustommer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameCustommer.ForeColor = System.Drawing.Color.White;
-            this.lblNameCustommer.Location = new System.Drawing.Point(723, 41);
+            this.lblNameCustommer.Location = new System.Drawing.Point(688, 22);
             this.lblNameCustommer.Name = "lblNameCustommer";
             this.lblNameCustommer.Size = new System.Drawing.Size(73, 21);
             this.lblNameCustommer.TabIndex = 8;
@@ -454,9 +456,9 @@ namespace GUI
             // 
             this.btnProfileCustommer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProfileCustommer.Image = global::GUI.Properties.Resources.profile;
-            this.btnProfileCustommer.Location = new System.Drawing.Point(675, 28);
+            this.btnProfileCustommer.Location = new System.Drawing.Point(629, 12);
             this.btnProfileCustommer.Name = "btnProfileCustommer";
-            this.btnProfileCustommer.Size = new System.Drawing.Size(42, 34);
+            this.btnProfileCustommer.Size = new System.Drawing.Size(53, 59);
             this.btnProfileCustommer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnProfileCustommer.TabIndex = 7;
             this.btnProfileCustommer.TabStop = false;
@@ -468,7 +470,7 @@ namespace GUI
             this.lblTimeNow.AutoSize = true;
             this.lblTimeNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeNow.ForeColor = System.Drawing.Color.White;
-            this.lblTimeNow.Location = new System.Drawing.Point(449, 12);
+            this.lblTimeNow.Location = new System.Drawing.Point(402, 18);
             this.lblTimeNow.Name = "lblTimeNow";
             this.lblTimeNow.Size = new System.Drawing.Size(41, 21);
             this.lblTimeNow.TabIndex = 2;
@@ -580,6 +582,19 @@ namespace GUI
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // lbl_Role
+            // 
+            this.lbl_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Role.AutoSize = true;
+            this.lbl_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.lbl_Role.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Role.ForeColor = System.Drawing.Color.White;
+            this.lbl_Role.Location = new System.Drawing.Point(688, 50);
+            this.lbl_Role.Name = "lbl_Role";
+            this.lbl_Role.Size = new System.Drawing.Size(73, 21);
+            this.lbl_Role.TabIndex = 9;
+            this.lbl_Role.Text = "leonanco";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,5 +653,6 @@ namespace GUI
         private IconButton iconButton1;
         private System.Windows.Forms.Panel panelDestop;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_Role;
     }
 }

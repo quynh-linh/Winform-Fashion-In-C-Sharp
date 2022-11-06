@@ -84,7 +84,7 @@ namespace GUI
             fullName = fullNameAccount.Text;
             password = passwordAccount.Text;
                 email = emailAccount.Text;
-            AccountDTO accountDTO = new AccountDTO(int.Parse(id), username, password, fullName, email, int.Parse(roleId));
+            AccountDTO accountDTO = new AccountDTO(id, username, password, fullName, email, roleId);
             accountBUS.updateAccount(accountDTO);
         }
 
