@@ -49,7 +49,7 @@ namespace BUS
             string email = data_Account.Rows[0][3].ToString();
             string full_name = data_Account.Rows[0][4].ToString();
             string role_id = data_Account.Rows[0][5].ToString();
-            return new AccountDTO(id, username, pass, full_name, email, role_id);
+            return new AccountDTO(Int32.Parse(id), username, pass, full_name, email, role_id);
         }
 
     }

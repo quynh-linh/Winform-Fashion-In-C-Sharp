@@ -8,7 +8,7 @@ namespace DTO
 {
     public class AccountDTO
     {
-        private string account_Id;
+        private int account_Id;
         private string user_Name;
         private string password;
         private string full_Name;
@@ -16,7 +16,7 @@ namespace DTO
         private string role_Id;
 
         public AccountDTO() { }
-        public AccountDTO(string account_Id, string user_Name, string password, string full_Name, string email, string role_Id)
+        public AccountDTO(int account_Id, string user_Name, string password, string full_Name, string email, string role_Id)
         {
             this.account_Id = account_Id;
             this.user_Name = user_Name;
@@ -26,7 +26,7 @@ namespace DTO
             this.role_Id = role_Id;
         }
 
-        public string Account_Id { get => account_Id; set => account_Id = value; }
+        public int Account_Id { get => account_Id; set => account_Id = value; }
         public string User_Name { get => user_Name; set => user_Name = value; }
         public string Password { get => password; set => password = value; }
         public string Full_Name { get => full_Name; set => full_Name = value; }
