@@ -3,16 +3,23 @@ using BUS;
 using DTO;
 using System.Windows.Forms;
 using System.Data;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
     public partial class DiscountGUI : Form
     {
         DiscountBUS dcBUS = new DiscountBUS();
-        public DiscountGUI()
+        public DiscountGUI(string role_Manipulative)
         {
             InitializeComponent();
             fillCombobox();
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                btn_add_discount.Enabled = false;
+                btn_delete_discount.Enabled = false;
+                btn_edit_discount.Enabled = false;
+            }
         }
 
         private void DiscountGUI_Load(object sender, EventArgs e)
@@ -45,7 +52,7 @@ namespace GUI
 
         private void btn_add_discount_Click(object sender, EventArgs e)
         {
-            if(tb_madiscount.Text != "" || cbb_maproduct.Text != "" || tb_giamgia.Text != "" || dtp_startday.Text != "" || dtp_endday.Text != "")
+            if(tb_madiscount.Text != "" && cbb_maproduct.Text != "" && tb_giamgia.Text != "" && dtp_startday.Text != "" && dtp_endday.Text != "")
             {
                 DataRowView br = (DataRowView)cbb_maproduct.SelectedItem;
                 String madiscount = tb_madiscount.Text;

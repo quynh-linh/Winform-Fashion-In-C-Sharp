@@ -9,15 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
     public partial class CustomerGUI : Form
     {
         private CustomerBUS customerBUS = new CustomerBUS();
-        public CustomerGUI()
+        public CustomerGUI(string role_Manipulative)
         {
             InitializeComponent();
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                guna2Button1.Enabled = false;
+                guna2Button4.Enabled = false;
+                guna2Button3.Enabled = false;
+                guna2Button2.Enabled = false;
+                guna2Button5.Enabled = false;
+            }
         }
         // load Dữ liệu từ DB lên form khách hàng
         private void CustomerGUI_Load(object sender, EventArgs e)

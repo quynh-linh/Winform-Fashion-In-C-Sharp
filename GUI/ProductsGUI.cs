@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,9 +24,17 @@ namespace GUI
         SizeProductsBUS sizeProductsBUS = new SizeProductsBUS();
         OpenFileDialog openFileDialog = new OpenFileDialog();
         ProductsBUS productsBUS = new ProductsBUS();
-        public ProductsGUI()
+        public ProductsGUI(string role_Manipulative)
         {
             InitializeComponent();
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                guna2Button5.Enabled = false;
+                guna2Button4.Enabled = false;
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnRemove.Enabled = false;
+            }
         }
         private void loadCBBBrand()
         {

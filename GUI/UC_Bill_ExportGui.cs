@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
     public partial class UC_Bill_ExportGui : UserControl
     {
-        public UC_Bill_ExportGui()
+        public UC_Bill_ExportGui( string role_Manipulative)
         {
             InitializeComponent();
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                guna2Button1.Enabled = false;
+                guna2Button2.Enabled = false;
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

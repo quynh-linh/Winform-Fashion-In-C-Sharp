@@ -317,6 +317,7 @@
             this.guna2Button1.Text = "IN PHIẾU";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.TextOffset = new System.Drawing.Point(20, 0);
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // UC_Bill_ImportGui
             // 

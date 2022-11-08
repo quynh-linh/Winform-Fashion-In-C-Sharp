@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using BUS;
+using DAO;
 using DTO;
 
 namespace GUI
@@ -78,26 +80,34 @@ namespace GUI
 
         private void load_Role_From_Id(string role_Id)
         {
-            RoleDTO role = roleBUS.get_Role_From_Id(role_Id);
-            guna2TextBox1.Text = role.Role_Id;
-            guna2TextBox2.Text = role.Role_Name;
-            string role_Description = role.Role_Desciption;
+            RoleDTO role_DTO = roleBUS.get_Role_From_Id(role_Id);
+            guna2TextBox1.Text = role_DTO.Role_Id;
+            guna2TextBox2.Text = role_DTO.Role_Name;
+            string role_Description = role_DTO.Role_Desciption;
 
             //Tách chuỗi mô tả
             string[] description = role_Description.Split(new string[] { ", " }, StringSplitOptions.None);
+            String[] role;// Lưu trữ 1 tên quyền và khả năng thao tác của quyền đó
+            ArrayList role_Name = new ArrayList(); // Lưu trữ mảng tên quyền
+            ArrayList role_Manipulative = new ArrayList();// Lưu trữ mảng khả năng thao tác của các quyền
 
-            for (int j = 0; j < check_Box.Count; j++)
+            //Thực hiện tách chuỗi và truyền data vào 2 mảng 
+            for (int i = 0; i < description.Length; i++)
             {
-                for (int i = 0; i < description.Length; i++)
-                {
-                    if (check_Box[j].Text == description[i].Split(new string[] { " : " }, StringSplitOptions.None)[0])
-                        check_Box[j].Checked = true;
-
-                    for (int k = 0; k < combo_Box[j].Items.Count; k++)
-                        if (combo_Box[j].Items[k].ToString() == description[i].Split(new string[] { " : " }, StringSplitOptions.None)[1])
-                            combo_Box[j].SelectedIndex = k;
-                }
+                role = description[i].Split(new string[] { " : " }, StringSplitOptions.None);
+                role_Name.Add(role[0]);
+                role_Manipulative.Add(role[1]);
             }
+
+            for (int i = 0; i < role_Name.Count; i++)
+                for (int j = 0; j < check_Box.Count; j++)
+                    if (check_Box[j].Text.Equals(role_Name[i]))
+                    {
+                        check_Box[j].Checked = true;
+                        for (int k = 0; k < combo_Box[j].Items.Count; k++)
+                            if (combo_Box[j].Items[k].ToString().Equals(role_Manipulative[i]))
+                                combo_Box[j].SelectedIndex = k;
+                    }    
         }
 
         //btn add + fix
@@ -122,7 +132,7 @@ namespace GUI
                 {
                     //Xóa dấu , cuối chuỗi
                     role_Description = role_Description.Remove(role_Description.Length - 2);
-                    RoleDTO roleDTO = new RoleDTO(guna2TextBox1.Text, guna2TextBox2.Text, role_Description);
+                    RoleDTO roleDTO = new RoleDTO(guna2TextBox1.Text, guna2TextBox2.Text, role_Description, 0);
 
                     //Tiến hành thêm
                     if (this.Text == "Add Permission")

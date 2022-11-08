@@ -47,7 +47,7 @@ namespace BUS
             string role_Id = data_Role_From_Id.Rows[0][0].ToString();
             string role_Name = data_Role_From_Id.Rows[0][1].ToString();
             string role_Description = data_Role_From_Id.Rows[0][2].ToString();
-            return new RoleDTO(role_Id, role_Name, role_Description);
+            return new RoleDTO(role_Id, role_Name, role_Description, 0);
         }
 
         public Boolean check_Name(String name, string id)
@@ -61,6 +61,11 @@ namespace BUS
             DataTable data = roleDAO.get_Role_Name_From_Role_Id(id);
             string name = data.Rows[0][1].ToString();
             return name;
+        }
+
+        public int count()
+        {
+            return roleDAO.count().Rows.Count;
         }
     }
 }

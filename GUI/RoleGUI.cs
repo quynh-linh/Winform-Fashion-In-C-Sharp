@@ -27,15 +27,7 @@ namespace GUI
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             //Tự sinh ID
-            string check_Id = "";
-            int num = 0;
-            for( int i = 0; i< dataGridView1.RowCount; i++)
-            {
-                check_Id = "Q" + num;
-                if ( check_Id == dataGridView1.Rows[i].Cells[0].FormattedValue.ToString()) num++;
-            }
-
-            string Id = "Q" + num;
+            string Id = "Q" + roleBUS.count();
             Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Add Permission","Thêm",Id, this);
             a.Show();
         }

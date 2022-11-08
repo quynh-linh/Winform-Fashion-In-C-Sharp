@@ -42,5 +42,10 @@ namespace BUS
             if (categoryDAO.check_Name(id, name).Rows.Count > 0) return true;
             return false;
         }
+
+        public int count()
+        {
+            return categoryDAO.count().Rows.Count;
+        }
     }
 }

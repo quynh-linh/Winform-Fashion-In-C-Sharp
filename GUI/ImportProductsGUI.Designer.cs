@@ -349,6 +349,7 @@
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton2.Size = new System.Drawing.Size(93, 30);
             this.guna2ImageButton2.TabIndex = 16;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
             // 
             // guna2TextBox6
             // 

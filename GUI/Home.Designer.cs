@@ -48,6 +48,7 @@ namespace GUI
             this.btnLogoHome = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_Role = new System.Windows.Forms.Label();
             this.lblDateNow = new System.Windows.Forms.Label();
             this.lblNameCustommer = new System.Windows.Forms.Label();
             this.btnProfileCustommer = new System.Windows.Forms.PictureBox();
@@ -61,7 +62,6 @@ namespace GUI
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panelDestop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_Role = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).BeginInit();
@@ -426,6 +426,19 @@ namespace GUI
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // lbl_Role
+            // 
+            this.lbl_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Role.AutoSize = true;
+            this.lbl_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.lbl_Role.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Role.ForeColor = System.Drawing.Color.White;
+            this.lbl_Role.Location = new System.Drawing.Point(688, 50);
+            this.lbl_Role.Name = "lbl_Role";
+            this.lbl_Role.Size = new System.Drawing.Size(73, 21);
+            this.lbl_Role.TabIndex = 9;
+            this.lbl_Role.Text = "leonanco";
+            // 
             // lblDateNow
             // 
             this.lblDateNow.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -580,20 +593,6 @@ namespace GUI
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // lbl_Role
-            // 
-            this.lbl_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Role.AutoSize = true;
-            this.lbl_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.lbl_Role.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Role.ForeColor = System.Drawing.Color.White;
-            this.lbl_Role.Location = new System.Drawing.Point(688, 50);
-            this.lbl_Role.Name = "lbl_Role";
-            this.lbl_Role.Size = new System.Drawing.Size(73, 21);
-            this.lbl_Role.TabIndex = 9;
-            this.lbl_Role.Text = "leonanco";
             // 
             // Home
             // 

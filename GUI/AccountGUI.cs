@@ -16,11 +16,18 @@ namespace GUI
     {
         private AccountDTO accountDTO;
         private AccountBUS accountBUS = new AccountBUS();
-        public AccountGUI()
+        public AccountGUI( string role_Manipulative)
         {
             InitializeComponent();
-          
-       
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                guna2Button1.Enabled = false;
+                guna2Button4.Enabled = false;
+                guna2Button3.Enabled = false;
+                guna2Button2.Enabled = false;
+                guna2Button6.Enabled = false;
+            }
+
         }
 
 

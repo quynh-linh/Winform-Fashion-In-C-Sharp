@@ -18,10 +18,18 @@ namespace GUI
         private BrandBUS brBUS = new BrandBUS();
         
        
-        public BrandGUI()
+        public BrandGUI(string role_Manipulative)
         {
             InitializeComponent();
-            
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                btn_addBrand.Enabled = false;
+                btn_deleteBrand.Enabled = false;
+                btn_editBrand.Enabled = false;
+                btn_exportExcelBrand.Enabled = false;
+                btn_importExcelBrand.Enabled = false;
+            }
+
         }
 
         public void BrandGUI_Load(object sender, EventArgs e)

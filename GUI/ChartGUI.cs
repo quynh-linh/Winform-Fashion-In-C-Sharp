@@ -7,16 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
     public partial class ChartGUI : Form
     {
         private Form currentChildForm;
-        public ChartGUI()
+        private string role_Manipulative;
+        public ChartGUI(string role_Manipulative)
         {
             InitializeComponent();
-            OpenChildForm(new ChartHomeGUI());
+            this.role_Manipulative = role_Manipulative;
+            OpenChildForm(new ChartHomeGUI(role_Manipulative));
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                button1.Enabled = false;
+                iconButton4.Enabled = false;
+                iconButton5.Enabled = false;
+                button2.Enabled = false;
+                iconButton6.Enabled = false;
+                iconButton7.Enabled = false;
+            }
         }
 
         private void OpenChildForm(Form form)
@@ -52,7 +64,7 @@ namespace GUI
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChartHomeGUI());
+            OpenChildForm(new ChartHomeGUI(role_Manipulative));
         }
 
         private void iconButton6_Click(object sender, EventArgs e)

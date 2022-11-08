@@ -2,15 +2,24 @@
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
     public partial class CategoryGUI : Form
     {
         CategoryBUS categoryBUS = new CategoryBUS();
-        public CategoryGUI()
+        public CategoryGUI(string role_Manipulative)
         {
             InitializeComponent();
+            if (!role_Manipulative.Equals("Được thay đổi"))
+            {
+                create_Id.Enabled = false;
+                btn_Add.Enabled = false;
+                btn_Delete.Enabled = false;
+                btn_Fix.Enabled = false;
+            }
+            txt_Id_Category.Text = "CT" + categoryBUS.count();
         }
 
         private void CategoryGUI_Load(object sender, EventArgs e)
@@ -45,7 +54,7 @@ namespace GUI
 
                 if (flag)
                 {
-                    CategoryDTO categoryDTO = new CategoryDTO(txt_Id_Category.Text, txt_Name_Category.Text);
+                    CategoryDTO categoryDTO = new CategoryDTO(txt_Id_Category.Text, txt_Name_Category.Text,0);
 
                     if (categoryBUS.addCategory(categoryDTO))
                     {
@@ -72,7 +81,7 @@ namespace GUI
                 }
                 else
                 {
-                    CategoryDTO categoryDTO = new CategoryDTO(id, name);
+                    CategoryDTO categoryDTO = new CategoryDTO(id, name,0);
 
                     if (categoryBUS.fixCategory(categoryDTO))
                     {
@@ -117,20 +126,8 @@ namespace GUI
         //Nút tạo mã
         private void create_Id_Click(object sender, EventArgs e)
         {
-            reloaddatagridView();
-            string Id = "CT";
-            int num = 0;
-
-            //check Id có trùng vs các Id đã tồn tại hay k
-            string check_Id;
-            for (int i = 0; i < dataGridViewCategory.Rows.Count; i++)
-            {
-                check_Id = Id + num + "";
-                if (check_Id == dataGridViewCategory.Rows[i].Cells[0].FormattedValue.ToString())
-                    num++;
-            }
-            Id += num + "";
-            txt_Id_Category.Text = Id;
+            reloaddatagridView();           
+            txt_Id_Category.Text = "CT" + categoryBUS.count(); 
         }
 
         //Search

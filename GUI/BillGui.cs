@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
     public partial class BillGui : Form
     {
-        public BillGui()
+        string role_Manipulative;
+        public BillGui(string role_Manipulative)
         {
             InitializeComponent();
-            UC_Bill_ImportGui uC_Bill_ImportGui = new UC_Bill_ImportGui();
+            this.role_Manipulative = role_Manipulative;
+            UC_Bill_ImportGui uC_Bill_ImportGui = new UC_Bill_ImportGui(role_Manipulative);
             addUserControl(uC_Bill_ImportGui);
         }
 
@@ -28,13 +31,13 @@ namespace GUI
         }
         private void BtnBillImport_Click(object sender, EventArgs e)
         {
-            UC_Bill_ImportGui uC_Bill_ImportGui = new UC_Bill_ImportGui();
+            UC_Bill_ImportGui uC_Bill_ImportGui = new UC_Bill_ImportGui(role_Manipulative);
             addUserControl(uC_Bill_ImportGui);
         }
 
         private void BtnBillExport_Click(object sender, EventArgs e)
         {
-            UC_Bill_ExportGui uC_Bill_ExportGui = new UC_Bill_ExportGui();
+            UC_Bill_ExportGui uC_Bill_ExportGui = new UC_Bill_ExportGui(role_Manipulative);
             addUserControl(uC_Bill_ExportGui);
         }
     }
