@@ -433,7 +433,6 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartHomeGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartProductGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartStaffGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.RoleGUI.resources
-D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.SaleGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.SellGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Sell_DetailGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_ExportGui.resources
@@ -616,3 +615,4 @@ C:\Users\84768\Desktop\Thanh\GUI\obj\Debug\GUI.csproj.Fody.CopyLocal.cache
 C:\Users\84768\Desktop\Thanh\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\84768\Desktop\Thanh\GUI\obj\Debug\GUI.exe
 C:\Users\84768\Desktop\Thanh\GUI\obj\Debug\GUI.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.DiscountGUI.resources

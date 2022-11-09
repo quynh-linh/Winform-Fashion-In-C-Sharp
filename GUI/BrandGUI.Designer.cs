@@ -54,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.panel1.Controls.Add(this.guna2Panel2);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -66,7 +67,8 @@
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2Panel2.BorderColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderRadius = 5;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel2.BorderThickness = 1;
@@ -160,7 +162,8 @@
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2Panel1.BorderColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel1.BorderThickness = 1;
@@ -181,12 +184,14 @@
             // btn_exportExcelBrand
             // 
             this.btn_exportExcelBrand.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_exportExcelBrand.BorderColor = System.Drawing.Color.White;
             this.btn_exportExcelBrand.BorderRadius = 5;
+            this.btn_exportExcelBrand.BorderThickness = 3;
             this.btn_exportExcelBrand.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_exportExcelBrand.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_exportExcelBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_exportExcelBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_exportExcelBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_exportExcelBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
             this.btn_exportExcelBrand.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_exportExcelBrand.ForeColor = System.Drawing.Color.White;
             this.btn_exportExcelBrand.Location = new System.Drawing.Point(682, 99);
@@ -198,12 +203,14 @@
             // btn_importExcelBrand
             // 
             this.btn_importExcelBrand.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_importExcelBrand.BorderColor = System.Drawing.Color.White;
             this.btn_importExcelBrand.BorderRadius = 5;
+            this.btn_importExcelBrand.BorderThickness = 3;
             this.btn_importExcelBrand.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_importExcelBrand.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_importExcelBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_importExcelBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_importExcelBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_importExcelBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
             this.btn_importExcelBrand.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_importExcelBrand.ForeColor = System.Drawing.Color.White;
             this.btn_importExcelBrand.Location = new System.Drawing.Point(515, 99);
@@ -215,12 +222,14 @@
             // btn_deleteBrand
             // 
             this.btn_deleteBrand.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_deleteBrand.BorderColor = System.Drawing.Color.White;
             this.btn_deleteBrand.BorderRadius = 5;
+            this.btn_deleteBrand.BorderThickness = 3;
             this.btn_deleteBrand.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_deleteBrand.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_deleteBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_deleteBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_deleteBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_deleteBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
             this.btn_deleteBrand.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_deleteBrand.ForeColor = System.Drawing.Color.White;
             this.btn_deleteBrand.Location = new System.Drawing.Point(352, 99);
@@ -233,12 +242,14 @@
             // btn_editBrand
             // 
             this.btn_editBrand.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_editBrand.BorderColor = System.Drawing.Color.White;
             this.btn_editBrand.BorderRadius = 5;
+            this.btn_editBrand.BorderThickness = 3;
             this.btn_editBrand.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_editBrand.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_editBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_editBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_editBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_editBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
             this.btn_editBrand.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_editBrand.ForeColor = System.Drawing.Color.White;
             this.btn_editBrand.Location = new System.Drawing.Point(189, 99);
@@ -251,12 +262,14 @@
             // btn_addBrand
             // 
             this.btn_addBrand.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_addBrand.BorderColor = System.Drawing.Color.White;
             this.btn_addBrand.BorderRadius = 5;
+            this.btn_addBrand.BorderThickness = 3;
             this.btn_addBrand.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_addBrand.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_addBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_addBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_addBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_addBrand.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
             this.btn_addBrand.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_addBrand.ForeColor = System.Drawing.Color.White;
             this.btn_addBrand.Location = new System.Drawing.Point(24, 99);

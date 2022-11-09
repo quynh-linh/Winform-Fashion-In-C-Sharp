@@ -83,6 +83,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_MLL {
+            get {
+                object obj = ResourceManager.GetObject("background_MLL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background_mlll {
+            get {
+                object obj = ResourceManager.GetObject("background_mlll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cart_add_icon {
             get {
                 object obj = ResourceManager.GetObject("Cart_add_icon", resourceCulture);
@@ -203,9 +223,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mll_logo {
+        internal static System.Drawing.Bitmap mll_logooo {
             get {
-                object obj = ResourceManager.GetObject("mll_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("mll_logooo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

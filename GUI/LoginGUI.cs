@@ -142,5 +142,10 @@ namespace GUI
                 Properties.Settings.Default.Save();
             }
         }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

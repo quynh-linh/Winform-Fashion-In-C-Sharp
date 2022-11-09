@@ -30,6 +30,11 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_discount = new System.Windows.Forms.DataGridView();
+            this.maDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sale_percent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.start_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.end_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,11 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_madiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sale_percent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.start_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.end_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_discount)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -62,7 +62,8 @@
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2Panel1.BorderColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.dgv_discount);
@@ -88,6 +89,41 @@
             this.dgv_discount.Size = new System.Drawing.Size(865, 290);
             this.dgv_discount.TabIndex = 30;
             this.dgv_discount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_discount_CellClick);
+            // 
+            // maDiscount
+            // 
+            this.maDiscount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maDiscount.DataPropertyName = "maDiscount";
+            this.maDiscount.HeaderText = "Mã Giảm Giá";
+            this.maDiscount.Name = "maDiscount";
+            // 
+            // nameProduct
+            // 
+            this.nameProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameProduct.DataPropertyName = "nameProduct";
+            this.nameProduct.HeaderText = "Tên Sản Phẩm";
+            this.nameProduct.Name = "nameProduct";
+            // 
+            // sale_percent
+            // 
+            this.sale_percent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sale_percent.DataPropertyName = "sale_percent";
+            this.sale_percent.HeaderText = "Giảm Giá";
+            this.sale_percent.Name = "sale_percent";
+            // 
+            // start_day
+            // 
+            this.start_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.start_day.DataPropertyName = "start_day";
+            this.start_day.HeaderText = "Ngày Bắt Đầu";
+            this.start_day.Name = "start_day";
+            // 
+            // end_day
+            // 
+            this.end_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.end_day.DataPropertyName = "end_day";
+            this.end_day.HeaderText = "Ngày Kết Thúc";
+            this.end_day.Name = "end_day";
             // 
             // guna2ImageButton1
             // 
@@ -141,7 +177,8 @@
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2Panel2.BorderColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label6);
@@ -178,7 +215,7 @@
             // 
             this.cbb_maproduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbb_maproduct.BackColor = System.Drawing.Color.Transparent;
-            this.cbb_maproduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.cbb_maproduct.BorderColor = System.Drawing.Color.White;
             this.cbb_maproduct.BorderRadius = 15;
             this.cbb_maproduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbb_maproduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -195,18 +232,21 @@
             // btn_delete_discount
             // 
             this.btn_delete_discount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_delete_discount.BackColor = System.Drawing.Color.Black;
+            this.btn_delete_discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.btn_delete_discount.BorderColor = System.Drawing.Color.White;
             this.btn_delete_discount.BorderRadius = 5;
+            this.btn_delete_discount.BorderThickness = 3;
             this.btn_delete_discount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_delete_discount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_delete_discount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_delete_discount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_delete_discount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_delete_discount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btn_delete_discount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete_discount.ForeColor = System.Drawing.Color.White;
             this.btn_delete_discount.Location = new System.Drawing.Point(613, 136);
             this.btn_delete_discount.MaximumSize = new System.Drawing.Size(200, 200);
             this.btn_delete_discount.Name = "btn_delete_discount";
+            this.btn_delete_discount.PressedColor = System.Drawing.Color.Aqua;
             this.btn_delete_discount.Size = new System.Drawing.Size(121, 40);
             this.btn_delete_discount.TabIndex = 33;
             this.btn_delete_discount.Text = "Xóa";
@@ -215,18 +255,21 @@
             // btn_edit_discount
             // 
             this.btn_edit_discount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_edit_discount.BackColor = System.Drawing.Color.Black;
+            this.btn_edit_discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.btn_edit_discount.BorderColor = System.Drawing.Color.White;
             this.btn_edit_discount.BorderRadius = 5;
+            this.btn_edit_discount.BorderThickness = 3;
             this.btn_edit_discount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_edit_discount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_edit_discount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_edit_discount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_edit_discount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_edit_discount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btn_edit_discount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit_discount.ForeColor = System.Drawing.Color.White;
             this.btn_edit_discount.Location = new System.Drawing.Point(432, 136);
             this.btn_edit_discount.MaximumSize = new System.Drawing.Size(200, 200);
             this.btn_edit_discount.Name = "btn_edit_discount";
+            this.btn_edit_discount.PressedColor = System.Drawing.Color.Aqua;
             this.btn_edit_discount.Size = new System.Drawing.Size(121, 40);
             this.btn_edit_discount.TabIndex = 32;
             this.btn_edit_discount.Text = "Sửa";
@@ -235,18 +278,21 @@
             // btn_add_discount
             // 
             this.btn_add_discount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_add_discount.BackColor = System.Drawing.Color.Black;
+            this.btn_add_discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.btn_add_discount.BorderColor = System.Drawing.Color.White;
             this.btn_add_discount.BorderRadius = 5;
+            this.btn_add_discount.BorderThickness = 3;
             this.btn_add_discount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_add_discount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_add_discount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_add_discount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_add_discount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_add_discount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btn_add_discount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_discount.ForeColor = System.Drawing.Color.White;
             this.btn_add_discount.Location = new System.Drawing.Point(267, 136);
             this.btn_add_discount.MaximumSize = new System.Drawing.Size(200, 200);
             this.btn_add_discount.Name = "btn_add_discount";
+            this.btn_add_discount.PressedColor = System.Drawing.Color.Aqua;
             this.btn_add_discount.Size = new System.Drawing.Size(121, 40);
             this.btn_add_discount.TabIndex = 31;
             this.btn_add_discount.Text = "Thêm";
@@ -255,7 +301,7 @@
             // dtp_endday
             // 
             this.dtp_endday.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtp_endday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.dtp_endday.BorderColor = System.Drawing.Color.White;
             this.dtp_endday.BorderRadius = 15;
             this.dtp_endday.BorderThickness = 1;
             this.dtp_endday.Checked = true;
@@ -286,7 +332,7 @@
             // dtp_startday
             // 
             this.dtp_startday.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtp_startday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.dtp_startday.BorderColor = System.Drawing.Color.White;
             this.dtp_startday.BorderRadius = 15;
             this.dtp_startday.BorderThickness = 1;
             this.dtp_startday.Checked = true;
@@ -317,7 +363,7 @@
             // tb_giamgia
             // 
             this.tb_giamgia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tb_giamgia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.tb_giamgia.BorderColor = System.Drawing.Color.White;
             this.tb_giamgia.BorderRadius = 15;
             this.tb_giamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_giamgia.DefaultText = "";
@@ -351,7 +397,7 @@
             // tb_madiscount
             // 
             this.tb_madiscount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tb_madiscount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.tb_madiscount.BorderColor = System.Drawing.Color.White;
             this.tb_madiscount.BorderRadius = 15;
             this.tb_madiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_madiscount.DefaultText = "";
@@ -382,46 +428,11 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã Khuyễn Mãi :";
             // 
-            // maDiscount
-            // 
-            this.maDiscount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maDiscount.DataPropertyName = "maDiscount";
-            this.maDiscount.HeaderText = "Mã Giảm Giá";
-            this.maDiscount.Name = "maDiscount";
-            // 
-            // nameProduct
-            // 
-            this.nameProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameProduct.DataPropertyName = "nameProduct";
-            this.nameProduct.HeaderText = "Tên Sản Phẩm";
-            this.nameProduct.Name = "nameProduct";
-            // 
-            // sale_percent
-            // 
-            this.sale_percent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sale_percent.DataPropertyName = "sale_percent";
-            this.sale_percent.HeaderText = "Giảm Giá";
-            this.sale_percent.Name = "sale_percent";
-            // 
-            // start_day
-            // 
-            this.start_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.start_day.DataPropertyName = "start_day";
-            this.start_day.HeaderText = "Ngày Bắt Đầu";
-            this.start_day.Name = "start_day";
-            // 
-            // end_day
-            // 
-            this.end_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.end_day.DataPropertyName = "end_day";
-            this.end_day.HeaderText = "Ngày Kết Thúc";
-            this.end_day.Name = "end_day";
-            // 
             // DiscountGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(878, 554);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);

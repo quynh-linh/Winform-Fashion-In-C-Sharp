@@ -25,7 +25,7 @@ namespace DAO
         {
             string host = "localhost";
             int port = 3306;
-            string database = "csdl_cchrap";
+            string database = "doan_ccharp";
             string username = "root";
             string password = "";
             return MySQLConnection.GetDBConnection(host, port, database, username, password);

@@ -521,9 +521,6 @@
     <None Include="Resources\MLL.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icon_cart.png" />
   </ItemGroup>
   <ItemGroup>
@@ -570,6 +567,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mll_logo.png" />
+    <None Include="Resources\mll_logooo.png" />
+    <None Include="Resources\background_mlll.png" />
+    <None Include="Resources\background_MLL.png" />
+    <None Include="Resources\background.png" />
     <Content Include="Resources\product_avt.png" />
     <Content Include="Resources\staff_avt.png" />
   </ItemGroup>

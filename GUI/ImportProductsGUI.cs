@@ -13,15 +13,15 @@ namespace GUI
 {
     public partial class ImportProductsGUI : Form
     {
-        public ImportProductsGUI(string role_Manipulative)
+        public ImportProductsGUI(string role_Manipulative , string name_Id)
         {
             InitializeComponent();
             if (!role_Manipulative.Equals("Nhập hàng "))
             {
-                guna2ImageButton2.Enabled = false;
-                guna2ImageButton5.Enabled = false;
-                guna2ImageButton6.Enabled = false;
-            }      
+                
+                
+            }
+            
         }
 
         private void ImportProductsGUI_Load(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace GUI
         }
 
         private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

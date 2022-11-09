@@ -42,6 +42,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.panel1.Controls.Add(this.BtnBillExport);
             this.panel1.Controls.Add(this.BtnBillImport);
             this.panel1.Location = new System.Drawing.Point(0, 42);
@@ -72,6 +73,7 @@
             // 
             // BtnBillImport
             // 
+            this.BtnBillImport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.BtnBillImport.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.BtnBillImport.Checked = true;
             this.BtnBillImport.CheckedState.CustomBorderColor = System.Drawing.Color.White;
@@ -81,11 +83,12 @@
             this.BtnBillImport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BtnBillImport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BtnBillImport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnBillImport.FillColor = System.Drawing.Color.Black;
+            this.BtnBillImport.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnBillImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnBillImport.ForeColor = System.Drawing.Color.White;
             this.BtnBillImport.Location = new System.Drawing.Point(43, 15);
             this.BtnBillImport.Name = "BtnBillImport";
+            this.BtnBillImport.PressedColor = System.Drawing.SystemColors.ButtonShadow;
             this.BtnBillImport.Size = new System.Drawing.Size(285, 45);
             this.BtnBillImport.TabIndex = 1;
             this.BtnBillImport.Text = "Phiếu Nhập";
@@ -96,6 +99,7 @@
             this.panelBillContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBillContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.panelBillContainer.Location = new System.Drawing.Point(0, 115);
             this.panelBillContainer.Name = "panelBillContainer";
             this.panelBillContainer.Size = new System.Drawing.Size(741, 581);
@@ -103,6 +107,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.panel2.Controls.Add(this.TbSearch);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -112,7 +117,7 @@
             // TbSearch
             // 
             this.TbSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TbSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.TbSearch.BorderColor = System.Drawing.Color.White;
             this.TbSearch.BorderRadius = 15;
             this.TbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TbSearch.DefaultText = "Tìm kiếm";
@@ -137,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(741, 660);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelBillContainer);
