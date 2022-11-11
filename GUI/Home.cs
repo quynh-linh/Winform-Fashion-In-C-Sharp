@@ -28,6 +28,7 @@ namespace GUI
         private AccountBUS account_BUS = new AccountBUS();
         public AccountDTO account_DTO;
         public String full_name_Account;
+        public int id_staff;
         
         public Home(AccountDTO account_DTO)
         {
@@ -35,6 +36,7 @@ namespace GUI
             this.account_DTO = account_DTO;
             lblNameCustommer.Text = account_DTO.Full_Name;
             full_name_Account = account_DTO.Full_Name;
+            id_staff = account_DTO.Account_Id;
             //lbl_Role.Text = role_BUS.get_Role_Name_From_Role_Id(account_DTO.Role_Id);
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 53);
@@ -232,7 +234,7 @@ namespace GUI
             if (check_Role("Nhập hàng") != null)
             {
                 ActivateButton(sender, RGBColor.color4);
-                OpenChildForm(new ImportProductsGUI(check_Role("Nhập hàng"), full_name_Account));
+                OpenChildForm(new ImportProductsGUI(check_Role("Nhập hàng"), full_name_Account , id_staff));
             }
             else
                 MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");
@@ -348,6 +350,11 @@ namespace GUI
         }
 
         private void lblNameCustommer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDateNow_Click(object sender, EventArgs e)
         {
 
         }

@@ -32,23 +32,6 @@ namespace GUI
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_Role = new System.Windows.Forms.Label();
-            this.lblDateNow = new System.Windows.Forms.Label();
-            this.lblNameCustommer = new System.Windows.Forms.Label();
-            this.lblTimeNow = new System.Windows.Forms.Label();
-            this.lblTitleChildForm = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.panelDestop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnProfileCustommer = new System.Windows.Forms.PictureBox();
-            this.btnMaximize = new FontAwesome.Sharp.IconButton();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.btnPermission = new FontAwesome.Sharp.IconButton();
@@ -61,14 +44,31 @@ namespace GUI
             this.btnAddProduct = new FontAwesome.Sharp.IconButton();
             this.btnSell = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.btnLogoHome = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_Role = new System.Windows.Forms.Label();
+            this.lblDateNow = new System.Windows.Forms.Label();
+            this.lblNameCustommer = new System.Windows.Forms.Label();
+            this.btnProfileCustommer = new System.Windows.Forms.PictureBox();
+            this.lblTimeNow = new System.Windows.Forms.Label();
+            this.btnMaximize = new FontAwesome.Sharp.IconButton();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.lblTitleChildForm = new System.Windows.Forms.Label();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.panelDestop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).BeginInit();
             this.panelDestop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -92,212 +92,6 @@ namespace GUI
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 713);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.Black;
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelLogo.Controls.Add(this.btnLogoHome);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
-            this.panel1.Controls.Add(this.lbl_Role);
-            this.panel1.Controls.Add(this.lblDateNow);
-            this.panel1.Controls.Add(this.lblNameCustommer);
-            this.panel1.Controls.Add(this.btnProfileCustommer);
-            this.panel1.Controls.Add(this.lblTimeNow);
-            this.panel1.Controls.Add(this.btnMaximize);
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.lblTitleChildForm);
-            this.panel1.Controls.Add(this.iconCurrentChildForm);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(220, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(808, 80);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // lbl_Role
-            // 
-            this.lbl_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Role.AutoSize = true;
-            this.lbl_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
-            this.lbl_Role.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Role.ForeColor = System.Drawing.Color.White;
-            this.lbl_Role.Location = new System.Drawing.Point(688, 50);
-            this.lbl_Role.Name = "lbl_Role";
-            this.lbl_Role.Size = new System.Drawing.Size(73, 21);
-            this.lbl_Role.TabIndex = 9;
-            this.lbl_Role.Text = "leonanco";
-            // 
-            // lblDateNow
-            // 
-            this.lblDateNow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDateNow.AutoSize = true;
-            this.lblDateNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateNow.ForeColor = System.Drawing.Color.White;
-            this.lblDateNow.Location = new System.Drawing.Point(402, 47);
-            this.lblDateNow.Name = "lblDateNow";
-            this.lblDateNow.Size = new System.Drawing.Size(40, 21);
-            this.lblDateNow.TabIndex = 4;
-            this.lblDateNow.Text = "date";
-            this.lblDateNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNameCustommer
-            // 
-            this.lblNameCustommer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNameCustommer.AutoSize = true;
-            this.lblNameCustommer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
-            this.lblNameCustommer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameCustommer.ForeColor = System.Drawing.Color.White;
-            this.lblNameCustommer.Location = new System.Drawing.Point(688, 22);
-            this.lblNameCustommer.Name = "lblNameCustommer";
-            this.lblNameCustommer.Size = new System.Drawing.Size(73, 21);
-            this.lblNameCustommer.TabIndex = 8;
-            this.lblNameCustommer.Text = "leonanco";
-            this.lblNameCustommer.Click += new System.EventHandler(this.lblNameCustommer_Click);
-            // 
-            // lblTimeNow
-            // 
-            this.lblTimeNow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTimeNow.AutoSize = true;
-            this.lblTimeNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeNow.ForeColor = System.Drawing.Color.White;
-            this.lblTimeNow.Location = new System.Drawing.Point(402, 18);
-            this.lblTimeNow.Name = "lblTimeNow";
-            this.lblTimeNow.Size = new System.Drawing.Size(41, 21);
-            this.lblTimeNow.TabIndex = 2;
-            this.lblTimeNow.Text = "time";
-            this.lblTimeNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTitleChildForm
-            // 
-            this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
-            this.lblTitleChildForm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(79, 28);
-            this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(62, 25);
-            this.lblTitleChildForm.TabIndex = 1;
-            this.lblTitleChildForm.Text = "Home";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panelDestop
-            // 
-            this.panelDestop.Controls.Add(this.pictureBox1);
-            this.panelDestop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDestop.Location = new System.Drawing.Point(220, 80);
-            this.panelDestop.Name = "panelDestop";
-            this.panelDestop.Size = new System.Drawing.Size(808, 633);
-            this.panelDestop.TabIndex = 2;
-            this.panelDestop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.background;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(808, 633);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnProfileCustommer
-            // 
-            this.btnProfileCustommer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProfileCustommer.Image = global::GUI.Properties.Resources.profile;
-            this.btnProfileCustommer.Location = new System.Drawing.Point(629, 12);
-            this.btnProfileCustommer.Name = "btnProfileCustommer";
-            this.btnProfileCustommer.Size = new System.Drawing.Size(53, 59);
-            this.btnProfileCustommer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnProfileCustommer.TabIndex = 7;
-            this.btnProfileCustommer.TabStop = false;
-            this.btnProfileCustommer.Click += new System.EventHandler(this.btnProfileCustommer_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btnMaximize.IconColor = System.Drawing.Color.White;
-            this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(767, 3);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(16, 16);
-            this.btnMaximize.TabIndex = 4;
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimize.IconColor = System.Drawing.Color.White;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(745, 3);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(16, 16);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
-            this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 20;
-            this.btnExit.Location = new System.Drawing.Point(789, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(16, 16);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.iconCurrentChildForm.FlatAppearance.BorderSize = 0;
-            this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 32;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(22, 18);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(51, 47);
-            this.iconCurrentChildForm.TabIndex = 0;
-            this.iconCurrentChildForm.UseVisualStyleBackColor = true;
             // 
             // iconButton1
             // 
@@ -584,6 +378,17 @@ namespace GUI
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.Black;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelLogo.Controls.Add(this.btnLogoHome);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
             // btnLogoHome
             // 
             this.btnLogoHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
@@ -595,6 +400,202 @@ namespace GUI
             this.btnLogoHome.TabIndex = 0;
             this.btnLogoHome.TabStop = false;
             this.btnLogoHome.Click += new System.EventHandler(this.btnLogoHome_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.lbl_Role);
+            this.panel1.Controls.Add(this.lblDateNow);
+            this.panel1.Controls.Add(this.lblNameCustommer);
+            this.panel1.Controls.Add(this.btnProfileCustommer);
+            this.panel1.Controls.Add(this.lblTimeNow);
+            this.panel1.Controls.Add(this.btnMaximize);
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.lblTitleChildForm);
+            this.panel1.Controls.Add(this.iconCurrentChildForm);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(220, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(808, 80);
+            this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // lbl_Role
+            // 
+            this.lbl_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Role.AutoSize = true;
+            this.lbl_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
+            this.lbl_Role.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Role.ForeColor = System.Drawing.Color.White;
+            this.lbl_Role.Location = new System.Drawing.Point(688, 50);
+            this.lbl_Role.Name = "lbl_Role";
+            this.lbl_Role.Size = new System.Drawing.Size(73, 21);
+            this.lbl_Role.TabIndex = 9;
+            this.lbl_Role.Text = "leonanco";
+            // 
+            // lblDateNow
+            // 
+            this.lblDateNow.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDateNow.AutoSize = true;
+            this.lblDateNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateNow.ForeColor = System.Drawing.Color.White;
+            this.lblDateNow.Location = new System.Drawing.Point(402, 47);
+            this.lblDateNow.Name = "lblDateNow";
+            this.lblDateNow.Size = new System.Drawing.Size(40, 21);
+            this.lblDateNow.TabIndex = 4;
+            this.lblDateNow.Text = "date";
+            this.lblDateNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDateNow.Click += new System.EventHandler(this.lblDateNow_Click);
+            // 
+            // lblNameCustommer
+            // 
+            this.lblNameCustommer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNameCustommer.AutoSize = true;
+            this.lblNameCustommer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
+            this.lblNameCustommer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameCustommer.ForeColor = System.Drawing.Color.White;
+            this.lblNameCustommer.Location = new System.Drawing.Point(688, 22);
+            this.lblNameCustommer.Name = "lblNameCustommer";
+            this.lblNameCustommer.Size = new System.Drawing.Size(73, 21);
+            this.lblNameCustommer.TabIndex = 8;
+            this.lblNameCustommer.Text = "leonanco";
+            this.lblNameCustommer.Click += new System.EventHandler(this.lblNameCustommer_Click);
+            // 
+            // btnProfileCustommer
+            // 
+            this.btnProfileCustommer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProfileCustommer.Image = global::GUI.Properties.Resources.profile;
+            this.btnProfileCustommer.Location = new System.Drawing.Point(629, 12);
+            this.btnProfileCustommer.Name = "btnProfileCustommer";
+            this.btnProfileCustommer.Size = new System.Drawing.Size(53, 59);
+            this.btnProfileCustommer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnProfileCustommer.TabIndex = 7;
+            this.btnProfileCustommer.TabStop = false;
+            this.btnProfileCustommer.Click += new System.EventHandler(this.btnProfileCustommer_Click);
+            // 
+            // lblTimeNow
+            // 
+            this.lblTimeNow.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTimeNow.AutoSize = true;
+            this.lblTimeNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeNow.ForeColor = System.Drawing.Color.White;
+            this.lblTimeNow.Location = new System.Drawing.Point(402, 18);
+            this.lblTimeNow.Name = "lblTimeNow";
+            this.lblTimeNow.Size = new System.Drawing.Size(41, 21);
+            this.lblTimeNow.TabIndex = 2;
+            this.lblTimeNow.Text = "time";
+            this.lblTimeNow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.btnMaximize.IconColor = System.Drawing.Color.White;
+            this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximize.IconSize = 20;
+            this.btnMaximize.Location = new System.Drawing.Point(767, 3);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(16, 16);
+            this.btnMaximize.TabIndex = 4;
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimize.IconColor = System.Drawing.Color.White;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 20;
+            this.btnMinimize.Location = new System.Drawing.Point(745, 3);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(16, 16);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.btnExit.IconColor = System.Drawing.Color.White;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 20;
+            this.btnExit.Location = new System.Drawing.Point(789, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(16, 16);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblTitleChildForm
+            // 
+            this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
+            this.lblTitleChildForm.Location = new System.Drawing.Point(79, 28);
+            this.lblTitleChildForm.Name = "lblTitleChildForm";
+            this.lblTitleChildForm.Size = new System.Drawing.Size(62, 25);
+            this.lblTitleChildForm.TabIndex = 1;
+            this.lblTitleChildForm.Text = "Home";
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.iconCurrentChildForm.FlatAppearance.BorderSize = 0;
+            this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 32;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(22, 18);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(51, 47);
+            this.iconCurrentChildForm.TabIndex = 0;
+            this.iconCurrentChildForm.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panelDestop
+            // 
+            this.panelDestop.Controls.Add(this.pictureBox1);
+            this.panelDestop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDestop.Location = new System.Drawing.Point(220, 80);
+            this.panelDestop.Name = "panelDestop";
+            this.panelDestop.Size = new System.Drawing.Size(808, 633);
+            this.panelDestop.TabIndex = 2;
+            this.panelDestop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.background;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(808, 633);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
@@ -612,12 +613,12 @@ namespace GUI
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).EndInit();
             this.panelDestop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfileCustommer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogoHome)).EndInit();
             this.ResumeLayout(false);
 
         }

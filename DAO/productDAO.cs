@@ -59,7 +59,6 @@ namespace DAO
             {
                 conn.Close();
             }
-            return false;
         }
         public bool editProducts(ProductDTO pd)
         {
@@ -93,7 +92,6 @@ namespace DAO
             {
                 conn.Close();
             }
-            return false;
         }
         public bool removeProducts(String idProducts)
         {
@@ -116,7 +114,6 @@ namespace DAO
             {
                 conn.Close();
             }
-            return false;
         }
         public DataTable searchProducts(String keyword)
         {
