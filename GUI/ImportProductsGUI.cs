@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using BUS;
 using DTO;
-using Guna.UI2.WinForms;
-using NPOI.SS.Util;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
+using static NPOI.HSSF.Util.HSSFColor;
+using NPOI.XWPF.UserModel;
+using System.Xml.Linq;
+using System.Windows.Input;
 
 namespace GUI
 {
@@ -22,7 +17,9 @@ namespace GUI
     {
         ImportProductBUS importProductBUS = new ImportProductBUS();
         BrandBUS brandBUS = new BrandBUS();
+        AccountBUS accountBUS = new AccountBUS();
         private int id_nv;
+        private double currentPrice;
         public ImportProductsGUI(string role_Manipulative , string name_Id , int id_Staff)
         {
             InitializeComponent();
@@ -33,6 +30,10 @@ namespace GUI
             textBoxStaff.Text = name_Id;
             id_nv = id_Staff;
             loadCBBBrand();
+            loadCBBBrand_List();
+            loadCBBAccount_List();
+            loadDBtoImportProducts();
+            
         }
         private void ImportProductsGUI_Load(object sender, EventArgs e)
         {
@@ -45,7 +46,48 @@ namespace GUI
             comboboxBrand.ValueMember = "id";
 
         }
-
+        private void loadCBBBrand_List()
+        {
+            comboboxNCC.DataSource = brandBUS.getBrand();
+            comboboxNCC.DisplayMember = "name";
+            comboboxNCC.ValueMember = "id";
+        }
+        private void loadCBBAccount_List()
+        {
+            comboboxStaff.DataSource = accountBUS.getAllAccount();
+            comboboxStaff.DisplayMember = "full_name";
+            comboboxStaff.ValueMember = "id";
+        }
+        private void loadDBtoImportProducts()
+        {
+            dataGridViewImprotProducts.DataSource = importProductBUS.getImportProducts();
+        }
+        private void loadDBtoDetailImportProducts()
+        {
+            string maPhieuNhap = textboxMaPhieuNhap_Detail.Text;
+            if(maPhieuNhap != "")
+            {
+                dataGridViewDetailImportProducts.DataSource = importProductBUS.getDetailImportProducts(maPhieuNhap);
+            }
+        }
+        private void searchDateImportProduct()
+        {
+            String dFirst = dateFirstTime.Text;
+            DateTime dateFirst = DateTime.Parse(dFirst);
+            String dEnd = dateEndTime.Text;
+            DateTime dateEnd = DateTime.Parse(dEnd);
+            int result = DateTime.Compare(dateFirst, dateEnd);
+            // ==1 ngày thứ nhất lớn hơn ngày thứ 2
+            if (result == 1)
+            {
+                MessageBox.Show("Ngày trước không lớn hơn ngày sau");
+            } 
+            // 1 ngày thứ nhất nhỏ hơn ngày thứ 2
+            else if (result == 1)
+            {
+                dataGridViewDetailImportProducts.DataSource = importProductBUS.searchDateImportProduct(dFirst, dEnd);
+            }
+        }
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -120,6 +162,7 @@ namespace GUI
                 textBoxMaPhieu.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
                 textBoxQuantity.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["quantity"].FormattedValue.ToString();
                 textBoxPrice.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["price"].FormattedValue.ToString();
+                textBox_size_ImportProducts.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["sizename"].FormattedValue.ToString();
             }
         }
         private void LoadSumMoney()
@@ -139,13 +182,14 @@ namespace GUI
         private void addProductsToCart(object sender, EventArgs e)
         {
             DataGridViewRow newRow = new DataGridViewRow();
-            newRow.CreateCells(dataGridView1);
+            newRow.CreateCells(guna2DataGridView1);
             newRow.Cells[0].Value = textBoxMaSanPham.Text;
             newRow.Cells[1].Value = textBoxMaPhieu.Text;
-            newRow.Cells[2].Value = textBoxQuantity.Text;
-            newRow.Cells[3].Value = textBoxPrice.Text;
-            Double tongTien = Convert.ToInt32(textBoxPrice.Text) * Convert.ToInt32(textBoxQuantity.Text);
-            newRow.Cells[4].Value = tongTien;
+            newRow.Cells[2].Value = textBox_size_ImportProducts.Text;
+            newRow.Cells[3].Value = textBoxQuantity.Text;
+            newRow.Cells[4].Value = textBoxPrice.Text;
+            Double tongTien = Convert.ToDouble(textBoxPrice.Text) * Convert.ToDouble(textBoxQuantity.Text);
+            newRow.Cells[5].Value = tongTien;
             guna2DataGridView1.Rows.Add(newRow);
             LoadSumMoney();
         }
@@ -165,6 +209,48 @@ namespace GUI
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+        private int size_id(string size_name)
+        {
+            int id = 0;
+            if (size_name.Trim().Equals("M"))
+            {
+                id = 1;
+            } 
+            else if (size_name.Trim().Equals("L"))
+            {
+                id = 2;
+            }
+            else if (size_name.Trim().Equals("X"))
+            {
+                id = 3;
+            }
+            else if (size_name.Trim().Equals("XL"))
+            {
+                id = 4;
+            }
+            return id;
+        }
+        private string size_name(int id)
+        {
+            string name = "";
+            if (id == 1)
+            {
+                name = "M";
+            }
+            else if (id == 2)
+            {
+                name = "L";
+            }
+            else if (id == 3)
+            {
+                name = "X";
+            }
+            else if (id == 4)
+            {
+                name = "XL";
+            }
+            return name;
         }
 
         private void addImportProducts(object sender, EventArgs e)
@@ -189,22 +275,198 @@ namespace GUI
                         for (int i = 0; i < guna2DataGridView1.Rows.Count; i++)
                         {
                             string maSP = Convert.ToString(guna2DataGridView1.Rows[i].Cells[0].Value);
-                            int soLuong = Convert.ToInt32(guna2DataGridView1.Rows[i].Cells[2].Value);
-                            double giaNhap = Convert.ToDouble(guna2DataGridView1.Rows[i].Cells[3].Value);
-                            double sumMoney = Convert.ToDouble(guna2DataGridView1.Rows[i].Cells[4].Value);
+                            int soLuong = Convert.ToInt32(guna2DataGridView1.Rows[i].Cells[3].Value);
+                            string size = Convert.ToString(guna2DataGridView1.Rows[i].Cells[2].Value);
+                            int size_Id = size_id(size);
+                            double giaNhap = Convert.ToDouble(guna2DataGridView1.Rows[i].Cells[4].Value);
+                            double sumMoney = Convert.ToDouble(guna2DataGridView1.Rows[i].Cells[5].Value);
                             if(maSP != "" || soLuong > 0 || giaNhap > 0 || sumMoney > 0)
                             {
-                                importProductBUS.addDetailImportProduct(new detail_importProductDTO(maSP, soLuong, giaNhap, sumMoney, maPhieuNhap));
+                                importProductBUS.addDetailImportProduct(new detail_importProductDTO(maSP, soLuong, giaNhap, sumMoney, maPhieuNhap, size_Id));
                                 importProductBUS.updatePriceAndQuantity(giaNhap, soLuong, maSP);
-                                dataGridViewSanPham.DataSource = importProductBUS.getProducts();
-                                removeRowAllCart();
-                                textBoxMaPhieuNhap.Text = "";
                             }   
                         }
+                        dataGridViewImprotProducts.DataSource = importProductBUS.getImportProducts();
+                        dataGridViewSanPham.DataSource = importProductBUS.getProducts();
+                        removeRowAllCart();
+                        textBoxMaPhieuNhap.Text = "";
                     }
                 }else
                 {
                     MessageBox.Show("Thêm không thành công", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadDataImportProductToDetail(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                dataGridViewImprotProducts.CurrentCell.Selected = true;
+                textboxMaPhieuNhap_Detail.Text = dataGridViewImprotProducts.Rows[e.RowIndex].Cells["maPhieuNhap"].FormattedValue.ToString();
+                textBoxImportDate_Detail.Text = dataGridViewImprotProducts.Rows[e.RowIndex].Cells["ngayNhap"].FormattedValue.ToString();
+                textBoxBrand_Detail.Text = dataGridViewImprotProducts.Rows[e.RowIndex].Cells["name_Brand"].FormattedValue.ToString();
+                textBoxStaff_Detail.Text = dataGridViewImprotProducts.Rows[e.RowIndex].Cells["full_name"].FormattedValue.ToString();
+                textBox_TongTien_Detail.Text = dataGridViewImprotProducts.Rows[e.RowIndex].Cells["tongTien"].FormattedValue.ToString();
+            }
+        }
+
+        private void textboxMaPhieuNhap_Detail_TextChanged(object sender, EventArgs e)
+        {
+            loadDBtoDetailImportProducts();
+        }
+
+        private void loadDetailImportProductToTextBox(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                dataGridViewDetailImportProducts.CurrentCell.Selected = true;
+                textBox_MaChiTiet_Detail.Text = dataGridViewDetailImportProducts.Rows[e.RowIndex].Cells["maChiTiet"].FormattedValue.ToString();
+                textBox_SoLuong_Detail.Text = dataGridViewDetailImportProducts.Rows[e.RowIndex].Cells["so_luong"].FormattedValue.ToString();
+                textBoxTongTien_Detail.Text = dataGridViewDetailImportProducts.Rows[e.RowIndex].Cells["tong_tien"].FormattedValue.ToString();
+                textBox_SanPham_Detail.Text = dataGridViewDetailImportProducts.Rows[e.RowIndex].Cells["maSP"].FormattedValue.ToString();
+                textBox_GiaNhap_Detail.Text = dataGridViewDetailImportProducts.Rows[e.RowIndex].Cells["gia_nhap"].FormattedValue.ToString();
+                int id_size = Convert.ToInt32(dataGridViewDetailImportProducts.Rows[e.RowIndex].Cells["size_detail"].Value);
+                textbox_size_detail.Text = size_name(id_size);
+                currentPrice = Convert.ToDouble(textBox_GiaNhap_Detail.Text);
+            }
+        }
+        public void PdfSharp()
+        {
+            // lưu file
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PDF(*.pdf)|*.pdf";
+            saveFileDialog1.Title = "Save an Image File";
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                
+                FileStream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create);
+                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+                //
+                PdfContentByte cb = writer.DirectContent;
+                //
+                BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                cb.SetColorFill(BaseColor.DARK_GRAY);
+                cb.SetFontAndSize(bf, 15);
+                //
+                cb.BeginText();
+                string text = "HÓA ĐƠN NHẬP ";
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text, 400, 800, 0);
+                cb.EndText();
+                //
+                cb.BeginText();
+                text = String.Format("Coupon Code : {0}", textboxMaPhieuNhap_Detail.Text);
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text, 100, 750, 0);
+                cb.EndText();
+                //
+                cb.BeginText();
+                text = String.Format("Date Added : {0}", textBoxImportDate_Detail.Text);
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text, 100, 700, 0);
+                cb.EndText();
+                //
+                cb.BeginText();
+                text = String.Format("Brand : {0}", textBoxBrand_Detail.Text);
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text , 100, 650, 0);
+                cb.EndText();
+                //
+                cb.BeginText();
+                text = String.Format("Staff : {0}", textBoxStaff_Detail.Text);
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text, 100, 600, 0);
+                cb.EndText();
+                //
+                cb.BeginText();
+                text = String.Format("Total Money : {0}", textBox_TongTien_Detail.Text);
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text, 100, 550, 0);
+                cb.EndText();
+                // Thêm table
+                PdfPTable pdfTable = new PdfPTable(dataGridViewDetailImportProducts.ColumnCount);
+                pdfTable.TotalWidth = pdfDoc.PageSize.Width;
+                pdfTable.DefaultCell.BorderWidth = 1;
+                //Adding DataRow
+                foreach (DataGridViewColumn col in dataGridViewDetailImportProducts.Columns)
+                {
+                    PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                    pdfTable.AddCell(pCell);
+                }
+                foreach(DataGridViewRow row in dataGridViewDetailImportProducts.Rows)
+                {
+                    foreach(DataGridViewCell dcell in row.Cells)
+                    {
+                        pdfTable.AddCell(dcell.FormattedValue.ToString());
+                    }
+                }
+                pdfDoc.Add(pdfTable);
+                pdfTable.WriteSelectedRows(0, -1, 50, 400, writer.DirectContent);
+                pdfDoc.Close();
+                stream.Close();
+                writer.Close();
+            }    
+        }
+        private void savePDF(object sender, EventArgs e)
+        {
+            PdfSharp();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            searchDateImportProduct();
+        }
+
+        private void updateDetailImportProducts(object sender, EventArgs e)
+        {
+            int maChiTiet = Convert.ToInt32(textBox_MaChiTiet_Detail.Text);
+            int soLuong = Convert.ToInt32(textBox_SoLuong_Detail.Text);
+            double giaNhap = Convert.ToDouble(textBox_GiaNhap_Detail.Text);
+            double tongTien = soLuong * giaNhap;
+            String nameSp = textBox_SanPham_Detail.Text;
+            string size_name = textbox_size_detail.Text;
+            int size = size_id(size_name);
+            string maPhieuNhap = textboxMaPhieuNhap_Detail.Text;
+            String maSp = importProductBUS.getIdProduct(nameSp, size);
+            detail_importProductDTO detail = new detail_importProductDTO(maChiTiet,maSp, soLuong, giaNhap, tongTien, maPhieuNhap, size);
+            if (importProductBUS.updateDetailImportProduct(detail)) {
+                double currentSum = Convert.ToDouble(textBox_TongTien_Detail.Text);
+                double sum = (currentSum - currentPrice) + tongTien; 
+                if (importProductBUS.updateTotalMonetImportProduct(maPhieuNhap,sum))
+                {
+                    textBox_TongTien_Detail.Text = Convert.ToString(sum);
+                    MessageBox.Show("Cập nhập thành công");
+                    dataGridViewDetailImportProducts.DataSource = importProductBUS.getDetailImportProducts(maPhieuNhap);
+                } 
+            }
+        }
+
+        private void removeDetail(object sender, EventArgs e)
+        {
+            int maChiTiet = Convert.ToInt32(textBox_MaChiTiet_Detail.Text);
+            int soLuong = Convert.ToInt32(textBox_SoLuong_Detail.Text);
+            double giaNhap = Convert.ToDouble(textBox_GiaNhap_Detail.Text);
+            double tongTien = soLuong * giaNhap;
+            String nameSp = textBox_SanPham_Detail.Text;
+            string size_name = textbox_size_detail.Text;
+            int size = size_id(size_name);
+            string maPhieuNhap = textboxMaPhieuNhap_Detail.Text;
+            String maSp = importProductBUS.getIdProduct(nameSp, size);
+            if (importProductBUS.removeDetailImportProduct(maChiTiet))
+            {
+                double currentSum = Convert.ToDouble(textBox_TongTien_Detail.Text);
+                double sum = currentSum - tongTien;
+                if (importProductBUS.updateTotalMonetImportProduct(maPhieuNhap, sum))
+                {
+                    if(importProductBUS.updateQuantity(soLuong, maSp, size))
+                    {
+                        textBox_TongTien_Detail.Text = Convert.ToString(sum);
+                        MessageBox.Show("Xóa thành công thành công");
+                        dataGridViewDetailImportProducts.DataSource = importProductBUS.getDetailImportProducts(maPhieuNhap);
+                    }
                 }
             }
         }

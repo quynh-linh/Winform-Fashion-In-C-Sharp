@@ -196,7 +196,7 @@ namespace GUI
                 int size = Convert.ToInt32(s.Row["id"]);
                 if (productsBUS.checkSizeProducts(size, name))
                 {
-                    MessageBox.Show("Không được thêm trùng size sản phẩm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không được sửa trùng size sản phẩm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 } else
                 {

@@ -16,6 +16,14 @@ namespace BUS
         {
             return importDAO.selectProducts();
         }
+        public DataTable getImportProducts()
+        {
+            return importDAO.selectImportProducts();
+        }
+        public DataTable getDetailImportProducts(string maPhieuNhap)
+        {
+            return importDAO.selectDetailImportProducts(maPhieuNhap);
+        }
         public bool addImportProduct(ImprotProductDTO ip)
         {
             if (importDAO.addImportProduct(ip))
@@ -37,9 +45,61 @@ namespace BUS
                 return false;
             }
         }
+        public DataTable searchDateImportProduct(string firstDate, string endDate)
+        {
+            return importDAO.searchDateImmportProducts(firstDate, endDate);
+        }
         public bool updatePriceAndQuantity(double giaNhap, int soLuong , string maSp)
         {
             if (importDAO.updatePriceAndQuantityProduct(giaNhap,soLuong,maSp))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool updateTotalMonetImportProduct(string maPhieuNhap , double total)
+        {
+            if (importDAO.updateMoneyTotalImportProduct(maPhieuNhap,total))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool removeDetailImportProduct(int maChiTiet)
+        {
+            if (importDAO.removeDetailImportProduct(maChiTiet))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool updateQuantity(int soluong, string maSp, int size_id)
+        {
+            if (importDAO.updateQuantityProduct(soluong,maSp,size_id))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public string getIdProduct(string name , int size_id)
+        {
+            return importDAO.getIdProductToName(name, size_id);
+        }
+        public bool updateDetailImportProduct(detail_importProductDTO detail)
+        {
+            if (importDAO.updateDetailImportProduct(detail))
             {
                 return true;
             }
