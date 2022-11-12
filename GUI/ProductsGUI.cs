@@ -133,35 +133,42 @@ namespace GUI
                 String nameImage = Path.GetFileName(pictureBox.ImageLocation);
                 String brand = br.Row["id"].ToString();
                 String category = ct.Row["id"].ToString();
-                String size = s.Row["id"].ToString();
-                ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
-                if (File.Exists(Application.StartupPath +  @"\Image\" + nameImage))
+                int size = Convert.ToInt32(s.Row["id"]);
+                if (productsBUS.checkSizeProducts(size,name))
                 {
-                    if (productsBUS.addProducts(pd))
-                    {
-                        MessageBox.Show("Thêm thành công","Thông báo");
-                        loadDataGridview();
-                        reloadForm();
-                    }             
-                    else
-                    {
-                        MessageBox.Show("Thêm không thành công", "Thông báo");
-                    }   
-                }
-                else
+                    MessageBox.Show("Không được thêm trùng size sản phẩm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                } else
                 {
-                    if (productsBUS.addProducts(pd))
+                    ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
+                    if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
                     {
-                        MessageBox.Show("Thêm thành công", "Thông báo");
-                        loadDataGridview();
-                        reloadForm();
-                        File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
+                        if (productsBUS.addProducts(pd))
+                        {
+                            MessageBox.Show("Thêm thành công", "Thông báo");
+                            loadDataGridview();
+                            reloadForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm không thành công", "Thông báo");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Thêm không thành công", "Thông báo");
-                    }  
-                }
+                        if (productsBUS.addProducts(pd))
+                        {
+                            MessageBox.Show("Thêm thành công", "Thông báo");
+                            loadDataGridview();
+                            reloadForm();
+                            File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm không thành công", "Thông báo");
+                        }
+                    }
+                }  
             }
         }
 
@@ -186,35 +193,42 @@ namespace GUI
                 String nameImage = Path.GetFileName(pictureBox.ImageLocation);
                 String brand = br.Row["id"].ToString();
                 String category = ct.Row["id"].ToString();
-                String size = s.Row["id"].ToString();
-                ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
-                if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
+                int size = Convert.ToInt32(s.Row["id"]);
+                if (productsBUS.checkSizeProducts(size, name))
                 {
-                    if (productsBUS.editProducts(pd))
+                    MessageBox.Show("Không được thêm trùng size sản phẩm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                } else
+                {
+                    ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
+                    if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
                     {
-                        MessageBox.Show("Sửa thành công", "Thông báo");
-                        loadDataGridview();
-                        reloadForm();
+                        if (productsBUS.editProducts(pd))
+                        {
+                            MessageBox.Show("Sửa thành công", "Thông báo");
+                            loadDataGridview();
+                            reloadForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa không thành công", "Thông báo");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Sửa không thành công", "Thông báo");
+                        if (productsBUS.editProducts(pd))
+                        {
+                            MessageBox.Show("Sửa thành công", "Thông báo");
+                            loadDataGridview();
+                            reloadForm();
+                            File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa không thành công", "Thông báo");
+                        }
                     }
-                }
-                else
-                {
-                    if (productsBUS.editProducts(pd))
-                    {
-                        MessageBox.Show("Sửa thành công", "Thông báo");
-                        loadDataGridview();
-                        reloadForm();
-                        File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sửa không thành công", "Thông báo");
-                    }
-                }
+                }   
             }
         }
 

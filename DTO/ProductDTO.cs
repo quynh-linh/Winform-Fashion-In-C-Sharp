@@ -15,10 +15,10 @@ namespace DTO
         private string description;
         private string brand_id;
         private string category_Id;
-        private string size_id;
+        private int size_id;
         private int quantity;
 
-        public ProductDTO(string product_Id, string product_Name, double product_Price, string image, string description, string brand_id, string category_Id, string size_id, int quantity)
+        public ProductDTO(string product_Id, string product_Name, double product_Price, string image, string description, string brand_id, string category_Id, int size_id, int quantity)
         {
             this.product_Id = product_Id;
             this.product_Name = product_Name;
@@ -38,7 +38,7 @@ namespace DTO
         public string Description { get => description; set => description = value; }
         public string Brand_id { get => brand_id; set => brand_id = value; }
         public string Category_Id { get => category_Id; set => category_Id = value; }
-        public string Size_id { get => size_id; set => size_id = value; }
+        public int Size_id { get => size_id; set => size_id = value; }
         public int Quantity { get => quantity; set => quantity = value; }
     }
 }

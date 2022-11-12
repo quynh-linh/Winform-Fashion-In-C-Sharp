@@ -36,6 +36,35 @@ namespace DAO
             }
             return ds;
         }
+        public bool checkSizeProducts(int size_id , string name_products)
+        {
+            try
+            {
+                conn.Open();
+                string sql = String.Format("SELECT pd.size_id , pd.name  FROM product AS pd WHERE pd.size_id = {0} AND pd.name = '{1}'", size_id , name_products);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    return true;
+                } 
+                else
+                {
+                    return false;
+                }
+                    
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
         public bool addProducts(ProductDTO pd)
         {
             try

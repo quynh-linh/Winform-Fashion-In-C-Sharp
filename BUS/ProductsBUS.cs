@@ -24,6 +24,17 @@ namespace BUS
             }
             return false;
         }
+        public bool checkSizeProducts(int size_id , string name_products)
+        {
+            if (productDAO.checkSizeProducts(size_id,name_products))
+            {
+                return true;
+            } 
+            else
+            {
+                return false;
+            }
+        }
         public DataTable searchProducts(String key)
         {
             return productDAO.searchProducts(key);
