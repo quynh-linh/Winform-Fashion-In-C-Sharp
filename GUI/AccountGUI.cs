@@ -76,5 +76,10 @@ namespace GUI
             DataGridViewRow row = dataGridViewAccount.Rows[rowIndex];
             accountDTO = new AccountDTO(Int32.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[5].Value.ToString());
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

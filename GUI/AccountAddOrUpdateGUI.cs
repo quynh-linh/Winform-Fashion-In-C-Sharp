@@ -17,7 +17,6 @@ namespace GUI
     {
         private RoleBUS roleBUS = new RoleBUS();
         private AccountBUS accountBUS = new AccountBUS();
-        private List<ItemDTO> list = new List<ItemDTO>();
         public AccountAddOrUpdateGUI(String type, AccountDTO accountDTO)
         {
             InitializeComponent();
@@ -33,7 +32,6 @@ namespace GUI
                 fullNameAccount.Text = accountDTO.Full_Name.ToString();
                 passwordAccount.Text = accountDTO.Password.ToString();
                 emailAccount.Text = accountDTO.Email.ToString();
-
             }
         }
 
@@ -70,22 +68,37 @@ namespace GUI
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            string nameSelected = selectRole.SelectedItem.ToString();
-            string id,roleId="", username, fullName, password, email;
-            list.ForEach(itemDto =>
+            string id, username, fullName, password, email;
+            id = idAccount.Text +"";
+            username = usernameAccount.Text + "";
+            fullName = fullNameAccount.Text + "";
+            password = passwordAccount.Text + "";
+            email = emailAccount.Text + "";
+            try
             {
-                if (itemDto.Name.Equals(nameSelected))
+                if (this.btnActionAccount.Text == "Update")
                 {
-                    roleId = itemDto.ID;
+                    AccountDTO accountDTO = new AccountDTO(Int32.Parse(id), username, password, fullName, email, "Q1");
+                    accountBUS.updateAccount(accountDTO);
+                    MessageBox.Show("Sua tai khoan thanh cong", "Successfully");
                 }
-            });
-            id = idAccount.Text;
-            username = usernameAccount.Text;
-            fullName = fullNameAccount.Text;
-            password = passwordAccount.Text;
-                email = emailAccount.Text;
-            AccountDTO accountDTO = new AccountDTO(Int32.Parse(id), username, password, fullName, email, roleId);
-            accountBUS.updateAccount(accountDTO);
+                else if (this.btnActionAccount.Text == "Add")
+                {
+                    AccountDTO accountDTO = new AccountDTO();
+                    accountDTO.User_Name = username;
+                    accountDTO.Password = password;
+                    accountDTO.Full_Name = fullName;
+                    accountDTO.Email = email;
+                    accountDTO.Role_Id = "Q1";
+                    accountBUS.createAccount(accountDTO);
+                    MessageBox.Show("Them tai khoan thanh cong", "Successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui long nhap day du thong tin", "Cảnh báo");
+
+            }
         }
 
         private void btnResetAccount_Click(object sender, EventArgs e)
@@ -98,18 +111,30 @@ namespace GUI
 
         private void AccountAddOrUpdateGUI_Load(object sender, EventArgs e)
         {
-            List<string> names = new List<string>();
-            DataTable data = new DataTable();
-            data = roleBUS.getAllRole();
-            foreach (DataRow dataRow in data.Rows)
-            {
-                list.Add(new ItemDTO(dataRow["id"].ToString(), dataRow["role_name"].ToString()));
-                names.Add(dataRow["role_name"].ToString());
-            }
-            selectRole.DataSource = names;
+          
         }
 
         private void idAccount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fullNameAccount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameAccount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordAccount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailAccount_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -38,8 +38,8 @@ namespace DAO
             try
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO account(id,username,password,email,full_name,role_id)" +
-                   " VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}')",accountDTO.Account_Id,accountDTO.User_Name,accountDTO.Password,accountDTO.Email,accountDTO.Full_Name,accountDTO.Role_Id);
+                string sql = string.Format("INSERT INTO account(username,password,email,full_name,role_id)" +
+                   " VALUES ('{0}','{1}','{2}','{3}','{4}')",accountDTO.User_Name,accountDTO.Password,accountDTO.Email,accountDTO.Full_Name,accountDTO.Role_Id);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
@@ -64,8 +64,9 @@ namespace DAO
                 conn.Open();
                 string SQL = string.Format("UPDATE account " +
                     "SET " +
-                    "password = '{0}'" +
-                    "WHERE username = '{1}'", accountDTO.Password, accountDTO.User_Name);
+                    "password = '{0}', email = '{1}', full_name = '{2}'" +
+                    "WHERE id = '{3}'", accountDTO.Password, accountDTO.Email,accountDTO.Full_Name,accountDTO.Account_Id);
+
                 Console.WriteLine(SQL);
                 MySqlCommand cmd = new MySqlCommand(SQL, conn);
                 if (cmd.ExecuteNonQuery() > 0)
