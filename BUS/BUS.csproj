@@ -48,6 +48,8 @@
     <Compile Include="DiscountBUS.cs" />
     <Compile Include="ImportProductBUS.cs" />
     <Compile Include="LoginBUS.cs" />
+    <Compile Include="OrderBUS.cs" />
+    <Compile Include="OrderDetailBUS.cs" />
     <Compile Include="ProductsBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleBUS.cs" />
