@@ -14,6 +14,10 @@ namespace DTO
         private string start_day;
         private string end_day;
 
+        public DiscountDTO()
+        {
+        }
+
         public DiscountDTO(string ma_discount, string ma_product, string sale_percent, string start_day, string end_day)
         {
             this.ma_discount = ma_discount;

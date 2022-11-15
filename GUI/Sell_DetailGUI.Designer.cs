@@ -29,35 +29,23 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btn_subtracQuantity = new FontAwesome.Sharp.IconButton();
+            this.tb_quantityProduct = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_addQuantity = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rdb_sizeS = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdb_sizeL = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdb_sizeM = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.tb_nameProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_priceProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.cbb_discountProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.ptb_imageDetailProduct = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_imageDetailProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,81 +54,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(308, 37);
+            this.label1.Location = new System.Drawing.Point(308, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "CHI TIẾT MUA HÀNG";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ngày bán :";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Enabled = false;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(166, 102);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox1.TabIndex = 2;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.Enabled = false;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(508, 102);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox2.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(398, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Thời Gian :";
             // 
             // label4
             // 
@@ -148,62 +66,66 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(56, 169);
+            this.label4.Location = new System.Drawing.Point(56, 345);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Số Lượng :";
             // 
-            // iconButton1
+            // btn_subtracQuantity
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(166, 163);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(25, 25);
-            this.iconButton1.TabIndex = 6;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btn_subtracQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_subtracQuantity.FlatAppearance.BorderSize = 0;
+            this.btn_subtracQuantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_subtracQuantity.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btn_subtracQuantity.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_subtracQuantity.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_subtracQuantity.Location = new System.Drawing.Point(167, 339);
+            this.btn_subtracQuantity.Name = "btn_subtracQuantity";
+            this.btn_subtracQuantity.Size = new System.Drawing.Size(25, 25);
+            this.btn_subtracQuantity.TabIndex = 6;
+            this.btn_subtracQuantity.UseVisualStyleBackColor = true;
+            this.btn_subtracQuantity.Click += new System.EventHandler(this.btn_subtracQuantity_Click);
             // 
-            // guna2TextBox3
+            // tb_quantityProduct
             // 
-            this.guna2TextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.Fuchsia;
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.Enabled = false;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(211, 158);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(95, 36);
-            this.guna2TextBox3.TabIndex = 7;
+            this.tb_quantityProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_quantityProduct.BorderColor = System.Drawing.Color.Fuchsia;
+            this.tb_quantityProduct.BorderRadius = 15;
+            this.tb_quantityProduct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_quantityProduct.DefaultText = "1";
+            this.tb_quantityProduct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_quantityProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_quantityProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_quantityProduct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_quantityProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_quantityProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_quantityProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_quantityProduct.Location = new System.Drawing.Point(212, 334);
+            this.tb_quantityProduct.Name = "tb_quantityProduct";
+            this.tb_quantityProduct.PasswordChar = '\0';
+            this.tb_quantityProduct.PlaceholderText = "";
+            this.tb_quantityProduct.SelectedText = "";
+            this.tb_quantityProduct.Size = new System.Drawing.Size(95, 36);
+            this.tb_quantityProduct.TabIndex = 7;
+            this.tb_quantityProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_quantityProduct.TextChanged += new System.EventHandler(this.tb_quantityProduct_TextChanged);
+            this.tb_quantityProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_quantityProduct_KeyPress);
             // 
-            // iconButton2
+            // btn_addQuantity
             // 
-            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(327, 163);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(25, 25);
-            this.iconButton2.TabIndex = 8;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btn_addQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_addQuantity.FlatAppearance.BorderSize = 0;
+            this.btn_addQuantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addQuantity.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btn_addQuantity.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.btn_addQuantity.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_addQuantity.Location = new System.Drawing.Point(328, 339);
+            this.btn_addQuantity.Name = "btn_addQuantity";
+            this.btn_addQuantity.Size = new System.Drawing.Size(25, 25);
+            this.btn_addQuantity.TabIndex = 8;
+            this.btn_addQuantity.UseVisualStyleBackColor = true;
+            this.btn_addQuantity.Click += new System.EventHandler(this.btn_addQuantity_Click);
             // 
             // label5
             // 
@@ -211,136 +133,103 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(399, 169);
+            this.label5.Location = new System.Drawing.Point(400, 345);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Chọn Size :";
             // 
-            // guna2RadioButton1
+            // rdb_sizeS
             // 
-            this.guna2RadioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2RadioButton1.AutoSize = true;
-            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.CheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(508, 170);
-            this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(47, 20);
-            this.guna2RadioButton1.TabIndex = 10;
-            this.guna2RadioButton1.Text = "   S";
-            this.guna2RadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdb_sizeS.AutoSize = true;
+            this.rdb_sizeS.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdb_sizeS.CheckedState.BorderThickness = 2;
+            this.rdb_sizeS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdb_sizeS.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdb_sizeS.CheckedState.InnerOffset = -4;
+            this.rdb_sizeS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rdb_sizeS.ForeColor = System.Drawing.Color.White;
+            this.rdb_sizeS.Location = new System.Drawing.Point(509, 346);
+            this.rdb_sizeS.Name = "rdb_sizeS";
+            this.rdb_sizeS.Size = new System.Drawing.Size(47, 20);
+            this.rdb_sizeS.TabIndex = 10;
+            this.rdb_sizeS.Text = "   S";
+            this.rdb_sizeS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdb_sizeS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.rdb_sizeS.UncheckedState.BorderThickness = 2;
+            this.rdb_sizeS.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeS.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeS.Click += new System.EventHandler(this.rdb_sizeS_Click);
             // 
-            // guna2RadioButton2
+            // rdb_sizeL
             // 
-            this.guna2RadioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2RadioButton2.AutoSize = true;
-            this.guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.CheckedState.BorderThickness = 2;
-            this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(663, 168);
-            this.guna2RadioButton2.Name = "guna2RadioButton2";
-            this.guna2RadioButton2.Size = new System.Drawing.Size(45, 20);
-            this.guna2RadioButton2.TabIndex = 11;
-            this.guna2RadioButton2.Text = "   L";
-            this.guna2RadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdb_sizeL.AutoSize = true;
+            this.rdb_sizeL.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdb_sizeL.CheckedState.BorderThickness = 2;
+            this.rdb_sizeL.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdb_sizeL.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdb_sizeL.CheckedState.InnerOffset = -4;
+            this.rdb_sizeL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rdb_sizeL.ForeColor = System.Drawing.Color.White;
+            this.rdb_sizeL.Location = new System.Drawing.Point(664, 344);
+            this.rdb_sizeL.Name = "rdb_sizeL";
+            this.rdb_sizeL.Size = new System.Drawing.Size(45, 20);
+            this.rdb_sizeL.TabIndex = 11;
+            this.rdb_sizeL.Text = "   L";
+            this.rdb_sizeL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdb_sizeL.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.rdb_sizeL.UncheckedState.BorderThickness = 2;
+            this.rdb_sizeL.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeL.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeL.Click += new System.EventHandler(this.rdb_sizeL_Click);
             // 
-            // guna2RadioButton3
+            // rdb_sizeM
             // 
-            this.guna2RadioButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2RadioButton3.AutoSize = true;
-            this.guna2RadioButton3.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.CheckedState.BorderThickness = 2;
-            this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(587, 170);
-            this.guna2RadioButton3.Name = "guna2RadioButton3";
-            this.guna2RadioButton3.Size = new System.Drawing.Size(49, 20);
-            this.guna2RadioButton3.TabIndex = 12;
-            this.guna2RadioButton3.Text = "   M";
-            this.guna2RadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.guna2RadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2RadioButton3.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdb_sizeM.AutoSize = true;
+            this.rdb_sizeM.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdb_sizeM.CheckedState.BorderThickness = 2;
+            this.rdb_sizeM.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdb_sizeM.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdb_sizeM.CheckedState.InnerOffset = -4;
+            this.rdb_sizeM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rdb_sizeM.ForeColor = System.Drawing.Color.White;
+            this.rdb_sizeM.Location = new System.Drawing.Point(588, 346);
+            this.rdb_sizeM.Name = "rdb_sizeM";
+            this.rdb_sizeM.Size = new System.Drawing.Size(49, 20);
+            this.rdb_sizeM.TabIndex = 12;
+            this.rdb_sizeM.Text = "   M";
+            this.rdb_sizeM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdb_sizeM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.rdb_sizeM.UncheckedState.BorderThickness = 2;
+            this.rdb_sizeM.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeM.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdb_sizeM.Click += new System.EventHandler(this.rdb_sizeM_Click);
             // 
-            // label6
+            // tb_nameProduct
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(56, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Nhân Viên :";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(56, 288);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Khách Hàng :";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(56, 348);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Nhà Cung Cấp :";
-            // 
-            // guna2TextBox7
-            // 
-            this.guna2TextBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2TextBox7.BorderRadius = 10;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.Enabled = false;
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(166, 462);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(542, 36);
-            this.guna2TextBox7.TabIndex = 20;
+            this.tb_nameProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_nameProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.tb_nameProduct.BorderRadius = 10;
+            this.tb_nameProduct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_nameProduct.DefaultText = "";
+            this.tb_nameProduct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_nameProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_nameProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_nameProduct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_nameProduct.Enabled = false;
+            this.tb_nameProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_nameProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_nameProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_nameProduct.Location = new System.Drawing.Point(166, 462);
+            this.tb_nameProduct.Name = "tb_nameProduct";
+            this.tb_nameProduct.PasswordChar = '\0';
+            this.tb_nameProduct.PlaceholderText = "";
+            this.tb_nameProduct.SelectedText = "";
+            this.tb_nameProduct.Size = new System.Drawing.Size(542, 36);
+            this.tb_nameProduct.TabIndex = 20;
             // 
             // label9
             // 
@@ -354,28 +243,28 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Tên Sản Phẩm :";
             // 
-            // guna2TextBox8
+            // tb_priceProduct
             // 
-            this.guna2TextBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2TextBox8.BorderRadius = 10;
-            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox8.DefaultText = "";
-            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.Enabled = false;
-            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(166, 519);
-            this.guna2TextBox8.Name = "guna2TextBox8";
-            this.guna2TextBox8.PasswordChar = '\0';
-            this.guna2TextBox8.PlaceholderText = "";
-            this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(542, 36);
-            this.guna2TextBox8.TabIndex = 22;
+            this.tb_priceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_priceProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.tb_priceProduct.BorderRadius = 10;
+            this.tb_priceProduct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_priceProduct.DefaultText = "";
+            this.tb_priceProduct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_priceProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_priceProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_priceProduct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_priceProduct.Enabled = false;
+            this.tb_priceProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_priceProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_priceProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_priceProduct.Location = new System.Drawing.Point(166, 519);
+            this.tb_priceProduct.Name = "tb_priceProduct";
+            this.tb_priceProduct.PasswordChar = '\0';
+            this.tb_priceProduct.PlaceholderText = "";
+            this.tb_priceProduct.SelectedText = "";
+            this.tb_priceProduct.Size = new System.Drawing.Size(542, 36);
+            this.tb_priceProduct.TabIndex = 22;
             // 
             // label10
             // 
@@ -388,51 +277,6 @@
             this.label10.Size = new System.Drawing.Size(95, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Giá Sản Phẩm :";
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Image = global::GUI.Properties.Resources.category_icon;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(668, 218);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(35, 36);
-            this.guna2ImageButton3.TabIndex = 25;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::GUI.Properties.Resources.category_icon;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(668, 276);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(35, 36);
-            this.guna2ImageButton1.TabIndex = 26;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = global::GUI.Properties.Resources.category_icon;
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(668, 336);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(35, 36);
-            this.guna2ImageButton2.TabIndex = 27;
             // 
             // guna2Button1
             // 
@@ -460,100 +304,25 @@
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // guna2ComboBox1
+            // cbb_discountProduct
             // 
-            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cbb_discountProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbb_discountProduct.BackColor = System.Drawing.Color.Transparent;
+            this.cbb_discountProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.cbb_discountProduct.BorderRadius = 10;
+            this.cbb_discountProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbb_discountProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_discountProduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_discountProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_discountProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_discountProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbb_discountProduct.ItemHeight = 30;
+            this.cbb_discountProduct.Items.AddRange(new object[] {
             "Select"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(166, 218);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(488, 36);
-            this.guna2ComboBox1.TabIndex = 29;
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2ComboBox2.BorderRadius = 10;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
-            "Select"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(166, 276);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(488, 36);
-            this.guna2ComboBox2.TabIndex = 30;
-            // 
-            // guna2ComboBox3
-            // 
-            this.guna2ComboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2ComboBox3.BorderRadius = 10;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
-            "Select"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(166, 336);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(488, 36);
-            this.guna2ComboBox3.TabIndex = 31;
-            // 
-            // guna2ComboBox4
-            // 
-            this.guna2ComboBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.guna2ComboBox4.BorderRadius = 10;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.Items.AddRange(new object[] {
-            "Select"});
-            this.guna2ComboBox4.Location = new System.Drawing.Point(166, 399);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(488, 36);
-            this.guna2ComboBox4.TabIndex = 34;
-            // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Image = global::GUI.Properties.Resources.category_icon;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(668, 399);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(35, 36);
-            this.guna2ImageButton4.TabIndex = 33;
+            this.cbb_discountProduct.Location = new System.Drawing.Point(166, 399);
+            this.cbb_discountProduct.Name = "cbb_discountProduct";
+            this.cbb_discountProduct.Size = new System.Drawing.Size(542, 36);
+            this.cbb_discountProduct.TabIndex = 34;
             // 
             // label11
             // 
@@ -567,45 +336,43 @@
             this.label11.TabIndex = 32;
             this.label11.Text = "Mã Giảm Giá :";
             // 
+            // ptb_imageDetailProduct
+            // 
+            this.ptb_imageDetailProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ptb_imageDetailProduct.Location = new System.Drawing.Point(275, 61);
+            this.ptb_imageDetailProduct.Name = "ptb_imageDetailProduct";
+            this.ptb_imageDetailProduct.Size = new System.Drawing.Size(292, 255);
+            this.ptb_imageDetailProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_imageDetailProduct.TabIndex = 35;
+            this.ptb_imageDetailProduct.TabStop = false;
+            // 
             // Sell_DetailGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(781, 667);
-            this.Controls.Add(this.guna2ComboBox4);
-            this.Controls.Add(this.guna2ImageButton4);
+            this.Controls.Add(this.ptb_imageDetailProduct);
+            this.Controls.Add(this.cbb_discountProduct);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.guna2ComboBox3);
-            this.Controls.Add(this.guna2ComboBox2);
-            this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2ImageButton2);
-            this.Controls.Add(this.guna2ImageButton1);
-            this.Controls.Add(this.guna2ImageButton3);
-            this.Controls.Add(this.guna2TextBox8);
+            this.Controls.Add(this.tb_priceProduct);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.guna2TextBox7);
+            this.Controls.Add(this.tb_nameProduct);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.guna2RadioButton3);
-            this.Controls.Add(this.guna2RadioButton2);
-            this.Controls.Add(this.guna2RadioButton1);
+            this.Controls.Add(this.rdb_sizeM);
+            this.Controls.Add(this.rdb_sizeL);
+            this.Controls.Add(this.rdb_sizeS);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.guna2TextBox3);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.btn_addQuantity);
+            this.Controls.Add(this.tb_quantityProduct);
+            this.Controls.Add(this.btn_subtracQuantity);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2TextBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Sell_DetailGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_imageDetailProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,34 +381,21 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btn_subtracQuantity;
+        private Guna.UI2.WinForms.Guna2TextBox tb_quantityProduct;
+        private FontAwesome.Sharp.IconButton btn_addQuantity;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2RadioButton rdb_sizeS;
+        private Guna.UI2.WinForms.Guna2RadioButton rdb_sizeL;
+        private Guna.UI2.WinForms.Guna2RadioButton rdb_sizeM;
+        private Guna.UI2.WinForms.Guna2TextBox tb_nameProduct;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private Guna.UI2.WinForms.Guna2TextBox tb_priceProduct;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private Guna.UI2.WinForms.Guna2ComboBox cbb_discountProduct;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox ptb_imageDetailProduct;
     }
 }

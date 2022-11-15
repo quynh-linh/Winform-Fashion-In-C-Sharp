@@ -1,5 +1,7 @@
 ﻿using DAO;
+using DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,10 +13,21 @@ namespace BUS
     public class SellBUS
     {
         private SellDAO sellDAO = new SellDAO();
-        public DataTable getProduct()
+        //ProductDTO productDTO = new ProductDTO();
+        ArrayList arrSell;
+        public ArrayList getArrayListSell()
         {
-            return sellDAO.selectAllpruduct();
+            arrSell = new ArrayList();
+            arrSell = sellDAO.getProduct();
+            return arrSell;
         }
-
+        public ArrayList checkSize(ProductDTO data)
+        {
+            return sellDAO.checkSize(data);
+        }
+        public ArrayList selectSize(string name, int size)
+        {
+            return sellDAO.selectSize(name, size);
+        }
     }
 }

@@ -18,6 +18,10 @@ namespace DTO
         private int size_id;
         private int quantity;
 
+        public ProductDTO()
+        {
+        }
+
         public ProductDTO(string product_Id, string product_Name, double product_Price, string image, string description, string brand_id, string category_Id, int size_id, int quantity)
         {
             this.product_Id = product_Id;

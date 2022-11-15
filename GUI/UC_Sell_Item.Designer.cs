@@ -29,72 +29,72 @@
         private void InitializeComponent()
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ptc_imageProductItem = new System.Windows.Forms.PictureBox();
+            this.lb_nameProductItem = new System.Windows.Forms.Label();
+            this.lb_priceProductItem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptc_imageProductItem)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::GUI.Properties.Resources.icon_addcart;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 61);
+            this.pictureBox2.Location = new System.Drawing.Point(120, 61);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // ptc_imageProductItem
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ptc_imageProductItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::GUI.Properties.Resources.demo_fashion;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptc_imageProductItem.Image = global::GUI.Properties.Resources.demo_fashion;
+            this.ptc_imageProductItem.Location = new System.Drawing.Point(3, 3);
+            this.ptc_imageProductItem.Name = "ptc_imageProductItem";
+            this.ptc_imageProductItem.Size = new System.Drawing.Size(67, 85);
+            this.ptc_imageProductItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptc_imageProductItem.TabIndex = 0;
+            this.ptc_imageProductItem.TabStop = false;
             // 
-            // label1
+            // lb_nameProductItem
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nakaroth";
+            this.lb_nameProductItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_nameProductItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameProductItem.Location = new System.Drawing.Point(76, 14);
+            this.lb_nameProductItem.Name = "lb_nameProductItem";
+            this.lb_nameProductItem.Size = new System.Drawing.Size(59, 13);
+            this.lb_nameProductItem.TabIndex = 2;
+            this.lb_nameProductItem.Text = "Nakaroth";
             // 
-            // label2
+            // lb_priceProductItem
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(71, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 9);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "100.000.000 đ";
+            this.lb_priceProductItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_priceProductItem.AutoSize = true;
+            this.lb_priceProductItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_priceProductItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lb_priceProductItem.Location = new System.Drawing.Point(68, 61);
+            this.lb_priceProductItem.Name = "lb_priceProductItem";
+            this.lb_priceProductItem.Size = new System.Drawing.Size(46, 9);
+            this.lb_priceProductItem.TabIndex = 3;
+            this.lb_priceProductItem.Text = "100.000 đ";
             // 
             // UC_Sell_Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_priceProductItem);
+            this.Controls.Add(this.lb_nameProductItem);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptc_imageProductItem);
             this.Name = "UC_Sell_Item";
             this.Size = new System.Drawing.Size(149, 91);
+            this.Click += new System.EventHandler(this.UC_Sell_Item_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptc_imageProductItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,9 +102,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptc_imageProductItem;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_nameProductItem;
+        private System.Windows.Forms.Label lb_priceProductItem;
     }
 }

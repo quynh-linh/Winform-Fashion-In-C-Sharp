@@ -12,6 +12,17 @@ namespace BUS
         {
             return dcDAO.SelectDiscount();
         }
+        public DataTable getMadiscount(DiscountDTO data)
+        {
+            return dcDAO.SelectMadiscount(data);
+        }
+        public int ma(String ma)
+        {
+            DataTable dt = dcDAO.SelectMa(ma);
+            String percent = dt.Rows[0][1].ToString();
+            int p = int.Parse(percent);
+            return p;
+        }
         public DataTable getIdProduct()
         {
             return dcDAO.SelectProduct();
@@ -41,6 +52,5 @@ namespace BUS
             }
             return false;
         }
-
     }
 }
