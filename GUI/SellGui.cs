@@ -20,6 +20,7 @@ namespace GUI
     {
         MySQLConnection sql;
         private SellBUS sellBUS = new SellBUS();
+        public static ArrayList listOder = new ArrayList();
         //public ArrayList<UC_Sell_Item> itemProduct = new ArrayList<UC_Sell_Item>();
         public SellGui(string role_Manipulative)
         {
@@ -28,8 +29,9 @@ namespace GUI
             if (!role_Manipulative.Equals("Bán hàng "))
             {
                 guna2Button1.Enabled = false;
-                guna2Button2.Enabled = false;
+                //guna2Button2.Enabled = false;
             }
+            // do sp vao flowlayout
             ArrayList list = new ArrayList();
             list = sellBUS.getArrayListSell();
             for (int i = 0; i < list.Count; i++)
@@ -37,19 +39,20 @@ namespace GUI
                 addItem((ProductDTO)list[i]);
 
             }
-
+            //Sell_DetailGUI sell = new Sell_DetailGUI();
+            
+            for (int i = 0; i < listOder.Count; i++)
+            {
+                addItemOder((ProductDTO)listOder[i]);
+            }
 
         }
-        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        public SellGui()
         {
-
         }
 
-        //
-        private void GetData()
-        {
-
-        }
+        // add sp zo usercontrol
         public void addItem(ProductDTO data)
         {
             UC_Sell_Item item = new UC_Sell_Item();
@@ -58,25 +61,13 @@ namespace GUI
             FlpSanPham.Controls.Add(item);
 
         }
-        private void SellGui_Load(object sender, EventArgs e)
+        //add thong tin mua vo usercontrol
+        public void addItemOder(ProductDTO data)
         {
-            // ProductDTO prd = new ProductDTO();
-            //var data = sellBUS.getArrayListSell(prd);
-            //var list = new UC_Sell_Item[data.Count];
-            //int i = 0;
+            UC_oder oder = new UC_oder(data);
+            oder.setDataOder(data);
+            flp_oder.Controls.Add(oder);
 
-            //itemProduct = new List<UC_Sell_Item>();
-            //foreach (var item in data)
-            //{
-            // list[i] = new UC_Sell_Item();
-            //list[i].uri_product = @"Image\" + item;
-            //list[i].name = item + "";
-            //list[i].price = item + "";
-            //list[i].loadImageAsync();
-            // itemProduct.Add(list[i]);
-            //i++;
-            // }
-            // FlpSanPham.Controls.AddRange(list);
         }
     }
 }

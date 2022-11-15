@@ -403,6 +403,12 @@
     <Compile Include="UC_Bill_ImportGui.Designer.cs">
       <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_oder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_oder.Designer.cs">
+      <DependentUpon>UC_oder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Permission_GUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -497,6 +503,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Bill_ImportGui.resx">
       <DependentUpon>UC_Bill_ImportGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_oder.resx">
+      <DependentUpon>UC_oder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Permission_GUI.resx">
       <DependentUpon>UC_Permission_GUI.cs</DependentUpon>

@@ -838,3 +838,4 @@ C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.Fod
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.exe
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.pdb
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_oder.resources

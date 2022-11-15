@@ -41,7 +41,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tb_priceProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_buy = new Guna.UI2.WinForms.Guna2Button();
             this.cbb_discountProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ptb_imageDetailProduct = new System.Windows.Forms.PictureBox();
@@ -148,6 +148,7 @@
             this.rdb_sizeS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.rdb_sizeS.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.rdb_sizeS.CheckedState.InnerOffset = -4;
+            this.rdb_sizeS.Cursor = System.Windows.Forms.Cursors.Default;
             this.rdb_sizeS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.rdb_sizeS.ForeColor = System.Drawing.Color.White;
             this.rdb_sizeS.Location = new System.Drawing.Point(509, 346);
@@ -278,31 +279,32 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Giá Sản Phẩm :";
             // 
-            // guna2Button1
+            // btn_buy
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button1.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 25;
-            this.guna2Button1.BorderThickness = 3;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.HotPink;
-            this.guna2Button1.Image = global::GUI.Properties.Resources.Cart_add_icon;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(20, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(313, 587);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(192, 56);
-            this.guna2Button1.TabIndex = 28;
-            this.guna2Button1.Text = "MUA";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(20, 0);
+            this.btn_buy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_buy.BorderColor = System.Drawing.Color.White;
+            this.btn_buy.BorderRadius = 25;
+            this.btn_buy.BorderThickness = 3;
+            this.btn_buy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_buy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_buy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_buy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_buy.FillColor = System.Drawing.Color.Transparent;
+            this.btn_buy.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buy.ForeColor = System.Drawing.Color.White;
+            this.btn_buy.HoverState.FillColor = System.Drawing.Color.HotPink;
+            this.btn_buy.Image = global::GUI.Properties.Resources.Cart_add_icon;
+            this.btn_buy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_buy.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btn_buy.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_buy.Location = new System.Drawing.Point(313, 587);
+            this.btn_buy.Name = "btn_buy";
+            this.btn_buy.Size = new System.Drawing.Size(192, 56);
+            this.btn_buy.TabIndex = 28;
+            this.btn_buy.Text = "MUA";
+            this.btn_buy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_buy.TextOffset = new System.Drawing.Point(20, 0);
+            this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
             // 
             // cbb_discountProduct
             // 
@@ -355,7 +357,7 @@
             this.Controls.Add(this.ptb_imageDetailProduct);
             this.Controls.Add(this.cbb_discountProduct);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btn_buy);
             this.Controls.Add(this.tb_priceProduct);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tb_nameProduct);
@@ -393,7 +395,7 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox tb_priceProduct;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_buy;
         private Guna.UI2.WinForms.Guna2ComboBox cbb_discountProduct;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox ptb_imageDetailProduct;

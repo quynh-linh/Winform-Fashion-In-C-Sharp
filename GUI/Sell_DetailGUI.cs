@@ -15,6 +15,7 @@ namespace GUI
 {
     public partial class Sell_DetailGUI : Form
     {
+        
         DiscountBUS dc_bus = new DiscountBUS();
         SellBUS sellBuss = new SellBUS();
         ProductDTO product = new ProductDTO();
@@ -23,12 +24,14 @@ namespace GUI
         int initClick = 0;
         int sl = 1;
         double gia = 0;
-
+        string name = "";
+        int size = 0;
         public Sell_DetailGUI(ProductDTO productDTO, DiscountDTO dTO)
         {
             InitializeComponent();
             checkSize(productDTO);
             checkedSize(productDTO);
+            
             this.discount = dTO;
             fillCombobox(dTO);
             this.product = productDTO;
@@ -206,8 +209,8 @@ namespace GUI
         private void rdb_sizeS_Click(object sender, EventArgs e)
         {
 
-            string name = tb_nameProduct.Text;
-            int size = 1;
+            name = tb_nameProduct.Text;
+            size = 1;
             //MessageBox.Show("name : " + name + "size : " + size);
             //sellBuss.selectSize(name, size);
             this.product = (ProductDTO)sellBuss.selectSize(name, size)[0];
@@ -225,8 +228,8 @@ namespace GUI
 
         private void rdb_sizeM_Click(object sender, EventArgs e)
         {
-            string name = tb_nameProduct.Text;
-            int size = 2;
+            name = tb_nameProduct.Text;
+            size = 2;
             //MessageBox.Show("name : " + name + "size : " + size);
             //sellBuss.selectSize(name, size);
             this.product = (ProductDTO)sellBuss.selectSize(name, size)[0];
@@ -244,8 +247,8 @@ namespace GUI
 
         private void rdb_sizeL_Click(object sender, EventArgs e)
         {
-            string name = tb_nameProduct.Text;
-            int size = 3;
+            name = tb_nameProduct.Text;
+            size = 3;
             this.product = (ProductDTO)sellBuss.selectSize(name, size)[0];
             //MessageBox.Show("name : " + name + "size : " + size);
             //sellBuss.selectSize(name, size);
@@ -267,6 +270,17 @@ namespace GUI
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_buy_Click(object sender, EventArgs e)
+        {
+
+             //SellGui s = new SellGui();
+             SellGui.listOder.Add(this.product);
+            //do du lieu oder vo flowlayout
+            //s.addItemOder(SellGui);
+          
+            this.Hide();  
         }
     }
 }
