@@ -223,7 +223,7 @@ namespace GUI
             if (check_Role("Bán hàng") != null)
             {
                 ActivateButton(sender, RGBColor.color3);
-                OpenChildForm(new SellGui(check_Role("Bán hàng")));
+                OpenChildForm(new SellGui(check_Role("Bán hàng"), id_staff));
             }
             else
                 MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");

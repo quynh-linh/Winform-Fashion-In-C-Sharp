@@ -33,7 +33,6 @@
             this.btn_subtracQuantity = new FontAwesome.Sharp.IconButton();
             this.tb_quantityProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_addQuantity = new FontAwesome.Sharp.IconButton();
-            this.label5 = new System.Windows.Forms.Label();
             this.rdb_sizeS = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdb_sizeL = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdb_sizeM = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -45,6 +44,11 @@
             this.cbb_discountProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ptb_imageDetailProduct = new System.Windows.Forms.PictureBox();
+            this.rdo_XL = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_imageDetailProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +70,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(56, 345);
+            this.label4.Location = new System.Drawing.Point(51, 536);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 5;
@@ -80,7 +84,7 @@
             this.btn_subtracQuantity.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btn_subtracQuantity.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.btn_subtracQuantity.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_subtracQuantity.Location = new System.Drawing.Point(167, 339);
+            this.btn_subtracQuantity.Location = new System.Drawing.Point(162, 530);
             this.btn_subtracQuantity.Name = "btn_subtracQuantity";
             this.btn_subtracQuantity.Size = new System.Drawing.Size(25, 25);
             this.btn_subtracQuantity.TabIndex = 6;
@@ -101,7 +105,7 @@
             this.tb_quantityProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_quantityProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_quantityProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_quantityProduct.Location = new System.Drawing.Point(212, 334);
+            this.tb_quantityProduct.Location = new System.Drawing.Point(207, 525);
             this.tb_quantityProduct.Name = "tb_quantityProduct";
             this.tb_quantityProduct.PasswordChar = '\0';
             this.tb_quantityProduct.PlaceholderText = "";
@@ -120,24 +124,12 @@
             this.btn_addQuantity.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btn_addQuantity.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.btn_addQuantity.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_addQuantity.Location = new System.Drawing.Point(328, 339);
+            this.btn_addQuantity.Location = new System.Drawing.Point(323, 530);
             this.btn_addQuantity.Name = "btn_addQuantity";
             this.btn_addQuantity.Size = new System.Drawing.Size(25, 25);
             this.btn_addQuantity.TabIndex = 8;
             this.btn_addQuantity.UseVisualStyleBackColor = true;
             this.btn_addQuantity.Click += new System.EventHandler(this.btn_addQuantity_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(400, 345);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Chọn Size :";
             // 
             // rdb_sizeS
             // 
@@ -151,17 +143,17 @@
             this.rdb_sizeS.Cursor = System.Windows.Forms.Cursors.Default;
             this.rdb_sizeS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.rdb_sizeS.ForeColor = System.Drawing.Color.White;
-            this.rdb_sizeS.Location = new System.Drawing.Point(509, 346);
+            this.rdb_sizeS.Location = new System.Drawing.Point(424, 531);
             this.rdb_sizeS.Name = "rdb_sizeS";
-            this.rdb_sizeS.Size = new System.Drawing.Size(47, 20);
+            this.rdb_sizeS.Size = new System.Drawing.Size(37, 20);
             this.rdb_sizeS.TabIndex = 10;
-            this.rdb_sizeS.Text = "   S";
+            this.rdb_sizeS.Text = "   ";
             this.rdb_sizeS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rdb_sizeS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.rdb_sizeS.UncheckedState.BorderThickness = 2;
             this.rdb_sizeS.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdb_sizeS.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdb_sizeS.Click += new System.EventHandler(this.rdb_sizeS_Click);
+            this.rdb_sizeS.CheckedChanged += new System.EventHandler(this.rdb_sizeS_CheckedChanged);
             // 
             // rdb_sizeL
             // 
@@ -174,17 +166,17 @@
             this.rdb_sizeL.CheckedState.InnerOffset = -4;
             this.rdb_sizeL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.rdb_sizeL.ForeColor = System.Drawing.Color.White;
-            this.rdb_sizeL.Location = new System.Drawing.Point(664, 344);
+            this.rdb_sizeL.Location = new System.Drawing.Point(579, 529);
             this.rdb_sizeL.Name = "rdb_sizeL";
-            this.rdb_sizeL.Size = new System.Drawing.Size(45, 20);
+            this.rdb_sizeL.Size = new System.Drawing.Size(37, 20);
             this.rdb_sizeL.TabIndex = 11;
-            this.rdb_sizeL.Text = "   L";
+            this.rdb_sizeL.Text = "   ";
             this.rdb_sizeL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rdb_sizeL.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.rdb_sizeL.UncheckedState.BorderThickness = 2;
             this.rdb_sizeL.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdb_sizeL.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdb_sizeL.Click += new System.EventHandler(this.rdb_sizeL_Click);
+            this.rdb_sizeL.CheckedChanged += new System.EventHandler(this.rdb_sizeS_CheckedChanged);
             // 
             // rdb_sizeM
             // 
@@ -197,17 +189,17 @@
             this.rdb_sizeM.CheckedState.InnerOffset = -4;
             this.rdb_sizeM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.rdb_sizeM.ForeColor = System.Drawing.Color.White;
-            this.rdb_sizeM.Location = new System.Drawing.Point(588, 346);
+            this.rdb_sizeM.Location = new System.Drawing.Point(503, 531);
             this.rdb_sizeM.Name = "rdb_sizeM";
-            this.rdb_sizeM.Size = new System.Drawing.Size(49, 20);
+            this.rdb_sizeM.Size = new System.Drawing.Size(37, 20);
             this.rdb_sizeM.TabIndex = 12;
-            this.rdb_sizeM.Text = "   M";
+            this.rdb_sizeM.Text = "   ";
             this.rdb_sizeM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rdb_sizeM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
             this.rdb_sizeM.UncheckedState.BorderThickness = 2;
             this.rdb_sizeM.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdb_sizeM.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdb_sizeM.Click += new System.EventHandler(this.rdb_sizeM_Click);
+            this.rdb_sizeM.CheckedChanged += new System.EventHandler(this.rdb_sizeS_CheckedChanged);
             // 
             // tb_nameProduct
             // 
@@ -224,7 +216,7 @@
             this.tb_nameProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_nameProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_nameProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_nameProduct.Location = new System.Drawing.Point(166, 462);
+            this.tb_nameProduct.Location = new System.Drawing.Point(163, 407);
             this.tb_nameProduct.Name = "tb_nameProduct";
             this.tb_nameProduct.PasswordChar = '\0';
             this.tb_nameProduct.PlaceholderText = "";
@@ -238,7 +230,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(56, 474);
+            this.label9.Location = new System.Drawing.Point(53, 419);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 13);
             this.label9.TabIndex = 19;
@@ -259,7 +251,7 @@
             this.tb_priceProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_priceProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_priceProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_priceProduct.Location = new System.Drawing.Point(166, 519);
+            this.tb_priceProduct.Location = new System.Drawing.Point(163, 464);
             this.tb_priceProduct.Name = "tb_priceProduct";
             this.tb_priceProduct.PasswordChar = '\0';
             this.tb_priceProduct.PlaceholderText = "";
@@ -273,7 +265,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(56, 531);
+            this.label10.Location = new System.Drawing.Point(53, 476);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 13);
             this.label10.TabIndex = 21;
@@ -297,7 +289,7 @@
             this.btn_buy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btn_buy.ImageOffset = new System.Drawing.Point(20, 0);
             this.btn_buy.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_buy.Location = new System.Drawing.Point(313, 587);
+            this.btn_buy.Location = new System.Drawing.Point(307, 599);
             this.btn_buy.Name = "btn_buy";
             this.btn_buy.Size = new System.Drawing.Size(192, 56);
             this.btn_buy.TabIndex = 28;
@@ -321,7 +313,7 @@
             this.cbb_discountProduct.ItemHeight = 30;
             this.cbb_discountProduct.Items.AddRange(new object[] {
             "Select"});
-            this.cbb_discountProduct.Location = new System.Drawing.Point(166, 399);
+            this.cbb_discountProduct.Location = new System.Drawing.Point(163, 344);
             this.cbb_discountProduct.Name = "cbb_discountProduct";
             this.cbb_discountProduct.Size = new System.Drawing.Size(542, 36);
             this.cbb_discountProduct.TabIndex = 34;
@@ -332,7 +324,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(56, 411);
+            this.label11.Location = new System.Drawing.Point(53, 356);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 13);
             this.label11.TabIndex = 32;
@@ -348,12 +340,84 @@
             this.ptb_imageDetailProduct.TabIndex = 35;
             this.ptb_imageDetailProduct.TabStop = false;
             // 
+            // rdo_XL
+            // 
+            this.rdo_XL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdo_XL.AutoSize = true;
+            this.rdo_XL.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdo_XL.CheckedState.BorderThickness = 2;
+            this.rdo_XL.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdo_XL.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rdo_XL.CheckedState.InnerOffset = -4;
+            this.rdo_XL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rdo_XL.ForeColor = System.Drawing.Color.White;
+            this.rdo_XL.Location = new System.Drawing.Point(645, 529);
+            this.rdo_XL.Name = "rdo_XL";
+            this.rdo_XL.Size = new System.Drawing.Size(33, 20);
+            this.rdo_XL.TabIndex = 36;
+            this.rdo_XL.Text = "  ";
+            this.rdo_XL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdo_XL.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.rdo_XL.UncheckedState.BorderThickness = 2;
+            this.rdo_XL.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdo_XL.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdo_XL.CheckedChanged += new System.EventHandler(this.rdb_sizeS_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(451, 531);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 20);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "S";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(535, 531);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "M";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(609, 530);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 20);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "L";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(674, 529);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 20);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "XL";
+            // 
             // Sell_DetailGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(781, 667);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rdo_XL);
             this.Controls.Add(this.ptb_imageDetailProduct);
             this.Controls.Add(this.cbb_discountProduct);
             this.Controls.Add(this.label11);
@@ -365,7 +429,6 @@
             this.Controls.Add(this.rdb_sizeM);
             this.Controls.Add(this.rdb_sizeL);
             this.Controls.Add(this.rdb_sizeS);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_addQuantity);
             this.Controls.Add(this.tb_quantityProduct);
             this.Controls.Add(this.btn_subtracQuantity);
@@ -387,7 +450,6 @@
         private FontAwesome.Sharp.IconButton btn_subtracQuantity;
         private Guna.UI2.WinForms.Guna2TextBox tb_quantityProduct;
         private FontAwesome.Sharp.IconButton btn_addQuantity;
-        private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2RadioButton rdb_sizeS;
         private Guna.UI2.WinForms.Guna2RadioButton rdb_sizeL;
         private Guna.UI2.WinForms.Guna2RadioButton rdb_sizeM;
@@ -399,5 +461,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbb_discountProduct;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox ptb_imageDetailProduct;
+        private Guna.UI2.WinForms.Guna2RadioButton rdo_XL;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -50,13 +50,12 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "SELECT size_id  FROM product WHERE name = '" + data.Product_Name + "'";
+                String sql = "SELECT size_id  FROM product WHERE name = '" + data.Product_Name + "' ORDER BY size_id";
                 Console.WriteLine("loi" + data.Product_Name);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader mySqlDataReader = cmd.ExecuteReader();
                 while (mySqlDataReader.Read())
                 {
-
                     arrayListSell.Add(mySqlDataReader["size_id"].ToString());
                 }
             }

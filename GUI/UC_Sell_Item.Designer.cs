@@ -40,12 +40,14 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::GUI.Properties.Resources.icon_addcart;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 61);
+            this.pictureBox2.Location = new System.Drawing.Point(120, 60);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
             // ptc_imageProductItem
             // 
@@ -55,10 +57,12 @@
             this.ptc_imageProductItem.Image = global::GUI.Properties.Resources.demo_fashion;
             this.ptc_imageProductItem.Location = new System.Drawing.Point(3, 3);
             this.ptc_imageProductItem.Name = "ptc_imageProductItem";
-            this.ptc_imageProductItem.Size = new System.Drawing.Size(67, 85);
+            this.ptc_imageProductItem.Size = new System.Drawing.Size(67, 84);
             this.ptc_imageProductItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptc_imageProductItem.TabIndex = 0;
             this.ptc_imageProductItem.TabStop = false;
+            this.ptc_imageProductItem.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
+            this.ptc_imageProductItem.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
             // lb_nameProductItem
             // 
@@ -66,9 +70,11 @@
             this.lb_nameProductItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nameProductItem.Location = new System.Drawing.Point(76, 14);
             this.lb_nameProductItem.Name = "lb_nameProductItem";
-            this.lb_nameProductItem.Size = new System.Drawing.Size(59, 13);
+            this.lb_nameProductItem.Size = new System.Drawing.Size(59, 12);
             this.lb_nameProductItem.TabIndex = 2;
             this.lb_nameProductItem.Text = "Nakaroth";
+            this.lb_nameProductItem.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
+            this.lb_nameProductItem.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
             // lb_priceProductItem
             // 
@@ -81,6 +87,8 @@
             this.lb_priceProductItem.Size = new System.Drawing.Size(46, 9);
             this.lb_priceProductItem.TabIndex = 3;
             this.lb_priceProductItem.Text = "100.000 đ";
+            this.lb_priceProductItem.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
+            this.lb_priceProductItem.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
             // UC_Sell_Item
             // 
@@ -91,8 +99,10 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ptc_imageProductItem);
             this.Name = "UC_Sell_Item";
-            this.Size = new System.Drawing.Size(149, 91);
-            this.Click += new System.EventHandler(this.UC_Sell_Item_Click);
+            this.Size = new System.Drawing.Size(149, 90);
+            this.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
+            this.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.UC_Sell_Item_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptc_imageProductItem)).EndInit();
             this.ResumeLayout(false);
@@ -102,9 +112,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox ptc_imageProductItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lb_nameProductItem;
-        private System.Windows.Forms.Label lb_priceProductItem;
+        public System.Windows.Forms.PictureBox ptc_imageProductItem;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label lb_nameProductItem;
+        public System.Windows.Forms.Label lb_priceProductItem;
     }
 }

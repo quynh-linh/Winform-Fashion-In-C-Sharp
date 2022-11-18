@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.lb_nameOder = new System.Windows.Forms.Label();
-            this.lb_quantityOder = new System.Windows.Forms.Label();
             this.lb_priceOder = new System.Windows.Forms.Label();
             this.btn_deleteOder = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_sizeOder = new System.Windows.Forms.Label();
+            this.lbl_Quantity_X_Price = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_nameOder
@@ -44,28 +42,22 @@
             this.lb_nameOder.Size = new System.Drawing.Size(100, 23);
             this.lb_nameOder.TabIndex = 0;
             this.lb_nameOder.Text = "name san pham";
-            // 
-            // lb_quantityOder
-            // 
-            this.lb_quantityOder.AutoSize = true;
-            this.lb_quantityOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_quantityOder.Location = new System.Drawing.Point(62, 43);
-            this.lb_quantityOder.Name = "lb_quantityOder";
-            this.lb_quantityOder.Size = new System.Drawing.Size(30, 17);
-            this.lb_quantityOder.TabIndex = 1;
-            this.lb_quantityOder.Text = "x10";
+            this.lb_nameOder.Click += new System.EventHandler(this.lb_nameOder_Click);
             // 
             // lb_priceOder
             // 
             this.lb_priceOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_priceOder.Location = new System.Drawing.Point(6, 66);
+            this.lb_priceOder.Location = new System.Drawing.Point(150, 43);
             this.lb_priceOder.Name = "lb_priceOder";
             this.lb_priceOder.Size = new System.Drawing.Size(86, 17);
             this.lb_priceOder.TabIndex = 2;
             this.lb_priceOder.Text = "100,000 d";
+            this.lb_priceOder.Click += new System.EventHandler(this.lb_nameOder_Click);
             // 
             // btn_deleteOder
             // 
+            this.btn_deleteOder.BorderRadius = 5;
+            this.btn_deleteOder.BorderThickness = 1;
             this.btn_deleteOder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_deleteOder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_deleteOder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -79,41 +71,32 @@
             this.btn_deleteOder.Size = new System.Drawing.Size(31, 31);
             this.btn_deleteOder.TabIndex = 3;
             this.btn_deleteOder.Text = "X";
+            this.btn_deleteOder.Click += new System.EventHandler(this.btn_deleteOder_Click);
             // 
-            // label1
+            // lbl_Quantity_X_Price
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(131, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Size  :";
-            // 
-            // lb_sizeOder
-            // 
-            this.lb_sizeOder.AutoSize = true;
-            this.lb_sizeOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sizeOder.Location = new System.Drawing.Point(184, 43);
-            this.lb_sizeOder.Name = "lb_sizeOder";
-            this.lb_sizeOder.Size = new System.Drawing.Size(18, 17);
-            this.lb_sizeOder.TabIndex = 5;
-            this.lb_sizeOder.Text = "S";
+            this.lbl_Quantity_X_Price.AutoSize = true;
+            this.lbl_Quantity_X_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Quantity_X_Price.Location = new System.Drawing.Point(23, 43);
+            this.lbl_Quantity_X_Price.Name = "lbl_Quantity_X_Price";
+            this.lbl_Quantity_X_Price.Size = new System.Drawing.Size(30, 17);
+            this.lbl_Quantity_X_Price.TabIndex = 1;
+            this.lbl_Quantity_X_Price.Text = "x10";
+            this.lbl_Quantity_X_Price.Click += new System.EventHandler(this.lb_nameOder_Click);
             // 
             // UC_oder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Controls.Add(this.lb_sizeOder);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_deleteOder);
             this.Controls.Add(this.lb_priceOder);
-            this.Controls.Add(this.lb_quantityOder);
+            this.Controls.Add(this.lbl_Quantity_X_Price);
             this.Controls.Add(this.lb_nameOder);
             this.Name = "UC_oder";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Size = new System.Drawing.Size(287, 89);
+            this.Size = new System.Drawing.Size(285, 89);
+            this.Click += new System.EventHandler(this.lb_nameOder_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +105,8 @@
         #endregion
 
         private System.Windows.Forms.Label lb_nameOder;
-        private System.Windows.Forms.Label lb_quantityOder;
-        private System.Windows.Forms.Label lb_priceOder;
-        private Guna.UI2.WinForms.Guna2Button btn_deleteOder;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lb_sizeOder;
+        public System.Windows.Forms.Label lb_priceOder;
+        public Guna.UI2.WinForms.Guna2Button btn_deleteOder;
+        private System.Windows.Forms.Label lbl_Quantity_X_Price;
     }
 }
