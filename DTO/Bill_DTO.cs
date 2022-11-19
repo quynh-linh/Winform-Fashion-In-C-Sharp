@@ -12,7 +12,7 @@ namespace DTO
         int account_Id;
         double total;
 
-        public Bill_DTO(string bill_Id, double total , string bill_Time, int account_Id, string customer_Id)
+        public Bill_DTO(string bill_Id, double total, string bill_Time, int account_Id, string customer_Id)
         {
             this.bill_Id = bill_Id;
             this.customer_Id = customer_Id;

@@ -85,7 +85,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("UPDATE product SET quantity = quantity - "+ quantity +" WHERE id = '"+ product_Id +"'");
+                String sql = String.Format("UPDATE product SET quantity = quantity - " + quantity + " WHERE id = '" + product_Id + "'");
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 Console.WriteLine(sql);
                 if (cmd.ExecuteNonQuery() > 0)

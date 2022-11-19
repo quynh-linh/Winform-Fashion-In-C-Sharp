@@ -14,7 +14,7 @@ namespace BUS
 
         public Boolean insert_Bill(Bill_DTO bill)
         {
-            if(bill_DAO.insert_Bill(bill)) return true;
+            if (bill_DAO.insert_Bill(bill)) return true;
             return false;
         }
 
