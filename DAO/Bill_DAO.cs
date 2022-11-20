@@ -12,6 +12,30 @@ namespace DAO
     public class Bill_DAO
     {
         MySqlConnection conn = DBUtils.GetDBConnection();
+        public DataTable selectBillAbout(string from, string to)
+        {
+            DataTable dtBill= new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time between '{0}' and '{1}'",from,to);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dtBill;
+        }
 
         public bool insert_Bill(Bill_DTO bill)
         {

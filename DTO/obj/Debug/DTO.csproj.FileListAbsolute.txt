@@ -64,3 +64,9 @@ C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.Ass
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.dll
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.pdb
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\DTO.dll
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\DTO.pdb
+C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.dll
+C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.pdb

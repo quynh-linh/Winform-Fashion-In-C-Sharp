@@ -11,7 +11,7 @@ namespace DTO
         String bill_Id, customer_Id, bill_Time;
         int account_Id;
         double total;
-
+        public Bill_DTO() { }
         public Bill_DTO(string bill_Id, double total, string bill_Time, int account_Id, string customer_Id)
         {
             this.bill_Id = bill_Id;

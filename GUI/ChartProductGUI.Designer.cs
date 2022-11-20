@@ -53,9 +53,9 @@
             this.formChildProduct.Controls.Add(this.chartProduct);
             this.formChildProduct.Controls.Add(this.panel9);
             this.formChildProduct.Location = new System.Drawing.Point(0, 1);
-            this.formChildProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.formChildProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.formChildProduct.Name = "formChildProduct";
-            this.formChildProduct.Size = new System.Drawing.Size(788, 380);
+            this.formChildProduct.Size = new System.Drawing.Size(1051, 468);
             this.formChildProduct.TabIndex = 13;
             this.formChildProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.formChildProduct_Paint);
             // 
@@ -64,10 +64,10 @@
             this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(247, 14);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoad.Location = new System.Drawing.Point(329, 17);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(82, 28);
+            this.btnLoad.Size = new System.Drawing.Size(109, 34);
             this.btnLoad.TabIndex = 9;
             this.btnLoad.Text = "Load data";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -85,8 +85,8 @@
             legend1.ForeColor = System.Drawing.Color.White;
             legend1.Name = "Legend1";
             this.chartProduct.Legends.Add(legend1);
-            this.chartProduct.Location = new System.Drawing.Point(219, 48);
-            this.chartProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.chartProduct.Location = new System.Drawing.Point(292, 59);
+            this.chartProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartProduct.Name = "chartProduct";
             this.chartProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -94,7 +94,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Quantity";
             this.chartProduct.Series.Add(series1);
-            this.chartProduct.Size = new System.Drawing.Size(393, 314);
+            this.chartProduct.Size = new System.Drawing.Size(524, 386);
             this.chartProduct.TabIndex = 8;
             this.chartProduct.Text = "chart1";
             // 
@@ -103,10 +103,10 @@
             this.panel9.Controls.Add(this.iconButton3);
             this.panel9.Controls.Add(this.iconButton2);
             this.panel9.Controls.Add(this.iconButton1);
-            this.panel9.Location = new System.Drawing.Point(8, 11);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(11, 14);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(220, 33);
+            this.panel9.Size = new System.Drawing.Size(293, 41);
             this.panel9.TabIndex = 7;
             // 
             // iconButton3
@@ -117,10 +117,10 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(128, 2);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton3.Location = new System.Drawing.Point(171, 2);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(90, 29);
+            this.iconButton3.Size = new System.Drawing.Size(120, 36);
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Text = "Nhập vào";
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -133,13 +133,14 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(64, 2);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton2.Location = new System.Drawing.Point(85, 2);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(58, 28);
+            this.iconButton2.Size = new System.Drawing.Size(77, 34);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "Bán ra";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -149,22 +150,22 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(3, 2);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton1.Location = new System.Drawing.Point(4, 2);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(57, 28);
+            this.iconButton1.Size = new System.Drawing.Size(76, 34);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "Tổng";
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // ChartProductGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(789, 384);
+            this.ClientSize = new System.Drawing.Size(1052, 473);
             this.Controls.Add(this.formChildProduct);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ChartProductGUI";
             this.Text = "ChartProductGUI";
             this.formChildProduct.ResumeLayout(false);

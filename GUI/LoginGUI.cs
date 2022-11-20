@@ -44,7 +44,7 @@ namespace GUI
                         h.Show();
                         SetVisibleCore(false);
                     }
-                    else MessageBox.Show(equal);
+                    else if (equal.Equals("Đăng không thành công")) MessageBox.Show(equal);
                 }
 
             }

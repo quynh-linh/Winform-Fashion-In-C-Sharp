@@ -58,8 +58,7 @@ namespace GUI
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-
-            OpenChildForm(new ChartProductGUI());
+            OpenChildForm(new ChartProductGUI(this));
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -75,6 +74,16 @@ namespace GUI
         private void iconButton7_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ChartStaffGUI());
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTo_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
