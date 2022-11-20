@@ -76,6 +76,7 @@ namespace GUI
             textBoxId.Text = " ";
             textboxDes.Text = " ";
             textboxQuantity.Text = "  ";
+            textboxPrice.Text = " ";
             pictureBox.Image = null;
         }
 
@@ -102,6 +103,8 @@ namespace GUI
                 textboxQuantity.Text = dataGridView.Rows[e.RowIndex].Cells["quantity"].FormattedValue.ToString();
                 textboxDes.Text = dataGridView.Rows[e.RowIndex].Cells["description"].FormattedValue.ToString();
                 String nameImage = dataGridView.Rows[e.RowIndex].Cells["image"].FormattedValue.ToString();
+                textBoxId.Enabled = false;
+                comboboxSize.Enabled = false;
                 if (!nameImage.Equals(""))
                 {
                     pictureBox.Image = new Bitmap(Application.StartupPath + @"\Image\" + nameImage);
@@ -134,44 +137,22 @@ namespace GUI
                 String brand = br.Row["id"].ToString();
                 String category = ct.Row["id"].ToString();
                 int size = Convert.ToInt32(s.Row["id"]);
-                if (productsBUS.checkSizeProducts(size,name))
+                ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
+                if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
                 {
-                    MessageBox.Show("Không được thêm trùng size sản phẩm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                } else
-                {
-                    ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
-                    if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
-                    {
-                        if (productsBUS.addProducts(pd))
-                        {
-                            MessageBox.Show("Thêm thành công", "Thông báo");
-                            loadDataGridview();
-                            reloadForm();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Thêm không thành công", "Thông báo");
-                        }
-                    }
-                    else
-                    {
-                        if (productsBUS.addProducts(pd))
-                        {
-                            MessageBox.Show("Thêm thành công", "Thông báo");
-                            loadDataGridview();
-                            reloadForm();
-                            File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Thêm không thành công", "Thông báo");
-                        }
-                    }
+                   MessageBox.Show(productsBUS.checkAddProducts(pd), "Thông báo");
+                   loadDataGridview();
+                   reloadForm();
+                }
+                else
+                 {
+                   MessageBox.Show(productsBUS.checkAddProducts(pd), "Thông báo");
+                   loadDataGridview();
+                   reloadForm();
+                   File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
                 }  
             }
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (textboxName.Text == " " || textBoxId.Text == " " || textboxDes.Text == " ")
@@ -194,44 +175,22 @@ namespace GUI
                 String brand = br.Row["id"].ToString();
                 String category = ct.Row["id"].ToString();
                 int size = Convert.ToInt32(s.Row["id"]);
-                if (productsBUS.checkSizeProducts(size, name))
+                ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
+                if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
                 {
-                    MessageBox.Show("Không được sửa trùng size sản phẩm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                } else
+                   MessageBox.Show(productsBUS.editProducts(pd), "Thông báo");
+                   loadDataGridview();
+                   reloadForm();
+                }
+                else
                 {
-                    ProductDTO pd = new ProductDTO(id, name, price, nameImage, des, brand, category, size, quantity);
-                    if (File.Exists(Application.StartupPath + @"\Image\" + nameImage))
-                    {
-                        if (productsBUS.editProducts(pd))
-                        {
-                            MessageBox.Show("Sửa thành công", "Thông báo");
-                            loadDataGridview();
-                            reloadForm();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Sửa không thành công", "Thông báo");
-                        }
-                    }
-                    else
-                    {
-                        if (productsBUS.editProducts(pd))
-                        {
-                            MessageBox.Show("Sửa thành công", "Thông báo");
-                            loadDataGridview();
-                            reloadForm();
-                            File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Sửa không thành công", "Thông báo");
-                        }
-                    }
-                }   
+                    MessageBox.Show(productsBUS.editProducts(pd), "Thông báo");
+                    loadDataGridview();
+                    reloadForm();
+                    File.Copy(openFileDialog.FileName, Application.StartupPath + @"\Image\" + nameImage);
+                }
             }
         }
-
         private void btnRemove_Click(object sender, EventArgs e)
         {
             String idProducts = textBoxId.Text;
@@ -251,7 +210,6 @@ namespace GUI
                 }
             } 
         }
-
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             string keyword = textBoxSearch.Text;

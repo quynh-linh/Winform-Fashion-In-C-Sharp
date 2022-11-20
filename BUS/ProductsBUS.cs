@@ -1,11 +1,7 @@
 ﻿using DAO;
 using DTO;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BUS
 {
@@ -16,36 +12,43 @@ namespace BUS
         {
             return productDAO.selectAllProducts();
         }
-        public bool addProducts(ProductDTO pd)
+        public string checkAddProducts(ProductDTO pd)
         {
-            if (productDAO.addProducts(pd))
+            if (productDAO.checkIdProducts(pd.Product_Id))
             {
-                return true;
-            }
-            return false;
-        }
-        public bool checkSizeProducts(int size_id , string name_products)
-        {
-            if (productDAO.checkSizeProducts(size_id,name_products))
-            {
-                return true;
+                return "Mã sản phẩm đã tồn tại";
             } 
             else
             {
-                return false;
+                if (productDAO.checkSizeProducts(pd.Size_id, pd.Product_Name))
+                {
+                    return "Không được thêm trùng kích cỡ sản phẩm";
+                } else
+                {
+                    if (productDAO.addProducts(pd))
+                    {
+                        return "Thêm thành công";
+                    } else
+                    {
+                        return "Thêm không thành công";
+                    }
+                }
             }
         }
         public DataTable searchProducts(String key)
         {
             return productDAO.searchProducts(key);
         }
-        public bool editProducts(ProductDTO pd)
+        public string editProducts(ProductDTO pd)
         {
             if (productDAO.editProducts(pd))
             {
-                return true;
+                return "Sửa thành công";
             }
-            return false;
+            else
+            {
+                return "Sửa không thành công";
+            }
         }
         public bool removeProducts(String idProducts)
         {

@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
+    <Compile Include="Bill_DAO.cs" />
     <Compile Include="BrandDAO.cs" />
     <Compile Include="AccountDAO.cs" />
     <Compile Include="CategoryDAO.cs" />

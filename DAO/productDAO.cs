@@ -36,24 +36,19 @@ namespace DAO
             }
             return ds;
         }
-        public bool checkSizeProducts(int size_id , string name_products)
+        public bool checkSizeProducts(int size , String name)
         {
             try
             {
                 conn.Open();
-                string sql = String.Format("SELECT pd.size_id , pd.name  FROM product AS pd WHERE pd.size_id = {0} AND pd.name = '{1}'", size_id , name_products);
+                string sql = String.Format("SELECT * FROM product WHERE size_id = {0} AND name = '{1}'",size, name);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql, conn);
                 var reader = cm.ExecuteReader();
                 if (reader.HasRows)
                 {
                     return true;
-                } 
-                else
-                {
-                    return false;
                 }
-                    
             }
             catch (Exception e)
             {
@@ -75,19 +70,44 @@ namespace DAO
                     ,pd.Product_Id,pd.Product_Name,pd.Product_Price,pd.Image,pd.Description,pd.Brand_id,pd.Category_Id,pd.Size_id,pd.Quantity);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql,conn);
-                if(cm.ExecuteNonQuery() >0);
+                if(cm.ExecuteNonQuery() >0)
                     return true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                Console.Read();
-                return false;
+                Console.Read();    
             }
             finally
             {
                 conn.Close();
             }
+            return false;
+        }
+        public bool checkIdProducts(string id)
+        {
+            try
+            {
+                conn.Open();
+                String sql = String.Format("SELECT * FROM `product` WHERE id = '{0}'",id);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
         }
         public bool editProducts(ProductDTO pd)
         {
@@ -108,19 +128,19 @@ namespace DAO
                     , pd.Product_Name, pd.Product_Price, pd.Image, pd.Description, pd.Brand_id, pd.Category_Id, pd.Size_id, pd.Quantity,pd.Product_Id);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql, conn);
-                if (cm.ExecuteNonQuery() > 0) ;
+                if (cm.ExecuteNonQuery() > 0) 
                 return true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 Console.Read();
-                return false;
             }
             finally
             {
                 conn.Close();
             }
+            return false;
         }
         public bool removeProducts(String idProducts)
         {
@@ -130,19 +150,20 @@ namespace DAO
                 String sql = String.Format("DELETE FROM `product` WHERE id = '{0}'",idProducts);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql, conn);
-                if (cm.ExecuteNonQuery() > 0) ;
+                if (cm.ExecuteNonQuery() > 0) 
                 return true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 Console.Read();
-                return false;
+                
             }
             finally
             {
                 conn.Close();
             }
+            return false;
         }
         public DataTable searchProducts(String keyword)
         {

@@ -213,15 +213,15 @@ namespace GUI
         private int size_id(string size_name)
         {
             int id = 0;
-            if (size_name.Trim().Equals("M"))
+            if (size_name.Trim().Equals("S"))
             {
-                id = 1;
+                id = 1;     
             } 
-            else if (size_name.Trim().Equals("L"))
+            else if (size_name.Trim().Equals("M"))
             {
                 id = 2;
             }
-            else if (size_name.Trim().Equals("X"))
+            else if (size_name.Trim().Equals("L"))
             {
                 id = 3;
             }
