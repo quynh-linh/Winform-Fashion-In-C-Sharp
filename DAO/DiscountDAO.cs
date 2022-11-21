@@ -180,6 +180,25 @@ namespace DAO
             return dtDiscount;
 
         }
-
+        public bool checkDiscountExist(string id) {
+            try {
+                conn.Open();
+                String sql = String.Format("SELECT * FROM `discount` WHERE id = '{0}'", id);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows) {
+                    return true;
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+            return false;
+        }
     }
 }

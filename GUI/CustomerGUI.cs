@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 using BUS;
 using DTO;
 using Guna.UI2.WinForms;
@@ -174,6 +175,53 @@ namespace GUI
             else
             {
                 MessageBox.Show("Hãy chọn thành viên muốn xóa");
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e) {
+            SaveFileDialog saved = new SaveFileDialog();
+            saved.Title = "Xuất -->> - - - ->";
+            saved.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (saved.ShowDialog() == DialogResult.OK) {
+                try {
+                    AccountGUI.exportExcel(saved.FileName, dataGridViewCustomer);
+                    MessageBox.Show("Xuất thành công <3");
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("Xuất thất bai :< Errors : " + ex.Message);
+                    MessageBox.Show("Phải tắt file excel khi thực hiện thao tác");
+                }
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e) {
+            OpenFileDialog opened = new OpenFileDialog();
+            opened.Title = "Nhập -->> - - - ->";
+            opened.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (opened.ShowDialog() == DialogResult.OK) {
+                try {
+                    // get datatable from excel
+                    System.Data.DataTable dataTable = AccountGUI.importExcel(opened.FileName);
+
+                    // insert to database customer
+                    customerBUS.insertCustomers(dataTable);
+
+                    //get all product
+                    System.Data.DataTable dataTable2 = customerBUS.getThanhVien();
+
+                    // update dataGridView
+                    dataGridViewCustomer.DataSource = dataTable2;
+                    MessageBox.Show("nhập thành công <3");
+                }
+                catch (FormatException ex1) {
+                    MessageBox.Show("Cột Không đúng định dạng");
+                }
+                catch (ApplicationException ex2) {
+                    MessageBox.Show(ex2.Message);
+                }
+                catch (ArgumentException ex3) {
+                    MessageBox.Show("Định dạng cột không đúng");
+                }
             }
         }
     }

@@ -118,5 +118,27 @@ namespace DAO
             }
             return false;
         }
+
+        public bool checkCustomerExist(string id) {
+            try {
+                conn.Open();
+                String sql = String.Format("SELECT * FROM `customer` WHERE idCustomer = '{0}'", id);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows) {
+                    return true;
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+            return false;
+        }
+
     }
 }
