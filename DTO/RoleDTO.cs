@@ -20,6 +20,7 @@ namespace DTO
             this.role_Desciption = role_Desciption;
             this.isDeleted = isDeleted;
         }
+        public RoleDTO() { }
 
         public string Role_Id { get => role_Id; set => role_Id = value; }
         public string Role_Name { get => role_Name; set => role_Name = value; }

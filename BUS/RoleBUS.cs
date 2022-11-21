@@ -23,6 +23,31 @@ namespace BUS
             if (roleDAO.addRole(role)) return true;
             return false;
         }
+        public void insertRoles(DataTable dataTable) {
+            List<RoleDTO> roles = new List<RoleDTO>();
+            //convert datatable to list<obj>
+            for (int i = 0; i < dataTable.Rows.Count; i++) {
+                RoleDTO roleDTO = new RoleDTO();
+                roleDTO.Role_Id = dataTable.Rows[i]["Mã vai trò"].ToString();
+                roleDTO.Role_Name = dataTable.Rows[i]["Tên vai trò"].ToString();
+                roleDTO.Role_Desciption = dataTable.Rows[i]["Mô tả quyền"].ToString();
+                roleDTO.IsDeleted = 0;
+
+                roles.Add(roleDTO);
+            }
+            int index = 0;
+            //check condition before insert data to database
+            roles.ForEach(b => {
+                if (roleDAO.checkRoleExist(b.Role_Id)) {
+                    throw new ApplicationException("Id : " + b.Role_Id + " nằm ở dòng " + (index + 1) + " trong file excel đã tồn tại trong DB");
+                }
+                else {
+                    // insert role to db
+                    this.addRole(b);
+                    index++;
+                }
+            });
+        }
 
         public Boolean fixRole(RoleDTO role)
         {

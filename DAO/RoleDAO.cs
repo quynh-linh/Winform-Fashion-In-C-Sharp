@@ -43,8 +43,8 @@ namespace DAO
             try
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO role(id,role_name,role_description)" +
-                   " VALUES ('{0}', '{1}', '{2}')", role.Role_Id, role.Role_Name, role.Role_Desciption);
+                string sql = string.Format("INSERT INTO role(id,role_name,role_description,isDeleted)" +
+                   " VALUES ('{0}', '{1}', '{2}',0)", role.Role_Id, role.Role_Name, role.Role_Desciption);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
@@ -239,5 +239,25 @@ namespace DAO
             return dtRole;
         }
 
+        public bool checkRoleExist(string id) {
+            try {
+                conn.Open();
+                String sql = String.Format("SELECT * FROM `role` WHERE id = '{0}'", id);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows) {
+                    return true;
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+            return false;
+        }
     }
 }
