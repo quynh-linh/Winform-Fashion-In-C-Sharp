@@ -469,3 +469,9 @@ C:\Users\onkid\source\repos\newcheck\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.
 C:\Users\onkid\source\repos\newcheck\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\onkid\source\repos\newcheck\BUS\obj\Debug\BUS.dll
 C:\Users\onkid\source\repos\newcheck\BUS\obj\Debug\BUS.pdb
+C:\Users\onkid\source\repos\newcheck\BUS\bin\Debug\EPPlus.dll
+C:\Users\onkid\source\repos\newcheck\BUS\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\onkid\source\repos\newcheck\BUS\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\onkid\source\repos\newcheck\BUS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\onkid\source\repos\newcheck\BUS\bin\Debug\EPPlus.xml
+C:\Users\onkid\source\repos\newcheck\BUS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

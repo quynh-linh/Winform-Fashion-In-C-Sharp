@@ -595,3 +595,9 @@ C:\Users\onkid\source\repos\newcheck\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.
 C:\Users\onkid\source\repos\newcheck\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\onkid\source\repos\newcheck\DAO\obj\Debug\DAO.dll
 C:\Users\onkid\source\repos\newcheck\DAO\obj\Debug\DAO.pdb
+C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\EPPlus.dll
+C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\EPPlus.xml
+C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

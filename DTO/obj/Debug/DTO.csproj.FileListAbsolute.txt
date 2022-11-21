@@ -70,3 +70,10 @@ C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.csproj.AssemblyReference.
 C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.dll
 C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.pdb
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\EPPlus.dll
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\EPPlus.xml
+C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.csproj.CopyComplete
