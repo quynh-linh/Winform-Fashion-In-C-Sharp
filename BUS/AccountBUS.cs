@@ -29,6 +29,33 @@ namespace BUS
             return false;
         }
 
+        public void insertAccounts(DataTable dataTable)  {
+            List<AccountDTO> accounts = new List<AccountDTO>(); 
+                for (int i = 0; i < dataTable.Rows.Count; i++) {
+                    AccountDTO accountDTO = new AccountDTO();
+                    accountDTO.Account_Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
+                    accountDTO.User_Name = dataTable.Rows[i]["username"].ToString();
+                    accountDTO.Password = dataTable.Rows[i]["password"].ToString();
+                    accountDTO.Full_Name = dataTable.Rows[i]["full_name"].ToString();
+                    accountDTO.Email = dataTable.Rows[i]["email"].ToString();
+                    accountDTO.Role_Id = dataTable.Rows[i]["role_id"].ToString();
+                    accounts.Add(accountDTO);
+                }
+            int index = 0;
+            foreach(AccountDTO account in accounts){
+                if (accountDao.checkExistUsername(account.User_Name)) {
+                    throw new ApplicationException("Username : " + account.User_Name + " nằm ở vị trí thứ " + (index + 1)  + " trong file excel đã tồn tại trong DB");
+                }
+                else if (accountDao.checkExistID(account.Account_Id)) {
+                    throw new ApplicationException("Id : " + account.Account_Id + " nằm ở vị trí thứ " + (index + 1) + " trong file excel đã tồn tại trong DB");
+                }
+                else {
+                    accountDao.addAccount(account);
+                    index++;
+                }
+            }
+        }
+
         public Boolean deleteAccount(string username)
         {
             if (accountDao.deleteAccount(username)) return true;

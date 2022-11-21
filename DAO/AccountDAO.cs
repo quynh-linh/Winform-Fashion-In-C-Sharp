@@ -2,6 +2,7 @@
 using System.Data;
 using MySql.Data.MySqlClient;
 using DTO;
+using Google.Protobuf.Collections;
 
 namespace DAO
 {
@@ -31,6 +32,39 @@ namespace DAO
             }
 
             return dtCategory;
+        }
+
+        public Boolean checkExistUsername(string username) {
+            conn.Open();
+            bool exists = false;
+            string checkuser = String.Format("SELECT COUNT(*) from account where username = '{0}'", username);
+            try {
+                MySqlCommand cmd = new MySqlCommand(checkuser, conn);
+                exists = !cmd.ExecuteScalar().ToString().Equals("0");
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
+            finally {
+                conn.Close();
+            }
+            return exists;
+        }
+        public Boolean checkExistID(int id) {
+            conn.Open();
+            bool exists = false;
+            string checkid = String.Format("SELECT COUNT(*) as quantity from account where id = {0}", id);
+            try {
+                MySqlCommand cmd = new MySqlCommand(checkid, conn);
+                exists = !cmd.ExecuteScalar().ToString().Equals("0");
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
+            finally {
+                conn.Close();
+            }
+            return exists;
         }
 
         public Boolean addAccount(AccountDTO accountDTO)

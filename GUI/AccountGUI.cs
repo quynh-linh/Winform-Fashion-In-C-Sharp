@@ -14,6 +14,7 @@ using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop.Excel;
 using PdfSharp.Charting;
+using NPOI.SS.Formula.Functions;
 
 namespace GUI
 {
@@ -87,55 +88,13 @@ namespace GUI
 
         }
 
-        private void exportExcel(string exportUrl) {
-            Excel.Application application =  new Excel.Application();
-            application.Application.Workbooks.Add(Type.Missing);
-
-            // create header rows 
-            for (int i=0;i< dataGridViewAccount.Columns.Count; i++) {
-                application.Cells[1, i + 1] = dataGridViewAccount.Columns[i].HeaderText;
-            }
-            // insert rows
-            for (int i = 0; i < dataGridViewAccount.Rows.Count; i++) {
-                for (int j = 0; j < dataGridViewAccount.Columns .Count; j++) {
-                    application.Cells[i + 2, j + 1] = dataGridViewAccount.Rows[i].Cells[j].Value;
-                }
-            }
-            application.Columns.AutoFit();
-            application.ActiveWorkbook.SaveCopyAs(exportUrl);
-            application.ActiveWorkbook.Saved = true;
-        }
-        private void importExcel(string importUrl) {
-            using (ExcelPackage package = new ExcelPackage(new FileInfo(importUrl))) {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                System.Data.DataTable dataTable = new System.Data.DataTable();
-                for (int i = worksheet.Dimension.Start.Column;i<= worksheet.Dimension.End.Column;i++) {
-                    dataTable.Columns.Add(worksheet.Cells[2, i].Value.ToString());
-                }
-                for(int i = (worksheet.Dimension.Start.Row + 1);i<= worksheet.Dimension.End.Row; i++) {
-                    List<string> rows = new List<string>();
-                    for (int j = worksheet.Dimension.Start.Column; j <= worksheet.Dimension.End.Column; j++) {
-                        rows.Add(worksheet.Cells[i, j].Value.ToString());
-                    }
-                   dataTable.Rows.Add(rows.ToArray());
-                }
-                if (false) {
-                    dataGridViewAccount.DataSource = dataTable;
-                }
-                else {
-                    MessageBox.Show("conccac");
-                }
-            }
-
-        }
-
         private void guna2Button6_Click_1(object sender, EventArgs e) {
             SaveFileDialog saved = new SaveFileDialog();
             saved.Title = "Xuất -->> - - - ->";
             saved.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
             if(saved.ShowDialog() == DialogResult.OK) {
                 try {
-                    exportExcel(saved.FileName);
+                    exportExcel(saved.FileName, dataGridViewAccount);
                     MessageBox.Show("Xuất thành công <3");
                 }catch(Exception ex) {
                     MessageBox.Show("Xuất thất bai :< Errors : "+ex.Message);
@@ -149,13 +108,59 @@ namespace GUI
             opened.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
             if (opened.ShowDialog() == DialogResult.OK) {
                 try {
-                    importExcel(opened.FileName);
+                    System.Data.DataTable dataTable = importExcel(opened.FileName);
+                    accountBUS.insertAccounts(dataTable);
+                    System.Data.DataTable dataTable2 = accountBUS.getAllAccount();
+                    dataGridViewAccount.DataSource = dataTable2;
                     MessageBox.Show("nhập thành công <3");
                 }
-                catch (Exception ex) {
-                    MessageBox.Show("nhập thất bai :< Errors : " + ex.Message);
+                catch (FormatException ex1) {
+                    MessageBox.Show("ID không đúng định dạng (int) thay vì (string)");
+                }
+                catch (ApplicationException ex2) {
+                    MessageBox.Show(ex2.Message);
+                }
+                catch (ArgumentException ex3) {
+                    MessageBox.Show("Định dạng cột không đúng");
                 }
             }
         }
+
+        public static void exportExcel(string exportUrl, DataGridView dataGridView) {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+            // create header rows 
+            for (int i = 0; i < dataGridView.Columns.Count; i++) {
+                application.Cells[1, i + 1] = dataGridView.Columns[i].HeaderText;
+            }
+            // insert rows
+            for (int i = 0; i < dataGridView.Rows.Count; i++) {
+                for (int j = 0; j < dataGridView.Columns.Count; j++) {
+                    application.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value;
+                }
+            }
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(exportUrl);
+            application.ActiveWorkbook.Saved = true;
+        }
+        public static System.Data.DataTable importExcel(string importUrl) {
+            using (ExcelPackage package = new ExcelPackage(new FileInfo(importUrl))) {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                System.Data.DataTable dataTable = new System.Data.DataTable();
+                for (int i = worksheet.Dimension.Start.Column; i <= worksheet.Dimension.End.Column; i++) {
+                    dataTable.Columns.Add(worksheet.Cells[1, i].Value.ToString());
+                }
+                for (int i = (worksheet.Dimension.Start.Row + 1); i <= worksheet.Dimension.End.Row; i++) {
+                    List<string> rows = new List<string>();
+                    for (int j = worksheet.Dimension.Start.Column; j <= worksheet.Dimension.End.Column; j++) {
+                        rows.Add(worksheet.Cells[i, j].Value.ToString());
+                    }
+                    dataTable.Rows.Add(rows.ToArray());
+                }
+                return dataTable;
+            }
+
+        }
+
     }
 }
