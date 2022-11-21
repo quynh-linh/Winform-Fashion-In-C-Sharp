@@ -247,10 +247,13 @@ namespace GUI
                 try {
                     // get datatable from excel
                     System.Data.DataTable dataTable = AccountGUI.importExcel(opened.FileName);
+
                     // insert to database product
-                    productsBUS.insertProducts(dataTable);  
+                    productsBUS.insertProducts(dataTable); 
+                    
                     //get all product
                     System.Data.DataTable dataTable2 = productsBUS.getProducts();
+
                     // update dataGridView
                     dataGridView.DataSource = dataTable2;
                     MessageBox.Show("nhập thành công <3");

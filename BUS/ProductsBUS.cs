@@ -99,7 +99,8 @@ namespace BUS
                 }
                 else if (!categoryDAO.checkCategoryExist(p.Category_Id)) {
                     throw new ApplicationException("Category id : " + p.Category_Id + " nằm ở dòng " + (index + 1) + " không tồn tại trong DB");
-                }else if (productDAO.checkSizeProducts(p.Size_id,p.Product_Name)) {
+                }
+                else if (productDAO.checkSizeProducts(p.Size_id,p.Product_Name)) {
                     throw new ApplicationException("Sản phẩm không được cùng trùng tên và size với sản phẩm đã tồn tại trong DB");
                 }
                 else {

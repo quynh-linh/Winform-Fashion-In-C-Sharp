@@ -39,9 +39,10 @@ namespace DAO
             try
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO category(id,nameCategory)" +
-                   " VALUES ('{0}', '{1}')", category.Category_Id, category.Category_Name);
+                string sql = string.Format("INSERT INTO category(id,nameCategory,isDeleted)" +
+                   " VALUES ('{0}', '{1}',0)", category.Category_Id, category.Category_Name);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
+                Console.WriteLine(sql);
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using DAO;
 using DTO;
+using Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
 
 namespace BUS
 {
@@ -18,6 +21,30 @@ namespace BUS
         {
             if (categoryDAO.addCategory(category)) return true;
             return false;
+        }
+
+        public void insertCategories(DataTable dataTable) {
+            List<CategoryDTO> categories = new List<CategoryDTO>();
+            //convert datatable to list<obj>
+            for (int i = 0; i < dataTable.Rows.Count; i++) {
+                CategoryDTO categoryDTO = new CategoryDTO();
+                categoryDTO.Category_Id = dataTable.Rows[i]["Mã loại sản phẩm"].ToString();
+                categoryDTO.Category_Name = dataTable.Rows[i]["Tên loại sản phẩm"].ToString();
+                categoryDTO.IsDeleted = 0;
+                categories.Add(categoryDTO);
+            }
+            int index = 0;
+            //check condition before insert data to database
+            categories.ForEach(c => {
+                if (categoryDAO.checkCategoryExist(c.Category_Id)) {
+                    throw new ApplicationException("Id : " + c.Category_Id + " nằm ở dòng " + (index + 1) + " trong file excel đã tồn tại trong DB");
+                }
+                else {
+                    // insert category to db
+                    this.addCategory(c);
+                    index++;
+                }
+            });
         }
 
         public Boolean fixCategory(CategoryDTO category)

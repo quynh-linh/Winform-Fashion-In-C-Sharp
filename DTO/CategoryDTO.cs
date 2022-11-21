@@ -14,6 +14,7 @@ namespace DTO
             this.category_Name = category_Name;
             this.isDeleted = isDeleted;
         }
+        public CategoryDTO() { }
 
         public string Category_Id { get => category_Id; set => category_Id = value; }
         public string Category_Name { get => category_Name; set => category_Name = value; }
