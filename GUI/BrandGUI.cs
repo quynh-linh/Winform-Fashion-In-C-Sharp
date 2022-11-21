@@ -173,5 +173,52 @@ namespace GUI
                 Txt_nameBrand.Text = dgv_brand.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
             }
         }
+
+        private void btn_importExcelBrand_Click(object sender, EventArgs e) {
+            OpenFileDialog opened = new OpenFileDialog();
+            opened.Title = "Nhập -->> - - - ->";
+            opened.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (opened.ShowDialog() == DialogResult.OK) {
+                try {
+                    // get datatable from excel
+                    System.Data.DataTable dataTable = AccountGUI.importExcel(opened.FileName);
+
+                    // insert to database brand
+                    brBUS.insertBrands(dataTable);
+
+                    //get all product
+                    System.Data.DataTable dataTable2 = brBUS.getBrand();
+
+                    // update dataGridView
+                    dgv_brand.DataSource = dataTable2;
+                    MessageBox.Show("nhập thành công <3");
+                }
+                catch (FormatException ex1) {
+                    MessageBox.Show("Cột Không đúng định dạng");
+                }
+                catch (ApplicationException ex2) {
+                    MessageBox.Show(ex2.Message);
+                }
+                catch (ArgumentException ex3) {
+                    MessageBox.Show("Định dạng cột không đúng");
+                }
+            }
+        }
+
+        private void btn_exportExcelBrand_Click(object sender, EventArgs e) {
+            SaveFileDialog saved = new SaveFileDialog();
+            saved.Title = "Xuất -->> - - - ->";
+            saved.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (saved.ShowDialog() == DialogResult.OK) {
+                try {
+                    AccountGUI.exportExcel(saved.FileName, dgv_brand);
+                    MessageBox.Show("Xuất thành công <3");
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("Xuất thất bai :< Errors : " + ex.Message);
+                    MessageBox.Show("Phải tắt file excel khi thực hiện thao tác");
+                }
+            }
+        }
     }
 }
