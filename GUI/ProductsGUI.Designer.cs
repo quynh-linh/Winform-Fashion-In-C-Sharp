@@ -83,8 +83,9 @@
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 600);
+            this.panel1.Size = new System.Drawing.Size(1076, 738);
             this.panel1.TabIndex = 0;
             // 
             // guna2Panel3
@@ -100,9 +101,10 @@
             this.guna2Panel3.Controls.Add(this.btnSearch);
             this.guna2Panel3.Controls.Add(this.textBoxSearch);
             this.guna2Panel3.Controls.Add(this.label8);
-            this.guna2Panel3.Location = new System.Drawing.Point(4, 347);
+            this.guna2Panel3.Location = new System.Drawing.Point(5, 427);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(799, 251);
+            this.guna2Panel3.Size = new System.Drawing.Size(1065, 309);
             this.guna2Panel3.TabIndex = 3;
             // 
             // dataGridView
@@ -121,9 +123,11 @@
             this.sizename,
             this.quantity,
             this.image});
-            this.dataGridView.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView.Location = new System.Drawing.Point(4, 44);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(793, 212);
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.Size = new System.Drawing.Size(1057, 261);
             this.dataGridView.TabIndex = 22;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
@@ -132,6 +136,7 @@
             this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "Mã";
+            this.id.MinimumWidth = 6;
             this.id.Name = "id";
             // 
             // name
@@ -139,6 +144,7 @@
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.DataPropertyName = "name";
             this.name.HeaderText = "Tên";
+            this.name.MinimumWidth = 6;
             this.name.Name = "name";
             // 
             // price
@@ -146,6 +152,7 @@
             this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.price.DataPropertyName = "price";
             this.price.HeaderText = "Giá";
+            this.price.MinimumWidth = 6;
             this.price.Name = "price";
             // 
             // description
@@ -153,6 +160,7 @@
             this.description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.description.DataPropertyName = "description";
             this.description.HeaderText = "Mô tả";
+            this.description.MinimumWidth = 6;
             this.description.Name = "description";
             // 
             // nameBrand
@@ -160,6 +168,7 @@
             this.nameBrand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nameBrand.DataPropertyName = "nameBrand";
             this.nameBrand.HeaderText = "Thương hiệu";
+            this.nameBrand.MinimumWidth = 6;
             this.nameBrand.Name = "nameBrand";
             // 
             // nameCate
@@ -167,6 +176,7 @@
             this.nameCate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nameCate.DataPropertyName = "nameCate";
             this.nameCate.HeaderText = "Danh mục";
+            this.nameCate.MinimumWidth = 6;
             this.nameCate.Name = "nameCate";
             // 
             // sizename
@@ -174,6 +184,7 @@
             this.sizename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sizename.DataPropertyName = "sizename";
             this.sizename.HeaderText = "Kích cỡ";
+            this.sizename.MinimumWidth = 6;
             this.sizename.Name = "sizename";
             // 
             // quantity
@@ -181,6 +192,7 @@
             this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.quantity.DataPropertyName = "quantity";
             this.quantity.HeaderText = "Số lượng";
+            this.quantity.MinimumWidth = 6;
             this.quantity.Name = "quantity";
             // 
             // image
@@ -188,6 +200,7 @@
             this.image.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.image.DataPropertyName = "image";
             this.image.HeaderText = "Tên ảnh";
+            this.image.MinimumWidth = 6;
             this.image.Name = "image";
             // 
             // btnSearch
@@ -199,10 +212,11 @@
             this.btnSearch.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSearch.ImageRotate = 0F;
             this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSearch.Location = new System.Drawing.Point(755, 5);
+            this.btnSearch.Location = new System.Drawing.Point(1007, 6);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSearch.Size = new System.Drawing.Size(41, 29);
+            this.btnSearch.Size = new System.Drawing.Size(55, 36);
             this.btnSearch.TabIndex = 21;
             // 
             // textBoxSearch
@@ -218,13 +232,13 @@
             this.textBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxSearch.Location = new System.Drawing.Point(537, 5);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSearch.Location = new System.Drawing.Point(716, 6);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.PasswordChar = '\0';
             this.textBoxSearch.PlaceholderText = "";
             this.textBoxSearch.SelectedText = "";
-            this.textBoxSearch.Size = new System.Drawing.Size(217, 28);
+            this.textBoxSearch.Size = new System.Drawing.Size(289, 34);
             this.textBoxSearch.TabIndex = 21;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -233,9 +247,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(8, 12);
+            this.label8.Location = new System.Drawing.Point(11, 15);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 21);
+            this.label8.Size = new System.Drawing.Size(201, 28);
             this.label8.TabIndex = 21;
             this.label8.Text = "Danh sách sản phẩm";
             // 
@@ -271,9 +286,10 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.textBoxId);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Location = new System.Drawing.Point(4, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(799, 338);
+            this.guna2Panel1.Size = new System.Drawing.Size(1065, 416);
             this.guna2Panel1.TabIndex = 2;
             // 
             // textboxQuantity
@@ -290,13 +306,13 @@
             this.textboxQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxQuantity.Location = new System.Drawing.Point(437, 58);
-            this.textboxQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textboxQuantity.Location = new System.Drawing.Point(583, 71);
+            this.textboxQuantity.Margin = new System.Windows.Forms.Padding(5);
             this.textboxQuantity.Name = "textboxQuantity";
             this.textboxQuantity.PasswordChar = '\0';
             this.textboxQuantity.PlaceholderText = "";
             this.textboxQuantity.SelectedText = "";
-            this.textboxQuantity.Size = new System.Drawing.Size(81, 28);
+            this.textboxQuantity.Size = new System.Drawing.Size(108, 34);
             this.textboxQuantity.TabIndex = 22;
             // 
             // label9
@@ -305,9 +321,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(353, 65);
+            this.label9.Location = new System.Drawing.Point(471, 80);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 21);
+            this.label9.Size = new System.Drawing.Size(94, 28);
             this.label9.TabIndex = 21;
             this.label9.Text = "Số lượng";
             // 
@@ -324,11 +341,13 @@
             this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(652, 281);
+            this.guna2Button5.Location = new System.Drawing.Point(869, 346);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(91, 40);
+            this.guna2Button5.Size = new System.Drawing.Size(121, 49);
             this.guna2Button5.TabIndex = 20;
             this.guna2Button5.Text = "Xuất Excel";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -343,11 +362,13 @@
             this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(495, 281);
+            this.guna2Button4.Location = new System.Drawing.Point(660, 346);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(91, 40);
+            this.guna2Button4.Size = new System.Drawing.Size(121, 49);
             this.guna2Button4.TabIndex = 19;
             this.guna2Button4.Text = "Nhập Excel";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // btnRemove
             // 
@@ -362,9 +383,10 @@
             this.btnRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(341, 281);
+            this.btnRemove.Location = new System.Drawing.Point(455, 346);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(91, 40);
+            this.btnRemove.Size = new System.Drawing.Size(121, 49);
             this.btnRemove.TabIndex = 18;
             this.btnRemove.Text = "Xóa";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -382,9 +404,10 @@
             this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(185, 281);
+            this.btnEdit.Location = new System.Drawing.Point(247, 346);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(91, 40);
+            this.btnEdit.Size = new System.Drawing.Size(121, 49);
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -402,9 +425,10 @@
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(34, 281);
+            this.btnAdd.Location = new System.Drawing.Point(45, 346);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(91, 40);
+            this.btnAdd.Size = new System.Drawing.Size(121, 49);
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.addProducts);
@@ -418,10 +442,11 @@
             this.imagebtnLoadFile.ImageOffset = new System.Drawing.Point(0, 0);
             this.imagebtnLoadFile.ImageRotate = 0F;
             this.imagebtnLoadFile.ImageSize = new System.Drawing.Size(32, 32);
-            this.imagebtnLoadFile.Location = new System.Drawing.Point(629, 219);
+            this.imagebtnLoadFile.Location = new System.Drawing.Point(839, 270);
+            this.imagebtnLoadFile.Margin = new System.Windows.Forms.Padding(4);
             this.imagebtnLoadFile.Name = "imagebtnLoadFile";
             this.imagebtnLoadFile.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imagebtnLoadFile.Size = new System.Drawing.Size(60, 38);
+            this.imagebtnLoadFile.Size = new System.Drawing.Size(80, 47);
             this.imagebtnLoadFile.TabIndex = 15;
             this.imagebtnLoadFile.Click += new System.EventHandler(this.imagebtnLoadFile_Click);
             // 
@@ -433,17 +458,19 @@
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.pictureBox);
-            this.guna2Panel2.Location = new System.Drawing.Point(534, 13);
+            this.guna2Panel2.Location = new System.Drawing.Point(712, 16);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(250, 200);
+            this.guna2Panel2.Size = new System.Drawing.Size(333, 246);
             this.guna2Panel2.TabIndex = 14;
             // 
             // pictureBox
             // 
             this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(244, 194);
+            this.pictureBox.Size = new System.Drawing.Size(325, 239);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
@@ -460,9 +487,10 @@
             this.comboboxSize.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboboxSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboboxSize.ItemHeight = 30;
-            this.comboboxSize.Location = new System.Drawing.Point(437, 105);
+            this.comboboxSize.Location = new System.Drawing.Point(583, 129);
+            this.comboboxSize.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxSize.Name = "comboboxSize";
-            this.comboboxSize.Size = new System.Drawing.Size(81, 36);
+            this.comboboxSize.Size = new System.Drawing.Size(107, 36);
             this.comboboxSize.TabIndex = 13;
             // 
             // label7
@@ -471,9 +499,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(349, 110);
+            this.label7.Location = new System.Drawing.Point(465, 135);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 21);
+            this.label7.Size = new System.Drawing.Size(77, 28);
             this.label7.TabIndex = 12;
             this.label7.Text = "Kích cỡ";
             // 
@@ -490,13 +519,13 @@
             this.textboxPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxPrice.Location = new System.Drawing.Point(437, 13);
-            this.textboxPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textboxPrice.Location = new System.Drawing.Point(583, 16);
+            this.textboxPrice.Margin = new System.Windows.Forms.Padding(5);
             this.textboxPrice.Name = "textboxPrice";
             this.textboxPrice.PasswordChar = '\0';
             this.textboxPrice.PlaceholderText = "";
             this.textboxPrice.SelectedText = "";
-            this.textboxPrice.Size = new System.Drawing.Size(81, 28);
+            this.textboxPrice.Size = new System.Drawing.Size(108, 34);
             this.textboxPrice.TabIndex = 11;
             // 
             // label6
@@ -505,9 +534,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(353, 20);
+            this.label6.Location = new System.Drawing.Point(471, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 21);
+            this.label6.Size = new System.Drawing.Size(41, 28);
             this.label6.TabIndex = 10;
             this.label6.Text = "Giá";
             // 
@@ -523,9 +553,10 @@
             this.comboboxCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboboxCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboboxCategory.ItemHeight = 30;
-            this.comboboxCategory.Location = new System.Drawing.Point(115, 213);
+            this.comboboxCategory.Location = new System.Drawing.Point(153, 262);
+            this.comboboxCategory.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxCategory.Name = "comboboxCategory";
-            this.comboboxCategory.Size = new System.Drawing.Size(216, 36);
+            this.comboboxCategory.Size = new System.Drawing.Size(287, 36);
             this.comboboxCategory.TabIndex = 9;
             // 
             // label5
@@ -534,9 +565,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(8, 218);
+            this.label5.Location = new System.Drawing.Point(11, 268);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 21);
+            this.label5.Size = new System.Drawing.Size(105, 28);
             this.label5.TabIndex = 8;
             this.label5.Text = "Danh mục";
             // 
@@ -552,9 +584,10 @@
             this.comboboxBrand.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboboxBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboboxBrand.ItemHeight = 30;
-            this.comboboxBrand.Location = new System.Drawing.Point(115, 156);
+            this.comboboxBrand.Location = new System.Drawing.Point(153, 192);
+            this.comboboxBrand.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxBrand.Name = "comboboxBrand";
-            this.comboboxBrand.Size = new System.Drawing.Size(216, 36);
+            this.comboboxBrand.Size = new System.Drawing.Size(287, 36);
             this.comboboxBrand.TabIndex = 7;
             // 
             // label4
@@ -563,9 +596,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 161);
+            this.label4.Location = new System.Drawing.Point(11, 198);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 21);
+            this.label4.Size = new System.Drawing.Size(129, 28);
             this.label4.TabIndex = 6;
             this.label4.Text = "Thương hiệu";
             // 
@@ -582,13 +616,13 @@
             this.textboxDes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxDes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxDes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxDes.Location = new System.Drawing.Point(115, 105);
-            this.textboxDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textboxDes.Location = new System.Drawing.Point(153, 129);
+            this.textboxDes.Margin = new System.Windows.Forms.Padding(5);
             this.textboxDes.Name = "textboxDes";
             this.textboxDes.PasswordChar = '\0';
             this.textboxDes.PlaceholderText = "";
             this.textboxDes.SelectedText = "";
-            this.textboxDes.Size = new System.Drawing.Size(217, 28);
+            this.textboxDes.Size = new System.Drawing.Size(289, 34);
             this.textboxDes.TabIndex = 5;
             // 
             // label3
@@ -597,9 +631,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(8, 112);
+            this.label3.Location = new System.Drawing.Point(11, 138);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 21);
+            this.label3.Size = new System.Drawing.Size(65, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Mô tả";
             // 
@@ -616,13 +651,13 @@
             this.textboxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxName.Location = new System.Drawing.Point(115, 58);
-            this.textboxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textboxName.Location = new System.Drawing.Point(153, 71);
+            this.textboxName.Margin = new System.Windows.Forms.Padding(5);
             this.textboxName.Name = "textboxName";
             this.textboxName.PasswordChar = '\0';
             this.textboxName.PlaceholderText = "";
             this.textboxName.SelectedText = "";
-            this.textboxName.Size = new System.Drawing.Size(217, 28);
+            this.textboxName.Size = new System.Drawing.Size(289, 34);
             this.textboxName.TabIndex = 3;
             // 
             // label2
@@ -631,9 +666,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 65);
+            this.label2.Location = new System.Drawing.Point(11, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
+            this.label2.Size = new System.Drawing.Size(97, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nhập tên";
             // 
@@ -650,13 +686,13 @@
             this.textBoxId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxId.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxId.Location = new System.Drawing.Point(115, 13);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxId.Location = new System.Drawing.Point(153, 16);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.PasswordChar = '\0';
             this.textBoxId.PlaceholderText = "";
             this.textBoxId.SelectedText = "";
-            this.textBoxId.Size = new System.Drawing.Size(217, 28);
+            this.textBoxId.Size = new System.Drawing.Size(289, 34);
             this.textBoxId.TabIndex = 1;
             // 
             // label1
@@ -665,19 +701,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Location = new System.Drawing.Point(11, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 21);
+            this.label1.Size = new System.Drawing.Size(95, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập mã";
             // 
             // ProductsGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(807, 600);
+            this.ClientSize = new System.Drawing.Size(1076, 738);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductsGUI";
             this.Text = "ProductsGUI";
             this.Load += new System.EventHandler(this.ProductsGUI_Load);

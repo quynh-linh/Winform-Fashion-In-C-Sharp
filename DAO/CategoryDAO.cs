@@ -33,6 +33,7 @@ namespace DAO
             return dtCategory;
         }
 
+
         public Boolean addCategory(CategoryDTO category)
         {
             try
@@ -185,6 +186,27 @@ namespace DAO
             }
 
             return data;
+        }
+
+        public bool checkCategoryExist(string id) {
+            try {
+                conn.Open();
+                String sql = String.Format("SELECT * FROM `category` WHERE id = '{0}'", id);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows) {
+                    return true;
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+            return false;
         }
     }
 }

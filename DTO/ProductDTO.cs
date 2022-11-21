@@ -44,5 +44,6 @@ namespace DTO
         public string Category_Id { get => category_Id; set => category_Id = value; }
         public int Size_id { get => size_id; set => size_id = value; }
         public int Quantity { get => quantity; set => quantity = value; }
+        
     }
 }

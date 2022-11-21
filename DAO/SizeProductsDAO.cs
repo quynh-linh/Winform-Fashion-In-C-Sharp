@@ -31,7 +31,26 @@ namespace DAO
                 conn.Close();
             }
             return dtSize;
-
+        }
+        public bool checkSizeExist(int id) {
+            try {
+                conn.Open();
+                String sql = String.Format("SELECT * FROM `size` WHERE id = {0}", id);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                var reader = cm.ExecuteReader();
+                if (reader.HasRows) {
+                    return true;
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+            return false;
         }
     }
 }
