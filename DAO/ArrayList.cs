@@ -11,6 +11,11 @@ namespace DAO
             throw new NotImplementedException();
         }
 
+        internal void Add(ProductDTO pro)
+        {
+            throw new NotImplementedException();
+        }
+
         public static implicit operator ArrayList<T>(ArrayList v)
         {
             throw new NotImplementedException();
