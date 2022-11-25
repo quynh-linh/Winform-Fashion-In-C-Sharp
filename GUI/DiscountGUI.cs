@@ -91,8 +91,9 @@ namespace GUI
 
                 if (dcBUS.load_Discount(txt_Search.Text, guna2ComboBox3.Text).Rows.Count > e.RowIndex)
                 {
-                    dtp_startday.Text = dcBUS.load_Discount(txt_Search.Text, guna2ComboBox3.Text).Rows[e.RowIndex][2].ToString();
-                    dtp_endday.Text = dcBUS.load_Discount(txt_Search.Text, guna2ComboBox3.Text).Rows[e.RowIndex][3].ToString();
+                    //MessageBox.Show(dcBUS.load_Discount(txt_Search.Text, guna2ComboBox3.Text).Rows[e.RowIndex][2].ToString());
+                    dtp_startday.Text = dcBUS.get_Date_From_Discount_Id(tb_madiscount.Text).Rows[0][0].ToString();
+                    dtp_endday.Text = dcBUS.get_Date_From_Discount_Id(tb_madiscount.Text).Rows[0][1].ToString();
                     this.table.Rows.Clear();
                     if (dcBUS.check_Discount_Id(tb_madiscount.Text))
                     {

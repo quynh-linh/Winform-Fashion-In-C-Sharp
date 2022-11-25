@@ -500,5 +500,30 @@ namespace DAO
             return data;
 
         }
+
+        public DataTable get_Date_From_Discount_Id(String id)
+        {
+            DataTable dtDiscount = new DataTable();
+            try
+            {
+                conn.Open();
+                //String sql = "SELECT ds.maDiscount , ds.sale_percent , ds.start_day , ds.end_day ,pd.name as nameProduct from discount as ds, product as pd where pd.id = ds.maProduct";
+                String sql = "SELECT start_day,end_day FROM discount WHERE isDeleted = 0 AND maDiscount = '"+id+"'";
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adt = new MySqlDataAdapter(sql, conn);
+                adt.Fill(dtDiscount);
+                Console.WriteLine(sql);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Loi select : " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtDiscount;
+
+        }
     }
 }

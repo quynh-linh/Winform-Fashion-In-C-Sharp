@@ -133,6 +133,11 @@ namespace BUS
         {
             return dcDAO.delete_Detail_Discount(discount_Id);
         }
+
+        public DataTable get_Date_From_Discount_Id(String id)
+        {
+            return dcDAO.get_Date_From_Discount_Id(id);
+        }
             public void insertDiscounts(DataTable dataTable) {
             List<DiscountDTO> discounts = new List<DiscountDTO>();
             //convert datatable to list<obj>
