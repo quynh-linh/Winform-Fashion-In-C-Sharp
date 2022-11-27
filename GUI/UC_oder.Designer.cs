@@ -39,6 +39,7 @@
             // lb_nameOder
             // 
             this.lb_nameOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameOder.ForeColor = System.Drawing.Color.White;
             this.lb_nameOder.Location = new System.Drawing.Point(6, 9);
             this.lb_nameOder.Name = "lb_nameOder";
             this.lb_nameOder.Size = new System.Drawing.Size(162, 34);
@@ -50,6 +51,7 @@
             // 
             this.lb_priceOder.AutoSize = true;
             this.lb_priceOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_priceOder.ForeColor = System.Drawing.Color.White;
             this.lb_priceOder.Location = new System.Drawing.Point(174, 43);
             this.lb_priceOder.Name = "lb_priceOder";
             this.lb_priceOder.Size = new System.Drawing.Size(62, 15);
@@ -70,7 +72,7 @@
             this.btn_deleteOder.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_deleteOder.ForeColor = System.Drawing.Color.Black;
             this.btn_deleteOder.HoverState.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_deleteOder.Location = new System.Drawing.Point(242, 29);
+            this.btn_deleteOder.Location = new System.Drawing.Point(242, 27);
             this.btn_deleteOder.Name = "btn_deleteOder";
             this.btn_deleteOder.Size = new System.Drawing.Size(31, 31);
             this.btn_deleteOder.TabIndex = 3;
@@ -81,6 +83,7 @@
             // 
             this.lbl_Quantity_X_Price.AutoSize = true;
             this.lbl_Quantity_X_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Quantity_X_Price.ForeColor = System.Drawing.Color.White;
             this.lbl_Quantity_X_Price.Location = new System.Drawing.Point(6, 43);
             this.lbl_Quantity_X_Price.Name = "lbl_Quantity_X_Price";
             this.lbl_Quantity_X_Price.Size = new System.Drawing.Size(27, 15);
@@ -110,6 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(95, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 15);
@@ -122,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.btn_deleteOder);

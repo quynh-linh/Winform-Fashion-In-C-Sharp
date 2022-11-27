@@ -53,6 +53,7 @@
             // 
             this.lb_nameProductItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_nameProductItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameProductItem.ForeColor = System.Drawing.Color.White;
             this.lb_nameProductItem.Location = new System.Drawing.Point(76, 14);
             this.lb_nameProductItem.Name = "lb_nameProductItem";
             this.lb_nameProductItem.Size = new System.Drawing.Size(59, 12);
@@ -85,6 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.lb_nameProductItem);
             this.Controls.Add(this.ptc_imageProductItem);

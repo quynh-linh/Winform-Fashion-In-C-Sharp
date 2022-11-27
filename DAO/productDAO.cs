@@ -66,8 +66,8 @@ namespace DAO
             {
                 conn.Open();
                 String sql = String.Format("INSERT INTO `product`(`id`, `name`, `price`, `image`, `description`, `brand_id`, `category_id`, `size_id`, `quantity`,`isDeleted`) " +
-                    "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')"
-                    ,pd.Product_Id,pd.Product_Name,pd.Product_Price,pd.Image,pd.Description,pd.Brand_id,pd.Category_Id,pd.Size_id,pd.Quantity,1);
+                    "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')"
+                    , pd.Product_Id,pd.Product_Name,pd.Product_Price,pd.Image,pd.Description,pd.Brand_id,pd.Category_Id,pd.Size_id,pd.Quantity,1);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql,conn);
                 if(cm.ExecuteNonQuery() >0)

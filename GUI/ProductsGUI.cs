@@ -132,7 +132,7 @@ namespace GUI
                 String name = textboxName.Text;
                 Double price = Convert.ToDouble(textboxPrice.Text);
                 String des = textboxDes.Text;
-                int quantity = int.Parse(textboxQuantity.Text);
+                int quantity = Convert.ToInt32(textboxQuantity.Text);
                 String nameImage = Path.GetFileName(pictureBox.ImageLocation);
                 String brand = br.Row["id"].ToString();
                 String category = ct.Row["id"].ToString();
