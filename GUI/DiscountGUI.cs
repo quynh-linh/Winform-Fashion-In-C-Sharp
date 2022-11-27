@@ -72,6 +72,7 @@ namespace GUI
                         if (dcBUS.addDiscount(dcDTO))
                         {
                             refresh();
+                            Auto_Update_Discount();
                             MessageBox.Show("Thêm Thành Công !");
                         }
                         else MessageBox.Show("Thêm Thất Bại !");
@@ -148,6 +149,7 @@ namespace GUI
                             list_Choose_Product.Clear();
                             MessageBox.Show("Cập nhật thành công !");
                             refresh();
+                            Auto_Update_Discount();
                         }
                         else MessageBox.Show("Cập nhật không thành công !");
                     }

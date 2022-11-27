@@ -86,6 +86,8 @@ namespace GUI
                 list_Quantity_Choice.Clear();
                 flp_oder.Controls.Clear();
                 label4.Text = "0đ";
+                guna2TextBox2.Text = "";
+                guna2TextBox3.Text = "";
             }
         }
 
@@ -153,6 +155,8 @@ namespace GUI
                     label4.Text = "0đ";
                     guna2TextBox1.Text = "";
                     label2.Text = "0đ";
+                    guna2TextBox2.Text = "";
+                    guna2TextBox3.Text = "";
                     MessageBox.Show("Đã thanh toán");
                 }
             }
