@@ -526,5 +526,18 @@ namespace GUI
                 MessageBox.Show("Lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void removeImportProducts(object sender, EventArgs e)
+        {
+            if(dataGridViewImprotProducts.SelectedRows.Count > 0)
+            {
+                int index = dataGridViewImprotProducts.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = dataGridViewImprotProducts.Rows[index];
+                string maPhieuNhap = Convert.ToString(selectedRow.Cells["maPhieuNhap"].Value);
+                MessageBox.Show(maPhieuNhap);
+                MessageBox.Show(importProductBUS.removeImportProductToID(maPhieuNhap),"Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                loadDBtoImportProducts();
+            }
+        }
     }
 }

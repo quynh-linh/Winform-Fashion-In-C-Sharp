@@ -89,7 +89,7 @@
             this.ngayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRemoveImportProduct = new Guna.UI2.WinForms.Guna2Button();
             this.comboboxStaff = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dateEndTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -135,6 +135,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textboxMaPhieuNhap_Detail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -857,7 +858,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.guna2Button8);
+            this.groupBox1.Controls.Add(this.guna2Button9);
+            this.groupBox1.Controls.Add(this.btnRemoveImportProduct);
             this.groupBox1.Controls.Add(this.comboboxStaff);
             this.groupBox1.Controls.Add(this.dateEndTime);
             this.groupBox1.Controls.Add(this.label6);
@@ -874,20 +876,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu nhập";
             // 
-            // guna2Button8
+            // btnRemoveImportProduct
             // 
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Location = new System.Drawing.Point(321, 145);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(140, 35);
-            this.guna2Button8.TabIndex = 14;
-            this.guna2Button8.Text = "Tìm kiếm";
-            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
+            this.btnRemoveImportProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveImportProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveImportProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemoveImportProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemoveImportProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRemoveImportProduct.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveImportProduct.Location = new System.Drawing.Point(229, 145);
+            this.btnRemoveImportProduct.Name = "btnRemoveImportProduct";
+            this.btnRemoveImportProduct.Size = new System.Drawing.Size(140, 35);
+            this.btnRemoveImportProduct.TabIndex = 14;
+            this.btnRemoveImportProduct.Text = "Xóa";
+            this.btnRemoveImportProduct.Click += new System.EventHandler(this.removeImportProducts);
             // 
             // comboboxStaff
             // 
@@ -1565,6 +1567,20 @@
             this.label13.Text = "Mã Phiếu";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // guna2Button9
+            // 
+            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button9.ForeColor = System.Drawing.Color.White;
+            this.guna2Button9.Location = new System.Drawing.Point(446, 145);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Size = new System.Drawing.Size(140, 35);
+            this.guna2Button9.TabIndex = 15;
+            this.guna2Button9.Text = "Tìm kiếm";
+            // 
             // ImportProductsGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1701,6 +1717,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gia_nhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn size_detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn tong_tien;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btnRemoveImportProduct;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
     }
 }

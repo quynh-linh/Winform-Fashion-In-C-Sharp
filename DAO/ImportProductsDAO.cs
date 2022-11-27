@@ -336,6 +336,29 @@ namespace DAO
             }
             return false;
         }
+        public bool removeDetailImportProductToId(String maPhieuNhap)
+        {
+            try
+            {
+                conn.Open();
+                string sql = string.Format("DELETE FROM `detail_import` WHERE maPhieuNhap = '{0}'", maPhieuNhap);
+                // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                // Query và kiểm tra
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
         public bool updateQuantityProduct(int soluong , string maSp , int size_id)
         {
             try

@@ -104,6 +104,21 @@ namespace BUS
                 return false;
             }
         }
+        public String removeImportProductToID(String maPhieuNhap)
+        {
+            if (importDAO.removeDetailImportProductToId(maPhieuNhap))
+            {
+                if (importDAO.removeImportProduct(maPhieuNhap))
+                {
+                    return "Xóa thành công";
+                }
+            }
+            else
+            {
+                return "Xóa không thành công";
+            }
+            return "";
+        }
         public bool updateQuantity(int soluong, string maSp, int size_id)
         {
             if (importDAO.updateQuantityProduct(soluong,maSp,size_id))
