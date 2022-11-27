@@ -18,11 +18,11 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "SELECT pd.id , pd.price , pd.name , pd.description , pd.quantity , pd.image, " +
+                String sql = "SELECT pd.id , pd.price , pd.name , pd.description , pd.quantity , pd.image, pd.isDeleted , " +
                     "br.name as nameBrand , " +
                     "ct.nameCategory as nameCate , s.name as sizename " +
                     "FROM product as pd , brand as br ,  category as ct , size as s " +
-                    "WHERE pd.brand_id = br.id AND pd.category_id = ct.id AND pd.size_id = s.id";
+                    "WHERE (pd.brand_id = br.id AND pd.category_id = ct.id) AND (pd.size_id = s.id AND pd.isDeleted = 1)";
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(ds);
             }
@@ -65,9 +65,9 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("INSERT INTO `product`(`id`, `name`, `price`, `image`, `description`, `brand_id`, `category_id`, `size_id`, `quantity`) " +
+                String sql = String.Format("INSERT INTO `product`(`id`, `name`, `price`, `image`, `description`, `brand_id`, `category_id`, `size_id`, `quantity`,`isDeleted`) " +
                     "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')"
-                    ,pd.Product_Id,pd.Product_Name,pd.Product_Price,pd.Image,pd.Description,pd.Brand_id,pd.Category_Id,pd.Size_id,pd.Quantity);
+                    ,pd.Product_Id,pd.Product_Name,pd.Product_Price,pd.Image,pd.Description,pd.Brand_id,pd.Category_Id,pd.Size_id,pd.Quantity,1);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql,conn);
                 if(cm.ExecuteNonQuery() >0)
@@ -147,7 +147,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("DELETE FROM `product` WHERE id = '{0}'",idProducts);
+                String sql = String.Format("UPDATE `product` SET `isDeleted`='0' WHERE id = '{0}'", idProducts);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql, conn);
                 if (cm.ExecuteNonQuery() > 0) 

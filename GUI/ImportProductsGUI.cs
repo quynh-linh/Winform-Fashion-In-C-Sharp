@@ -534,7 +534,6 @@ namespace GUI
                 int index = dataGridViewImprotProducts.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridViewImprotProducts.Rows[index];
                 string maPhieuNhap = Convert.ToString(selectedRow.Cells["maPhieuNhap"].Value);
-                MessageBox.Show(maPhieuNhap);
                 MessageBox.Show(importProductBUS.removeImportProductToID(maPhieuNhap),"Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 loadDBtoImportProducts();
             }
