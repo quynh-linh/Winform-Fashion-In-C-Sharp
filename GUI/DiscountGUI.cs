@@ -7,6 +7,7 @@ using Guna.UI2.WinForms;
 using DAO;
 using System.Collections;
 using NPOI.SS.Formula.Functions;
+using System.Globalization;
 
 namespace GUI
 {
@@ -21,6 +22,7 @@ namespace GUI
         public DiscountGUI(string role_Manipulative)
         {
             InitializeComponent();
+            Auto_Update_Discount();
             if (!role_Manipulative.Equals("Được thay đổi"))
             {
                 btn_add_discount.Enabled = false;
@@ -64,7 +66,7 @@ namespace GUI
                     MessageBox.Show("Giá trị đã tồn tại");
                 else
                 {
-                    if(MessageBox.Show("Bạn có chắc chắn muốn thêm loại giảm giá này","",MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc chắn muốn thêm loại giảm giá này", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         DiscountDTO dcDTO = new DiscountDTO(madiscount, giagia, startday, endday, guna2ComboBox1.Text, 0);
                         if (dcBUS.addDiscount(dcDTO))
@@ -87,7 +89,7 @@ namespace GUI
                 tb_madiscount.Text = dgv_discount.Rows[e.RowIndex].Cells["maDiscount"].FormattedValue.ToString();
                 tb_giamgia.Text = dgv_discount.Rows[e.RowIndex].Cells["sale_percent"].FormattedValue.ToString();
 
-                
+
 
                 if (dcBUS.load_Discount(txt_Search.Text, guna2ComboBox3.Text).Rows.Count > e.RowIndex)
                 {
@@ -142,7 +144,7 @@ namespace GUI
                         {
                             dcBUS.delete_Detail_Discount(madiscount);
                             foreach (String id in list_Choose_Product)
-                                dcBUS.insert_Detail_Discount(madiscount, id);
+                                dcBUS.insert_Detail_Discount(madiscount, id, dcBUS.get_Product_By_Id(id).Product_Name);
                             list_Choose_Product.Clear();
                             MessageBox.Show("Cập nhật thành công !");
                             refresh();
@@ -172,28 +174,35 @@ namespace GUI
             }
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e) {
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
             SaveFileDialog saved = new SaveFileDialog();
             saved.Title = "Xuất -->> - - - ->";
             saved.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
-            if (saved.ShowDialog() == DialogResult.OK) {
-                try {
+            if (saved.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
                     AccountGUI.exportExcel(saved.FileName, dgv_discount);
                     MessageBox.Show("Xuất thành công <3");
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show("Xuất thất bai :< Errors : " + ex.Message);
                     MessageBox.Show("Phải tắt file excel khi thực hiện thao tác");
                 }
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e) {
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
             OpenFileDialog opened = new OpenFileDialog();
             opened.Title = "Nhập -->> - - - ->";
             opened.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
-            if (opened.ShowDialog() == DialogResult.OK) {
-                try {
+            if (opened.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
                     // get datatable from excel
                     System.Data.DataTable dataTable = AccountGUI.importExcel(opened.FileName);
 
@@ -207,13 +216,16 @@ namespace GUI
                     dgv_discount.DataSource = dataTable2;
                     MessageBox.Show("nhập thành công <3");
                 }
-                catch (FormatException ex1) {
+                catch (FormatException ex1)
+                {
                     MessageBox.Show("Cột Không đúng định dạng");
                 }
-                catch (ApplicationException ex2) {
+                catch (ApplicationException ex2)
+                {
                     MessageBox.Show(ex2.Message);
                 }
-                catch (ArgumentException ex3) {
+                catch (ArgumentException ex3)
+                {
                     MessageBox.Show("Định dạng cột không đúng");
                 }
             }
@@ -270,7 +282,7 @@ namespace GUI
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
-            if (i < dataGridView1.Rows.Count-1)
+            if (i < dataGridView1.Rows.Count - 1)
             {
                 if ((bool)dataGridView1.Rows[i].Cells[4].Value == true)
                 {
@@ -319,7 +331,7 @@ namespace GUI
         {
             this.table_Discount.Rows.Clear();
             DataTable tb = dcBUS.load_Discount(txt_Search.Text, guna2ComboBox3.Text);
-            for(int i=0;i< tb.Rows.Count;i++)
+            for (int i = 0; i < tb.Rows.Count; i++)
                 this.table_Discount.Rows.Add(tb.Rows[i][0].ToString(), tb.Rows[i][1].ToString(), tb.Rows[i][2].ToString());
             dgv_discount.DataSource = table_Discount;
         }
@@ -338,6 +350,32 @@ namespace GUI
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void Auto_Update_Discount()
+        {
+            int day = DateTime.Now.Day;
+            int month = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+            String now = day + "/" + month + "/" + year;
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            DateTime time1 = DateTime.ParseExact(now, "dd/MM/yyyy", provider);
+
+            ArrayList list_Discount = dcBUS.get_Discount();
+
+            for (int i = 0; i < list_Discount.Count; i++)
+            {
+                DiscountDTO dc = (DiscountDTO)list_Discount[i];
+                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "dd/MM/yyyy", provider)) >= 0 && time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) <= 0 && dc.Status.Equals("Ngừng áp dụng"))
+                {
+                    dcBUS.Auto_Update_Discount(dc.Ma_discount, "Đang áp dụng");
+                }
+
+                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "dd/MM/yyyy", provider)) < 0 && dc.Status.Equals("Đang áp dụng") || time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) > 0 && dc.Status.Equals("Đang áp dụng"))
+                {
+                    dcBUS.Auto_Update_Discount(dc.Ma_discount, "Ngừng áp dụng");
+                }
             }
         }
     }

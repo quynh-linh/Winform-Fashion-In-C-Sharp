@@ -1,6 +1,7 @@
 ﻿using BUS;
 using DAO;
 using DTO;
+using FontAwesome.Sharp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace GUI
 {
     public partial class Sell_DetailGUI : Form
     {
-        
+
         DiscountBUS dc_bus = new DiscountBUS();
         SellBUS sellBuss = new SellBUS();
         ProductDTO product = new ProductDTO();
@@ -30,34 +31,54 @@ namespace GUI
         double gia = 0;
         string name = "";
         int size = 0;
-        public Sell_DetailGUI(ProductDTO productDTO, SellGui sellGUI, String s, String size)
+        double price_Discount = 0;
+        int percent = 0;
+        public Sell_DetailGUI(ProductDTO productDTO, SellGui sellGUI, String s, String size, int discount)
         {
             this.product = productDTO;
             InitializeComponent();
             checkSize(productDTO);
             checkedSize(productDTO);
             this.Text = s;
-            
             this.sellGUI = sellGUI;
-            //this.discount = dTO;
-            //fillCombobox(dTO);
             _uriproduct = @"Image\" + this.product.Image;
             loadImageAsync();
             tb_nameProduct.Text = this.product.Product_Name;
 
             if (this.Text.Equals("Add new Product to Bill"))
-                tb_quantityProduct.Text = 1 +"";
+                tb_quantityProduct.Text = 1 + "";
             else
             {
                 int index = sellGUI.listOder.IndexOf(productDTO);
-                int newQuantity = (int) sellGUI.list_Quantity_Choice[index];
+                int newQuantity = (int)sellGUI.list_Quantity_Choice[index];
                 tb_quantityProduct.Text = newQuantity.ToString();
             }
+            int size_Id = 0;
+            if (size.Equals("S")) { rdb_sizeS.Checked = true; size_Id = 1; }
+            else if (size.Equals("M")) { rdb_sizeM.Checked = true; size_Id = 2; }
+            else if (size.Equals("L")) {rdb_sizeL.Checked = true; size_Id = 3; }
+            else if (size.Equals("XL")) {rdo_XL.Checked = true; size_Id = 4;}
 
-            if (size.Equals("S")) rdb_sizeS.Checked = true;
-            else if (size.Equals("M")) rdb_sizeM.Checked = true;
-            else if (size.Equals("L")) rdb_sizeL.Checked = true;
-            else if (size.Equals("XL")) rdo_XL.Checked = true;
+            if (discount > 0)
+            {
+                percent = discount;
+                double price_up = this.product.Product_Price * 0.05 + this.product.Product_Price;
+                this.price_Discount = price_up - (percent * price_up) / 100;
+                double total = price_up * sl;
+                double total_Discount = this.price_Discount * sl;
+                guna2CircleButton1.Text = "-" + discount + "%";
+                tb_priceProduct.Text = total.ToString("#,#,#") + "đ";
+                guna2TextBox1.Text = total_Discount.ToString("#,#,#") + "đ";
+            }
+            else
+            {
+                price_Discount = product.Product_Price;
+                guna2CircleButton1.Visible = false;
+                label5.Visible = false;
+                guna2TextBox1.Visible = false;
+            }
+
+            
 
         }
         public Task<Image> loadImageFromFileAsync(string uri)
@@ -85,10 +106,7 @@ namespace GUI
                 if (sl <= this.product.Quantity)
                 {
                     tb_quantityProduct.Text = sl.ToString();
-                    gia = this.product.Product_Price * sl;
-                    double thue = (5 * gia) / 100; // gia sp tang 5% so vs nhap hang
-                    double tienloi = gia + thue;
-                    tb_priceProduct.Text = tienloi.ToString("#,#,#") + "đ";
+
                 }
                 else
                 {
@@ -107,10 +125,6 @@ namespace GUI
                 if (sl > 0)
                 {
                     tb_quantityProduct.Text = sl.ToString();
-                    gia = this.product.Product_Price * sl;
-                    double thue = (5 * gia) / 100; // gia sp tang 5% so vs nhap hang
-                    double tienloi = gia + thue;
-                    tb_priceProduct.Text = tienloi.ToString("#,#,#") + "đ";
                 }
                 else
                 {
@@ -131,6 +145,14 @@ namespace GUI
                     double thue = (5 * gia) / 100; // gia sp tang 5% so vs nhap hang
                     double tienloi = gia + thue;
                     tb_priceProduct.Text = tienloi.ToString("#,#,#") + "đ";
+
+                    if (this.percent > 0)
+                    {
+                        double price_up = this.product.Product_Price + this.product.Product_Price * 0.05;
+                        this.price_Discount = price_up - (percent * price_up) / 100;
+                        double total_Discount = this.price_Discount * sl;
+                        guna2TextBox1.Text = total_Discount.ToString("#,#,#") + "đ";
+                    }
                 }
                 if (sl > this.product.Quantity)
                 {
@@ -140,20 +162,7 @@ namespace GUI
                 }
             }
         }
-        // gan ma giam gia len combobox
-        public void fillCombobox(DiscountDTO data)
-        {
-            this.cbb_discountProduct.DataSource = dc_bus.getMadiscount(data);
-            this.cbb_discountProduct.DisplayMember = "maDiscount";
-            this.cbb_discountProduct.ValueMember = "maDiscount";
-            this.cbb_discountProduct.Enabled = true;
-            cbb_discountProduct.SelectedItem = null;
-        }
-        // aps max giam gia cho san pham
-        private void giamgia()
-        {
 
-        }
         //check checked size cua sp
         public void checkedSize(ProductDTO productDTO)
         {
@@ -204,14 +213,17 @@ namespace GUI
             if (checkOrderExits(this.product) != null)
             {
                 int index = sellGUI.listOder.IndexOf(checkOrderExits(this.product));
+                sellGUI.list_Quantity_Choice.RemoveAt(index);
                 sellGUI.list_Quantity_Choice.Insert(index, int.Parse(tb_quantityProduct.Text));
             }
             else//SP k có trong bill thì thêm mới sp
             {
+                if (this.percent > 0)
+                    this.product.Product_Price = this.price_Discount;
+                else this.product.Product_Price = this.product.Product_Price + 0.05 * this.product.Product_Price;
                 this.sellGUI.listOder.Add(this.product);
                 this.sellGUI.list_Quantity_Choice.Add(int.Parse(tb_quantityProduct.Text));
             }
-            
 
             //do du lieu oder vo flowlayout
             this.sellGUI.addItemOder(this.sellGUI.listOder, this.sellGUI.list_Quantity_Choice);   
@@ -235,6 +247,15 @@ namespace GUI
                     double thue = (5 * gia) / 100; // gia sp tang 5% so vs nhap hang
                     double tienloi = gia + thue;
                     tb_priceProduct.Text = tienloi.ToString("#,#,#") + "đ";
+
+                    if (this.percent > 0)
+                    {
+                        double price_up = this.product.Product_Price + this.product.Product_Price * 0.05;
+                        this.price_Discount = price_up - (percent * price_up) / 100;
+                        double total_Discount = this.price_Discount * sl;
+                        guna2TextBox1.Text = total_Discount.ToString("#,#,#") + "đ";
+                    }
+
                     if (sl > this.product.Quantity)
                     {
                         sl = this.product.Quantity;

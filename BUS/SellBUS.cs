@@ -29,5 +29,10 @@ namespace BUS
         {
             return sellDAO.selectSize(name, size);
         }
+
+        public ArrayList searchProducts(String keyword, String cbb)
+        {
+            return sellDAO.searchProducts(keyword, cbb);
+        }
     }
 }

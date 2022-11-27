@@ -454,10 +454,10 @@ namespace DAO
             return false;
         }
 
-        public bool insert_Detail_Discount(String discount_Id, String product_Id)
+        public bool insert_Detail_Discount(String discount_Id, String product_Id, String name)
         {
-            String sql = "INSERT INTO detail_discount (discount_Id, product_Id)"
-                + "VALUES( '" + discount_Id + "','" + product_Id + "')";
+            String sql = "INSERT INTO detail_discount (discount_Id, product_Id, product_Name)"
+                + "VALUES( '" + discount_Id + "','" + product_Id + "', '"+name+"')";
 
             try
             {
@@ -525,5 +525,121 @@ namespace DAO
             return dtDiscount;
 
         }
+
+        public int check_Product_Discount(String id, String name, String s)
+        {
+            String sql = "";
+            if(name.Equals("id"))
+                sql = "SELECT dc.sale_percent FROM detail_discount as dd, discount as dc WHERE dd.discount_Id = dc.maDiscount  AND  dd.product_Id = '" + id + "' AND dc.status = 'Đang áp dụng' AND isDeleted = 0";
+            else sql = "SELECT dc.sale_percent FROM detail_discount as dd, discount as dc WHERE dd.discount_Id = dc.maDiscount  AND  dd.product_Name = '" + name + "' AND dc.status = 'Đang áp dụng' AND isDeleted = 0";
+            DataTable dtDiscount = new DataTable();
+            int result = -1;
+            try
+            {
+                conn.Open();
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adt = new MySqlDataAdapter(sql, conn);
+                adt.Fill(dtDiscount);
+                Console.WriteLine(sql);
+                result = int.Parse(dtDiscount.Rows[0][0].ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Loi select : " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
+
+        public String get_Price_Product(String id)
+        {
+            String sql = "SELECT price FROM product WHERE id = '" + id + "'";
+            DataTable dtDiscount = new DataTable();
+            String s = "";
+            try
+            {
+                conn.Open();
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adt = new MySqlDataAdapter(sql, conn);
+                adt.Fill(dtDiscount);
+                Console.WriteLine(sql);
+                s = dtDiscount.Rows[0][0].ToString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Loi select : " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return s;
+        }
+
+        public ArrayList get_Discount()
+        {
+            String sql = "SELECT * FROM discount WHERE isDeleted = 0";
+            DataTable dtDiscount = new DataTable();
+            ArrayList list = new ArrayList();
+            try
+            {
+                conn.Open();
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adt = new MySqlDataAdapter(sql, conn);
+                adt.Fill(dtDiscount);
+                Console.WriteLine(sql);
+                if(dtDiscount.Rows.Count > 0)
+                {
+                    for(int i=0;i< dtDiscount.Rows.Count; i++)
+                    {
+                        DiscountDTO dc = new DiscountDTO();
+                        dc.Ma_discount = dtDiscount.Rows[i][0].ToString();
+                        dc.Sale_percent = dtDiscount.Rows[i][1].ToString();
+                        dc.Start_day = dtDiscount.Rows[i][2].ToString();
+                        dc.End_day = dtDiscount.Rows[i][3].ToString();
+                        dc.Status = dtDiscount.Rows[i][4].ToString();
+                        dc.IsDeleted = int.Parse(dtDiscount.Rows[i][5].ToString());
+                        list.Add(dc);
+                        Console.WriteLine(dc.Ma_discount);
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Loi select : " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return list;
+        }
+
+        public bool Auto_Update_Discount(String id, String status)
+        {
+            try
+            {
+                conn.Open();
+                String sql = "UPDATE discount SET status = '"+status+"' WHERE maDiscount = '" + id + "'";
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                Console.WriteLine("Auto_Update_Discount : "+sql);
+                if (cm.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("loi Auto_Update_Discount :" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
+
     }
 }

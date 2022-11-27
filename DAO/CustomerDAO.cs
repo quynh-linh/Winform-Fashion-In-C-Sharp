@@ -18,7 +18,7 @@ namespace DAO
                 Console.WriteLine("Bắt đầu mở kết nối ...");
                 Console.WriteLine("Kết nối thành công !");
                 //Lấy toàn bộ dữ liệu từ bảng tblMatHang
-                String sql = "select * from customer";
+                String sql = "select * from customer where idCustomer not in ('null') ";
                 //Khởi tạo đối tượng DataAdapter và cung cấp vào câu lệnh SQL và đối tượng Connection
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
@@ -138,6 +138,36 @@ namespace DAO
                 conn.Close();
             }
             return false;
+        }
+
+        public String get_Customer_By_Phone(string phone, String ss)
+        {
+            String s = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = String.Format("SELECT idCustomer, nameCustomer FROM `customer` WHERE phone = {0}", phone);
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dt);
+                if (dt.Rows.Count > 0) 
+                    if(ss.Equals("name"))
+                        return ss = dt.Rows[0][1].ToString();
+                    else return dt.Rows[0][0].ToString();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
         }
 
     }

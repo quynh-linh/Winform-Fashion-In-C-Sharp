@@ -2,6 +2,8 @@
 using System;
 using DTO;
 using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DAO
 {
@@ -104,6 +106,52 @@ namespace DAO
                 conn.Close();
             }
             return arrayListSell;
+        }
+
+        public ArrayList searchProducts(String keyword, String cbb)
+        {
+            DataTable searchCategory = new DataTable();
+            ArrayList arrayList = new ArrayList();
+
+            String sql = "";
+
+            if (String.IsNullOrEmpty(keyword) && cbb.Equals("Tất cả"))
+                sql = "select * from product GROUP BY name";
+            else if (!String.IsNullOrEmpty(keyword) && cbb.Equals("Tất cả"))
+                sql = "select * from product WHERE name LIKE '%"+keyword+"%' GROUP BY name";
+            else sql = "select * from product, category WHERE category.id = product.category_id AND name LIKE '%" + keyword + "%' AND category.nameCategory = '"+cbb+"' GROUP BY name";
+            try
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader mySqlDataReader = cmd.ExecuteReader();
+                while (mySqlDataReader.Read())
+                {
+                    ProductDTO productDTO = new ProductDTO();
+                    productDTO.Product_Id = mySqlDataReader["id"].ToString();
+                    productDTO.Product_Name = mySqlDataReader["name"].ToString();
+                    productDTO.Product_Price = (double)mySqlDataReader["price"];
+                    productDTO.Image = mySqlDataReader["image"].ToString();
+                    productDTO.Description = mySqlDataReader["description"].ToString();
+                    productDTO.Brand_id = mySqlDataReader["brand_id"].ToString();
+                    productDTO.Category_Id = mySqlDataReader["category_id"].ToString();
+                    productDTO.Size_id = (int)mySqlDataReader["size_id"];
+                    productDTO.Quantity = (int)mySqlDataReader["quantity"];
+                    arrayList.Add(productDTO);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return arrayList;
         }
 
     }

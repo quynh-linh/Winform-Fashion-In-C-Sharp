@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace BUS
 {
@@ -124,9 +125,9 @@ namespace BUS
             return dcDAO.get_Percent(id);
         }
 
-        public bool insert_Detail_Discount(String discount_Id, String product_Id)
+        public bool insert_Detail_Discount(String discount_Id, String product_Id, String name)
         {
-            return dcDAO.insert_Detail_Discount(discount_Id, product_Id);
+            return dcDAO.insert_Detail_Discount(discount_Id, product_Id,name);
         }
 
         public bool delete_Detail_Discount(String discount_Id)
@@ -134,10 +135,31 @@ namespace BUS
             return dcDAO.delete_Detail_Discount(discount_Id);
         }
 
+        public int check_Product_Discount(String id, String name, String s)
+        {
+            return dcDAO.check_Product_Discount(id,name,s);
+        }
+
         public DataTable get_Date_From_Discount_Id(String id)
         {
             return dcDAO.get_Date_From_Discount_Id(id);
         }
+
+        public Double get_Price_Product(String id)
+        {
+            return Double.Parse(dcDAO.get_Price_Product(id));
+        }
+
+        public ArrayList get_Discount()
+        {
+            return dcDAO.get_Discount();
+        }
+
+        public bool Auto_Update_Discount(String id, String status)
+        {
+            return dcDAO.Auto_Update_Discount(id, status);
+        }
+
             public void insertDiscounts(DataTable dataTable) {
             List<DiscountDTO> discounts = new List<DiscountDTO>();
             //convert datatable to list<obj>

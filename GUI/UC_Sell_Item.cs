@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace GUI
     {
         DiscountDTO discountDTO = new DiscountDTO();
         SellGui sellGUI;
+        DiscountBUS discountBUS = new DiscountBUS();
+        int percent = 0;
         //SellGui sell = new SellGui();
         public UC_Sell_Item(SellGui sellGUI)
         {
@@ -31,11 +34,13 @@ namespace GUI
         {
             this.data = data;
             lb_nameProductItem.Text = data.Product_Name;
-            double gia = data.Product_Price;
-            double thue = (5 * gia) / 100; // gia sp tang 5% so vs nhap hang
-            double tienloi = gia + thue;
-            lb_priceProductItem.Text = tienloi.ToString("#,#,#") + "đ";
-            //lb_priceProductItem.Text = data.Product_Price.ToString("#,#,#") + "đ";
+            if (discountBUS.check_Product_Discount(this.data.Product_Id, this.data.Product_Name, "id") != -1)
+            {
+                guna2CircleButton1.Text = "-" + discountBUS.check_Product_Discount(this.data.Product_Id, this.data.Product_Name, "id") + "%";
+                this.percent = discountBUS.check_Product_Discount(this.data.Product_Id, this.data.Product_Name, "id");
+            }
+            else guna2CircleButton1.Visible = false;
+
             _uriproduct = @"Image\" + data.Image;
             loadImageAsync();
             
@@ -65,12 +70,12 @@ namespace GUI
 
             if (checkOrderExits(this.data) != null)
             {
-                Sell_DetailGUI sell_DetailGUI = new Sell_DetailGUI(checkOrderExits(this.data), this.sellGUI, "Update Detail Product in Bill", size);
+                Sell_DetailGUI sell_DetailGUI = new Sell_DetailGUI(checkOrderExits(this.data), this.sellGUI, "Update Detail Product in Bill", size, this.percent);
                 sell_DetailGUI.Show();
             }
             else
             {
-                Sell_DetailGUI sell_DetailGUI = new Sell_DetailGUI(this.data, this.sellGUI, "Add new Product to Bill",size);
+                Sell_DetailGUI sell_DetailGUI = new Sell_DetailGUI(this.data, this.sellGUI, "Add new Product to Bill",size, this.percent);
                 sell_DetailGUI.Show();
             }
         }

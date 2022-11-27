@@ -11,14 +11,16 @@ namespace DTO
         private String bill_Id, product_Id, size;
         private int quantity;
         private double price;
+        int percent;
 
-        public Bill_Detail_DTO(string bill_Id, string product_Id, string size, int quantity, double price)
+        public Bill_Detail_DTO(string bill_Id, string product_Id, string size, int quantity, double price, int percent)
         {
             this.bill_Id = bill_Id;
             this.product_Id = product_Id;
             this.size = size;
             this.quantity = quantity;
             this.price = price;
+            this.percent = percent;
         }
 
         public string Bill_Id { get => bill_Id; set => bill_Id = value; }
@@ -26,5 +28,6 @@ namespace DTO
         public string Size { get => size; set => size = value; }
         public int Quantity { get => quantity; set => quantity = value; }
         public double Price { get => price; set => price = value; }
+        public int Percent { get => percent; set => percent = value; }
     }
 }

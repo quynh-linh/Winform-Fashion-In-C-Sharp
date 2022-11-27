@@ -87,7 +87,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("INSERT INTO bill_detail(bill_Id ,product_Id, size, quantity , price )" + "VALUES ('{0}','{1}','{2}','{3}','{4}')", bill_Detail.Bill_Id, bill_Detail.Product_Id, bill_Detail.Size, bill_Detail.Quantity, bill_Detail.Price);
+                String sql = String.Format("INSERT INTO bill_detail(bill_Id ,product_Id, size, quantity , price , percent_Discount)" + "VALUES ('{0}','{1}','{2}','{3}','{4}', {5})", bill_Detail.Bill_Id, bill_Detail.Product_Id, bill_Detail.Size, bill_Detail.Quantity, bill_Detail.Price, bill_Detail.Percent);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 Console.WriteLine(sql);
                 if (cmd.ExecuteNonQuery() > 0)

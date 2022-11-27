@@ -37,7 +37,13 @@ namespace BUS
             }
             return false;
         }
-            
+
+        public String get_Customer_By_Phone(string phone, String ss)
+        {
+            return customerDAO.get_Customer_By_Phone(phone, ss);
+        }
+
+
         public void insertCustomers(DataTable dataTable) {
             List<CustomerDTO> customers = new List<CustomerDTO>();
             //convert datatable to list<obj>

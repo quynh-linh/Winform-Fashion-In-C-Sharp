@@ -32,6 +32,8 @@
             this.lb_priceOder = new System.Windows.Forms.Label();
             this.btn_deleteOder = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_Quantity_X_Price = new System.Windows.Forms.Label();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_nameOder
@@ -39,19 +41,21 @@
             this.lb_nameOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nameOder.Location = new System.Drawing.Point(6, 9);
             this.lb_nameOder.Name = "lb_nameOder";
-            this.lb_nameOder.Size = new System.Drawing.Size(100, 23);
+            this.lb_nameOder.Size = new System.Drawing.Size(162, 34);
             this.lb_nameOder.TabIndex = 0;
             this.lb_nameOder.Text = "name san pham";
             this.lb_nameOder.Click += new System.EventHandler(this.lb_nameOder_Click);
             // 
             // lb_priceOder
             // 
-            this.lb_priceOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_priceOder.Location = new System.Drawing.Point(150, 43);
+            this.lb_priceOder.AutoSize = true;
+            this.lb_priceOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_priceOder.Location = new System.Drawing.Point(174, 43);
             this.lb_priceOder.Name = "lb_priceOder";
-            this.lb_priceOder.Size = new System.Drawing.Size(86, 17);
+            this.lb_priceOder.Size = new System.Drawing.Size(62, 15);
             this.lb_priceOder.TabIndex = 2;
             this.lb_priceOder.Text = "100,000 d";
+            this.lb_priceOder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lb_priceOder.Click += new System.EventHandler(this.lb_nameOder_Click);
             // 
             // btn_deleteOder
@@ -76,19 +80,51 @@
             // lbl_Quantity_X_Price
             // 
             this.lbl_Quantity_X_Price.AutoSize = true;
-            this.lbl_Quantity_X_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Quantity_X_Price.Location = new System.Drawing.Point(23, 43);
+            this.lbl_Quantity_X_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Quantity_X_Price.Location = new System.Drawing.Point(6, 43);
             this.lbl_Quantity_X_Price.Name = "lbl_Quantity_X_Price";
-            this.lbl_Quantity_X_Price.Size = new System.Drawing.Size(30, 17);
+            this.lbl_Quantity_X_Price.Size = new System.Drawing.Size(27, 15);
             this.lbl_Quantity_X_Price.TabIndex = 1;
             this.lbl_Quantity_X_Price.Text = "x10";
             this.lbl_Quantity_X_Price.Click += new System.EventHandler(this.lb_nameOder_Click);
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(174, 5);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedDepth = 0;
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(59, 27);
+            this.guna2CircleButton1.TabIndex = 4;
+            this.guna2CircleButton1.Text = "-20%";
+            this.guna2CircleButton1.Click += new System.EventHandler(this.lb_nameOder_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(95, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "100,000 d";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.lb_nameOder_Click);
             // 
             // UC_oder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.btn_deleteOder);
             this.Controls.Add(this.lb_priceOder);
             this.Controls.Add(this.lbl_Quantity_X_Price);
@@ -108,5 +144,7 @@
         public System.Windows.Forms.Label lb_priceOder;
         public Guna.UI2.WinForms.Guna2Button btn_deleteOder;
         private System.Windows.Forms.Label lbl_Quantity_X_Price;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        public System.Windows.Forms.Label label1;
     }
 }

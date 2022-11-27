@@ -28,26 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ptc_imageProductItem = new System.Windows.Forms.PictureBox();
             this.lb_nameProductItem = new System.Windows.Forms.Label();
-            this.lb_priceProductItem = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ptc_imageProductItem)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::GUI.Properties.Resources.icon_addcart;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 60);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
             // ptc_imageProductItem
             // 
@@ -76,45 +61,47 @@
             this.lb_nameProductItem.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
             this.lb_nameProductItem.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
-            // lb_priceProductItem
+            // guna2CircleButton1
             // 
-            this.lb_priceProductItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_priceProductItem.AutoSize = true;
-            this.lb_priceProductItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_priceProductItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lb_priceProductItem.Location = new System.Drawing.Point(68, 61);
-            this.lb_priceProductItem.Name = "lb_priceProductItem";
-            this.lb_priceProductItem.Size = new System.Drawing.Size(46, 9);
-            this.lb_priceProductItem.TabIndex = 3;
-            this.lb_priceProductItem.Text = "100.000 đ";
-            this.lb_priceProductItem.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
-            this.lb_priceProductItem.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(76, 51);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedDepth = 0;
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(59, 27);
+            this.guna2CircleButton1.TabIndex = 3;
+            this.guna2CircleButton1.Text = "-20%";
+            this.guna2CircleButton1.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
+            this.guna2CircleButton1.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.guna2CircleButton1.MouseLeave += new System.EventHandler(this.UC_Sell_Item_MouseLeave);
             // 
             // UC_Sell_Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lb_priceProductItem);
+            this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.lb_nameProductItem);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ptc_imageProductItem);
             this.Name = "UC_Sell_Item";
             this.Size = new System.Drawing.Size(149, 90);
             this.Click += new System.EventHandler(this.ptc_imageProductItem_Click);
             this.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.UC_Sell_Item_MouseLeave);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptc_imageProductItem)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         public System.Windows.Forms.PictureBox ptc_imageProductItem;
-        public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lb_nameProductItem;
-        public System.Windows.Forms.Label lb_priceProductItem;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

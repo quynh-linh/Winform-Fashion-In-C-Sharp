@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,26 +24,29 @@ namespace GUI
         private Bill_BUS bill_BUS = new Bill_BUS();
         public ArrayList listOder = new ArrayList();
         public ArrayList list_Quantity_Choice = new ArrayList();
-        //public ArrayList<UC_Sell_Item> itemProduct = new ArrayList<UC_Sell_Item>();
         double totalPrice = 0;
         int id_Staff = 0;
+        DiscountBUS discountBUS = new DiscountBUS();
+        CustomerBUS customerBUS = new CustomerBUS();
         public SellGui(string role_Manipulative, int id_Staff)
         {
             InitializeComponent();
+            load_Category();
+            Auto_Update_Discount();
             if (!role_Manipulative.Equals("Bán hàng "))
             {
                 guna2Button1.Enabled = false;
                 //guna2Button2.Enabled = false;
             }
-            // do sp vao flowlayout
-            ArrayList list = new ArrayList();
-            list = sellBUS.getArrayListSell();
-            for (int i = 0; i < list.Count; i++)
-            {
-                addItem((ProductDTO)list[i]);
-            }
+
             label4.Text = "0đ";
             this.id_Staff = id_Staff;
+
+            ArrayList list = new ArrayList();
+            FlpSanPham.Controls.Clear();
+            list = sellBUS.searchProducts(TbSearch.Text, guna2ComboBox1.Text);
+            for (int i = 0; i < list.Count; i++)
+                addItem((ProductDTO)list[i]);
         }
 
         // add sp zo usercontrol
@@ -124,7 +128,9 @@ namespace GUI
             {
                 String bill_Id = autoGenerateId();
                 DateTime time = DateTime.Now;
-                Bill_DTO bill = new Bill_DTO(bill_Id, this.totalPrice, time.ToString("dd/MM/yyyy hh:mm:ss"), id_Staff, "abc");
+                String customer_Id = "null";
+                if (!guna2TextBox3.Text.Equals("Tên khách hàng :")) customer_Id = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "id");
+                Bill_DTO bill = new Bill_DTO(bill_Id, this.totalPrice, time.ToString("dd/MM/yyyy hh:mm:ss"), id_Staff, customer_Id);
                 if (bill_BUS.insert_Bill(bill))
                 {
                     for( int i=0;i< listOder.Count; i++)
@@ -135,7 +141,8 @@ namespace GUI
                         else if (p.Size_id == 2) size = "M";
                         else if (p.Size_id == 3) size = "L";
                         else if (p.Size_id == 4) size = "XL";
-                        Bill_Detail_DTO bill_Detail = new Bill_Detail_DTO(bill_Id,p.Product_Id, size, (int)list_Quantity_Choice[i], p.Product_Price * 0.05 + p.Product_Price);
+                        int percent = discountBUS.check_Product_Discount(p.Product_Id, p.Product_Name, "name");
+                        Bill_Detail_DTO bill_Detail = new Bill_Detail_DTO(bill_Id,p.Product_Id, size, (int)list_Quantity_Choice[i], p.Product_Price + p.Product_Price, percent);
                         bill_BUS.insert_Detail_Bill(bill_Detail);
                         bill_BUS.update_Quantity_After_Payment(p.Product_Id, (int)list_Quantity_Choice[i]);
                     }
@@ -150,6 +157,70 @@ namespace GUI
                 }
             }
             
+        }
+
+        private void TbSearch_TextChanged(object sender, EventArgs e)
+        {
+            ArrayList list = new ArrayList();
+            FlpSanPham.Controls.Clear();
+            list = sellBUS.searchProducts(TbSearch.Text, guna2ComboBox1.Text);
+            for (int i = 0; i < list.Count; i++)
+                addItem((ProductDTO)list[i]);
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ArrayList list = new ArrayList();
+            FlpSanPham.Controls.Clear();
+            list = sellBUS.searchProducts(TbSearch.Text, guna2ComboBox1.Text);
+            for (int i = 0; i < list.Count; i++)
+                addItem((ProductDTO)list[i]);
+        }
+
+        private void load_Category()
+        {
+            guna2ComboBox1.DataSource = discountBUS.load_Data_Category();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(guna2TextBox2.Text))
+            {
+                //do nothing
+            }
+            else
+            {
+                if (customerBUS.get_Customer_By_Phone(guna2TextBox2.Text,"name") != null)
+                    guna2TextBox3.Text = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text,"name");
+                else MessageBox.Show("Không tìm thấy số điện thoại này");
+            }
+        }
+
+        private void Auto_Update_Discount()
+        {
+            int day = DateTime.Now.Day;
+            int month = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+            String now = day + "/" + month + "/" + year;
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            DateTime time1 = DateTime.ParseExact(now, "dd/MM/yyyy", provider);
+
+            ArrayList list_Discount = discountBUS.get_Discount();
+
+            for (int i=0;i< list_Discount.Count;i++)
+            {
+                DiscountDTO dc = (DiscountDTO)list_Discount[i];
+                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "dd/MM/yyyy", provider)) >= 0 && time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) <= 0 && dc.Status.Equals("Ngừng áp dụng"))
+                {
+                    discountBUS.Auto_Update_Discount(dc.Ma_discount, "Đang áp dụng");
+                }
+
+                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "dd/MM/yyyy", provider)) < 0 && dc.Status.Equals("Đang áp dụng") || time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) > 0 && dc.Status.Equals("Đang áp dụng"))
+                {
+                    discountBUS.Auto_Update_Discount(dc.Ma_discount, "Ngừng áp dụng");
+                }
+            }
+
         }
     }
 }
