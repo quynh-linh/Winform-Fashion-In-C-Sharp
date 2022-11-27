@@ -72,7 +72,6 @@ namespace GUI
                         if (dcBUS.addDiscount(dcDTO))
                         {
                             refresh();
-                            Auto_Update_Discount();
                             MessageBox.Show("Thêm Thành Công !");
                         }
                         else MessageBox.Show("Thêm Thất Bại !");
@@ -123,6 +122,7 @@ namespace GUI
             dataGridView1.DataSource = null;
             auto_Create_Id();
             dgv_discount.DataSource = dcBUS.get_All_Discount("0");
+            Auto_Update_Discount();
         }
 
         private void btn_edit_discount_Click(object sender, EventArgs e)
@@ -149,7 +149,6 @@ namespace GUI
                             list_Choose_Product.Clear();
                             MessageBox.Show("Cập nhật thành công !");
                             refresh();
-                            Auto_Update_Discount();
                         }
                         else MessageBox.Show("Cập nhật không thành công !");
                     }
