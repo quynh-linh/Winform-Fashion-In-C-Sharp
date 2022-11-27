@@ -943,3 +943,5 @@ C:\Users\onkid\source\repos\newcheck\GUI\obj\Debug\GUI.exe
 C:\Users\onkid\source\repos\newcheck\GUI\obj\Debug\GUI.pdb
 C:\Users\onkid\source\repos\newcheck\GUI\bin\Debug\EPPlus.xml
 C:\Users\onkid\source\repos\newcheck\GUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\EPPlus.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

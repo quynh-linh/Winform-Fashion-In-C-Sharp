@@ -601,3 +601,9 @@ C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\EPPlus.System.Drawing.dll
 C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\EPPlus.xml
 C:\Users\onkid\source\repos\newcheck\DAO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\EPPlus.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\EPPlus.Interfaces.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\EPPlus.System.Drawing.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\EPPlus.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DAO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

@@ -179,6 +179,32 @@ namespace DAO
             }
             return false;
         }
+        public bool updatePriceAndQuantityProductReduce(double giaNhap, int soLuong, string maSp)
+        {
+            try
+            {
+                conn.Open();
+                string sql = string.Format("UPDATE product " +
+                    "SET `price`= {0} ," +
+                    "`quantity`= quantity - {1} " +
+                    "WHERE id = '{2}'", giaNhap, soLuong, maSp);
+                // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                // Query và kiểm tra
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
         public bool updateDetailImportProduct(detail_importProductDTO detail) 
         {
             try
@@ -270,6 +296,29 @@ namespace DAO
             {
                 conn.Open();
                 string sql = string.Format("DELETE FROM `detail_import` WHERE maChiTiet = '{0}'",maChiTiet);
+                // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                // Query và kiểm tra
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
+        public bool removeImportProduct(String maPhieuNhap)
+        {
+            try
+            {
+                conn.Open();
+                string sql = string.Format("DELETE FROM `imprort_product` WHERE maPhieuNhap = '{0}'", maPhieuNhap);
                 // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);

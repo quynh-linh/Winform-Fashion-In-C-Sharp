@@ -69,6 +69,7 @@
     <Compile Include="CustomerDTO.cs" />
     <Compile Include="detail_importProductDTO.cs" />
     <Compile Include="DiscountDTO.cs" />
+    <Compile Include="Discount_Detail_DTO.cs" />
     <Compile Include="ImprotProductDTO.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="OrderDTO.cs" />

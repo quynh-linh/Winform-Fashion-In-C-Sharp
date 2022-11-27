@@ -60,6 +60,17 @@ namespace BUS
                 return false;
             }
         }
+        public bool updatePriceAndQuantityReduce(double giaNhap, int soLuong, string maSp)
+        {
+            if (importDAO.updatePriceAndQuantityProductReduce(giaNhap, soLuong, maSp))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool updateTotalMonetImportProduct(string maPhieuNhap , double total)
         {
             if (importDAO.updateMoneyTotalImportProduct(maPhieuNhap,total))
@@ -74,6 +85,17 @@ namespace BUS
         public bool removeDetailImportProduct(int maChiTiet)
         {
             if (importDAO.removeDetailImportProduct(maChiTiet))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool removeImportProduct(String maPhieuNhap)
+        {
+            if (importDAO.removeImportProduct(maPhieuNhap))
             {
                 return true;
             }
@@ -97,16 +119,20 @@ namespace BUS
         {
             return importDAO.getIdProductToName(name, size_id);
         }
-        public bool updateDetailImportProduct(detail_importProductDTO detail)
+        public String updateDetailImportProduct(detail_importProductDTO detail , double total)
         {
             if (importDAO.updateDetailImportProduct(detail))
             {
-                return true;
+                if (importDAO.updateMoneyTotalImportProduct(detail.MaChiTietPN,total))
+                {
+                    return "Cập nhập thành công";
+                }
             }
             else
             {
-                return false;
+                return "Cập nhập thất bại";
             }
+            return "";
         }
     }
 }

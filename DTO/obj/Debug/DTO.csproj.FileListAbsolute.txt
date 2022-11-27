@@ -77,3 +77,10 @@ C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\Microsoft.IO.RecyclableMemory
 C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\EPPlus.xml
 C:\Users\onkid\source\repos\newcheck\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 C:\Users\onkid\source\repos\newcheck\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.Interfaces.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.System.Drawing.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.CopyComplete
