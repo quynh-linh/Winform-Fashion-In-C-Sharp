@@ -23,10 +23,6 @@ namespace GUI
         {
             this.chartGUI = chartGUI;
             InitializeComponent();
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 9", 120);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 10", 110);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 11", 156);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 12", 100);
         }
 
         private void formChildProduct_Paint(object sender, PaintEventArgs e)
@@ -36,29 +32,30 @@ namespace GUI
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            
             List<Bill_DTO> bills = bill_BUS.getBillsAbout(chartGUI.dateFrom.Value.ToString("dd-MM-yyyy HH:mm:ss"), chartGUI.dateTo.Value.ToString("dd-MM-yyyy HH:mm:ss"));
-
-            MessageBox.Show(bills.Count.ToString());
             chartProduct.Series["Quantity"].Points.Clear();
+            if (bills.Count > 0) {
+                Dictionary<string, int> revenue = new Dictionary<string, int>();
+                Bill_DTO billFirst = bills[0];
+                Bill_DTO billLast = bills[bills.Count - 1];
+                DateTime dateFirst = DateTime.ParseExact(billFirst.Bill_Time, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                DateTime dateLast = DateTime.ParseExact(billLast.Bill_Time, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                //MessageBox.Show((dateLast.Month).ToString() + (dateFirst.Month).ToString());
+                if ((dateLast.Month - dateFirst.Month) > 0) {
+                    revenue = bill_BUS.revenueWithMonth(bills);
+                }
+                else if ((dateLast.Month - dateFirst.Month) == 0) {
+                    revenue = bill_BUS.revenueWithDay(bills);
+                }
+                foreach (var item in revenue) {
+                    Console.WriteLine(item.Key + "---" + item.Value);
+                    chartProduct.Series["Quantity"].Points.AddXY(item.Key, item.Value);
+                }
+            }
+            else {
+                MessageBox.Show("Không có hóa đơn nào được thực hiện trong thời gian này");
+            }
 
-            List<string> months = new List<string>();
-            List<int> quantityOfMonth = new List<int>();
-                bills.ForEach(b => {
-                        DateTime dateTime = DateTime.ParseExact(b.Bill_Time, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-                    var matchingvalues = months.Where(stringToCheck => stringToCheck.Contains(dateTime.Month.ToString()));
-                    if (matchingvalues!=null)
-                    {
-                        months.Add(dateTime.Month.ToString());
-                    }
-                });
-           
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 9", 120);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 10", 110);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 11", 156);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 12", 100);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 13", 100);
-            chartProduct.Series["Quantity"].Points.AddXY("Tháng 14", 100);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)

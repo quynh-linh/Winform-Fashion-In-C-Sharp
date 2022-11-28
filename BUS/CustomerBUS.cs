@@ -1,8 +1,10 @@
 ﻿using DAO;
 using DTO;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using DataTable = System.Data.DataTable;
 
 namespace BUS
 {
@@ -12,6 +14,9 @@ namespace BUS
         public DataTable getThanhVien()
         {
             return customerDAO.selectAllUser();
+        }
+        public long quantityCustomer() {
+            return long.Parse(customerDAO.selectAllUser().Rows.Count.ToString());
         }
         public bool themKhachHang(CustomerDTO tv)
         {
@@ -37,7 +42,16 @@ namespace BUS
             }
             return false;
         }
-
+        public CustomerDTO findCustomerById(String id) {
+            DataTable data = customerDAO.findCustomerById(id);
+            CustomerDTO customer = new CustomerDTO();
+            customer.IdCustomer = data.Rows[0]["idCustomer"].ToString();
+            customer.NameCustomer = data.Rows[0]["nameCustomer"].ToString();
+            customer.AddressCustomer = data.Rows[0]["address"].ToString();
+            customer.PhoneCustomer = Convert.ToInt32(data.Rows[0]["phone"].ToString());
+            customer.SexCustomer = data.Rows[0]["sex"].ToString();
+            return customer;
+        }
         public String get_Customer_By_Phone(string phone, String ss)
         {
             return customerDAO.get_Customer_By_Phone(phone, ss);

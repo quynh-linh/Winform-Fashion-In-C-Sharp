@@ -110,5 +110,10 @@ namespace BUS
                 }
             });
         }
+  
+        public long sumQuantity() {
+            DataTable data = productDAO.sumQuantity();
+            return long.Parse(data.Rows[0][0].ToString());
+        }
     }
 }

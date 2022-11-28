@@ -19,6 +19,7 @@ namespace DAO
             {
                 conn.Open();
                 String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time between '{0}' and '{1}'",from,to);
+                // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
@@ -28,6 +29,7 @@ namespace DAO
             {
                 Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
                 Console.Read();
+
             }
             finally
             {
@@ -35,6 +37,54 @@ namespace DAO
             }
 
             return dtBill;
+
+        }
+
+        public DataTable selectBillAboutAndCustomerNotNull(string from, string to) {
+            DataTable dtBill = new DataTable();
+            try {
+                conn.Open();
+                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time between '{0}' and '{1}' and customer_id not in ('null') order by bill_Total", from, to);
+                // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally {
+                conn.Close();
+            }
+
+            return dtBill;
+
+        }
+
+        public DataTable findBillByCustomerId(String id) {
+            DataTable dtBill = new DataTable();
+            try {
+                conn.Open();
+                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where customer_id like '{0}'", id);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally {
+                conn.Close();
+            }
+
+            return dtBill;
+
         }
 
         public bool insert_Bill(Bill_DTO bill)
@@ -57,6 +107,26 @@ namespace DAO
                 conn.Close();
             }
             return false;
+        }
+        public DataTable getBillDetailsByBillId(string billId) {
+            DataTable dtBill = new DataTable();
+            try {
+                conn.Open();
+                String sql = String.Format("select * from bill_detail where bill_id = '{0}'", billId);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+
+            return dtBill;
         }
 
         public int countGenerateId()
@@ -124,6 +194,27 @@ namespace DAO
                 conn.Close();
             }
             return false;
+        }
+
+        public DataTable getSumQuantityProductOfBill() {
+            DataTable dtBill = new DataTable();
+            try {
+                conn.Open();
+                String sql = String.Format("select SUM(quantity) as sum from bill_detail where 1");
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+
+            return dtBill;
         }
     }
 }

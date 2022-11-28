@@ -382,5 +382,23 @@ namespace DAO
             }
             return false;
         }
+        
+        public DataTable getSumQuantityProductOfImport() {
+            DataTable ds = new DataTable();
+            try {
+
+                string sql = String.Format("select SUM(SoLuong) as sum from detail_import where 1");
+                Console.WriteLine(sql);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(ds);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.ToString());
+            }
+            finally {
+                conn.Close();
+            }
+            return ds;
+        }
     }
 }

@@ -42,7 +42,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.productSize = new System.Windows.Forms.TextBox();
+            this.productQuantity = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
             this.panel9.SuspendLayout();
@@ -81,6 +81,7 @@
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Text = "Nhập vào";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -97,6 +98,7 @@
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "Bán ra";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -113,6 +115,7 @@
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "Tổng";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // guna2Panel6
             // 
@@ -230,7 +233,7 @@
             this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel5.BorderThickness = 4;
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel5.Controls.Add(this.productSize);
+            this.guna2Panel5.Controls.Add(this.productQuantity);
             this.guna2Panel5.Controls.Add(this.textBox6);
             this.guna2Panel5.Location = new System.Drawing.Point(15, 110);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,19 +254,19 @@
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // productSize
+            // productQuantity
             // 
-            this.productSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.productSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productSize.ForeColor = System.Drawing.SystemColors.Info;
-            this.productSize.Location = new System.Drawing.Point(197, 148);
-            this.productSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.productSize.Name = "productSize";
-            this.productSize.Size = new System.Drawing.Size(57, 38);
-            this.productSize.TabIndex = 5;
-            this.productSize.Text = "100";
-            this.productSize.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.productQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.productQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productQuantity.ForeColor = System.Drawing.SystemColors.Info;
+            this.productQuantity.Location = new System.Drawing.Point(197, 148);
+            this.productQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productQuantity.Name = "productQuantity";
+            this.productQuantity.Size = new System.Drawing.Size(57, 38);
+            this.productQuantity.TabIndex = 5;
+            this.productQuantity.Text = "100";
+            this.productQuantity.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -335,7 +338,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.TextBox productSize;
+        private System.Windows.Forms.TextBox productQuantity;
         private System.Windows.Forms.TextBox textBox6;
         private Guna.UI2.WinForms.Guna2Panel panelChildForm;
     }

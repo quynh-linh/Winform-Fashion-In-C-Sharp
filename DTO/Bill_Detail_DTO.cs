@@ -23,6 +23,7 @@ namespace DTO
             this.percent = percent;
         }
 
+        public Bill_Detail_DTO() { }
         public string Bill_Id { get => bill_Id; set => bill_Id = value; }
         public string Product_Id { get => product_Id; set => product_Id = value; }
         public string Size { get => size; set => size = value; }

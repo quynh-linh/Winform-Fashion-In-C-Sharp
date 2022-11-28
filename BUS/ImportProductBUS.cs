@@ -149,5 +149,10 @@ namespace BUS
             }
             return "";
         }
+        public long getSumQuantityProductOfImport() {
+            DataTable data = importDAO.getSumQuantityProductOfImport();
+            return long.Parse(data.Rows[0][0].ToString());
+        }
     }
+
 }

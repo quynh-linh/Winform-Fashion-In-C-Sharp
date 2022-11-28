@@ -37,6 +37,34 @@ namespace DAO
             }
             return dtThanhvien;
         }
+        
+        public DataTable findCustomerById(String id) {
+            //Tạo đối tượng Connection
+            //tạo đối tượng DataSet
+            DataTable dtThanhvien = new DataTable();
+            try {
+                conn.Open();
+                Console.WriteLine("Bắt đầu mở kết nối ...");
+                Console.WriteLine("Kết nối thành công !");
+                //Lấy toàn bộ dữ liệu từ bảng tblMatHang
+                String sql = String.Format("select * from customer where idCustomer = '{0}' ",id);
+                //Khởi tạo đối tượng DataAdapter và cung cấp vào câu lệnh SQL và đối tượng Connection
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                Console.WriteLine(dtThanhvien);
+                returnVal.Fill(dtThanhvien);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally {
+                // Dong ket noi
+                conn.Close();
+            }
+            return dtThanhvien;
+        }
+        
         public bool themKhachHang(CustomerDTO ct) {
             try
             {

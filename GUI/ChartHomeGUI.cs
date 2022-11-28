@@ -16,6 +16,8 @@ namespace GUI
     {
         private ProductsBUS productsBUS = new ProductsBUS();
         private CustomerBUS customerBUS = new CustomerBUS();
+        private Bill_BUS bill_BUS = new Bill_BUS();
+        private ImportProductBUS importProductBUS = new ImportProductBUS();
         public ChartHomeGUI(string role_Manipulative)
         {
             InitializeComponent();
@@ -25,8 +27,8 @@ namespace GUI
                 iconButton2.Enabled = false;
                 iconButton3.Enabled = false;
             }
-            productSize.Text = productsBUS.getProducts().Rows.Count.ToString();
-            customerSize.Text = customerBUS.getThanhVien().Rows.Count.ToString();
+            productQuantity.Text = productsBUS.sumQuantity() + "";
+            customerSize.Text = customerBUS.quantityCustomer() + "";
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -37,6 +39,19 @@ namespace GUI
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e) {
+            productQuantity.Text = productsBUS.sumQuantity() + "";
+            customerSize.Text = customerBUS.quantityCustomer() + "";
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e) {
+            productQuantity.Text = bill_BUS.getSumQuantityProductOfBill() + "";
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e) {
+            productQuantity.Text = importProductBUS.getSumQuantityProductOfImport() + "";
         }
     }
 }

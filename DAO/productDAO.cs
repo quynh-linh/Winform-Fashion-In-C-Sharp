@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace DAO
 {
@@ -188,6 +189,27 @@ namespace DAO
             }
 
             return searchCategory;
+        }
+        
+        public DataTable sumQuantity() {
+            DataTable sum = new DataTable();
+            try {
+                conn.Open();
+                String sql = "select SUM(quantity) as sum from product where 1";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                Console.WriteLine(returnVal);
+                returnVal.Fill(sum);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+
+            return sum;
         }
     }
 }
