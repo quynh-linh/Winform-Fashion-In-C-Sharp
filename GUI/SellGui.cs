@@ -54,7 +54,7 @@ namespace GUI
         {
             UC_Sell_Item item = new UC_Sell_Item(this);
             item.setData(data);
-            item.BackColor = Color.White;
+            item.BackColor = Color.SteelBlue;
             FlpSanPham.Controls.Add(item);
 
         }

@@ -48,7 +48,7 @@ namespace GUI
             if (!string.IsNullOrEmpty(Name))
             {
                 //Gán Id = chữ cái đầu của Name
-                Id = Name[0].ToString().ToUpper();
+                Id = Name[0].ToString().ToUpper();// manh ne
                 //Duyệt chuỗi nối Id
                 for (int i = 1; i < Name.Length; i++)
                 {
@@ -77,21 +77,36 @@ namespace GUI
             {
                 String id = Txt_MaBrand.Text + "";
                 String name = Txt_nameBrand.Text + "";
-                BrandDTO brDTO = new BrandDTO(id, name);
+                BrandDTO brDTO = new BrandDTO(id, name,0);
                 if (brBUS.CheckKeyID(id))
                 {
                     MessageBox.Show("Trùng khóa chính");
                 } else
                 {
-                    if (brBUS.addBrand(brDTO))
+                    //Kiểm tra tên trùng
+                    string namee = Txt_nameBrand.Text;
+                    bool flag = true;
+                    for (int i = 0; i < dgv_brand.Rows.Count; i++)
                     {
-                        MessageBox.Show("Thêm thành công!");
-                        removeLoadDb();
-                        dgv_brand.DataSource = brBUS.getBrand();
+                        if (namee == dgv_brand.Rows[i].Cells[1].FormattedValue.ToString())
+                        {
+                            MessageBox.Show("Tên thương hiệu sản phẩm đã tồn tại");
+                            flag = false;
+                            break;
+                        }
                     }
-                    else
+                    if (flag)
                     {
-                        MessageBox.Show("Thêm không thành công !");
+                        if (brBUS.addBrand(brDTO))
+                        {
+                            MessageBox.Show("Thêm thành công!");
+                            removeLoadDb();
+                            dgv_brand.DataSource = brBUS.getBrand();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm không thành công !");
+                        }
                     }
                 }
                 
@@ -109,18 +124,26 @@ namespace GUI
             {
                 String id = Txt_MaBrand.Text + "";
                 String name = Txt_nameBrand.Text + "";
-                BrandDTO brandDTO = new BrandDTO(id, name);
-                if (brBUS.editBrand(brandDTO))
+                if (brBUS.check_Name(id, name))
                 {
-                    MessageBox.Show("Sửa thành công !");
-                    removeLoadDb();
-                    dgv_brand.DataSource = brBUS.getBrand();
-
+                    MessageBox.Show("Tên thương hiệu sản phẩm đã tồn tại");
                 }
                 else
                 {
-                    MessageBox.Show("Sửa không thành công !");
+                    BrandDTO brandDTO = new BrandDTO(id, name, 0);
+                    if (brBUS.editBrand(brandDTO))
+                    {
+                        MessageBox.Show("Sửa thành công !");
+                        removeLoadDb();
+                        dgv_brand.DataSource = brBUS.getBrand();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa không thành công !");
+                    }
                 }
+                
             }
             else
             {
@@ -131,20 +154,13 @@ namespace GUI
 
         private void btn_deleteBrand_Click(object sender, EventArgs e)
         {
-            if(dgv_brand.SelectedRows.Count > 0)
+            if (MessageBox.Show("Bạn có chắc muốn xóa thương hiệu " + dgv_brand.CurrentRow.Cells[1].Value.ToString() + "?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                DataGridViewRow row = dgv_brand.SelectedRows[0];
-                String id = row.Cells[0].Value.ToString();
-                if (brBUS.deleteBrand(id))
-                {
-                    MessageBox.Show("Xóa thành công !");
-                    dgv_brand.DataSource = brBUS.getBrand();
-                    removeLoadDb();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa không thành công !");
-                }
+                string Id = dgv_brand.CurrentRow.Cells[0].Value.ToString();
+                Console.WriteLine("ia barna : " + Id);
+                brBUS.deleteBrand(Id);
+                dgv_brand.DataSource = brBUS.getBrand();
+                MessageBox.Show("Xóa thành công");
             }
         }
         public static string utf8Convert3(string s)

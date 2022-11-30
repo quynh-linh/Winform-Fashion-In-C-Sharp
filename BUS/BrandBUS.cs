@@ -52,6 +52,7 @@ namespace BUS
                 BrandDTO brandDTO = new BrandDTO();
                 brandDTO.Brand_Id = dataTable.Rows[i]["id"].ToString();
                 brandDTO.Brand_Name = dataTable.Rows[i]["name"].ToString();
+                brandDTO.IsDelete = 0;
                 brands.Add(brandDTO);
             }
             int index = 0;
@@ -75,7 +76,7 @@ namespace BUS
             }
             return false;
         }
-        public bool deleteBrand(String id)
+        public bool deleteBrand(string id)
         {
             if (brandDAO.deleteBrand(id))
             {
@@ -83,7 +84,14 @@ namespace BUS
             }
             return false;
         }
-
-       
+        public DataTable searchBrand(string keyword)
+        {
+            return brandDAO.searchBrand(keyword);
+        }
+        public Boolean check_Name(string id, string name)
+        {
+            if (brandDAO.check_Name(id, name).Rows.Count > 0) return true;
+            return false;
+        }
     }
 }
