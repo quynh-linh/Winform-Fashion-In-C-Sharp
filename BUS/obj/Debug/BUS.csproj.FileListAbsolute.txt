@@ -555,3 +555,9 @@ C:\Users\onkid\Source\Repos\newcheck2\BUS\obj\Debug\BUS.csproj.CoreCompileInputs
 C:\Users\onkid\Source\Repos\newcheck2\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\onkid\Source\Repos\newcheck2\BUS\obj\Debug\BUS.dll
 C:\Users\onkid\Source\Repos\newcheck2\BUS\obj\Debug\BUS.pdb
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\EPPlus.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\EPPlus.xml
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\BUS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

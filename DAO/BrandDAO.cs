@@ -15,7 +15,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "SELECT * FROM brand";
+                String sql = "SELECT id, name FROM brand WHERE isDelete = 0";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter dtAdapter = new MySqlDataAdapter(sql, conn);
                 dtAdapter.Fill(dtBrand);
@@ -37,7 +37,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "SELECT * FROM brand";
+                String sql = "SELECT * FROM brand WHERE isDelete = 0";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader mySqlDataReader = cmd.ExecuteReader();
                 while (mySqlDataReader.Read())
@@ -64,7 +64,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("INSERT INTO brand(id,name)" + "VALUES ('{0}','{1}')",br.Brand_Id,br.Brand_Name);
+                String sql = String.Format("INSERT INTO brand(id,name,isDelete)" + "VALUES ('{0}','{1}',0)",br.Brand_Id,br.Brand_Name,br.IsDelete);
                 MySqlCommand cmd = new MySqlCommand(sql,conn);
                 Console.WriteLine(sql);
                 if(cmd.ExecuteNonQuery() > 0)
@@ -109,12 +109,15 @@ namespace DAO
             }
             return false;
         }
-        public bool deleteBrand(String id)
+        public bool deleteBrand(string id)
         {
             try
             {
                 conn.Open();
-                String sql = String.Format("DELETE FROM brand WHERE id = '{0}'",id);
+                String sql = String.Format("UPDATE brand " +
+                    "SET " +
+                    "isDelete = 1 " +
+                    "WHERE id = '{0}'",id);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 if(cmd.ExecuteNonQuery() > 0)
                 {
@@ -151,6 +154,54 @@ namespace DAO
                 conn.Close();
             }
             return false;
+        }
+        public DataTable searchBrand(String keyword)
+        {
+            DataTable searchCategory = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select id, nameCategory from category where nameCategory LIKE  '%" + keyword + "%' and isDeleted = 0";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                Console.WriteLine(returnVal);
+                returnVal.Fill(searchCategory);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return searchCategory;
+        }
+        public DataTable check_Name(string id, string name)
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                conn.Open();
+                String sql = "select id, name from brand where name = '" + name + "' and id not in ('" + id + "') and isDelete = 0";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(data);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return data;
         }
     }
 }

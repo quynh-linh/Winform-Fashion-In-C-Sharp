@@ -97,3 +97,10 @@ C:\Users\onkid\Source\Repos\newcheck2\DTO\obj\Debug\DTO.csproj.CoreCompileInputs
 C:\Users\onkid\Source\Repos\newcheck2\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\onkid\Source\Repos\newcheck2\DTO\obj\Debug\DTO.dll
 C:\Users\onkid\Source\Repos\newcheck2\DTO\obj\Debug\DTO.pdb
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\EPPlus.xml
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\DTO\obj\Debug\DTO.csproj.CopyComplete
