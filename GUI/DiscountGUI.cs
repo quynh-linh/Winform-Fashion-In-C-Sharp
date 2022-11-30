@@ -116,13 +116,13 @@ namespace GUI
 
         public void refresh()
         {
+            Auto_Update_Discount();
             tb_giamgia.Text = "";
             dtp_startday.Text = System.DateTime.Now.ToLongTimeString();
             dtp_endday.Text = System.DateTime.Now.ToLongTimeString();
             dataGridView1.DataSource = null;
             auto_Create_Id();
             dgv_discount.DataSource = dcBUS.get_All_Discount("0");
-            Auto_Update_Discount();
         }
 
         private void btn_edit_discount_Click(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace GUI
                     MessageBox.Show("Giá trị đã tồn tại");
                 else
                 {
-                    if (MessageBox.Show("Bạn có chắc chắn muốn thêm loại giảm giá này", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc chắn muốn cập nhật loại giảm giá này", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         if (dcBUS.editDiscount(dt))
                         {

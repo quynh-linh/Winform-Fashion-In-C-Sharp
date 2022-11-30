@@ -53,7 +53,7 @@
             // 
             this.lb_nameProductItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_nameProductItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nameProductItem.ForeColor = System.Drawing.Color.White;
+            this.lb_nameProductItem.ForeColor = System.Drawing.Color.Black;
             this.lb_nameProductItem.Location = new System.Drawing.Point(76, 14);
             this.lb_nameProductItem.Name = "lb_nameProductItem";
             this.lb_nameProductItem.Size = new System.Drawing.Size(59, 12);

@@ -67,6 +67,7 @@ namespace GUI
                 double total = price_up * sl;
                 double total_Discount = this.price_Discount * sl;
                 guna2CircleButton1.Text = "-" + discount + "%";
+                tb_priceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 tb_priceProduct.Text = total.ToString("#,#,#") + "đ";
                 guna2TextBox1.Text = total_Discount.ToString("#,#,#") + "đ";
             }
