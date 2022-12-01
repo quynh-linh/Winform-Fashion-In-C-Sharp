@@ -44,20 +44,20 @@ namespace GUI
         {
             comboboxBrand.DataSource = brandBUS.getBrand();
             comboboxBrand.DisplayMember = "name";
-            comboboxBrand.ValueMember = "id";
+            comboboxBrand.DisplayMember = "id";
 
         }
         private void loadCBBBrand_List()
         {
             comboboxNCC.DataSource = brandBUS.getBrand();
             comboboxNCC.DisplayMember = "name";
-            comboboxNCC.ValueMember = "id";
+            comboboxNCC.DisplayMember = "id";
         }
         private void loadCBBAccount_List()
         {
             comboboxStaff.DataSource = accountBUS.getAllAccount();
             comboboxStaff.DisplayMember = "full_name";
-            comboboxStaff.ValueMember = "id";
+            comboboxStaff.DisplayMember = "id";
         }
         private void loadDBtoImportProducts()
         {

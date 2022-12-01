@@ -207,19 +207,19 @@ namespace GUI
             int year = DateTime.Now.Year;
             String now = day + "/" + month + "/" + year;
             CultureInfo provider = CultureInfo.InvariantCulture;
-            DateTime time1 = DateTime.ParseExact(now, "dd/MM/yyyy", provider);
+            DateTime time1 = DateTime.ParseExact(now, "d/M/yyyy", provider);
 
             ArrayList list_Discount = discountBUS.get_Discount();
 
             for (int i=0;i< list_Discount.Count;i++)
             {
                 DiscountDTO dc = (DiscountDTO)list_Discount[i];
-                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "dd/MM/yyyy", provider)) >= 0 && time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) <= 0 && dc.Status.Equals("Ngừng áp dụng"))
+                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "d/M/yyyy", provider)) >= 0 && time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) <= 0 && dc.Status.Equals("Ngừng áp dụng"))
                 {
                     discountBUS.Auto_Update_Discount(dc.Ma_discount, "Đang áp dụng");
                 }
 
-                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "dd/MM/yyyy", provider)) < 0 && dc.Status.Equals("Đang áp dụng") || time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) > 0 && dc.Status.Equals("Đang áp dụng"))
+                if (time1.CompareTo(DateTime.ParseExact(dc.Start_day, "d/M/yyyy", provider)) < 0 && dc.Status.Equals("Đang áp dụng") || time1.CompareTo(DateTime.ParseExact(dc.End_day, "dd/MM/yyyy", provider)) > 0 && dc.Status.Equals("Đang áp dụng"))
                 {
                     discountBUS.Auto_Update_Discount(dc.Ma_discount, "Ngừng áp dụng");
                 }
