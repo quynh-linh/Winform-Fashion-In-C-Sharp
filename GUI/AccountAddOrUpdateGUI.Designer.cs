@@ -47,6 +47,9 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnResetAccount = new Guna.UI2.WinForms.Guna2Button();
             this.btnActionAccount = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.roles = new System.Windows.Forms.ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
@@ -54,6 +57,7 @@
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -70,15 +74,16 @@
             // 
             // guna2Panel7
             // 
+            this.guna2Panel7.Controls.Add(this.guna2Panel6);
             this.guna2Panel7.Controls.Add(this.guna2Panel8);
             this.guna2Panel7.Controls.Add(this.guna2Panel2);
             this.guna2Panel7.Controls.Add(this.guna2Panel3);
             this.guna2Panel7.Controls.Add(this.guna2Panel4);
             this.guna2Panel7.Controls.Add(this.guna2Panel5);
-            this.guna2Panel7.Location = new System.Drawing.Point(72, 68);
+            this.guna2Panel7.Location = new System.Drawing.Point(67, 2);
             this.guna2Panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(541, 419);
+            this.guna2Panel7.Size = new System.Drawing.Size(541, 558);
             this.guna2Panel7.TabIndex = 7;
             // 
             // guna2Panel8
@@ -328,7 +333,7 @@
             this.btnResetAccount.FillColor = System.Drawing.Color.DimGray;
             this.btnResetAccount.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnResetAccount.Location = new System.Drawing.Point(420, 526);
+            this.btnResetAccount.Location = new System.Drawing.Point(415, 564);
             this.btnResetAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResetAccount.Name = "btnResetAccount";
             this.btnResetAccount.Size = new System.Drawing.Size(193, 46);
@@ -346,13 +351,48 @@
             this.btnActionAccount.FillColor = System.Drawing.Color.DimGray;
             this.btnActionAccount.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnActionAccount.Location = new System.Drawing.Point(72, 526);
+            this.btnActionAccount.Location = new System.Drawing.Point(67, 564);
             this.btnActionAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActionAccount.Name = "btnActionAccount";
             this.btnActionAccount.Size = new System.Drawing.Size(193, 46);
             this.btnActionAccount.TabIndex = 5;
             this.btnActionAccount.Text = "Update";
             this.btnActionAccount.Click += new System.EventHandler(this.btnUpdateAccount_Click);
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.Controls.Add(this.roles);
+            this.guna2Panel6.Controls.Add(this.guna2HtmlLabel5);
+            this.guna2Panel6.Location = new System.Drawing.Point(11, 397);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(20, 20, 11, 10);
+            this.guna2Panel6.Size = new System.Drawing.Size(517, 68);
+            this.guna2Panel6.TabIndex = 4;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(23, 23);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 22);
+            this.guna2HtmlLabel5.TabIndex = 0;
+            this.guna2HtmlLabel5.Text = "Roles";
+            this.guna2HtmlLabel5.Click += new System.EventHandler(this.guna2HtmlLabel5_Click_1);
+            // 
+            // roles
+            // 
+            this.roles.BackColor = System.Drawing.SystemColors.Window;
+            this.roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roles.FormattingEnabled = true;
+            this.roles.Location = new System.Drawing.Point(173, 23);
+            this.roles.Name = "roles";
+            this.roles.Size = new System.Drawing.Size(264, 33);
+            this.roles.TabIndex = 1;
+            this.roles.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // AccountAddOrUpdateGUI
             // 
@@ -378,6 +418,8 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -403,5 +445,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Guna.UI2.WinForms.Guna2TextBox idAccount;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private System.Windows.Forms.ComboBox roles;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
     }
 }

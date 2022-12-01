@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DAO;
 using DTO;
+using Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
 
 namespace BUS
 {
@@ -16,6 +18,19 @@ namespace BUS
         public DataTable getAllRole()
         {
             return roleDAO.selectAllRole();
+        }
+
+        public List<RoleDTO> getRoles() {
+            DataTable data = getAllRole();
+            List<RoleDTO> roles = new List<RoleDTO>();
+            for (int i=0;i<data.Rows.Count;i++) {
+                RoleDTO role = new RoleDTO();
+                role.Role_Id = data.Rows[i]["id"].ToString();
+                role.Role_Name = data.Rows[i]["role_Name"].ToString();
+                role.Role_Desciption = data.Rows[i]["role_Description"].ToString();
+                roles.Add(role);
+            }
+            return roles;
         }
 
         public Boolean addRole(RoleDTO role)

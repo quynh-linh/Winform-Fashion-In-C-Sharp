@@ -17,10 +17,22 @@ namespace GUI
     {
         private RoleBUS roleBUS = new RoleBUS();
         private AccountBUS accountBUS = new AccountBUS();
+        List<ComboItem> comboItems;
+        class ComboItem{
+            public string Value { get; set; }
+            public string Text { get; set; }
+        }
         public AccountAddOrUpdateGUI(String type, AccountDTO accountDTO)
         {
             InitializeComponent();
+            comboItems = new List<ComboItem>();
             this.btnActionAccount.Text = type;
+            roleBUS.getRoles().ForEach(role => {
+                comboItems.Add(new ComboItem { Value = role.Role_Id,Text = role.Role_Name});
+            });
+            this.roles.DataSource = comboItems;
+            this.roles.DisplayMember = "Text";
+            this.roles.ValueMember = "Value";
             setTextToUpdate(accountDTO);
         }
 
@@ -68,17 +80,18 @@ namespace GUI
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            string id, username, fullName, password, email;
+            string id, username, fullName, password, email, role;
             id = idAccount.Text +"";
             username = usernameAccount.Text + "";
             fullName = fullNameAccount.Text + "";
             password = passwordAccount.Text + "";
             email = emailAccount.Text + "";
+            role = comboItems[roles.SelectedIndex].Value;
             try
             {
                 if (this.btnActionAccount.Text == "Update")
                 {
-                    AccountDTO accountDTO = new AccountDTO(Int32.Parse(id), username, password, fullName, email, "Q1");
+                    AccountDTO accountDTO = new AccountDTO(Int32.Parse(id), username, password, fullName, email, role);
                     accountBUS.updateAccount(accountDTO);
                     MessageBox.Show("Sua tai khoan thanh cong", "Successfully");
                 }
@@ -89,15 +102,18 @@ namespace GUI
                     accountDTO.Password = password;
                     accountDTO.Full_Name = fullName;
                     accountDTO.Email = email;
-                    accountDTO.Role_Id = "Q1";
+                    accountDTO.Role_Id = role;
                     accountBUS.createAccount(accountDTO);
                     MessageBox.Show("Them tai khoan thanh cong", "Successfully");
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Vui long nhap day du thong tin", "Cảnh báo");
+            catch (ApplicationException e1) {
 
+                MessageBox.Show(e1.Message, "Cảnh báo");
+            }
+            catch (FormatException e1) {
+
+                MessageBox.Show("Email không đúng định dạng", "Cảnh báo");
             }
         }
 
@@ -136,6 +152,14 @@ namespace GUI
 
         private void emailAccount_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void guna2HtmlLabel5_Click_1(object sender, EventArgs e) {
 
         }
     }
