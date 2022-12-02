@@ -24,7 +24,7 @@ namespace GUI
         private Bill_BUS bill_BUS = new Bill_BUS();
         public ArrayList listOder = new ArrayList();
         public ArrayList list_Quantity_Choice = new ArrayList();
-        double totalPrice = 0;
+        public double totalPrice = 0;
         int id_Staff = 0;
         DiscountBUS discountBUS = new DiscountBUS();
         CustomerBUS customerBUS = new CustomerBUS();
@@ -63,6 +63,7 @@ namespace GUI
         public void addItemOder(ArrayList listOder, ArrayList list_Quantity_Choice)
         {
             flp_oder.Controls.Clear();
+            totalPrice = 0;
 
             for (int i = 0; i < listOder.Count; i++)
             {
@@ -75,7 +76,11 @@ namespace GUI
 
             if (totalPrice > 0)
                 label4.Text = totalPrice.ToString("#,#,#") + "đ";
-            else label4.Text = "0đ";
+            else
+            {
+                totalPrice = 0;
+                label4.Text = "0đ";
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -86,6 +91,7 @@ namespace GUI
                 list_Quantity_Choice.Clear();
                 flp_oder.Controls.Clear();
                 label4.Text = "0đ";
+                totalPrice = 0;
                 guna2TextBox2.Text = "";
                 guna2TextBox3.Text = "";
             }
@@ -194,9 +200,16 @@ namespace GUI
             }
             else
             {
-                if (customerBUS.get_Customer_By_Phone(guna2TextBox2.Text,"name") != null)
-                    guna2TextBox3.Text = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text,"name");
-                else MessageBox.Show("Không tìm thấy số điện thoại này");
+                if (customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "name") != null)
+                    guna2TextBox3.Text = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "name");
+                else
+                {
+                    if(MessageBox.Show("Không tìm thấy số điện thoại này? \n Bạn muốn thêm khách hàng???","",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        Add_Customer_GUI form = new Add_Customer_GUI(this);
+                        form.Show();
+                    }
+                }
             }
         }
 

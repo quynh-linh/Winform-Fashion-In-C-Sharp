@@ -116,10 +116,10 @@ namespace DAO
             String sql = "";
 
             if (String.IsNullOrEmpty(keyword) && cbb.Equals("Tất cả"))
-                sql = "select * from product GROUP BY name";
+                sql = "select * from product Where isDeleted = 1 GROUP BY name";
             else if (!String.IsNullOrEmpty(keyword) && cbb.Equals("Tất cả"))
-                sql = "select * from product WHERE name LIKE '%"+keyword+"%' GROUP BY name";
-            else sql = "select * from product, category WHERE category.id = product.category_id AND name LIKE '%" + keyword + "%' AND category.nameCategory = '"+cbb+"' GROUP BY name";
+                sql = "select * from product WHERE name LIKE '%"+keyword+ "%' AND isDeleted = 1 GROUP BY name";
+            else sql = "select * from product, category WHERE category.id = product.category_id AND name LIKE '%" + keyword + "%' AND category.nameCategory = '"+cbb+ "' AND product.isDeleted = 1 GROUP BY name";
             try
             {
                 conn.Open();

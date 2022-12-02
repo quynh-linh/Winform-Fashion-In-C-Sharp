@@ -285,7 +285,7 @@
             this.btn_buy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_buy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_buy.FillColor = System.Drawing.Color.Transparent;
-            this.btn_buy.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buy.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.btn_buy.ForeColor = System.Drawing.Color.White;
             this.btn_buy.HoverState.FillColor = System.Drawing.Color.HotPink;
             this.btn_buy.Image = global::GUI.Properties.Resources.Cart_add_icon;

@@ -317,11 +317,11 @@ namespace DAO
         {
             String sql = "";
             if (String.IsNullOrEmpty(search) && cbb.Equals("Tất cả"))
-                sql = "SELECT * FROM product WHERE name NOT IN ( SELECT name FROM product WHERE id IN (SELECT product_Id FROM detail_discount)) GROUP BY name";
+                sql = "SELECT * FROM product WHERE name NOT IN ( SELECT name FROM product WHERE id IN (SELECT product_Id FROM detail_discount)) AND isDeleted = 1 GROUP BY name";
             else if (!String.IsNullOrEmpty(search) && cbb.Equals("Tất cả"))
-                sql = "SELECT * FROM product WHERE name NOT IN ( SELECT name FROM product WHERE id IN (SELECT product_Id FROM detail_discount)) AND name LIKE N'%" + search + "%' GROUP BY name";
+                sql = "SELECT * FROM product WHERE name NOT IN ( SELECT name FROM product WHERE id IN (SELECT product_Id FROM detail_discount)) AND name LIKE N'%" + search + "%' AND isDeleted = 1 GROUP BY name";
             else
-                sql = "SELECT * FROM product, category WHERE category.id = product.category_id AND product.name NOT IN ( SELECT name FROM product WHERE id IN (SELECT product_Id FROM detail_discount)) AND product.name LIKE N'%" + search + "%' AND category.nameCategory = '" + cbb + "' GROUP BY name";
+                sql = "SELECT * FROM product, category WHERE category.id = product.category_id AND product.name NOT IN ( SELECT name FROM product WHERE id IN (SELECT product_Id FROM detail_discount)) AND product.name LIKE N'%" + search + "%' AND category.nameCategory = '" + cbb + "' AND product.isDeleted = 1 GROUP BY name";
             ArrayList list_Pro = new ArrayList();
 
             DataTable data = new DataTable();
@@ -386,7 +386,7 @@ namespace DAO
 
         public DataTable get_Product_By_Id(String id)
         {
-            String sql = "SELECT * FROM product WHERE id = '" + id + "'";
+            String sql = "SELECT * FROM product WHERE id = '" + id + "' AND isDeleted = 1";
             DataTable data = new DataTable();
             try
             {

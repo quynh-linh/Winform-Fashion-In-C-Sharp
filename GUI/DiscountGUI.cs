@@ -64,6 +64,8 @@ namespace GUI
 
                 if (dcBUS.check_Name(int.Parse(tb_giamgia.Text), "-1"))
                     MessageBox.Show("Giá trị đã tồn tại");
+                else if (int.Parse(tb_giamgia.Text) <= 0 || int.Parse(tb_giamgia.Text) >= 100)
+                    MessageBox.Show("Giá trị hợp lệ từ 1 - 99");
                 else
                 {
                     if (MessageBox.Show("Bạn có chắc chắn muốn thêm loại giảm giá này", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -137,6 +139,8 @@ namespace GUI
 
                 if (dcBUS.check_Name(int.Parse(tb_giamgia.Text), madiscount))
                     MessageBox.Show("Giá trị đã tồn tại");
+                else if (int.Parse(tb_giamgia.Text) <= 0 || int.Parse(tb_giamgia.Text) >= 100)
+                    MessageBox.Show("Giá trị hợp lệ từ 1 - 99");
                 else
                 {
                     if (MessageBox.Show("Bạn có chắc chắn muốn cập nhật loại giảm giá này", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -240,9 +244,7 @@ namespace GUI
         private void tb_giamgia_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
                 e.Handled = true;
-            }
         }
 
         private void load_Product_From_Discount(ArrayList List_Product)

@@ -40,21 +40,21 @@ namespace GUI
         {
             comboboxBrand.DataSource = brandBUS.getBrand();
             comboboxBrand.DisplayMember = "name";
-            comboboxBrand.ValueMember = "id";
+            comboboxBrand.DisplayMember = "id";
             
         }
         private void loadCBBCategory()
         {
             comboboxCategory.DataSource = categoryBUS.getAllCategory();
             comboboxCategory.DisplayMember = "nameCategory";
-            comboboxCategory.ValueMember = "id";
+            comboboxCategory.DisplayMember = "id";
             
         }
         private void loadCBBSize()
         {
             comboboxSize.DataSource = sizeProductsBUS.getSize();
             comboboxSize.DisplayMember = "name";
-            comboboxSize.ValueMember = "id";
+            comboboxSize.DisplayMember = "id";
             
         }
         private void loadDataGridview()

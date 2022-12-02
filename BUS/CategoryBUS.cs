@@ -74,5 +74,16 @@ namespace BUS
         {
             return categoryDAO.count().Rows.Count;
         }
+
+        public int count_Product_Belong_Category(String id)
+        {
+            return categoryDAO.count_Product_Belong_Category(id);
+        }
+
+        public bool delete_Product_From_Category(String id)
+        {
+            return categoryDAO.delete_Product_From_Category(id);
+        }
+
     }
 }

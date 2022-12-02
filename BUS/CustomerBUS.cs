@@ -83,5 +83,10 @@ namespace BUS
                 }
             });
         }
+
+        public int  count()
+        {
+            return customerDAO.count().Rows.Count;
+        }
     }
 }

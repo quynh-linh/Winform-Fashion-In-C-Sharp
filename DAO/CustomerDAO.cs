@@ -198,5 +198,31 @@ namespace DAO
             return null;
         }
 
+        public DataTable count()
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                conn.Open();
+                String sql = "select * from customer";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(data);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return data;
+        }
+
+
     }
 }

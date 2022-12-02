@@ -97,10 +97,11 @@ namespace GUI
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc muốn xóa thể loại " + dataGridViewCategory.CurrentRow.Cells[1].Value.ToString() + "?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            string Id = dataGridViewCategory.CurrentRow.Cells[0].Value.ToString();
+            if (MessageBox.Show("Bạn có chắc muốn xóa thể loại " + dataGridViewCategory.CurrentRow.Cells[1].Value.ToString() + "?\n Hiện đang có "+categoryBUS.count_Product_Belong_Category(Id)+" sản phẩm thuộc thể loại này!", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string Id = dataGridViewCategory.CurrentRow.Cells[0].Value.ToString();
                 categoryBUS.deleteCategory(Id);
+                categoryBUS.delete_Product_From_Category(Id);
                 dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
                 MessageBox.Show("Xóa thành công");
             }

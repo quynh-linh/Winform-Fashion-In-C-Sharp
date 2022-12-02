@@ -94,7 +94,7 @@ namespace DAO
                 string SQL = string.Format("UPDATE category " +
                     "SET " +
                     "isDeleted = 1 " +
-                    "WHERE id = '{0}'",id);
+                    "WHERE id = '{0}'", id);
                 // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
                 Console.WriteLine(SQL);
                 MySqlCommand cmd = new MySqlCommand(SQL, conn);
@@ -146,7 +146,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "select id, nameCategory from category where nameCategory = '" + name +"' and id not in ('"+ id +"') and isDeleted = 0";
+                String sql = "select id, nameCategory from category where nameCategory = '" + name + "' and id not in ('" + id + "') and isDeleted = 0";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(data);
@@ -189,22 +189,77 @@ namespace DAO
             return data;
         }
 
-        public bool checkCategoryExist(string id) {
-            try {
+        public bool checkCategoryExist(string id)
+        {
+            try
+            {
                 conn.Open();
                 String sql = String.Format("SELECT * FROM `category` WHERE id = '{0}'", id);
                 Console.WriteLine(sql);
                 MySqlCommand cm = new MySqlCommand(sql, conn);
                 var reader = cm.ExecuteReader();
-                if (reader.HasRows) {
+                if (reader.HasRows)
+                {
                     return true;
                 }
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine(e);
                 Console.Read();
             }
-            finally {
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
+
+        public int count_Product_Belong_Category(String id)
+        {
+            int count = 0;
+            DataTable data = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "SELECT COUNT(category_id) as count FROM product WHERE IsDeleted <> 0 AND category_id = '" + id + "'";
+                Console.WriteLine(sql);
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(data);
+                count = data.Rows.Count;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return count;
+        }
+
+        public bool delete_Product_From_Category(String id)
+        {
+            try
+            {
+                conn.Open();
+                string SQL = "UPDATE product SET IsDeleted = 0 WHERE category_id = '" + id + "'";
+                Console.WriteLine(SQL);
+                MySqlCommand cmd = new MySqlCommand(SQL, conn);
+                // Query và kiểm tra
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.Read();
+            }
+            finally
+            {
                 conn.Close();
             }
             return false;
