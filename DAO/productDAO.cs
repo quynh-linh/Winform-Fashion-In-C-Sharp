@@ -19,11 +19,11 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "SELECT pd.id , pd.price , pd.name , pd.description , pd.quantity , pd.image, pd.isDeleted , " +
+                String sql = "SELECT pd.id , pd.price , pd.name , pd.description , pd.quantity , pd.image," +
                     "br.name as nameBrand , " +
                     "ct.nameCategory as nameCate , s.name as sizename " +
                     "FROM product as pd , brand as br ,  category as ct , size as s " +
-                    "WHERE (pd.brand_id = br.id AND pd.category_id = ct.id) AND (pd.size_id = s.id AND pd.isDeleted = 1)";
+                    "WHERE (pd.brand_id = br.id AND pd.category_id = ct.id) AND (pd.size_id = s.id AND pd.isDeleted = 1) ORDER BY name ASC";
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(ds);
             }

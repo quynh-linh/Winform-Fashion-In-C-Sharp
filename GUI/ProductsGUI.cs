@@ -40,21 +40,21 @@ namespace GUI
         {
             comboboxBrand.DataSource = brandBUS.getBrand();
             comboboxBrand.DisplayMember = "name";
-            comboboxBrand.DisplayMember = "id";
+            comboboxBrand.ValueMember = "id";
             
         }
         private void loadCBBCategory()
         {
             comboboxCategory.DataSource = categoryBUS.getAllCategory();
             comboboxCategory.DisplayMember = "nameCategory";
-            comboboxCategory.DisplayMember = "id";
+            comboboxCategory.ValueMember = "id";
             
         }
         private void loadCBBSize()
         {
             comboboxSize.DataSource = sizeProductsBUS.getSize();
             comboboxSize.DisplayMember = "name";
-            comboboxSize.DisplayMember = "id";
+            comboboxSize.ValueMember = "id";
             
         }
         private void loadDataGridview()
@@ -103,8 +103,6 @@ namespace GUI
                 textboxQuantity.Text = dataGridView.Rows[e.RowIndex].Cells["quantity"].FormattedValue.ToString();
                 textboxDes.Text = dataGridView.Rows[e.RowIndex].Cells["description"].FormattedValue.ToString();
                 String nameImage = dataGridView.Rows[e.RowIndex].Cells["image"].FormattedValue.ToString();
-                textBoxId.Enabled = false;
-                comboboxSize.Enabled = false;
                 if (!nameImage.Equals(""))
                 {
                     pictureBox.Image = new Bitmap(Application.StartupPath + @"\Image\" + nameImage);

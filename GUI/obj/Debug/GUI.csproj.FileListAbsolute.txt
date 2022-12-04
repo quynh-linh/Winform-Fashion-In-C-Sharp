@@ -1153,3 +1153,4 @@ C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-2\GUI\obj\Debug\GUI.cspro
 C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-2\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-2\GUI\obj\Debug\GUI.exe
 C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-2\GUI\obj\Debug\GUI.pdb
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Add_Customer_GUI.resources
