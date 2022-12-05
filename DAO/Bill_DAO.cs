@@ -19,7 +19,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time between '{0}' and '{1}'",from,to);
+                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= '{0}'  and bill_Time <= '{1}'", from,to);
                 // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -34,6 +34,30 @@ namespace DAO
             }
             finally
             {
+                conn.Close();
+            }
+
+            return dtBill;
+
+        }
+
+        public DataTable selectBills() {
+            DataTable dtBill = new DataTable();
+            try {
+                conn.Open();
+                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where 1=1");
+                // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally {
                 conn.Close();
             }
 

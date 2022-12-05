@@ -73,7 +73,7 @@ namespace GUI
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChartStaffGUI());
+            OpenChildForm(new ChartRevenueGUI());
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

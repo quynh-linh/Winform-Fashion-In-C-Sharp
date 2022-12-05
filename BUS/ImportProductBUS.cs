@@ -1,11 +1,13 @@
 ﻿using DAO;
 using DTO;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataTable = System.Data.DataTable;
 
 namespace BUS
 {
@@ -153,6 +155,47 @@ namespace BUS
             DataTable data = importDAO.getSumQuantityProductOfImport();
             return long.Parse(data.Rows[0][0].ToString());
         }
+
+        public List<ImprotProductDTO> getAllImportProduct() {
+            List<ImprotProductDTO> improtProductDTOs= new List<ImprotProductDTO>();
+            DataTable data = importDAO.selectImportProducts();
+            for (int i = 0; i < data.Rows.Count; i++) {
+                ImprotProductDTO improtProduct = new ImprotProductDTO();
+                improtProduct.MaPhieuNhap = data.Rows[i]["maPhieuNhap"].ToString();
+                improtProduct.NgayNhap = data.Rows[i]["ngayNhap"].ToString();
+                improtProduct.Tongtien = Convert.ToDouble(data.Rows[i]["tongtien"].ToString());
+                improtProductDTOs.Add(improtProduct);
+            }
+            return improtProductDTOs;
+        } 
+        public List<RevenueDTO> getAllRevenue() {
+            List<ImprotProductDTO> improtProducts = this.getAllImportProduct();
+            Console.WriteLine("BUI MANH THANH");
+            List<RevenueDTO> revenues = new List<RevenueDTO>();
+            foreach (var item in revenueWithMonth(improtProducts)) {
+                RevenueDTO revenue = new RevenueDTO();
+                revenue.Month = item.Key;
+                revenue.TongTien = item.Value;
+                revenues.Add(revenue);
+            }
+            return revenues;
+        }
+        public Dictionary<string, double> revenueWithMonth(List<ImprotProductDTO> improtProducts) {
+            Dictionary<string, double> revenue = new Dictionary<string, double>();
+            improtProducts.ForEach(i => {
+                DateTime dateTime = DateTime.ParseExact(i.NgayNhap , "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                if (revenue.ContainsKey("Tháng " + dateTime.Month)) {
+                    double tongtien = i.Tongtien;
+                    revenue["Tháng " + dateTime.Month] += tongtien;
+                }
+                else {
+                    double tongtien = i.Tongtien;
+                    revenue.Add("Tháng " + dateTime.Month, tongtien);
+                }
+            });
+            return revenue;
+        }
+
     }
 
 }

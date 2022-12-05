@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -43,8 +44,8 @@
             this.panelChildForm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(196)))));
             this.panelChildForm.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.panelChildForm.BorderThickness = 1;
-            this.panelChildForm.Controls.Add(this.iconButton4);
             this.panelChildForm.Controls.Add(this.chartCustomer);
+            this.panelChildForm.Controls.Add(this.iconButton4);
             this.panelChildForm.Location = new System.Drawing.Point(3, 0);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChildForm.Name = "panelChildForm";
@@ -70,31 +71,32 @@
             // 
             // chartCustomer
             // 
-            this.chartCustomer.BackColor = System.Drawing.Color.Black;
-            this.chartCustomer.BorderlineColor = System.Drawing.Color.Black;
+            this.chartCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.chartCustomer.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.chartCustomer.BackImageTransparentColor = System.Drawing.Color.Black;
             chartArea1.BackColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea1";
             this.chartCustomer.ChartAreas.Add(chartArea1);
-            this.chartCustomer.Location = new System.Drawing.Point(11, 62);
+            legend1.BackColor = System.Drawing.Color.Black;
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.Name = "Legend1";
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            legend1.TitleSeparatorColor = System.Drawing.Color.White;
+            this.chartCustomer.Legends.Add(legend1);
+            this.chartCustomer.Location = new System.Drawing.Point(9, 75);
             this.chartCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartCustomer.Name = "chartCustomer";
-            this.chartCustomer.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
+            this.chartCustomer.Padding = new System.Windows.Forms.Padding(20);
+            this.chartCustomer.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.chartCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.IsXValueIndexed = true;
-            series1.LabelAngle = 12;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Star4;
+            series1.LabelForeColor = System.Drawing.Color.Transparent;
+            series1.Legend = "Legend1";
             series1.Name = "Quantity";
-            series1.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            series1.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chartCustomer.Series.Add(series1);
-            this.chartCustomer.Size = new System.Drawing.Size(524, 386);
-            this.chartCustomer.TabIndex = 9;
+            this.chartCustomer.Size = new System.Drawing.Size(876, 399);
+            this.chartCustomer.TabIndex = 10;
             this.chartCustomer.Text = "chart1";
-            this.chartCustomer.Click += new System.EventHandler(this.chartProduct_Click);
             // 
             // ChartCustomerGUI
             // 
@@ -115,7 +117,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelChildForm;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartCustomer;
         private FontAwesome.Sharp.IconButton iconButton4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartCustomer;
     }
 }
