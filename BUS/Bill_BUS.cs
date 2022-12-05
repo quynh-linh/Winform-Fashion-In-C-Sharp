@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -143,6 +144,30 @@ namespace BUS
             return bills;
         }
 
+        public Bill_DTO get_Bill_By_Id(String id)
+        {
+            return bill_DAO.get_Bill_By_Id(id);
+        }
+
+        public ArrayList get_Detail_Bill_By_Id(String id)
+        {
+            return bill_DAO.get_Detail_Bill_By_Id(id);
+        }
+
+        public String get_Name_Staff_By_Id(int id)
+        {
+            return bill_DAO.get_Name_Staff_By_Id(id);
+        }
+
+        public String get_Name_Customer_By_Id(String id)
+        {
+            return bill_DAO.get_Name_Customer_By_Id(id);
+        }
+
+        public ProductDTO get_Product_In_Detail_Bill(String id, int size)
+        {
+            return bill_DAO.get_Product_In_Detail_Bill(id, size);
+        }
 
     }
 }

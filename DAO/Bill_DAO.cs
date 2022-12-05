@@ -1,6 +1,7 @@
 ﻿using DTO;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -215,6 +216,165 @@ namespace DAO
             }
 
             return dtBill;
+        }
+
+        public Bill_DTO get_Bill_By_Id(String id)
+        {
+            Bill_DTO bill = new Bill_DTO();
+            DataTable Bill = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select * from bill where bill_Id = '"+id+"'";
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(Bill);
+                if(Bill.Rows.Count > 0)
+                {
+                    bill.Bill_Id = Bill.Rows[0][0].ToString();
+                    bill.Total = Convert.ToDouble(Bill.Rows[0][1]);
+                    bill.Bill_Time = Bill.Rows[0][2].ToString();
+                    bill.Account_Id = Convert.ToInt32(Bill.Rows[0][3]);
+                    bill.Customer_Id = Bill.Rows[0][4].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return bill;
+        }
+
+        public ArrayList get_Detail_Bill_By_Id(String id)
+        {
+            ArrayList arr = new ArrayList();
+            DataTable Bill = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select * from bill_detail where bill_Id = '" + id + "'";
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(Bill);
+                for (int i = 0; i < Bill.Rows.Count; i++)
+                {
+                    Bill_Detail_DTO bill = new Bill_Detail_DTO();
+                    bill.Bill_Id = Bill.Rows[i][0].ToString();
+                    bill.Product_Id = Bill.Rows[i][1].ToString();
+                    bill.Size = Bill.Rows[i][2].ToString();
+                    bill.Quantity = Convert.ToInt32(Bill.Rows[i][3]);
+                    bill.Price = Convert.ToDouble(Bill.Rows[i][4]);
+                    bill.Percent = Convert.ToInt32(Bill.Rows[i][5]);
+                    arr.Add(bill);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return arr;
+        }
+
+        public String get_Name_Staff_By_Id(int id)
+        {
+            String name = "";
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select full_name from account where id = " + id;
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dt);
+                name = dt.Rows[0][0].ToString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return name;
+        }
+
+        public String get_Name_Customer_By_Id(String id)
+        {
+            String name = "";
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "select nameCustomer from customer where idCustomer  = '" + id + "'";
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dt);
+                name = dt.Rows[0][0].ToString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return name;
+        }
+
+        public ProductDTO get_Product_In_Detail_Bill(String id, int size)
+        {
+            ProductDTO pd = new ProductDTO();
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "SELECT * FROM product WHERE id= '" + id + "' AND size_id  = " + size + " AND IsDeleted <> 0";
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dt);
+                pd.Product_Id = dt.Rows[0][0].ToString();
+                pd.Product_Name = dt.Rows[0][1].ToString();
+                pd.Product_Price = Double.Parse(dt.Rows[0][2].ToString());
+                pd.Image = dt.Rows[0][3].ToString();
+                pd.Description = dt.Rows[0][4].ToString();
+                pd.Brand_id = dt.Rows[0][5].ToString();
+                pd.Category_Id = dt.Rows[0][6].ToString();
+                pd.Size_id = int.Parse(dt.Rows[0][7].ToString());
+                pd.Quantity = int.Parse(dt.Rows[0][8].ToString());
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return pd;
         }
     }
 }

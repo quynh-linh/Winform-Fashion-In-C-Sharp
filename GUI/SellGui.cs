@@ -2,6 +2,8 @@
 using DAO;
 using DTO;
 using Guna.UI2.WinForms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using NPOI.SS.Formula.Functions;
 using System;
 using System.Collections;
@@ -10,10 +12,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Ink;
 
 namespace GUI
 {
@@ -150,10 +154,11 @@ namespace GUI
                         else if (p.Size_id == 3) size = "L";
                         else if (p.Size_id == 4) size = "XL";
                         int percent = discountBUS.check_Product_Discount(p.Product_Id, p.Product_Name, "name");
-                        Bill_Detail_DTO bill_Detail = new Bill_Detail_DTO(bill_Id,p.Product_Id, size, (int)list_Quantity_Choice[i], p.Product_Price + p.Product_Price, percent);
+                        Bill_Detail_DTO bill_Detail = new Bill_Detail_DTO(bill_Id,p.Product_Id, size, (int)list_Quantity_Choice[i], p.Product_Price + p.Product_Price * 5/100, percent);
                         bill_BUS.insert_Detail_Bill(bill_Detail);
                         bill_BUS.update_Quantity_After_Payment(p.Product_Id, (int)list_Quantity_Choice[i]);
                     }
+                    PDF(bill_Id);
                     this.totalPrice = 0;
                     listOder.Clear();
                     list_Quantity_Choice.Clear();
@@ -238,6 +243,144 @@ namespace GUI
                 }
             }
 
+        }
+
+        public void PDF(String id)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.FileName = Application.StartupPath + @"\PDF_Bill\" + id + ".pdf";
+            iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(PageSize.A4, 10f, 10f, 10f, 0f);
+
+            FileStream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create);
+            PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+            pdfDoc.Open();
+
+            PdfContentByte cb = writer.DirectContent;
+
+            BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            cb.SetColorFill(BaseColor.DARK_GRAY);
+            cb.SetFontAndSize(bf, 15);
+
+            Bill_DTO b = bill_BUS.get_Bill_By_Id(id);
+            ArrayList bd = bill_BUS.get_Detail_Bill_By_Id(id);
+
+            cb.BeginText();
+            string text = "BILL";
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 300, 800, 0);
+
+            text = String.Format("Coupon Code : {0}", id);
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 100, 750, 0);
+            
+            text = String.Format("Date : {0}", b.Bill_Time);
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 350, 750, 0);
+            
+            String name = bill_BUS.get_Name_Staff_By_Id(b.Account_Id);
+            text = String.Format("Staff : {0}", name);
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 100, 700, 0);
+            //
+            if (b.Customer_Id.Equals("null")) { }
+            else
+            {
+                text = String.Format("Customer : {0}", bill_BUS.get_Name_Customer_By_Id(b.Customer_Id));
+                cb.ShowTextAligned(Element.ALIGN_LEFT, text, 350, 700, 0);
+            }
+            //
+            text = "-------------------------------------------------------------------------------------------------------";
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 50, 650, 0);
+            cb.EndText();
+            //
+
+            //
+            cb.BeginText();
+            text = "Quantity";
+            cb.ShowTextAligned(Element.ALIGN_CENTER, text, 100, 600, 0);
+            text = "Price";
+            cb.ShowTextAligned(Element.ALIGN_CENTER, text, 200, 600, 0);
+            text = "Discount";
+            cb.ShowTextAligned(Element.ALIGN_CENTER, text, 350, 600, 0);
+            text = "Total";
+            cb.ShowTextAligned(Element.ALIGN_CENTER, text, 500, 600, 0);
+            cb.EndText();
+            //
+            int y = 600;
+            int STT = 0;
+            if(bd.Count > 0)
+            {
+                for (int i = 0; i < bd.Count; i++)
+                {
+                    if( y < 150)
+                    {
+                        y = 800;
+                        pdfDoc.Add(new Paragraph());
+                        pdfDoc.NewPage();
+                    }
+                    STT++;
+                    Bill_Detail_DTO bill_Dtail = (Bill_Detail_DTO)bd[i];
+
+                    int size = 0;
+                    if (bill_Dtail.Size.Equals("S")) size = 1;
+                    else if(bill_Dtail.Size.Equals("M")) size = 2;
+                    else if (bill_Dtail.Size.Equals("L")) size = 3;
+                    else if (bill_Dtail.Size.Equals("XL")) size = 4;
+                    ProductDTO pd = bill_BUS.get_Product_In_Detail_Bill(bill_Dtail.Product_Id, size);
+
+                    String s = "";
+                    if (pd.Size_id == 1) s = "S";
+                    else if (pd.Size_id == 2) s = "M";
+                    else if (pd.Size_id == 3) s = "L";
+                    else if (pd.Size_id == 4) s = "XL";
+
+                    BaseFont bf1 = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                    cb.SetColorFill(BaseColor.DARK_GRAY);
+                    cb.SetFontAndSize(bf1, 13);
+
+                    cb.BeginText();
+                    text = STT + ". " + pd.Product_Name + " (" + s +")";
+                    cb.ShowTextAligned(Element.ALIGN_CENTER, text, 90, y = y - 50, 0);
+                    y = y - 50;
+                    text = bill_Dtail.Quantity + "";
+                    cb.ShowTextAligned(Element.ALIGN_CENTER, text, 100, y , 0);
+                    text = bill_Dtail.Price.ToString("#,#,#") ;
+                    cb.ShowTextAligned(Element.ALIGN_CENTER, text+ " VND", 200, y, 0);
+                    if (bill_Dtail.Percent > 0)
+                    {
+                        text = (bill_Dtail.Price - bill_Dtail.Price* bill_Dtail.Percent/100).ToString("#,#,#") ;
+                        cb.ShowTextAligned(Element.ALIGN_CENTER, text+ " VND", 350, y, 0);
+                        text = ((bill_Dtail.Price - bill_Dtail.Price * bill_Dtail.Percent / 100) * bill_Dtail.Quantity).ToString("#,#,#") ;
+                        cb.ShowTextAligned(Element.ALIGN_CENTER, text+ " VND", 500, y, 0);
+                    }
+
+                    else
+                    {
+                        text = (bill_Dtail.Price * bill_Dtail.Quantity).ToString("#,#,#") ;
+                        cb.ShowTextAligned(Element.ALIGN_CENTER, text+ " VND", 500, y, 0);
+                    }
+                    cb.EndText();
+                }
+            }
+            
+            if (y < 250)
+            {
+                y = 800;
+                pdfDoc.Add(new Paragraph());
+                pdfDoc.NewPage();
+            }
+            cb.BeginText();
+            text = "---------------------------------------------------------------------------------------------------------------";
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 50, y = y - 50, 0);
+            text = "Total : " + b.Total.ToString("#,#,#") ;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text+ " VND", 300, y = y - 50, 0);
+            text = "Recieved Money : " + Double.Parse(guna2TextBox1.Text).ToString("#,#,#") ;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text+  " VND", 300, y = y - 50, 0);
+            text = "Excess Money : " + label2.Text;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text+ " VND", 300, y = y - 50, 0);
+            cb.EndText();
+
+
+            pdfDoc.Close();
+            stream.Close();
+            writer.Close();
         }
     }
 }
