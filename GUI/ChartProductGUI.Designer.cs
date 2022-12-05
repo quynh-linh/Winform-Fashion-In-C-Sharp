@@ -64,7 +64,7 @@
             this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(329, 17);
+            this.btnLoad.Location = new System.Drawing.Point(394, 18);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(109, 34);
@@ -76,25 +76,29 @@
             // chartProduct
             // 
             this.chartProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.chartProduct.BorderlineColor = System.Drawing.Color.Black;
-            this.chartProduct.BorderSkin.BorderColor = System.Drawing.Color.White;
+            this.chartProduct.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.chartProduct.BackImageTransparentColor = System.Drawing.Color.Black;
             chartArea1.BackColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea1";
             this.chartProduct.ChartAreas.Add(chartArea1);
             legend1.BackColor = System.Drawing.Color.Black;
             legend1.ForeColor = System.Drawing.Color.White;
             legend1.Name = "Legend1";
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            legend1.TitleSeparatorColor = System.Drawing.Color.White;
             this.chartProduct.Legends.Add(legend1);
-            this.chartProduct.Location = new System.Drawing.Point(292, 59);
+            this.chartProduct.Location = new System.Drawing.Point(15, 59);
             this.chartProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartProduct.Name = "chartProduct";
-            this.chartProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartProduct.Padding = new System.Windows.Forms.Padding(20);
+            this.chartProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.chartProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.LabelForeColor = System.Drawing.Color.Transparent;
             series1.Legend = "Legend1";
             series1.Name = "Quantity";
             this.chartProduct.Series.Add(series1);
-            this.chartProduct.Size = new System.Drawing.Size(524, 386);
+            this.chartProduct.Size = new System.Drawing.Size(845, 386);
             this.chartProduct.TabIndex = 8;
             this.chartProduct.Text = "chart1";
             // 
@@ -106,7 +110,7 @@
             this.panel9.Location = new System.Drawing.Point(11, 14);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(293, 41);
+            this.panel9.Size = new System.Drawing.Size(363, 41);
             this.panel9.TabIndex = 7;
             // 
             // iconButton3
@@ -117,10 +121,10 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(171, 2);
+            this.iconButton3.Location = new System.Drawing.Point(229, 2);
             this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(120, 36);
+            this.iconButton3.Size = new System.Drawing.Size(131, 36);
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Text = "Nhập vào";
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -133,10 +137,10 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(85, 2);
+            this.iconButton2.Location = new System.Drawing.Point(107, 3);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(77, 34);
+            this.iconButton2.Size = new System.Drawing.Size(116, 34);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "Bán ra";
             this.iconButton2.UseVisualStyleBackColor = false;
@@ -153,7 +157,7 @@
             this.iconButton1.Location = new System.Drawing.Point(4, 2);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(76, 34);
+            this.iconButton1.Size = new System.Drawing.Size(97, 34);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "Tổng";
             this.iconButton1.UseVisualStyleBackColor = false;

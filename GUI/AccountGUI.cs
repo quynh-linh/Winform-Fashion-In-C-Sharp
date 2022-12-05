@@ -20,7 +20,7 @@ namespace GUI
 {
     public partial class AccountGUI : Form
     {
-        private AccountDTO accountDTO;
+        private int currentIndex = 0;
         private AccountBUS accountBUS = new AccountBUS();
         public AccountGUI( string role_Manipulative)
         {
@@ -29,7 +29,6 @@ namespace GUI
             {
                 guna2Button1.Enabled = false;
                 guna2Button4.Enabled = false;
-                guna2Button3.Enabled = false;
                 guna2Button2.Enabled = false;
                 guna2Button6.Enabled = false;
             }
@@ -65,22 +64,29 @@ namespace GUI
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            AccountAddOrUpdateGUI accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Update", accountDTO);
+            AccountDTO accountDTO = null;
+            AccountAddOrUpdateGUI accountAddOrUpdateGUI = null;
+            Console.WriteLine(currentIndex);
+            if (currentIndex >= 0) {
+                accountDTO = new AccountDTO(Int32.Parse(dataGridViewAccount.Rows[currentIndex].Cells[0].Value.ToString()), dataGridViewAccount.Rows[currentIndex].Cells[1].Value.ToString(), dataGridViewAccount.Rows[currentIndex].Cells[2].Value.ToString(), dataGridViewAccount.Rows[currentIndex].Cells[4].Value.ToString(), dataGridViewAccount.Rows[currentIndex].Cells[3].Value.ToString(), dataGridViewAccount.Rows[currentIndex].Cells[5].Value.ToString());
+                 accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Update", accountDTO);
+            }
+            else {
+                accountDTO = new AccountDTO();
+                 accountAddOrUpdateGUI = new AccountAddOrUpdateGUI("Add", accountDTO);
+            }
             accountAddOrUpdateGUI.Show();
         }
 
         private void AccountGUI_Load(object sender, EventArgs e)
         {
             dataGridViewAccount.DataSource = accountBUS.getAllAccount();
-            DataGridViewRow row = dataGridViewAccount.Rows[0];
-            accountDTO = new AccountDTO(Int32.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(),row.Cells[5].Value.ToString());
         }
 
         private void dataGridViewAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            DataGridViewRow row = dataGridViewAccount.Rows[rowIndex];
-            accountDTO = new AccountDTO(Int32.Parse(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[5].Value.ToString());
+            currentIndex = e.RowIndex;
+            Console.WriteLine(currentIndex);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -159,8 +165,11 @@ namespace GUI
                 }
                 return dataTable;
             }
-
         }
 
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e) {
+            List<AccountDTO> accounts = accountBUS.getAllAccountBySearchKey(searchAccount.Text);
+            dataGridViewAccount.DataSource = accounts;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DAO;
 using DTO;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,6 +10,8 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using DataTable = System.Data.DataTable;
+
 namespace BUS
 {
     public class AccountBUS
@@ -18,7 +21,21 @@ namespace BUS
         {
             return accountDao.selectAllAccount();
         }
-
+        public List<AccountDTO> getAllAccountBySearchKey(String searchKey) {
+            DataTable dataTable = accountDao.getAllAccountBySearchKey(searchKey);
+            List<AccountDTO> result = new List<AccountDTO>();
+            for (int i = 0; i < dataTable.Rows.Count; i++) {
+                AccountDTO accountDTO = new AccountDTO();
+                accountDTO.Account_Id = Convert.ToInt32(dataTable.Rows[i]["id"].ToString());
+                accountDTO.User_Name = dataTable.Rows[i]["username"].ToString();
+                accountDTO.Password = dataTable.Rows[i]["password"].ToString();
+                accountDTO.Email = dataTable.Rows[i]["email"].ToString();
+                accountDTO.Full_Name = dataTable.Rows[i]["full_name"].ToString();
+                accountDTO.Role_Id = dataTable.Rows[i]["role_id"].ToString();
+                result.Add(accountDTO);
+            }
+            return result;
+        }
         public Boolean createAccount(AccountDTO account)
         {
             if(accountDao.checkExistUsername(account.User_Name)) {
