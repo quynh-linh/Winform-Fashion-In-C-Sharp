@@ -108,11 +108,9 @@ namespace GUI
                 }
             }
             catch (ApplicationException e1) {
-
                 MessageBox.Show(e1.Message, "Cảnh báo");
             }
             catch (FormatException e1) {
-
                 MessageBox.Show("Email không đúng định dạng", "Cảnh báo");
             }
         }

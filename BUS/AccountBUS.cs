@@ -47,15 +47,15 @@ namespace BUS
             //Only contains alphanumeric characters, underscore and dot. Underscore and dot can't be at the end or start of a username
             //Underscore and dot can't be next to each other,Underscore or dot can't be used multiple times in a row
             //Number of characters must be between 8 to 20.
-            if (Regex.Match(account.User_Name, "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$", RegexOptions.IgnoreCase).Success || account.User_Name.Equals("")) {
+            if (!Regex.Match(account.User_Name, "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$", RegexOptions.IgnoreCase).Success || account.User_Name.Equals("")) {
                 throw new ApplicationException("username cần có 1 kí tự đặc biệt hoặc _ hoặc . , _ và . không được nằm cuối , _ . không nằm cạnh nhau, _ . không lặp lại cạnh nhau , số lượng kí tự từ 8 - 20");
             }
             // start to string, 3 or more character, 0 or more words with 3 or more character, end of string
-            else if (Regex.Match(account.Full_Name, "^[a-zA-Z]{3,}( {1,2}[a-zA-Z]{3,}){0,}$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
-                throw new ApplicationException("Fullname fắt đầu và kết thúc bằng chuỗi, 3 hoặc nhiều hơn 3 từ");
+            else if (!Regex.Match(account.Full_Name, "^[a-zA-Z]{3,}( {1,2}[a-zA-Z]{3,}){0,}$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
+                throw new ApplicationException("Fullname fắt đầu và kết thúc bằng chuỗi, 3 hoặc nhiều hơn 3 ki tu");
             }
             //At least one upper case and at least one lower case English letter,At least one digit,At least one special character,Minimum eight in length
-            else if (Regex.Match(account.Password, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", RegexOptions.IgnoreCase).Success || account.Password.Equals("")) {
+            else if (!Regex.Match(account.Password, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", RegexOptions.IgnoreCase).Success || account.Password.Equals("")) {
                 throw new ApplicationException("Password ít nhất 1 từ viết hoa và 1 từ viết thường, ít nhất 1 số và 1 kí tự đặc biệt, ít nhất 8 kí tự");
             }
             else if (account.Role_Id.Equals("")) {
@@ -71,15 +71,15 @@ namespace BUS
             //Only contains alphanumeric characters, underscore and dot. Underscore and dot can't be at the end or start of a username
             //Underscore and dot can't be next to each other,Underscore or dot can't be used multiple times in a row
             //Number of characters must be between 8 to 20.
-            if (Regex.Match(account.User_Name, "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
+            if (!Regex.Match(account.User_Name, "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
                 throw new ApplicationException("username cần có 1 kí tự đặc biệt hoặc _ hoặc . , _ và . không được nằm cuối , _ . không nằm cạnh nhau, _ . không lặp lại cạnh nhau , số lượng kí tự từ 8 - 20");
             }
             // start to string, 3 or more character, 0 or more words with 3 or more character, end of string
-            else if (Regex.Match(account.Full_Name, "^[a-zA-Z]{3,}( {1,2}[a-zA-Z]{3,}){0,}$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
+            else if (!Regex.Match(account.Full_Name, "^[a-zA-Z]{3,}( {1,2}[a-zA-Z]{3,}){0,}$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
                 throw new ApplicationException("Bắt đầu và kết thúc bằng chuỗi, 3 hoặc nhiều hơn 3 từ");
             }
             //At least one upper case and at least one lower case English letter,At least one digit,At least one special character,Minimum eight in length
-            else if (Regex.Match(account.Password, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
+            else if (!Regex.Match(account.Password, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", RegexOptions.IgnoreCase).Success || account.Full_Name.Equals("")) {
                 throw new ApplicationException("Ít nhất 1 từ viết hoa và 1 từ viết thường, ít nhất 1 số và 1 kí tự đặc biệt, ít nhất 8 kí tự");
             }
             else if (account.Role_Id.Equals("")) {
