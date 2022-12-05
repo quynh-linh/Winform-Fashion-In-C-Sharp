@@ -94,7 +94,7 @@
             this.panel10.Location = new System.Drawing.Point(13, 9);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panel10.Padding = new System.Windows.Forms.Padding(20);
             this.panel10.Size = new System.Drawing.Size(1008, 53);
             this.panel10.TabIndex = 8;
             // 
@@ -106,12 +106,12 @@
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton7.IconColor = System.Drawing.Color.Black;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(405, 6);
+            this.iconButton7.Location = new System.Drawing.Point(421, 6);
             this.iconButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(104, 34);
+            this.iconButton7.Size = new System.Drawing.Size(124, 34);
             this.iconButton7.TabIndex = 5;
-            this.iconButton7.Text = "Nhân viên";
+            this.iconButton7.Text = "Doanh Thu";
             this.iconButton7.UseVisualStyleBackColor = false;
             this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
@@ -123,10 +123,10 @@
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(255, 6);
+            this.iconButton6.Location = new System.Drawing.Point(271, 6);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(125, 34);
+            this.iconButton6.Size = new System.Drawing.Size(144, 34);
             this.iconButton6.TabIndex = 4;
             this.iconButton6.Text = "Khách hàng";
             this.iconButton6.UseVisualStyleBackColor = false;
@@ -140,10 +140,10 @@
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(117, 6);
+            this.iconButton5.Location = new System.Drawing.Point(133, 6);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(123, 34);
+            this.iconButton5.Size = new System.Drawing.Size(132, 34);
             this.iconButton5.TabIndex = 3;
             this.iconButton5.Text = "Sản phẩm";
             this.iconButton5.UseVisualStyleBackColor = false;
@@ -160,7 +160,7 @@
             this.iconButton4.Location = new System.Drawing.Point(9, 6);
             this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(89, 34);
+            this.iconButton4.Size = new System.Drawing.Size(113, 34);
             this.iconButton4.TabIndex = 1;
             this.iconButton4.Text = "Tổng quát";
             this.iconButton4.UseVisualStyleBackColor = false;
@@ -276,7 +276,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1060, 734);
             this.guna2Panel1.TabIndex = 7;

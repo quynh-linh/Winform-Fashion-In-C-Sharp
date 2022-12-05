@@ -78,6 +78,7 @@
     <Compile Include="ProductDTO.cs" />
     <Compile Include="Product_SizeDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevenueDTO.cs" />
     <Compile Include="RoleDTO.cs" />
     <Compile Include="Role_PermissionDTO.cs" />
   </ItemGroup>

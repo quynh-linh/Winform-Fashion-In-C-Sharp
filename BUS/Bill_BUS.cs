@@ -29,6 +29,20 @@ namespace BUS
             }
             return bills;
         }
+        public List<Bill_DTO> getBills() {
+            DataTable dataTable = bill_DAO.selectBills();
+            List<Bill_DTO> bills = new List<Bill_DTO>();
+            for (int i = 0; i < dataTable.Rows.Count; i++) {
+                Bill_DTO bill_DTO = new Bill_DTO();
+                bill_DTO.Bill_Id = dataTable.Rows[i]["bill_Id"].ToString();
+                bill_DTO.Customer_Id = dataTable.Rows[i]["customer_Id"].ToString();
+                bill_DTO.Bill_Time = dataTable.Rows[i]["bill_Time"].ToString();
+                bill_DTO.Account_Id = Convert.ToInt32(dataTable.Rows[i]["account_Id"]);
+                bill_DTO.Total = Convert.ToInt32(dataTable.Rows[i]["bill_Total"]);
+                bills.Add(bill_DTO);
+            }
+            return bills;
+        }
         public List<Bill_DTO> getBillsAboutAndCustomerIdNotNull(String from, String to) {
             DataTable dataTable = bill_DAO.selectBillAboutAndCustomerNotNull(from, to);
             List<Bill_DTO> bills = new List<Bill_DTO>();
@@ -121,6 +135,33 @@ namespace BUS
                 }
             });
             return revenue;
+        }
+
+        public Dictionary<string, double> revenueMoneyWithMonth(List<Bill_DTO> bills) {
+            Dictionary<string, double> revenue = new Dictionary<string, double>();
+            bills.ForEach(billDTO => {
+                DateTime dateTime = DateTime.ParseExact(billDTO.Bill_Time, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                if (revenue.ContainsKey("Tháng " + dateTime.Month)) {
+                    revenue["Tháng " + dateTime.Month] += billDTO.Total;
+                }
+                else {
+                    revenue.Add("Tháng " + dateTime.Month, billDTO.Total);
+                }
+            });
+            return revenue;
+        }
+
+        public List<RevenueDTO> getAllRevenue() {
+            List<Bill_DTO> bills = this.getBills();
+            Console.WriteLine("BUI MANH THANH");
+            List<RevenueDTO> revenues = new List<RevenueDTO>();
+            foreach (var item in revenueMoneyWithMonth(bills)) {
+                RevenueDTO revenue = new RevenueDTO();
+                revenue.Month = item.Key;
+                revenue.TongTien = item.Value;
+                revenues.Add(revenue);
+            }
+            return revenues;
         }
 
         public long getSumQuantityProductOfBill() {
