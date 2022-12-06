@@ -89,6 +89,7 @@
             this.ngayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.btnRemoveImportProduct = new Guna.UI2.WinForms.Guna2Button();
             this.comboboxStaff = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dateEndTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -118,12 +119,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDetailImportProducts = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.maChiTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.so_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gia_nhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tong_tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox_TongTien_Detail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -135,7 +130,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textboxMaPhieuNhap_Detail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.maChiTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.so_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia_nhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tong_tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -876,6 +876,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu nhập";
             // 
+            // guna2Button9
+            // 
+            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button9.ForeColor = System.Drawing.Color.White;
+            this.guna2Button9.Location = new System.Drawing.Point(446, 145);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Size = new System.Drawing.Size(140, 35);
+            this.guna2Button9.TabIndex = 15;
+            this.guna2Button9.Text = "Tìm kiếm";
+            // 
             // btnRemoveImportProduct
             // 
             this.btnRemoveImportProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -1355,42 +1369,6 @@
             this.dataGridViewDetailImportProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGridViewDetailImportProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadDetailImportProductToTextBox);
             // 
-            // maChiTiet
-            // 
-            this.maChiTiet.DataPropertyName = "maChiTiet";
-            this.maChiTiet.HeaderText = "Mã";
-            this.maChiTiet.Name = "maChiTiet";
-            // 
-            // maSP
-            // 
-            this.maSP.DataPropertyName = "maSP";
-            this.maSP.HeaderText = "Sản phẩm";
-            this.maSP.Name = "maSP";
-            // 
-            // so_luong
-            // 
-            this.so_luong.DataPropertyName = "so_luong";
-            this.so_luong.HeaderText = "Số lượng";
-            this.so_luong.Name = "so_luong";
-            // 
-            // gia_nhap
-            // 
-            this.gia_nhap.DataPropertyName = "gia_nhap";
-            this.gia_nhap.HeaderText = "Giá nhập";
-            this.gia_nhap.Name = "gia_nhap";
-            // 
-            // size_detail
-            // 
-            this.size_detail.DataPropertyName = "size_detail";
-            this.size_detail.HeaderText = "Kích cỡ";
-            this.size_detail.Name = "size_detail";
-            // 
-            // tong_tien
-            // 
-            this.tong_tien.DataPropertyName = "tong_tien";
-            this.tong_tien.HeaderText = "Tổng tiền";
-            this.tong_tien.Name = "tong_tien";
-            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.textBox_TongTien_Detail);
@@ -1567,19 +1545,41 @@
             this.label13.Text = "Mã Phiếu";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // guna2Button9
+            // maChiTiet
             // 
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button9.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.Location = new System.Drawing.Point(446, 145);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(140, 35);
-            this.guna2Button9.TabIndex = 15;
-            this.guna2Button9.Text = "Tìm kiếm";
+            this.maChiTiet.DataPropertyName = "maChiTiet";
+            this.maChiTiet.HeaderText = "Id";
+            this.maChiTiet.Name = "maChiTiet";
+            // 
+            // maSP
+            // 
+            this.maSP.DataPropertyName = "maSP";
+            this.maSP.HeaderText = "Product";
+            this.maSP.Name = "maSP";
+            // 
+            // so_luong
+            // 
+            this.so_luong.DataPropertyName = "so_luong";
+            this.so_luong.HeaderText = "Quantity";
+            this.so_luong.Name = "so_luong";
+            // 
+            // gia_nhap
+            // 
+            this.gia_nhap.DataPropertyName = "gia_nhap";
+            this.gia_nhap.HeaderText = "Price";
+            this.gia_nhap.Name = "gia_nhap";
+            // 
+            // size_detail
+            // 
+            this.size_detail.DataPropertyName = "size_detail";
+            this.size_detail.HeaderText = "Size";
+            this.size_detail.Name = "size_detail";
+            // 
+            // tong_tien
+            // 
+            this.tong_tien.DataPropertyName = "tong_tien";
+            this.tong_tien.HeaderText = "Sum money";
+            this.tong_tien.Name = "tong_tien";
             // 
             // ImportProductsGUI
             // 
@@ -1711,13 +1711,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sunmoney;
         private Guna.UI2.WinForms.Guna2TextBox textbox_size_detail;
         private System.Windows.Forms.Label label24;
+        private Guna.UI2.WinForms.Guna2Button btnRemoveImportProduct;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private System.Windows.Forms.DataGridViewTextBoxColumn maChiTiet;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn so_luong;
         private System.Windows.Forms.DataGridViewTextBoxColumn gia_nhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn size_detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn tong_tien;
-        private Guna.UI2.WinForms.Guna2Button btnRemoveImportProduct;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
     }
 }

@@ -34,6 +34,27 @@ namespace DAO
             return dtCategory;
         }
 
+        public DataTable getAllAccountBySearchKey(String searchKey) {
+            DataTable dtCategory = new DataTable();
+            try {
+                conn.Open();
+                String sql = String.Format("select * from account where username like '%{0}%'",searchKey);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtCategory);
+            }
+            catch (Exception e) {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally {
+                conn.Close();
+            }
+
+            return dtCategory;
+        }
+
+
         public Boolean checkExistUsername(string username) {
             conn.Open();
             bool exists = false;

@@ -352,11 +352,11 @@
     <Compile Include="ChartProductGUI.Designer.cs">
       <DependentUpon>ChartProductGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartStaffGUI.cs">
+    <Compile Include="ChartRevenueGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChartStaffGUI.Designer.cs">
-      <DependentUpon>ChartStaffGUI.cs</DependentUpon>
+    <Compile Include="ChartRevenueGUI.Designer.cs">
+      <DependentUpon>ChartRevenueGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerGUI.cs">
       <SubType>Form</SubType>
@@ -483,8 +483,8 @@
     <EmbeddedResource Include="ChartProductGUI.resx">
       <DependentUpon>ChartProductGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartStaffGUI.resx">
-      <DependentUpon>ChartStaffGUI.cs</DependentUpon>
+    <EmbeddedResource Include="ChartRevenueGUI.resx">
+      <DependentUpon>ChartRevenueGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerGUI.resx">
       <DependentUpon>CustomerGUI.cs</DependentUpon>

@@ -14,6 +14,7 @@ namespace DTO
         private string maNCC;
         private double tongtien;
 
+        public ImprotProductDTO() { }
         public ImprotProductDTO(string maPhieuNhap, string ngayNhap, int maNhanVien, string maNCC, double tongtien)
         {
             this.maPhieuNhap = maPhieuNhap;

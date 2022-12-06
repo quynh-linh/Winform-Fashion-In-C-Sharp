@@ -163,7 +163,7 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>685, 33</value>
+    <value>601, 33</value>
   </data>
   <data name="guna2Button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -192,42 +192,6 @@
   <data name="&gt;&gt;guna2Button2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="guna2Button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="guna2Button3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12pt, style=Bold</value>
-  </data>
-  <data name="guna2Button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 33</value>
-  </data>
-  <data name="guna2Button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="guna2Button3.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>267, 246</value>
-  </data>
-  <data name="guna2Button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 49</value>
-  </data>
-  <data name="guna2Button3.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="guna2Button3.Text" xml:space="preserve">
-    <value>Xóa</value>
-  </data>
-  <data name="&gt;&gt;guna2Button3.Name" xml:space="preserve">
-    <value>guna2Button3</value>
-  </data>
-  <data name="&gt;&gt;guna2Button3.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
-  </data>
-  <data name="&gt;&gt;guna2Button3.Parent" xml:space="preserve">
-    <value>guna2Panel3</value>
-  </data>
-  <data name="&gt;&gt;guna2Button3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="guna2Button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -235,7 +199,7 @@
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="guna2Button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 33</value>
+    <value>306, 33</value>
   </data>
   <data name="guna2Button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -262,7 +226,7 @@
     <value>guna2Panel3</value>
   </data>
   <data name="&gt;&gt;guna2Button4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="guna2Button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -298,7 +262,7 @@
     <value>guna2Panel3</value>
   </data>
   <data name="&gt;&gt;guna2Button1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="guna2Panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -337,7 +301,7 @@
     <value>60</value>
   </data>
   <data name="dataGridViewAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 78</value>
+    <value>4, 78</value>
   </data>
   <data name="dataGridViewAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -346,7 +310,7 @@
     <value>51</value>
   </data>
   <data name="dataGridViewAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1047, 484</value>
+    <value>1056, 484</value>
   </data>
   <data name="dataGridViewAccount.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -390,37 +354,37 @@
   <data name="&gt;&gt;guna2ImageButton1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="guna2TextBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="searchAccount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="guna2TextBox3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="searchAccount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="guna2TextBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="searchAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>704, 15</value>
   </data>
-  <data name="guna2TextBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="searchAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
-  <data name="guna2TextBox3.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="searchAccount.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>400, 34</value>
   </data>
-  <data name="guna2TextBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="searchAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 34</value>
   </data>
-  <data name="guna2TextBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="searchAccount.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;guna2TextBox3.Name" xml:space="preserve">
-    <value>guna2TextBox3</value>
+  <data name="&gt;&gt;searchAccount.Name" xml:space="preserve">
+    <value>searchAccount</value>
   </data>
-  <data name="&gt;&gt;guna2TextBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;searchAccount.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
   </data>
-  <data name="&gt;&gt;guna2TextBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;searchAccount.Parent" xml:space="preserve">
     <value>guna2Panel2</value>
   </data>
-  <data name="&gt;&gt;guna2TextBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;searchAccount.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
