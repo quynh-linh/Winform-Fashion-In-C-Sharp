@@ -170,7 +170,6 @@ namespace BUS
         } 
         public List<RevenueDTO> getAllRevenue() {
             List<ImprotProductDTO> improtProducts = this.getAllImportProduct();
-            Console.WriteLine("BUI MANH THANH");
             List<RevenueDTO> revenues = new List<RevenueDTO>();
             foreach (var item in revenueWithMonth(improtProducts)) {
                 RevenueDTO revenue = new RevenueDTO();

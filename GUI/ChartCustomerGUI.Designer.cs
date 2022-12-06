@@ -32,8 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.chartCustomer = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCustomer)).BeginInit();
             this.SuspendLayout();
@@ -51,23 +51,6 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1067, 486);
             this.panelChildForm.TabIndex = 14;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
-            this.iconButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(320, 17);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(109, 34);
-            this.iconButton4.TabIndex = 3;
-            this.iconButton4.Text = "Lấy dữ liệu";
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // chartCustomer
             // 
@@ -97,6 +80,23 @@
             this.chartCustomer.Size = new System.Drawing.Size(876, 399);
             this.chartCustomer.TabIndex = 10;
             this.chartCustomer.Text = "chart1";
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(152)))), ((int)(((byte)(174)))));
+            this.iconButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(9, 11);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(109, 34);
+            this.iconButton4.TabIndex = 3;
+            this.iconButton4.Text = "Lấy dữ liệu";
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // ChartCustomerGUI
             // 
