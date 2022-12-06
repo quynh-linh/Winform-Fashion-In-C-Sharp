@@ -548,89 +548,104 @@ namespace GUI
 
         private void PDFSave()
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "PDF(*.pdf)|*.pdf";
-            saveFileDialog1.Title = "Save an Image File";
-            saveFileDialog1.ShowDialog();
-            if (saveFileDialog1.FileName != "")
+            int number = dataGridViewDetailImportProducts.Rows.Count;
+            if (number > 1)
             {
-                Document document = new Document(new Rectangle(288f, 144f), 10, 10, 10, 10);
-                document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
-                PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(saveFileDialog1.FileName, FileMode.Create));
-                iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 11);
-                document.Open();
-                PdfPTable table = new PdfPTable(dataGridViewDetailImportProducts.Columns.Count);
-                PdfPCell cell;
-                Font ColFont = FontFactory.GetFont("Segoe UI", (float)20.0, BaseColor.BLACK);
-                Chunk chunkCols = new Chunk("IMPORT COUPON", ColFont);
-                Paragraph header = new Paragraph(chunkCols);
-                cell = new PdfPCell(header);
-                cell.Colspan = dataGridViewDetailImportProducts.Columns.Count;
-                cell.PaddingLeft = 10;
-                cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                cell.BackgroundColor = new iTextSharp.text.BaseColor(217, 234, 247);
-                cell.Padding = 5;
-                table.AddCell(cell);
-                PdfPCell cellH;
-                Font ColFont3 = FontFactory.GetFont("Segoe UI", (float)15.0, BaseColor.BLACK);
-                Chunk chunkCols1 = new Chunk(
-                    "Bill Info : " + "\n" +
-                    "" + "\n" +
-                    "Id : " + textboxMaPhieuNhap_Detail.Text.ToString() + "\n" +
-                    "" + "\n" +
-                    "Date : " + textBoxImportDate_Detail.Text.ToString() + "\n" +
-                    "" + "\n" +
-                    "Supplier :" + textBoxBrand_Detail.Text.ToString() + "\n"+
-                    "" + "\n" +
-                    "Staff :" + textBoxStaff_Detail.Text.ToString() + "\n" +
-                    "" + "\n" 
-                    , ColFont3);
-                cellH = new PdfPCell(new Paragraph(chunkCols1));
-                cellH.Colspan = dataGridViewDetailImportProducts.Columns.Count ;
-                cellH.Padding = 10;
-                table.AddCell(cellH);
-                table.DefaultCell.BorderWidth = 1;
-                Font ColFont4 = FontFactory.GetFont("Segoe UI", (float)13.0, BaseColor.BLACK);
-                foreach (DataGridViewColumn col in dataGridViewDetailImportProducts.Columns)
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "PDF(*.pdf)|*.pdf";
+                saveFileDialog1.Title = "Save an Image File";
+                string id = textboxMaPhieuNhap_Detail.Text.ToString();
+                saveFileDialog1.FileName = Application.StartupPath + @"\PDF_Import\" + id + ".pdf";
+                if (File.Exists(Application.StartupPath + @"\PDF_Import\" + id + ".pdf") == true)
                 {
-                    Chunk chunkCols4 = new Chunk(col.HeaderText, ColFont4);
-                    PdfPCell pCell = new PdfPCell(new Phrase(chunkCols4));
-                    pCell.BackgroundColor = new iTextSharp.text.BaseColor(217, 234, 247);
-                    pCell.Padding = 10;
-                    table.AddCell(pCell);
-                }
-                foreach (DataGridViewRow row in dataGridViewDetailImportProducts.Rows)
+                    MessageBox.Show("PDF file has been exported in the link" + Application.StartupPath + @"\PDF_Import\", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } else
                 {
-                     foreach (DataGridViewCell dcell in row.Cells)
-                     {
-                        Chunk chunkCols4 = new Chunk(dcell.FormattedValue.ToString());
-                        PdfPCell pCell1 = new PdfPCell(new Phrase(chunkCols4));
-                        pCell1.Padding = 10;
-                        table.AddCell(pCell1);
-                     }
-                }
-                PdfPCell cellF;
-                Font ColFont5 = FontFactory.GetFont("Segoe UI", (float)15.0, BaseColor.BLACK);
-                Chunk chunkCols5 = new Chunk( "Total Money :" + textBox_TongTien_Detail.Text.ToString(), ColFont5);
-                cellF = new PdfPCell(new Paragraph(chunkCols5));
-                cellF.Colspan = dataGridViewDetailImportProducts.Columns.Count;
-                cellF.Padding = 10;
-                cellF.HorizontalAlignment = Element.ALIGN_RIGHT;
-                table.AddCell(cellF);
-                document.Add(table);
-                Paragraph footer = new Paragraph("COMANY NAME", FontFactory.GetFont(FontFactory.TIMES, 10, iTextSharp.text.Font.NORMAL));
-                footer.Alignment = Element.ALIGN_RIGHT;
-                PdfPTable footerTbl = new PdfPTable(1);
-                footerTbl.TotalWidth = 1000;
-                footerTbl.HorizontalAlignment = Element.ALIGN_CENTER;
-                PdfPCell cell2 = new PdfPCell(footer);
-                cell2.Border = 0;
-                cell2.PaddingLeft = 10;
-                footerTbl.AddCell(cell2);
-                footerTbl.WriteSelectedRows(0, -1, 550, 30, writer.DirectContent);
-                document.Close();
-                MessageBox.Show("Lưu thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
+                    if (saveFileDialog1.FileName != "")
+                    {
+                        Document document = new Document(new Rectangle(288f, 144f), 10, 10, 10, 10);
+                        document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
+                        PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(saveFileDialog1.FileName, FileMode.Create));
+                        iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 11);
+                        document.Open();
+                        PdfPTable table = new PdfPTable(dataGridViewDetailImportProducts.Columns.Count);
+                        PdfPCell cell;
+                        Font ColFont = FontFactory.GetFont("Segoe UI", (float)20.0, BaseColor.BLACK);
+                        Chunk chunkCols = new Chunk("IMPORT COUPON", ColFont);
+                        Paragraph header = new Paragraph(chunkCols);
+                        cell = new PdfPCell(header);
+                        cell.Colspan = dataGridViewDetailImportProducts.Columns.Count;
+                        cell.PaddingLeft = 10;
+                        cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        cell.BackgroundColor = new iTextSharp.text.BaseColor(217, 234, 247);
+                        cell.Padding = 5;
+                        table.AddCell(cell);
+                        PdfPCell cellH;
+                        Font ColFont3 = FontFactory.GetFont("Segoe UI", (float)15.0, BaseColor.BLACK);
+                        Chunk chunkCols1 = new Chunk(
+                            "Bill Info : " + "\n" +
+                            "" + "\n" +
+                            "Id : " + textboxMaPhieuNhap_Detail.Text.ToString() + "\n" +
+                            "" + "\n" +
+                            "Date : " + textBoxImportDate_Detail.Text.ToString() + "\n" +
+                            "" + "\n" +
+                            "Supplier :" + textBoxBrand_Detail.Text.ToString() + "\n" +
+                            "" + "\n" +
+                            "Staff :" + textBoxStaff_Detail.Text.ToString() + "\n" +
+                            "" + "\n"
+                            , ColFont3);
+                        cellH = new PdfPCell(new Paragraph(chunkCols1));
+                        cellH.Colspan = dataGridViewDetailImportProducts.Columns.Count;
+                        cellH.Padding = 10;
+                        table.AddCell(cellH);
+                        table.DefaultCell.BorderWidth = 1;
+                        Font ColFont4 = FontFactory.GetFont("Segoe UI", (float)13.0, BaseColor.BLACK);
+                        foreach (DataGridViewColumn col in dataGridViewDetailImportProducts.Columns)
+                        {
+                            Chunk chunkCols4 = new Chunk(col.HeaderText, ColFont4);
+                            PdfPCell pCell = new PdfPCell(new Phrase(chunkCols4));
+                            pCell.BackgroundColor = new iTextSharp.text.BaseColor(217, 234, 247);
+                            pCell.Padding = 10;
+                            table.AddCell(pCell);
+                        }
+                        foreach (DataGridViewRow row in dataGridViewDetailImportProducts.Rows)
+                        {
+                            foreach (DataGridViewCell dcell in row.Cells)
+                            {
+                                Chunk chunkCols4 = new Chunk(dcell.FormattedValue.ToString());
+                                PdfPCell pCell1 = new PdfPCell(new Phrase(chunkCols4));
+                                pCell1.Padding = 10;
+                                table.AddCell(pCell1);
+                            }
+                        }
+                        PdfPCell cellF;
+                        Font ColFont5 = FontFactory.GetFont("Segoe UI", (float)15.0, BaseColor.BLACK);
+                        Chunk chunkCols5 = new Chunk("Total Money :" + textBox_TongTien_Detail.Text.ToString(), ColFont5);
+                        cellF = new PdfPCell(new Paragraph(chunkCols5));
+                        cellF.Colspan = dataGridViewDetailImportProducts.Columns.Count;
+                        cellF.Padding = 10;
+                        cellF.HorizontalAlignment = Element.ALIGN_RIGHT;
+                        table.AddCell(cellF);
+                        document.Add(table);
+                        Paragraph footer = new Paragraph("COMANY NAME", FontFactory.GetFont(FontFactory.TIMES, 10, iTextSharp.text.Font.NORMAL));
+                        footer.Alignment = Element.ALIGN_RIGHT;
+                        PdfPTable footerTbl = new PdfPTable(1);
+                        footerTbl.TotalWidth = 1000;
+                        footerTbl.HorizontalAlignment = Element.ALIGN_CENTER;
+                        PdfPCell cell2 = new PdfPCell(footer);
+                        cell2.Border = 0;
+                        cell2.PaddingLeft = 10;
+                        footerTbl.AddCell(cell2);
+                        footerTbl.WriteSelectedRows(0, -1, 550, 30, writer.DirectContent);
+                        document.Close();
+                        MessageBox.Show("Export PDF file successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        System.Diagnostics.Process.Start(saveFileDialog1.FileName);
+                    }
+                }     
+            } else
+            {
+                MessageBox.Show("Error", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }  
         }
     }
 }
