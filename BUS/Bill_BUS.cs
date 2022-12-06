@@ -128,7 +128,7 @@ namespace BUS
                 DateTime dateTime = DateTime.ParseExact(billDTO.Bill_Time, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
                 if (revenue.ContainsKey("Tháng " + dateTime.Month)) {
                     int sum = sumQuantityOfListBillDetail(getBillDetailsByBillId(billDTO.Bill_Id));
-                    revenue["Tháng " + dateTime.Month] = revenue["Tháng " + dateTime.Day] + sum;
+                    revenue["Tháng " + dateTime.Month]  += sum;
                 }
                 else {
                     int sum = sumQuantityOfListBillDetail(getBillDetailsByBillId(billDTO.Bill_Id));

@@ -106,7 +106,7 @@
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton7.IconColor = System.Drawing.Color.Black;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(421, 6);
+            this.iconButton7.Location = new System.Drawing.Point(587, 6);
             this.iconButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(124, 34);
@@ -123,12 +123,12 @@
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(271, 6);
+            this.iconButton6.Location = new System.Drawing.Point(311, 6);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(144, 34);
+            this.iconButton6.Size = new System.Drawing.Size(270, 34);
             this.iconButton6.TabIndex = 4;
-            this.iconButton6.Text = "Khách hàng";
+            this.iconButton6.Text = "Khách hàng mua sản phẩm";
             this.iconButton6.UseVisualStyleBackColor = false;
             this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
@@ -140,12 +140,12 @@
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(133, 6);
+            this.iconButton5.Location = new System.Drawing.Point(128, 6);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(132, 34);
+            this.iconButton5.Size = new System.Drawing.Size(177, 34);
             this.iconButton5.TabIndex = 3;
-            this.iconButton5.Text = "Sản phẩm";
+            this.iconButton5.Text = "Sản phẩm bán ra";
             this.iconButton5.UseVisualStyleBackColor = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 

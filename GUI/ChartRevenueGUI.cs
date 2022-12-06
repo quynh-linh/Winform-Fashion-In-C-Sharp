@@ -38,8 +38,15 @@ namespace GUI
             chartCustomer.Series["Nhập vào"].Points.Clear();
             chartCustomer.Series["Bán ra"].Points.Clear();
 
+            double tongDoanhThu = 0;
             List<RevenueDTO> revenuesImport = importProductBUS.getAllRevenue();
             List<RevenueDTO> revenuesBill = bill_BUS.getAllRevenue();
+            List<RevenueDTO> sumRevenues  = new List<RevenueDTO>();
+            for (int i=1;i<=12;i++) {
+                double sum = getMoneyByMonth(revenuesBill,i) - getMoneyByMonth(revenuesImport, i);
+                sumRevenues.Add(new RevenueDTO(i+"", sum));
+                tongDoanhThu += sum;
+            }
             if (statistic.Text.Equals("Nhập vào")) {
                 revenuesImport.ForEach(revenue => {
                     chartCustomer.Series["Nhập vào"].Points.AddXY(revenue.Month, revenue.TongTien);
@@ -51,6 +58,7 @@ namespace GUI
                 });
             }
             else {
+                int index1 = 0;
                 revenuesImport.ForEach(revenue => {
                     chartCustomer.Series["Nhập vào"].Points.AddXY(revenue.Month, revenue.TongTien);
                 });
@@ -58,9 +66,21 @@ namespace GUI
                     chartCustomer.Series["Bán ra"].Points.AddXY(revenue.Month, revenue.TongTien);
                 });
             }
+            var bindingList = new BindingList<RevenueDTO>(sumRevenues);
+            var source = new BindingSource(bindingList, null);
+            dataGridViewRevenue.DataSource = source;
+            doanhThu2.Text = "Doanh thu: " + tongDoanhThu + "vnđ";
 
         }
 
+        private double getMoneyByMonth(List<RevenueDTO> revenues,int month) {
+            double money = 0;
+            revenues.ForEach(revenue => {
+                if (revenue.Month.Equals("Tháng " + month))
+                    money = revenue.TongTien;
+            });
+            return money;
+        }
         private void chartCustomer_Click(object sender, EventArgs e)
         {
 
@@ -103,5 +123,9 @@ namespace GUI
                     chartCustomer.Series["Bán ra"].Points.AddXY(revenue.Month, revenue.TongTien);
                 });
             }
+
+        private void dataGridViewCategory_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
     }
 }

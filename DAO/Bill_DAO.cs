@@ -19,8 +19,8 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= '{0}'  and bill_Time <= '{1}'", from,to);
-                // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
+                //String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= '{0}'  and bill_Time <= '{1}'", from,to);
+                String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
@@ -70,7 +70,7 @@ namespace DAO
             try {
                 conn.Open();
                 String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time between '{0}' and '{1}' and customer_id not in ('null') order by bill_Total", from, to);
-                // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)", from, to);
+                // String sql = String.Format("select bill_Id, bill_Total, bill_Time, account_Id, customer_Id from bill where bill_time >= CAST('{0}' AS DATETIME) and bill_time <= CAST('{1}' AS DATETIME)  and customer_id not in ('null') order by bill_Total", from, to);
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
