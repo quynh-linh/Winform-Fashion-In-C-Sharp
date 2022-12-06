@@ -50,20 +50,20 @@ namespace GUI
         {
             comboboxBrand.DataSource = brandBUS.getBrand();
             comboboxBrand.DisplayMember = "name";
-            comboboxBrand.DisplayMember = "id";
+            comboboxBrand.ValueMember = "id";
 
         }
         private void loadCBBBrand_List()
         {
             comboboxNCC.DataSource = brandBUS.getBrand();
             comboboxNCC.DisplayMember = "name";
-            comboboxNCC.DisplayMember = "id";
+            comboboxNCC.ValueMember = "id";
         }
         private void loadCBBAccount_List()
         {
             comboboxStaff.DataSource = accountBUS.getAllAccount();
             comboboxStaff.DisplayMember = "full_name";
-            comboboxStaff.DisplayMember = "id";
+            comboboxStaff.ValueMember = "id";
         }
         private void loadDBtoImportProducts()
         {
@@ -84,16 +84,16 @@ namespace GUI
             String dEnd = dateEndTime.Text;
             DateTime dateEnd = DateTime.Parse(dEnd);
             int result = DateTime.Compare(dateFirst, dateEnd);
-            // ==1 ngày thứ nhất lớn hơn ngày thứ 2
-            if (result == 1)
-            {
-                MessageBox.Show("Ngày trước không lớn hơn ngày sau");
-            }
+            // < 0 ngày thứ nhất lớn hơn ngày thứ 2
+            //if (result < 0)
+            //{
+            //    MessageBox.Show("Ngày trước không lớn hơn ngày sau");
+            //}
             // 1 ngày thứ nhất nhỏ hơn ngày thứ 2
-            else if (result == 1)
-            {
-                dataGridViewDetailImportProducts.DataSource = importProductBUS.searchDateImportProduct(dFirst, dEnd);
-            }
+            //else if (result > 0)
+            //{
+            dataGridViewImprotProducts.DataSource = importProductBUS.searchDateImportProduct(dFirst, dEnd);
+            //}
         }
         private void label7_Click(object sender, EventArgs e)
         {
@@ -280,10 +280,11 @@ namespace GUI
 
         private void addImportProducts(object sender, EventArgs e)
         {
-            string format = "dd/MM/yyyy";
+            string format = "yyyy-MM-dd";
             DateTime now = DateTime.Now;
             // ==> 18/03/2016 23:49:39
             string ngayNhap = now.ToString(format);
+            //
             String maPhieuNhap = textBoxMaPhieuNhap.Text;
             int maNhanVien = id_nv;
             DataRowView br = (DataRowView)comboboxBrand.SelectedItem;
@@ -442,10 +443,6 @@ namespace GUI
             PDFSave();
         }
 
-        private void guna2Button8_Click(object sender, EventArgs e)
-        {
-            searchDateImportProduct();
-        }
 
         private void updateDetailImportProducts(object sender, EventArgs e)
         {
@@ -646,6 +643,11 @@ namespace GUI
             {
                 MessageBox.Show("Error", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }  
+        }
+
+        private void searchImportProduct(object sender, EventArgs e)
+        {
+            searchDateImportProduct();
         }
     }
 }

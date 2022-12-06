@@ -90,7 +90,7 @@ namespace DAO
 
                 string sql = String.Format("SELECT ip.maPhieuNhap , ip.ngayNhap , ip.tongtien , ac.full_name AS full_name , br.name AS name_Brand " +
                     "FROM imprort_product AS ip, account AS ac, brand AS br " +
-                    "WHERE (ngayNhap BETWEEN '12/11/2022'  AND '12/11/2022') AND (ip.maNhanVien = ac.id AND ip.maNCC = br.id)", firstDate,endDate);
+                    "WHERE (ngayNhap BETWEEN '{0}'  AND '{1}') AND (ip.maNhanVien = ac.id AND ip.maNCC = br.id)", firstDate,endDate);
                 Console.WriteLine(sql);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(ds);
