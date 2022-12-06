@@ -431,7 +431,6 @@ D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.BillGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartCustomerGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartHomeGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartProductGUI.resources
-D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartStaffGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.RoleGUI.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.SellGui.resources
 D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.Sell_DetailGUI.resources
@@ -1258,6 +1257,7 @@ C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-4\GUI\obj\Debug\GUI.cspro
 C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-4\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-4\GUI\obj\Debug\GUI.exe
 C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-4\GUI\obj\Debug\GUI.pdb
+<<<<<<< HEAD
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\bin\Debug\GUI.exe.config
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\bin\Debug\GUI.exe
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\bin\Debug\GUI.pdb
@@ -1362,3 +1362,6 @@ C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\obj\Debug\GUI.cspro
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\obj\Debug\GUI.exe
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\GUI\obj\Debug\GUI.pdb
+=======
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.ChartRevenueGUI.resources
+>>>>>>> 9c95002528899d45cc07fd3e8c7efb6fcf20bfaa
