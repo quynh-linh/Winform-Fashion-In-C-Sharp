@@ -317,9 +317,9 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button guna2Button3;
+        public Guna.UI2.WinForms.Guna2Button guna2Button4;
+        public Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2TextBox TbSearch;

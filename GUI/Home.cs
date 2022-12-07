@@ -29,15 +29,17 @@ namespace GUI
         public AccountDTO account_DTO;
         public String full_name_Account;
         public int id_staff;
-        
+        public String role_Id;
+
         public Home(AccountDTO account_DTO)
         {
             InitializeComponent();
             this.account_DTO = account_DTO;
+            this.role_Id = account_DTO.Role_Id;
             lblNameCustommer.Text = account_DTO.Full_Name;
             full_name_Account = account_DTO.Full_Name;
             id_staff = account_DTO.Account_Id;
-            //lbl_Role.Text = role_BUS.get_Role_Name_From_Role_Id(account_DTO.Role_Id);
+            lbl_Role.Text = role_BUS.get_Role_Name_From_Role_Id(account_DTO.Role_Id);
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 53);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -47,6 +49,7 @@ namespace GUI
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             ActivateButton(btnHome, RGBColor.color1);
+            DisableTabsForDecentralize();
         }
         //Structs
         private struct RGBColor
@@ -71,7 +74,7 @@ namespace GUI
         //Methods
         private void ActivateButton(object senderBtn, Color color)
         {
-            if(senderBtn != null)
+            if (senderBtn != null)
             {
                 DisableButon();
                 currentBtn = (IconButton)senderBtn;
@@ -96,7 +99,7 @@ namespace GUI
         //
         private void DisableButon()
         {
-            if(currentBtn != null)
+            if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(51, 66, 87);
                 currentBtn.ForeColor = Color.Gainsboro;
@@ -127,7 +130,7 @@ namespace GUI
         {
             ActivateButton(btnHome, RGBColor.color1);
             pictureBox1.Image = GUI.Properties.Resources.background;
-            if(currentChildForm!=null)
+            if (currentChildForm != null)
                 currentChildForm.Close();
         }
 
@@ -162,7 +165,7 @@ namespace GUI
             WindowState = FormWindowState.Minimized;
         }
 
-        private string check_Role( string name)
+        private string check_Role(string name)
         {
             //Cắt chuỗi
             String description = role_BUS.get_Role_From_Id(account_DTO.Role_Id).Role_Desciption;
@@ -181,7 +184,7 @@ namespace GUI
             if (role_Name.Contains(name))
             {
                 int index = role_Name.IndexOf(name);
-                manipulative = role_Manipulative[index]+"";
+                manipulative = role_Manipulative[index] + "";
             }
             return manipulative;
         }
@@ -234,7 +237,7 @@ namespace GUI
             if (check_Role("Nhập hàng") != null)
             {
                 ActivateButton(sender, RGBColor.color4);
-                OpenChildForm(new ImportProductsGUI(check_Role("Nhập hàng"), full_name_Account , id_staff));
+                OpenChildForm(new ImportProductsGUI(check_Role("Nhập hàng"), full_name_Account, id_staff));
             }
             else
                 MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");
@@ -311,11 +314,12 @@ namespace GUI
             if (check_Role("Quyền") != null)
             {
                 ActivateButton(sender, RGBColor.color13);
-                OpenChildForm(new RoleGUI(check_Role("Quyền")));
-            }else 
+                OpenChildForm(new RoleGUI(check_Role("Quyền"), this));
+            }
+            else
                 MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");
         }
-            
+
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             if (check_Role("Khách hàng") != null)
@@ -357,6 +361,80 @@ namespace GUI
         private void lblDateNow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void DisableTabsForDecentralize()
+        {
+            String decentralize_Name = lbl_Role.Text;
+            String description = role_BUS.get_Role_From_Id(this.role_Id).Role_Desciption;
+
+            //Cắt chuỗi
+            string[] description_Split = description.Split(new string[] { ", " }, StringSplitOptions.None);
+            String[] role;// Lưu trữ 1 tên quyền và khả năng thao tác của quyền đó
+            ArrayList role_Name = new ArrayList(); // Lưu trữ mảng tên quyền
+            //Thực hiện tách chuỗi 1 lần nữa và truyền data vào 2 mảng 
+            for (int i = 0; i < description_Split.Length; i++)
+            {
+                role = description_Split[i].Split(new string[] { " : " }, StringSplitOptions.None);
+                role_Name.Add(role[0]);
+            }
+
+            if (!role_Name.Contains("Bán hàng"))
+                btnSell.BackColor = Color.Gray;
+            else btnSell.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Khuyến mãi"))
+                btnSale.BackColor = Color.Gray;
+            else btnSale.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Nhập hàng"))
+                btnAddProduct.BackColor = Color.Gray;
+            else btnAddProduct.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Sản phẩm"))
+                btnProducts.BackColor = Color.Gray;
+            else btnProducts.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Loại sản phẩm"))
+                btnCategory.BackColor = Color.Gray;
+            else btnCategory.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Hóa đơn"))
+                btnBill.BackColor = Color.Gray;
+            else btnBill.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Thương hiệu"))
+                btnSupplier.BackColor = Color.Gray;
+            else btnSupplier.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Tài khoản"))
+                btnAccount.BackColor = Color.Gray;
+            else btnAccount.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Quyền"))
+            {
+                ActivateButton(btnHome, RGBColor.color1);
+                pictureBox1.Image = GUI.Properties.Resources.background;
+                if (currentChildForm != null)
+                    currentChildForm.Close();
+                pictureBox1.Show();
+                btnPermission.BackColor = Color.Gray;
+            }
+            else btnPermission.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Thống kê"))
+                iconButton1.BackColor = Color.Gray;
+            else iconButton1.BackColor = Color.FromArgb(51, 66, 87);
+
+            if (!role_Name.Contains("Khách hàng"))
+                btnCustomer.BackColor = Color.Gray;
+            else btnCustomer.BackColor = Color.FromArgb(51, 66, 87);
+
+        }
+
+        public void set_Background_btnPermission()
+        {
+            btnPermission.BackColor = Color.FromArgb(37, 36, 81);
         }
     }
 }

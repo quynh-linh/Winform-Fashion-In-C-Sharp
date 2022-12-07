@@ -7,20 +7,25 @@ namespace GUI
     public partial class RoleGUI : Form
     {
         RoleBUS roleBUS = new RoleBUS();
-        public RoleGUI(String role_Manipulative)
+        Home home;
+        public RoleGUI(String role_Manipulative, Home home)
         {
             InitializeComponent();
             dataGridView1.DataSource = roleBUS.getAllRole();
-            if(role_Manipulative.Equals("Được thay đổi"))
+            if (role_Manipulative.Equals("Được thay đổi"))
             {
 
             }
-            else
-            {
-                guna2Button1.Enabled = false;
-                guna2Button4.Enabled = false;
-                guna2Button3.Enabled = false;
-            }
+            else disable();
+
+            this.home = home;
+        }
+
+        public void disable()
+        {
+            guna2Button1.Enabled = false;
+            guna2Button4.Enabled = false;
+            guna2Button3.Enabled = false;
         }
 
         //btn Thêm
@@ -28,7 +33,7 @@ namespace GUI
         {
             //Tự sinh ID
             string Id = "Q" + roleBUS.count();
-            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Add Permission","Thêm",Id, this);
+            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Add Permission","Thêm",Id, this, this.home);
             a.Show();
         }
 
@@ -37,7 +42,7 @@ namespace GUI
         {
             //Lấy ID dc chọn trong datagridview
             string Id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Fix Permission", "Sửa", Id, this);
+            Add_Or_Fix_RoleGUI a = new Add_Or_Fix_RoleGUI("Fix Permission", "Sửa", Id, this, this.home);
             a.Show();
             dataGridView1.DataSource = roleBUS.getAllRole();
         }

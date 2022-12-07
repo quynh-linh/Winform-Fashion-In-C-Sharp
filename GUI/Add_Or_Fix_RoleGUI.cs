@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using BUS;
 using DAO;
 using DTO;
+using Guna.UI2.WinForms.Suite;
 
 namespace GUI
 {
@@ -12,7 +13,9 @@ namespace GUI
     {
         RoleBUS roleBUS = new RoleBUS();
         RoleGUI roleGUI ;
-        public Add_Or_Fix_RoleGUI(string title, string btn_Title, string role_Id, RoleGUI roleGUI)
+        Home home;
+        String role_Id = "";
+        public Add_Or_Fix_RoleGUI(string title, string btn_Title, string role_Id, RoleGUI roleGUI, Home home)
         {
             InitializeComponent();
             import_Array();
@@ -28,8 +31,10 @@ namespace GUI
                 guna2TextBox1.Text = role_Id + "";
             else
                 load_Role_From_Id(role_Id);
+            this.home = home;
+            this.role_Id = role_Id;
         }
-
+        
         List<ComboBox> combo_Box;
         List<CheckBox> check_Box;
 
@@ -151,6 +156,32 @@ namespace GUI
                         {
                             MessageBox.Show("Sửa thành công");
                             roleGUI.dataGridView1.DataSource = roleBUS.getAllRole();
+                            this.home.DisableTabsForDecentralize();
+
+                            String description = roleBUS.get_Role_From_Id(this.role_Id).Role_Desciption;
+                            //Cắt chuỗi
+                            string[] description_Split = description.Split(new string[] { ", " }, StringSplitOptions.None);
+                            String[] role;// Lưu trữ 1 tên quyền và khả năng thao tác của quyền đó
+                            ArrayList role_Name = new ArrayList(); // Lưu trữ mảng tên quyền
+                            ArrayList role_Manipulative = new ArrayList();// Lưu trữ mảng khả năng thao tác của các quyền
+                            //Thực hiện tách chuỗi 1 lần nữa và truyền data vào 2 mảng 
+                            for (int i = 0; i < description_Split.Length; i++)
+                            {
+                                role = description_Split[i].Split(new string[] { " : " }, StringSplitOptions.None);
+                                role_Name.Add(role[0]);
+                                role_Manipulative.Add(role[1]);
+                            }
+
+                            string manipulative = "";
+                            if (role_Name.Contains("Quyền"))
+                            {
+                                int index = role_Name.IndexOf("Quyền");
+                                manipulative = role_Manipulative[index] + "";
+                                this.home.set_Background_btnPermission();
+                            }
+
+                            if (!manipulative.Equals("Được thay đổi"))
+                                this.roleGUI.disable();
                             this.Dispose();
                         }
                         else MessageBox.Show(guna2TextBox1.Text +" " +guna2TextBox2.Text +" "+ role_Description);
