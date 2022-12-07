@@ -266,6 +266,13 @@ namespace GUI
                 catch (ArgumentException ex3) {
                     MessageBox.Show("Định dạng cột không đúng");
                 }
+                finally {
+                    //get all product
+                    System.Data.DataTable dataTable2 = productsBUS.getProducts();
+
+                    // update dataGridView
+                    dataGridView.DataSource = dataTable2;
+                }
             }
         }
     }

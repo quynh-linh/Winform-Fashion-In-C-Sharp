@@ -64,9 +64,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 4);
+            this.label1.Location = new System.Drawing.Point(56, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 21);
+            this.label1.Size = new System.Drawing.Size(221, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Phiếu Nhập";
             // 
@@ -104,10 +105,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.Location = new System.Drawing.Point(24, 27);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(32, 33);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(692, 240);
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(923, 295);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -134,31 +137,37 @@
             // Column1
             // 
             this.Column1.HeaderText = "Mã Phiếu Nhập";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Ngày Nhập";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nhân Viên";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Số Lượng";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Nhà Cung Cấp";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Tổng Tiền";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // guna2DataGridView2
@@ -195,10 +204,12 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.Location = new System.Drawing.Point(24, 246);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(32, 303);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(692, 238);
+            this.guna2DataGridView2.RowHeadersWidth = 51;
+            this.guna2DataGridView2.Size = new System.Drawing.Size(923, 293);
             this.guna2DataGridView2.TabIndex = 3;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -225,31 +236,37 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Mã Phiếu Nhập";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Tên SP";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Đơn Giá";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Số Lượng";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.HeaderText = "Size";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.HeaderText = "Tổng Tiền";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // label2
@@ -260,9 +277,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 223);
+            this.label2.Location = new System.Drawing.Point(56, 274);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 21);
+            this.label2.Size = new System.Drawing.Size(194, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Chi Tiết Phiếu Nhập";
             // 
@@ -284,13 +302,15 @@
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(20, 0);
             this.guna2Button2.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2Button2.Location = new System.Drawing.Point(421, 490);
+            this.guna2Button2.Location = new System.Drawing.Point(561, 603);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(203, 55);
+            this.guna2Button2.Size = new System.Drawing.Size(271, 68);
             this.guna2Button2.TabIndex = 5;
             this.guna2Button2.Text = "EXPORT EXCEL";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.TextOffset = new System.Drawing.Point(20, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -310,9 +330,10 @@
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(20, 0);
             this.guna2Button1.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2Button1.Location = new System.Drawing.Point(109, 490);
+            this.guna2Button1.Location = new System.Drawing.Point(145, 603);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(203, 55);
+            this.guna2Button1.Size = new System.Drawing.Size(271, 68);
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "IN PHIẾU";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -321,7 +342,7 @@
             // 
             // UC_Bill_ImportGui
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.guna2Button2);
@@ -330,8 +351,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_Bill_ImportGui";
-            this.Size = new System.Drawing.Size(741, 600);
+            this.Size = new System.Drawing.Size(988, 738);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             this.ResumeLayout(false);

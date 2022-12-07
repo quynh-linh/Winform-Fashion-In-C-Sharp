@@ -205,12 +205,6 @@ namespace GUI
 
                     // insert to database customer
                     customerBUS.insertCustomers(dataTable);
-
-                    //get all product
-                    System.Data.DataTable dataTable2 = customerBUS.getThanhVien();
-
-                    // update dataGridView
-                    dataGridViewCustomer.DataSource = dataTable2;
                     MessageBox.Show("nhập thành công <3");
                 }
                 catch (FormatException ex1) {
@@ -221,6 +215,12 @@ namespace GUI
                 }
                 catch (ArgumentException ex3) {
                     MessageBox.Show("Định dạng cột không đúng");
+                }
+                finally {
+                    //get all customer
+                    System.Data.DataTable dataTable2 = customerBUS.getThanhVien();
+                    // update dataGridView
+                    dataGridViewCustomer.DataSource = dataTable2;
                 }
             }
         }

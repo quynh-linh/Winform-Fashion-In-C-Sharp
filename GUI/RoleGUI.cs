@@ -75,11 +75,6 @@ namespace GUI
                     // insert to database role
                     roleBUS.insertRoles(dataTable);
 
-                    //get all role
-                    System.Data.DataTable dataTable2 = roleBUS.getAllRole();
-
-                    // update dataGridView
-                    dataGridView1.DataSource = dataTable2;
                     MessageBox.Show("nhập thành công <3");
                 }
                 catch (FormatException ex1) {
@@ -90,6 +85,13 @@ namespace GUI
                 }
                 catch (ArgumentException ex3) {
                     MessageBox.Show("Định dạng cột không đúng");
+                }
+                finally {
+                    //get all role
+                    System.Data.DataTable dataTable2 = roleBUS.getAllRole();
+
+                    // update dataGridView
+                    dataGridView1.DataSource = dataTable2;
                 }
             }
         }
