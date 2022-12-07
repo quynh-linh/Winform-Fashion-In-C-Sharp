@@ -649,5 +649,251 @@ namespace GUI
         {
             searchDateImportProduct();
         }
+
+        private void guna2Button7_Click(object sender, EventArgs e) {
+            SaveFileDialog saved = new SaveFileDialog();
+            saved.Title = "Xuất -->> - - - ->";
+            saved.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (saved.ShowDialog() == DialogResult.OK) {
+                try {
+
+                    DataTable dataTable = new DataTable();
+                    DataColumn col1 = new DataColumn("Size");
+                    DataColumn col2 = new DataColumn("Id");
+                    DataColumn col3 = new DataColumn("Product");
+                    DataColumn col4 = new DataColumn("Quantity");
+                    DataColumn col5 = new DataColumn("Price");
+                    DataColumn col6 = new DataColumn("Summoney");
+                    dataTable.Columns.Add(col1);
+                    dataTable.Columns.Add(col2);
+                    dataTable.Columns.Add(col3);
+                    dataTable.Columns.Add(col4);
+                    dataTable.Columns.Add(col5);
+                    dataTable.Columns.Add(col6);
+                    foreach (DataGridViewRow dtgv in dataGridViewDetailImportProducts.Rows) {
+                        DataRow dtrow = dataTable.NewRow();
+                        dtrow[0] = dtgv.Cells[0].Value;
+                        dtrow[1] = dtgv.Cells[1].Value;
+                        dtrow[2] = dtgv.Cells[2].Value;
+                        dtrow[3] = dtgv.Cells[3].Value;
+                        dtrow[4] = dtgv.Cells[4].Value;
+                        dtrow[5] = dtgv.Cells[5].Value;
+                        dataTable.Rows.Add(dtrow);
+                    }
+                    exportExcel2(dataTable, "THANH", "THANH");
+                    MessageBox.Show("Xuất thành công <3");
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("Xuất thất bai :< Errors : " + ex.Message);
+                }
+            }
+
+        }
+        public void exportExcel2(DataTable dataTable, string sheetName, string title) {
+
+
+            //Tạo các đối tượng Excel
+            Microsoft.Office.Interop.Excel.Application oExcel = new Microsoft.Office.Interop.Excel.Application();
+
+            Microsoft.Office.Interop.Excel.Workbooks oBooks;
+
+            Microsoft.Office.Interop.Excel.Sheets oSheets;
+
+            Microsoft.Office.Interop.Excel.Workbook oBook;
+
+            Microsoft.Office.Interop.Excel.Worksheet oSheet;
+
+            //Tạo mới một Excel WorkBook 
+
+            oExcel.Visible = true;
+
+            oExcel.DisplayAlerts = false;
+
+            oExcel.Application.SheetsInNewWorkbook = 1;
+
+            oBooks = oExcel.Workbooks;
+
+            oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
+
+            oSheets = oBook.Worksheets;
+
+            oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
+
+            oSheet.Name = sheetName;
+
+            // Tạo phần Tiêu đề
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "F1");
+
+            head.MergeCells = true;
+
+            head.Value2 = title;
+
+            head.Font.Bold = true;
+
+            head.Font.Name = "Times New Roman";
+
+            head.Font.Size = "20";
+
+            head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo tiêu đề hàng
+            Microsoft.Office.Interop.Excel.Range cl1_c = oSheet.get_Range("A2", "A2");
+
+            cl1_c.Value2 = "Bill Information : ";
+
+            cl1_c.ColumnWidth = 12;
+
+            Microsoft.Office.Interop.Excel.Range cl2_c = oSheet.get_Range("A3", "A3");
+            Microsoft.Office.Interop.Excel.Range cl2_c_value = oSheet.get_Range("B3", "B3");
+
+            cl2_c.Value2 = "ID";
+
+            cl2_c.ColumnWidth = 12;
+
+            cl2_c_value.Value2 = textboxMaPhieuNhap_Detail.Text;
+
+            Microsoft.Office.Interop.Excel.Range cl3_c = oSheet.get_Range("A4", "A4");
+            Microsoft.Office.Interop.Excel.Range cl3_c_value = oSheet.get_Range("B4", "B4");
+
+            cl3_c.Value2 = "DATE";
+
+            cl3_c.ColumnWidth = 12;
+
+            cl3_c_value.Value2 = textBoxImportDate_Detail.Text;
+
+            Microsoft.Office.Interop.Excel.Range cl4_c = oSheet.get_Range("A5", "A5");
+            Microsoft.Office.Interop.Excel.Range cl4_c_value = oSheet.get_Range("B5", "B5");
+
+            cl4_c.Value2 = "SUPPLIER";
+
+            cl4_c.ColumnWidth = 12;
+            cl4_c_value.Value2 = textBoxBrand_Detail.Text;
+
+            Microsoft.Office.Interop.Excel.Range cl5_c = oSheet.get_Range("A6", "A6");
+            Microsoft.Office.Interop.Excel.Range cl5_c_value = oSheet.get_Range("B6", "B6");
+
+            cl5_c.Value2 = "STAFF";
+            cl5_c_value.Value2 = textBoxStaff_Detail.Text;
+
+            cl5_c.ColumnWidth = 12;
+
+            // Tạo tiêu đề cột 
+            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A7", "A7");
+
+            cl1.Value2 = "Size";
+
+            cl1.ColumnWidth = 12;
+
+            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B7", "B7");
+
+            cl2.Value2 = "Id";
+
+            cl2.ColumnWidth = 25.0;
+
+            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C7", "C7");
+
+            cl3.Value2 = "Product";
+            cl3.ColumnWidth = 12.0;
+
+            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D7", "D7");
+
+            cl4.Value2 = "Quantity";
+
+            cl4.ColumnWidth = 10.5;
+
+            Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E7", "E7");
+
+            cl5.Value2 = "Price";
+
+            cl5.ColumnWidth = 20.5;
+
+            Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F7", "F7");
+
+            cl6.Value2 = "Sum money";
+
+            cl6.ColumnWidth = 18.5;
+
+           
+
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A7", "F7");
+
+            rowHead.Font.Bold = true;
+
+            // Kẻ viền
+
+            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            // Thiết lập màu nền
+
+            rowHead.Interior.ColorIndex = 6;
+
+            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo mảng theo datatable
+
+            object[,] arr = new object[dataTable.Rows.Count, dataTable.Columns.Count];
+
+            //Chuyển dữ liệu từ DataTable vào mảng đối tượng
+
+            for (int row = 0; row < dataTable.Rows.Count; row++) {
+                DataRow dataRow = dataTable.Rows[row];
+
+                for (int col = 0; col < dataTable.Columns.Count; col++) {
+                    arr[row, col] = dataRow[col];
+                }
+            }
+           
+
+            //Thiết lập vùng điền dữ liệu
+
+            int rowStart = 9;
+
+            int columnStart = 1;
+
+            int rowEnd = rowStart + dataTable.Rows.Count - 2;
+
+            int columnEnd = dataTable.Columns.Count;
+
+            // Ô bắt đầu điền dữ liệu
+
+            Microsoft.Office.Interop.Excel.Range c1 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowStart, columnStart];
+
+            // Ô kết thúc điền dữ liệu
+
+            Microsoft.Office.Interop.Excel.Range c2 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnEnd];
+
+            // Lấy về vùng điền dữ liệu
+
+            Microsoft.Office.Interop.Excel.Range range = oSheet.get_Range(c1, c2);
+
+            //Điền dữ liệu vào vùng đã thiết lập
+
+            range.Value2 = arr;
+
+            //Sum money
+            Microsoft.Office.Interop.Excel.Range c_sum_1 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd + 1, 1];
+            Microsoft.Office.Interop.Excel.Range c_sum_2 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd + 1, columnEnd];
+            Microsoft.Office.Interop.Excel.Range range_sum = oSheet.get_Range(c_sum_1, c_sum_2);
+            range_sum.MergeCells = true;
+            range_sum.Value2 = "Sum money : " + textBox_TongTien_Detail.Text;
+
+            // Kẻ viền
+
+            range.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            Microsoft.Office.Interop.Excel.Range range2 = oSheet.get_Range(head, c2);
+            range2.BorderAround();
+
+
+            // Căn giữa cột mã nhân viên
+
+            //Microsoft.Office.Interop.Excel.Range c3 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnStart];
+
+            //Microsoft.Office.Interop.Excel.Range c4 = oSheet.get_Range(c1, c3);
+
+            //Căn giữa cả bảng 
+            oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+        }
+
     }
 }

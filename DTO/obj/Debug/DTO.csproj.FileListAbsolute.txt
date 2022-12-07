@@ -143,3 +143,16 @@ C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\DTO\obj\Debug\DTO.cspro
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\DTO\obj\Debug\DTO.dll
 C:\Users\onkid\source\repos\Winform-Fashion-In-C-Sharp-5\DTO\obj\Debug\DTO.pdb
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\DTO.dll
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\DTO.pdb
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\EPPlus.dll
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\EPPlus.xml
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\obj\Debug\DTO.dll
+C:\Users\onkid\Source\Repos\Winform-Fashion-In-C-Sharp-1-2\DTO\obj\Debug\DTO.pdb
