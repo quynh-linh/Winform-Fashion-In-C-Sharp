@@ -41,7 +41,6 @@ namespace GUI
             comboboxBrand.DataSource = brandBUS.getBrand();
             comboboxBrand.DisplayMember = "name";
             comboboxBrand.ValueMember = "id";
-            
         }
         private void loadCBBCategory()
         {
