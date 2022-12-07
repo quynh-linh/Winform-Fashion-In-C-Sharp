@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using BUS;
 using DAO;
 using DTO;
-using Guna.UI2.WinForms.Suite;
 
 namespace GUI
 {
@@ -34,7 +33,7 @@ namespace GUI
             this.home = home;
             this.role_Id = role_Id;
         }
-        
+
         List<ComboBox> combo_Box;
         List<CheckBox> check_Box;
 

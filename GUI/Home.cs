@@ -74,7 +74,7 @@ namespace GUI
         //Methods
         private void ActivateButton(object senderBtn, Color color)
         {
-            if (senderBtn != null)
+            if(senderBtn != null)
             {
                 DisableButon();
                 currentBtn = (IconButton)senderBtn;
@@ -99,7 +99,7 @@ namespace GUI
         //
         private void DisableButon()
         {
-            if (currentBtn != null)
+            if(currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(51, 66, 87);
                 currentBtn.ForeColor = Color.Gainsboro;
@@ -130,7 +130,7 @@ namespace GUI
         {
             ActivateButton(btnHome, RGBColor.color1);
             pictureBox1.Image = GUI.Properties.Resources.background;
-            if (currentChildForm != null)
+            if(currentChildForm!=null)
                 currentChildForm.Close();
         }
 
@@ -165,7 +165,7 @@ namespace GUI
             WindowState = FormWindowState.Minimized;
         }
 
-        private string check_Role(string name)
+        private string check_Role( string name)
         {
             //Cắt chuỗi
             String description = role_BUS.get_Role_From_Id(account_DTO.Role_Id).Role_Desciption;
@@ -184,7 +184,7 @@ namespace GUI
             if (role_Name.Contains(name))
             {
                 int index = role_Name.IndexOf(name);
-                manipulative = role_Manipulative[index] + "";
+                manipulative = role_Manipulative[index]+"";
             }
             return manipulative;
         }
@@ -237,7 +237,7 @@ namespace GUI
             if (check_Role("Nhập hàng") != null)
             {
                 ActivateButton(sender, RGBColor.color4);
-                OpenChildForm(new ImportProductsGUI(check_Role("Nhập hàng"), full_name_Account, id_staff));
+                OpenChildForm(new ImportProductsGUI(check_Role("Nhập hàng"), full_name_Account , id_staff));
             }
             else
                 MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");
@@ -315,11 +315,10 @@ namespace GUI
             {
                 ActivateButton(sender, RGBColor.color13);
                 OpenChildForm(new RoleGUI(check_Role("Quyền"), this));
-            }
-            else
+            }else 
                 MessageBox.Show("Bạn không đủ quyền hạn để truy cập trang này");
         }
-
+            
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             if (check_Role("Khách hàng") != null)
@@ -359,6 +358,11 @@ namespace GUI
         }
 
         private void lblDateNow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

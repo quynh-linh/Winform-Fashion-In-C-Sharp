@@ -12,7 +12,7 @@ namespace GUI
         {
             InitializeComponent();
             dataGridView1.DataSource = roleBUS.getAllRole();
-            if (role_Manipulative.Equals("Được thay đổi"))
+            if(role_Manipulative.Equals("Được thay đổi"))
             {
 
             }
