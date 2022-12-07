@@ -39,6 +39,8 @@ namespace GUI
             table_Discount.Columns.Add("Giá trị(%)", typeof(String));
             table_Discount.Columns.Add("Trạng thái", typeof(String));
             fill_Combobox();
+            dgv_discount.RowHeadersVisible = false;
+            dataGridView1.RowHeadersVisible = false;
             refresh();
         }
         public void fill_Combobox()
