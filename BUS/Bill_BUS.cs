@@ -125,7 +125,7 @@ namespace BUS
         public Dictionary<string, int> revenueWithMonth(List<Bill_DTO> bills) {
             Dictionary<string, int> revenue = new Dictionary<string, int>();
             bills.ForEach(billDTO => {
-                DateTime dateTime = DateTime.ParseExact(billDTO.Bill_Time, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                DateTime dateTime = DateTime.ParseExact(billDTO.Bill_Time, "MM-dd-yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
                 if (revenue.ContainsKey("Tháng " + dateTime.Month)) {
                     int sum = sumQuantityOfListBillDetail(getBillDetailsByBillId(billDTO.Bill_Id));
                     revenue["Tháng " + dateTime.Month]  += sum;
