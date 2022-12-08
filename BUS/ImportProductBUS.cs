@@ -182,7 +182,12 @@ namespace BUS
         public Dictionary<string, double> revenueWithMonth(List<ImprotProductDTO> improtProducts) {
             Dictionary<string, double> revenue = new Dictionary<string, double>();
             improtProducts.ForEach(i => {
-                DateTime dateTime = DateTime.ParseExact(i.NgayNhap , "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                DateTime dateTime ;
+                try {
+                    dateTime = DateTime.ParseExact(i.NgayNhap, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                }catch(FormatException) {
+                    dateTime = DateTime.ParseExact(i.NgayNhap, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
                 if (revenue.ContainsKey("Tháng " + dateTime.Month)) {
                     double tongtien = i.Tongtien;
                     revenue["Tháng " + dateTime.Month] += tongtien;

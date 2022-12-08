@@ -37,9 +37,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.chartCustomer = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.statistic = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -47,6 +47,7 @@
             this.doanhThu = new Guna.UI2.WinForms.Guna2TextBox();
             this.doanhThu2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRevenue)).BeginInit();
@@ -64,22 +65,22 @@
             this.panel9.Size = new System.Drawing.Size(339, 37);
             this.panel9.TabIndex = 7;
             // 
-            // iconButton1
+            // iconButton3
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(4, 2);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(76, 34);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Tổng";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.iconButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(198, 2);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(138, 34);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "Nhập vào";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -98,22 +99,22 @@
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton3
+            // iconButton1
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.iconButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(198, 2);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(138, 34);
-            this.iconButton3.TabIndex = 2;
-            this.iconButton3.Text = "Nhập vào";
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(4, 2);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(76, 34);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.Text = "Tổng";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // chartCustomer
             // 
@@ -288,6 +289,7 @@
             this.doanhThu2.ForeColor = System.Drawing.Color.White;
             this.doanhThu2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.doanhThu2.Location = new System.Drawing.Point(753, 475);
+            this.doanhThu2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.doanhThu2.Name = "doanhThu2";
             this.doanhThu2.PasswordChar = '\0';
             this.doanhThu2.PlaceholderText = "";
@@ -301,6 +303,7 @@
             this.panelChildForm.BorderColor = System.Drawing.Color.Black;
             this.panelChildForm.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.panelChildForm.BorderThickness = 1;
+            this.panelChildForm.Controls.Add(this.iconButton5);
             this.panelChildForm.Controls.Add(this.doanhThu2);
             this.panelChildForm.Controls.Add(this.doanhThu);
             this.panelChildForm.Controls.Add(this.dataGridViewRevenue);
@@ -313,6 +316,23 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1070, 556);
             this.panelChildForm.TabIndex = 15;
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.iconButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.ForeColor = System.Drawing.Color.White;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton5.IconColor = System.Drawing.Color.Black;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.Location = new System.Drawing.Point(677, 14);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(130, 34);
+            this.iconButton5.TabIndex = 19;
+            this.iconButton5.Text = "Export";
+            this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // ChartRevenueGUI
             // 
@@ -345,5 +365,6 @@
         private Guna.UI2.WinForms.Guna2TextBox doanhThu;
         private Guna.UI2.WinForms.Guna2TextBox doanhThu2;
         private Guna.UI2.WinForms.Guna2Panel panelChildForm;
+        private FontAwesome.Sharp.IconButton iconButton5;
     }
 }

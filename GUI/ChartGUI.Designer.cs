@@ -43,7 +43,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -109,7 +108,7 @@
             this.iconButton7.Location = new System.Drawing.Point(587, 6);
             this.iconButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(124, 34);
+            this.iconButton7.Size = new System.Drawing.Size(162, 34);
             this.iconButton7.TabIndex = 5;
             this.iconButton7.Text = "Doanh Thu";
             this.iconButton7.UseVisualStyleBackColor = false;
@@ -171,11 +170,10 @@
             this.panel7.Controls.Add(this.panel2);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.panel1);
-            this.panel7.Controls.Add(this.button1);
             this.panel7.Location = new System.Drawing.Point(8, 66);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1035, 57);
+            this.panel7.Size = new System.Drawing.Size(1013, 57);
             this.panel7.TabIndex = 7;
             // 
             // panel2
@@ -215,13 +213,14 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(917, 14);
+            this.button2.Location = new System.Drawing.Point(820, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 36);
             this.button2.TabIndex = 6;
             this.button2.Text = "Làm mới";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -254,19 +253,6 @@
             this.dateFrom.Size = new System.Drawing.Size(324, 29);
             this.dateFrom.TabIndex = 2;
             this.dateFrom.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(815, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Lọc";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // guna2Panel1
             // 
@@ -320,7 +306,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public System.Windows.Forms.DateTimePicker dateTo;
         public System.Windows.Forms.DateTimePicker dateFrom;

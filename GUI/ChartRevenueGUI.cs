@@ -127,5 +127,27 @@ namespace GUI
         private void dataGridViewCategory_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
+
+        private void iconButton5_Click(object sender, EventArgs e) {
+            SaveFileDialog saved = new SaveFileDialog();
+            saved.Title = "Xuất -->> - - - ->";
+            saved.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            Console.WriteLine(dataGridViewRevenue.RowCount.ToString());
+            if (dataGridViewRevenue.RowCount > 0) {
+                if (saved.ShowDialog() == DialogResult.OK) {
+                    try {
+                        AccountGUI.exportExcel(saved.FileName, dataGridViewRevenue, "Thống kê doanh thu năm", "Thống kê");
+                        MessageBox.Show("Xuất thành công <3");
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show("Xuất thất bai :< Errors : " + ex.Message);
+                    }
+                }
+            }
+            else {
+                MessageBox.Show("Vui lòng export dữ liệu ra table");
+            }
+            
+        }
     }
 }

@@ -22,7 +22,6 @@ namespace GUI
             OpenChildForm(new ChartHomeGUI(role_Manipulative));
             if (!role_Manipulative.Equals("Được thay đổi"))
             {
-                button1.Enabled = false;
                 iconButton4.Enabled = false;
                 iconButton5.Enabled = false;
                 button2.Enabled = false;
@@ -85,5 +84,22 @@ namespace GUI
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+            if (typeof(ChartRevenueGUI).IsInstanceOfType(currentChildForm)) {
+                OpenChildForm(new ChartRevenueGUI());
+            }
+            else if(typeof(ChartCustomerGUI).IsInstanceOfType(currentChildForm)) {
+                OpenChildForm(new ChartCustomerGUI(this));
+            }
+            else if (typeof(ChartProductGUI).IsInstanceOfType(currentChildForm)) {
+                OpenChildForm(new ChartProductGUI(this));
+            }
+            else if (typeof(ChartHomeGUI).IsInstanceOfType(currentChildForm)) {
+                OpenChildForm(new ChartHomeGUI(role_Manipulative));
+            }
+        }
+
+      
     }
 }
