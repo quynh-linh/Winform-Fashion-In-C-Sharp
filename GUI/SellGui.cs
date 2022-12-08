@@ -40,7 +40,7 @@ namespace GUI
             if (!role_Manipulative.Equals("Bán hàng "))
             {
                 guna2Button1.Enabled = false;
-                //guna2Button2.Enabled = false;
+                guna2Button2.Enabled = false;
             }
 
             label4.Text = "0đ";
@@ -141,7 +141,7 @@ namespace GUI
                 String bill_Id = autoGenerateId();
                 DateTime time = DateTime.Now;
                 String customer_Id = "null";
-                if (!guna2TextBox3.Text.Equals("Tên khách hàng :")) customer_Id = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "id");
+                if (!guna2TextBox3.Text.Equals("Tên khách hàng :")&& !guna2TextBox3.Text.Equals("")) customer_Id = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "id");
                 Bill_DTO bill = new Bill_DTO(bill_Id, this.totalPrice, time.ToString("dd/MM/yyyy hh:mm:ss"), id_Staff, customer_Id);
                 if (bill_BUS.insert_Bill(bill))
                 {
@@ -309,7 +309,7 @@ namespace GUI
             {
                 for (int i = 0; i < bd.Count; i++)
                 {
-                    if( y < 150)
+                    if( y < 200)
                     {
                         y = 800;
                         pdfDoc.Add(new Paragraph());
@@ -331,13 +331,10 @@ namespace GUI
                     else if (pd.Size_id == 3) s = "L";
                     else if (pd.Size_id == 4) s = "XL";
 
-                    BaseFont bf1 = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                    cb.SetColorFill(BaseColor.DARK_GRAY);
-                    cb.SetFontAndSize(bf1, 13);
-
                     cb.BeginText();
                     text = STT + ". " + pd.Product_Name + " (" + s +")";
-                    cb.ShowTextAligned(Element.ALIGN_CENTER, text, 90, y = y - 50, 0);
+                    y = y - 50;
+                    cb.ShowTextAligned(Element.ALIGN_LEFT, text, 90, y, 0);
                     y = y - 50;
                     text = bill_Dtail.Quantity + "";
                     cb.ShowTextAligned(Element.ALIGN_CENTER, text, 100, y , 0);
@@ -359,28 +356,37 @@ namespace GUI
                     cb.EndText();
                 }
             }
-            
-            if (y < 250)
+
+
+            if (y <= 400)
             {
                 y = 800;
                 pdfDoc.Add(new Paragraph());
                 pdfDoc.NewPage();
             }
             cb.BeginText();
+            BaseFont bf1 = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            cb.SetColorFill(BaseColor.DARK_GRAY);
+            cb.SetFontAndSize(bf1, 15);
             text = "---------------------------------------------------------------------------------------------------------------";
-            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 50, y = y - 50, 0);
+            y = y - 50;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text, 50, y, 0);
             text = "Total : " + b.Total.ToString("#,#,#") ;
-            cb.ShowTextAligned(Element.ALIGN_LEFT, text+ " VND", 300, y = y - 50, 0);
+            y = y - 50;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text+ " VND", 300, y, 0);
             text = "Recieved Money : " + Double.Parse(guna2TextBox1.Text).ToString("#,#,#") ;
-            cb.ShowTextAligned(Element.ALIGN_LEFT, text+  " VND", 300, y = y - 50, 0);
+            y = y - 50;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text+  " VND", 300, y, 0);
             text = "Excess Money : " + label2.Text;
-            cb.ShowTextAligned(Element.ALIGN_LEFT, text+ " VND", 300, y = y - 50, 0);
+            y = y - 50;
+            cb.ShowTextAligned(Element.ALIGN_LEFT, text+ " VND", 300, y, 0);
             cb.EndText();
 
 
             pdfDoc.Close();
             stream.Close();
             writer.Close();
+            System.Diagnostics.Process.Start(saveFileDialog1.FileName);
         }
     }
 }

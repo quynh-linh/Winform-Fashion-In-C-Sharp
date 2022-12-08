@@ -227,7 +227,7 @@ namespace DAO
                 MySqlCommand cm = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(data);
-                count = data.Rows.Count;
+                count = (int)Convert.ToInt64(data.Rows[0][0].ToString());
 
             }
             catch (Exception e)

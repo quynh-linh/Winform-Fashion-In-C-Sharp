@@ -61,6 +61,7 @@ namespace GUI
                         MessageBox.Show("Thêm thành công");
                         dataGridViewCategory.DataSource = categoryBUS.getAllCategory();
                         reloaddatagridView();
+                        txt_Id_Category.Text = "CT" + categoryBUS.count();
                     }
                     else MessageBox.Show("Thêm không thành công");
                 }

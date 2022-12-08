@@ -75,8 +75,8 @@ namespace GUI
             textboxName.Text = " ";
             textBoxId.Text = " ";
             textboxDes.Text = " ";
-            textboxQuantity.Text = "  ";
-            textboxPrice.Text = " ";
+            textboxQuantity.Text = "0";
+            textboxPrice.Text = "0";
             pictureBox.Image = null;
         }
 
