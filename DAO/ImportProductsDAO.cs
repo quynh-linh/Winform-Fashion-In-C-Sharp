@@ -66,9 +66,9 @@ namespace DAO
             {
                 conn.Open();
                 String sql = "SELECT pd.id , pd.price , pd.name  , pd.quantity ,br.name as nameBrand , " +
-                    "ct.nameCategory as nameCate , s.name as sizename " +
-                    "FROM product as pd , brand as br ,  category as ct , size as s " +
-                    "WHERE pd.brand_id = br.id AND pd.category_id = ct.id AND pd.size_id = s.id";
+                     "ct.nameCategory as nameCate , s.name as sizename " +
+                     "FROM product as pd , brand as br ,  category as ct , size as s " +
+                     "WHERE pd.brand_id = br.id AND pd.category_id = ct.id AND pd.size_id = s.id AND pd.isDeleted = 1";
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 returnVal.Fill(ds);
             }

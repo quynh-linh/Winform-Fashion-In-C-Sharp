@@ -20,6 +20,10 @@ namespace BUS
         {
             return productDAO.selectAllProducts();
         }
+        public DataTable getProductsToBrand(String idbrand)
+        {
+            return productDAO.selectAllProductsToBrand(idbrand);
+        }
         public string checkAddProducts(ProductDTO pd)
         {
             if (productDAO.checkIdProducts(pd.Product_Id))
@@ -46,6 +50,10 @@ namespace BUS
         public DataTable searchProducts(String key)
         {
             return productDAO.searchProducts(key);
+        }
+        public DataTable searchProductsToBrand(String key)
+        {
+            return productDAO.searchProductsTobrand(key);
         }
         public string editProducts(ProductDTO pd)
         {

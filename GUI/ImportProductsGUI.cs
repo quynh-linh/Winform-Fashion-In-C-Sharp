@@ -24,6 +24,7 @@ namespace GUI
         ImportProductBUS importProductBUS = new ImportProductBUS();
         BrandBUS brandBUS = new BrandBUS();
         AccountBUS accountBUS = new AccountBUS();
+        ProductsBUS productsBUS = new ProductsBUS();
         private int id_nv;
         private double currentPrice;
         private int currentQuantity;
@@ -40,7 +41,10 @@ namespace GUI
             loadCBBBrand_List();
             loadCBBAccount_List();
             loadDBtoImportProducts();
+            loadCBBBrandSearch();
             dataGridViewDetailImportProducts.AllowUserToAddRows = false;
+            dataGridViewSanPham.AllowUserToAddRows = false;
+            guna2DataGridView1.AllowUserToAddRows = false;
         }
         private void ImportProductsGUI_Load(object sender, EventArgs e)
         {
@@ -58,6 +62,12 @@ namespace GUI
             comboboxNCC.DataSource = brandBUS.getBrand();
             comboboxNCC.DisplayMember = "name";
             comboboxNCC.ValueMember = "id";
+        }
+        private void loadCBBBrandSearch()
+        {
+            guna2ComboBoxBrand.DataSource = brandBUS.getBrand();
+            guna2ComboBoxBrand.DisplayMember = "name";
+            guna2ComboBoxBrand.ValueMember = "id";
         }
         private void loadCBBAccount_List()
         {
@@ -169,7 +179,11 @@ namespace GUI
                 textBoxMaPhieu.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
                 textBoxQuantity.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["quantity"].FormattedValue.ToString();
                 textBoxPrice.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["price"].FormattedValue.ToString();
-                textBox_size_ImportProducts.Text = dataGridViewSanPham.Rows[e.RowIndex].Cells["sizename"].FormattedValue.ToString();
+                String sizename = dataGridViewSanPham.Rows[e.RowIndex].Cells["sizename"].FormattedValue.ToString();
+                if (!sizename.Equals(""))
+                {
+                    textBox_size_ImportProducts.Text = sizename;
+                }
             }
         }
         private void LoadSumMoney()
@@ -895,5 +909,24 @@ namespace GUI
             oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
         }
 
+        private void searchBrandCombobox(object sender, EventArgs e)
+        {
+            DataRowView br = (DataRowView)guna2ComboBoxBrand.SelectedItem;
+            string maBrand = br.Row["id"].ToString();
+            dataGridViewSanPham.DataSource = productsBUS.getProductsToBrand(maBrand);
+        }
+
+        private void searchNameProducts(object sender, EventArgs e)
+        {
+            string keyword = guna2TextBoxSearchNameProduct.Text;
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                dataGridViewSanPham.DataSource = productsBUS.searchProductsToBrand(keyword);
+            }
+            else
+            {
+                dataGridViewSanPham.DataSource = productsBUS.getProducts();
+            }
+        }
     }
 }

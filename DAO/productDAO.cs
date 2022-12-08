@@ -1,12 +1,16 @@
 ﻿using DTO;
+using Microsoft.Office.Interop.Excel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Xml.Linq;
+using DataTable = System.Data.DataTable;
 
 namespace DAO
 {
@@ -28,6 +32,31 @@ namespace DAO
                 returnVal.Fill(ds);
             }
             catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ds;
+        }
+        public DataTable selectAllProductsToBrand(String idbrand)
+        {
+            DataTable ds = new DataTable();
+            try
+            {
+                String sql1 = "";
+                conn.Open();
+                String sql = String.Format("SELECT pd.id , pd.price , pd.name  , pd.quantity ,br.name as nameBrand ," +
+                    "ct.nameCategory as nameCate , s.name as sizename " +
+                    "FROM product as pd, brand as br, category as ct, size as s " +
+                    "WHERE (pd.brand_id = '{0}' AND br.id = '{1}') AND pd.category_id = ct.id AND (pd.size_id = s.id AND pd.isDeleted = 1)" +
+                    "GROUP BY pd.name ASC",idbrand,idbrand);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(ds);
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e);
             }
@@ -172,7 +201,11 @@ namespace DAO
             try
             {
                 conn.Open();
-                String sql = "select * from product where name LIKE  '%" + keyword + "%'";
+                String sql = "SELECT pd.id , pd.price , pd.name , pd.description , pd.quantity , pd.image," +
+                    "br.name as nameBrand , " +
+                    "ct.nameCategory as nameCate , s.name as sizename " +
+                    "FROM product as pd , brand as br ,  category as ct , size as s " +
+                    "where pd.name LIKE  '%" + keyword + "%' AND (pd.brand_id = br.id AND pd.category_id = ct.id) AND (pd.size_id = s.id AND pd.isDeleted = 1) ORDER BY name ASC";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 Console.WriteLine(returnVal);
@@ -190,7 +223,33 @@ namespace DAO
 
             return searchCategory;
         }
-        
+        public DataTable searchProductsTobrand(String keyword)
+        {
+            DataTable searchCategory = new DataTable();
+            try
+            {
+                conn.Open();
+                String sql = "SELECT pd.id , pd.price , pd.name  , pd.quantity ,br.name as nameBrand ,  ct.nameCategory as nameCate , s.name as sizename  " +
+                    "FROM product as pd , brand as br ,  category as ct , size as s " +
+                    "where pd.name LIKE  '%" + keyword + "%' AND(pd.brand_id = br.id AND pd.category_id = ct.id) AND(pd.size_id = s.id AND pd.isDeleted = 1) ORDER BY name ASC";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                Console.WriteLine(returnVal);
+                returnVal.Fill(searchCategory);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return searchCategory;
+        }
+
         public DataTable sumQuantity() {
             DataTable sum = new DataTable();
             try {

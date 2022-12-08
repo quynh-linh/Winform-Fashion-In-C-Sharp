@@ -98,6 +98,8 @@ namespace GUI
                 totalPrice = 0;
                 guna2TextBox2.Text = "";
                 guna2TextBox3.Text = "";
+                guna2TextBox1.Text = "";
+                label2.Text = "";
             }
         }
 
