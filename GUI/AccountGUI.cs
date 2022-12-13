@@ -228,5 +228,6 @@ namespace GUI
             List<AccountDTO> accounts = accountBUS.getAllAccountBySearchKey(searchAccount.Text);
             dataGridViewAccount.DataSource = accounts;
         }
+
     }
 }

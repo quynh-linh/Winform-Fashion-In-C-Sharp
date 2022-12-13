@@ -85,7 +85,8 @@
             this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Search.BorderColor = System.Drawing.Color.White;
-            this.txt_Search.BorderRadius = 15;
+            this.txt_Search.BorderRadius = 5;
+            this.txt_Search.BorderThickness = 2;
             this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Search.DefaultText = "";
             this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -95,13 +96,14 @@
             this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.IconRight = global::GUI.Properties.Resources.icon_search;
             this.txt_Search.IconRightOffset = new System.Drawing.Point(15, 0);
-            this.txt_Search.Location = new System.Drawing.Point(237, 10);
+            this.txt_Search.Location = new System.Drawing.Point(178, 10);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Tìm kiếm";
             this.txt_Search.SelectedText = "";
-            this.txt_Search.Size = new System.Drawing.Size(224, 36);
+            this.txt_Search.Size = new System.Drawing.Size(283, 36);
             this.txt_Search.TabIndex = 44;
             this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
@@ -181,16 +183,17 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 16);
+            this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Mã Khuyễn Mãi :";
+            this.label1.Text = "Mã Khuyễn Mãi ";
             // 
             // tb_madiscount
             // 
             this.tb_madiscount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_madiscount.BorderColor = System.Drawing.Color.White;
-            this.tb_madiscount.BorderRadius = 15;
+            this.tb_madiscount.BorderRadius = 5;
+            this.tb_madiscount.BorderThickness = 2;
             this.tb_madiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_madiscount.DefaultText = "";
             this.tb_madiscount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -201,12 +204,12 @@
             this.tb_madiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_madiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_madiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_madiscount.Location = new System.Drawing.Point(169, 163);
+            this.tb_madiscount.Location = new System.Drawing.Point(169, 162);
             this.tb_madiscount.Name = "tb_madiscount";
             this.tb_madiscount.PasswordChar = '\0';
             this.tb_madiscount.PlaceholderText = "";
             this.tb_madiscount.SelectedText = "";
-            this.tb_madiscount.Size = new System.Drawing.Size(202, 36);
+            this.tb_madiscount.Size = new System.Drawing.Size(226, 36);
             this.tb_madiscount.TabIndex = 9;
             // 
             // tb_giamgia
@@ -214,7 +217,8 @@
             this.tb_giamgia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_giamgia.BorderColor = System.Drawing.Color.White;
-            this.tb_giamgia.BorderRadius = 15;
+            this.tb_giamgia.BorderRadius = 5;
+            this.tb_giamgia.BorderThickness = 2;
             this.tb_giamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_giamgia.DefaultText = "";
             this.tb_giamgia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -229,7 +233,7 @@
             this.tb_giamgia.PasswordChar = '\0';
             this.tb_giamgia.PlaceholderText = "";
             this.tb_giamgia.SelectedText = "";
-            this.tb_giamgia.Size = new System.Drawing.Size(202, 36);
+            this.tb_giamgia.Size = new System.Drawing.Size(226, 36);
             this.tb_giamgia.TabIndex = 11;
             this.tb_giamgia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_giamgia_KeyPress);
             // 
@@ -242,27 +246,27 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(29, 282);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 16);
+            this.label3.Size = new System.Drawing.Size(111, 16);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Ngày Áp Dụng :";
+            this.label3.Text = "Ngày Áp Dụng ";
             // 
             // dtp_startday
             // 
             this.dtp_startday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_startday.BorderColor = System.Drawing.Color.White;
-            this.dtp_startday.BorderRadius = 15;
-            this.dtp_startday.BorderThickness = 1;
+            this.dtp_startday.BorderRadius = 5;
+            this.dtp_startday.BorderThickness = 2;
             this.dtp_startday.Checked = true;
             this.dtp_startday.CustomFormat = "dd/MM/yyy";
             this.dtp_startday.FillColor = System.Drawing.Color.White;
             this.dtp_startday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtp_startday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_startday.Location = new System.Drawing.Point(169, 273);
+            this.dtp_startday.Location = new System.Drawing.Point(169, 272);
             this.dtp_startday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_startday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_startday.Name = "dtp_startday";
-            this.dtp_startday.Size = new System.Drawing.Size(202, 36);
+            this.dtp_startday.Size = new System.Drawing.Size(226, 36);
             this.dtp_startday.TabIndex = 13;
             this.dtp_startday.Value = new System.DateTime(2022, 11, 24, 0, 0, 0, 0);
             // 
@@ -275,27 +279,27 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(29, 338);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 16);
+            this.label4.Size = new System.Drawing.Size(112, 16);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Ngày Kết Thúc :";
+            this.label4.Text = "Ngày Kết Thúc ";
             // 
             // dtp_endday
             // 
             this.dtp_endday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_endday.BorderColor = System.Drawing.Color.White;
-            this.dtp_endday.BorderRadius = 15;
-            this.dtp_endday.BorderThickness = 1;
+            this.dtp_endday.BorderRadius = 5;
+            this.dtp_endday.BorderThickness = 2;
             this.dtp_endday.Checked = true;
             this.dtp_endday.CustomFormat = "dd/MM/yyy";
             this.dtp_endday.FillColor = System.Drawing.Color.White;
             this.dtp_endday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtp_endday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_endday.Location = new System.Drawing.Point(169, 329);
+            this.dtp_endday.Location = new System.Drawing.Point(169, 328);
             this.dtp_endday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_endday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_endday.Name = "dtp_endday";
-            this.dtp_endday.Size = new System.Drawing.Size(202, 36);
+            this.dtp_endday.Size = new System.Drawing.Size(226, 36);
             this.dtp_endday.TabIndex = 15;
             this.dtp_endday.Value = new System.DateTime(2022, 11, 24, 0, 0, 0, 0);
             // 
@@ -467,7 +471,8 @@
             this.guna2ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 15;
+            this.guna2ComboBox1.BorderRadius = 5;
+            this.guna2ComboBox1.BorderThickness = 2;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -480,7 +485,7 @@
             "Ngừng áp dụng"});
             this.guna2ComboBox1.Location = new System.Drawing.Point(169, 382);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(202, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(226, 36);
             this.guna2ComboBox1.StartIndex = 0;
             this.guna2ComboBox1.TabIndex = 38;
             // 
@@ -506,7 +511,8 @@
             this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2TextBox1.BorderColor = System.Drawing.Color.White;
-            this.guna2TextBox1.BorderRadius = 15;
+            this.guna2TextBox1.BorderRadius = 5;
+            this.guna2TextBox1.BorderThickness = 2;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -516,13 +522,14 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconRight = global::GUI.Properties.Resources.icon_search;
             this.guna2TextBox1.IconRightOffset = new System.Drawing.Point(15, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(237, 10);
+            this.guna2TextBox1.Location = new System.Drawing.Point(178, 10);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Tìm kiếm";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(227, 36);
+            this.guna2TextBox1.Size = new System.Drawing.Size(283, 36);
             this.guna2TextBox1.TabIndex = 43;
             this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
@@ -548,7 +555,8 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

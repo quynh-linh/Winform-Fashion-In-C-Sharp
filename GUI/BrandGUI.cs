@@ -238,5 +238,10 @@ namespace GUI
                 }
             }
         }
+
+        private void btn_searchBrand_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

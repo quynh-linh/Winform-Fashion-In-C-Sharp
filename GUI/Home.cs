@@ -34,6 +34,8 @@ namespace GUI
         public Home(AccountDTO account_DTO)
         {
             InitializeComponent();
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
             this.account_DTO = account_DTO;
             this.role_Id = account_DTO.Role_Id;
             lblNameCustommer.Text = account_DTO.Full_Name;
