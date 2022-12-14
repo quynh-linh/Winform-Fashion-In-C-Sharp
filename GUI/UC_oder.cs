@@ -14,11 +14,16 @@ namespace GUI
         String size = "";
         int percent = 0;
         DiscountBUS discountBUS = new DiscountBUS();
+        Bill_BUS bill_BUS = new Bill_BUS();
+        private BillGui billGui;
+
         public UC_oder(SellGui sellGUI)
         {
             InitializeComponent();
             this.sellGUI = sellGUI;
         }
+
+      
         public void setDataOder(ProductDTO data, int quantity, int index)
         {
             this.product = data;
@@ -46,7 +51,7 @@ namespace GUI
                 label1.Visible = false;
             }
         }
-
+        
         private void btn_deleteOder_Click(object sender, System.EventArgs e)
         {
             if(MessageBox.Show("Bạn có chắc chắn muốn xóa loại sản phẩm này?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)

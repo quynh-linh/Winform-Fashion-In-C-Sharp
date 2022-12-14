@@ -400,5 +400,234 @@ namespace DAO
 
             return pd;
         }
+        //bill export
+        public DataTable selectBill()
+        {
+            DataTable dtBill = new DataTable();
+            try
+            {
+                conn.Open();
+
+                String sql = String.Format("select b.bill_Id, b.bill_Total, b.bill_Time, ac.full_name as name, ct.nameCustomer as namecustomer from bill AS b, account AS ac, customer as ct where b.account_Id = ac.id AND b.customer_Id = ct.idCustomer");
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dtBill;
+
+        }
+        // select detail bill
+        public ArrayList getBillDetail(String id)
+        {
+            ArrayList brandDTO = new ArrayList();
+            try
+            {
+                conn.Open();
+                String sql = "select * from bill_detail where bill_Id =  '" + id + "' ";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader mySqlDataReader = cmd.ExecuteReader();
+                while (mySqlDataReader.Read())
+                {
+                    Bill_Detail_DTO bill_Detail_DTO = new Bill_Detail_DTO();
+                    bill_Detail_DTO.Bill_Id = mySqlDataReader["bill_Id"].ToString();
+                    bill_Detail_DTO.Product_Id = mySqlDataReader["product_Id"].ToString();
+                    bill_Detail_DTO.Size = mySqlDataReader["size"].ToString();
+                    bill_Detail_DTO.Quantity = int.Parse(mySqlDataReader["quantity"].ToString());
+                    bill_Detail_DTO.Price = double.Parse(mySqlDataReader["price"].ToString());
+                    bill_Detail_DTO.Percent = int.Parse(mySqlDataReader["percent_Discount"].ToString());
+                    brandDTO.Add(bill_Detail_DTO);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("ket noi that bai !");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return brandDTO;
+        }
+        //
+        public DataTable selectBillDetail(String id)
+        {
+            DataTable dtBill = new DataTable();
+            try
+            {
+                conn.Open();
+
+                String sql = String.Format("select p.name as namesp, b.size, b.quantity, b.price, b.percent_Discount from bill_detail AS b, product AS p where b.product_Id = p.id AND b.bill_Id =  '" + id + " ' ");
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dtBill;
+
+        }
+        //
+        public String get_Name_Product(String id)
+        {
+            String sql = "SELECT name FROM product  WHERE id = '" + id + "' ";
+            DataTable dtDiscount = new DataTable();
+            String s = "";
+            try
+            {
+                conn.Open();
+                MySqlCommand cm = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adt = new MySqlDataAdapter(sql, conn);
+                adt.Fill(dtDiscount);
+                Console.WriteLine(sql);
+                s = dtDiscount.Rows[0][0].ToString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Loi select : " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return s;
+        }
+        // bill import
+        public DataTable selectBillDetailImport()
+        {
+            DataTable dtBill = new DataTable();
+            try
+            {
+                conn.Open();
+
+                String sql = String.Format("select ip.maPhieuNhap as ma, ip.ngayNhap as date, a.full_name as name, ip.tongtien, br.name as namencc from imprort_product AS ip, account AS a, brand as br where ip.maNhanVien = a.id AND ip.maNCC = br.id");
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dtBill;
+
+        }
+        // select bill import
+        public ArrayList getBillDetailImport(String id)
+        {
+            ArrayList brandDTO = new ArrayList();
+            try
+            {
+                conn.Open();
+                String sql = "select * from detail_import where maPhieuNhap =  '" + id + "' ";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader mySqlDataReader = cmd.ExecuteReader();
+                while (mySqlDataReader.Read())
+                {
+                    detail_importProductDTO detail_Import = new detail_importProductDTO();
+                    detail_Import.MaChiTiet = int.Parse(mySqlDataReader["maChiTiet"].ToString());
+                    detail_Import.MaSanPham = mySqlDataReader["maSanPham"].ToString();
+                    detail_Import.SoLuong1 = int.Parse(mySqlDataReader["SoLuong"].ToString());
+                    detail_Import.GiaNhap1 = double.Parse(mySqlDataReader["GiaNhap"].ToString());
+                    detail_Import.Sunmoney = double.Parse(mySqlDataReader["sunmoney"].ToString());
+                    detail_Import.MaChiTietPN = mySqlDataReader["maPhieuNhap"].ToString();
+                    detail_Import.Size = int.Parse(mySqlDataReader["size"].ToString());
+                    brandDTO.Add(detail_Import);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("ket noi that bai !");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return brandDTO;
+        }
+        // get bill search date
+        public DataTable selectBillSearch(String date)
+        {
+            DataTable dtBill = new DataTable();
+            try
+            {
+                conn.Open();
+
+                String sql = String.Format("select b.bill_Id, b.bill_Total, b.bill_Time, ac.full_name as name, ct.nameCustomer as namecustomer from bill AS b, account AS ac, customer as ct where b.account_Id = ac.id AND b.customer_Id = ct.idCustomer AND b.bill_time LIKE '"+date+"%' ");
+                Console.WriteLine("manhhhhhh", sql);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtBill;
+        }
+        // get bill search import date
+        
+        public DataTable selectBillSearchImport(String date)
+        {
+            DataTable dtBill = new DataTable();
+            try
+            {
+                conn.Open();
+
+                String sql = String.Format("select ip.maPhieuNhap as ma, ip.ngayNhap as date, a.full_name as name, ip.tongtien, br.name as namencc from imprort_product AS ip, account AS a, brand as br where ip.maNhanVien = a.id AND ip.maNCC = br.id AND ip.ngayNhap LIKE '" + date + "%' ");
+                Console.WriteLine("manhhhhhh", sql);
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
+                returnVal.Fill(dtBill);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kết nối thất bại với lỗi sau: " + e.Message);
+                Console.Read();
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtBill;
+        }
     }
 }

@@ -16,6 +16,10 @@ namespace DTO
         private string maChiTietPN;
         private int size;
 
+        public detail_importProductDTO()
+        {
+        }
+
         public detail_importProductDTO(string maSanPham, int soLuong, double giaNhap, double sunmoney, string maChiTietPN, int size)
         {
             this.maSanPham = maSanPham;

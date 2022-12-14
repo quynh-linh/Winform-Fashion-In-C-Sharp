@@ -209,6 +209,46 @@ namespace BUS
         {
             return bill_DAO.get_Product_In_Detail_Bill(id, size);
         }
+        // bill export
+        public DataTable getBillExport()
+        {
+            return bill_DAO.selectBill();
+        }
+        //
+        public DataTable selectBillDetail(String id)
+        {
+            return bill_DAO.selectBillDetail(id);
+        }
+        //
+        public String get_Name_Product(String id)
+        {
+            return bill_DAO.get_Name_Product(id);
+        }
+        // get bill export
+        public ArrayList getBillDetail(String id)
+        {
+            return bill_DAO.getBillDetail(id);
+        }
+        //
+        public DataTable selectBillDetailImport()
+        {
+            return bill_DAO.selectBillDetailImport();
+        }
+        // get bill import
+        public ArrayList getBillDetailImport(String id)
+        {
+            return bill_DAO.getBillDetailImport(id);
+        }
+        //get bill search date
+        public DataTable selectBillSearch(String date)
+        {
+            return bill_DAO.selectBillSearch(date);
+        }
 
+        // get bill import search
+        public DataTable selectBillSearchImport(String date)
+        {
+            return bill_DAO.selectBillSearchImport(date);
+        }
     }
 }
