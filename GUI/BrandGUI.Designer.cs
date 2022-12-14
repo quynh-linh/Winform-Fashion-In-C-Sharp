@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_brand = new System.Windows.Forms.DataGridView();
-            this.btn_searchBrand = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.txt_searchBrand = new Guna.UI2.WinForms.Guna2TextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_exportExcelBrand = new Guna.UI2.WinForms.Guna2Button();
@@ -44,8 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_MaBrand = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_brand)).BeginInit();
@@ -73,9 +72,8 @@
             this.guna2Panel2.BorderRadius = 5;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.txt_Search);
             this.guna2Panel2.Controls.Add(this.dgv_brand);
-            this.guna2Panel2.Controls.Add(this.btn_searchBrand);
-            this.guna2Panel2.Controls.Add(this.txt_searchBrand);
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Location = new System.Drawing.Point(4, 128);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -84,8 +82,7 @@
             // 
             // dgv_brand
             // 
-            this.dgv_brand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgv_brand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_brand.BackgroundColor = System.Drawing.Color.White;
             this.dgv_brand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -94,47 +91,27 @@
             this.name});
             this.dgv_brand.Location = new System.Drawing.Point(3, 46);
             this.dgv_brand.Name = "dgv_brand";
+            this.dgv_brand.RowHeadersVisible = false;
             this.dgv_brand.RowHeadersWidth = 51;
             this.dgv_brand.Size = new System.Drawing.Size(793, 420);
             this.dgv_brand.TabIndex = 11;
             this.dgv_brand.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_brand_CellClick);
             // 
-            // btn_searchBrand
+            // id
             // 
-            this.btn_searchBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_searchBrand.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_searchBrand.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_searchBrand.Image = global::GUI.Properties.Resources.find;
-            this.btn_searchBrand.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_searchBrand.ImageRotate = 0F;
-            this.btn_searchBrand.Location = new System.Drawing.Point(753, 10);
-            this.btn_searchBrand.Name = "btn_searchBrand";
-            this.btn_searchBrand.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_searchBrand.Size = new System.Drawing.Size(36, 29);
-            this.btn_searchBrand.TabIndex = 10;
-            this.btn_searchBrand.Click += new System.EventHandler(this.btn_searchBrand_Click);
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã Thương Hiệu";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
             // 
-            // txt_searchBrand
+            // name
             // 
-            this.txt_searchBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_searchBrand.BorderRadius = 5;
-            this.txt_searchBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_searchBrand.DefaultText = "";
-            this.txt_searchBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_searchBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_searchBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_searchBrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_searchBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_searchBrand.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_searchBrand.Location = new System.Drawing.Point(514, 10);
-            this.txt_searchBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_searchBrand.Name = "txt_searchBrand";
-            this.txt_searchBrand.PasswordChar = '\0';
-            this.txt_searchBrand.PlaceholderText = "";
-            this.txt_searchBrand.SelectedText = "";
-            this.txt_searchBrand.Size = new System.Drawing.Size(244, 29);
-            this.txt_searchBrand.TabIndex = 9;
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Tên Thương Hiệu";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
             // 
             // label3
             // 
@@ -314,6 +291,7 @@
             this.Txt_MaBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Txt_MaBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Txt_MaBrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_MaBrand.Enabled = false;
             this.Txt_MaBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_MaBrand.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_MaBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -338,21 +316,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập mã";
             // 
-            // id
+            // txt_Search
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Mã Thương Hiệu";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Tên Thương Hiệu";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.BorderColor = System.Drawing.Color.White;
+            this.txt_Search.BorderRadius = 15;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.DefaultText = "";
+            this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.IconRight = global::GUI.Properties.Resources.icon_search;
+            this.txt_Search.IconRightOffset = new System.Drawing.Point(15, 0);
+            this.txt_Search.Location = new System.Drawing.Point(495, 4);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.PasswordChar = '\0';
+            this.txt_Search.PlaceholderText = "Tìm kiếm";
+            this.txt_Search.SelectedText = "";
+            this.txt_Search.Size = new System.Drawing.Size(294, 36);
+            this.txt_Search.TabIndex = 19;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // BrandGUI
             // 
@@ -379,8 +366,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.DataGridView dgv_brand;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_searchBrand;
-        private Guna.UI2.WinForms.Guna2TextBox txt_searchBrand;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btn_exportExcelBrand;
@@ -394,5 +379,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
     }
 }

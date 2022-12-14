@@ -155,13 +155,14 @@ namespace DAO
             }
             return false;
         }
+        // search
         public DataTable searchBrand(String keyword)
         {
             DataTable searchCategory = new DataTable();
             try
             {
                 conn.Open();
-                String sql = "select id, nameCategory from category where nameCategory LIKE  '%" + keyword + "%' and isDeleted = 0";
+                String sql = "select id, name from brand where name LIKE  '%" + keyword + "%' and isDelete = 0";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter returnVal = new MySqlDataAdapter(sql, conn);
                 Console.WriteLine(returnVal);
