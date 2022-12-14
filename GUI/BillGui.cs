@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Drawing;
-
+using System.Drawing.Printing;
 using System.Windows.Forms;
 using BUS;
 using DTO;
@@ -113,6 +113,60 @@ namespace GUI
         {
             DateTimePickerSearchImport.CustomFormat = " ";
             dgv_import_bill.DataSource = bill_bus.selectBillDetailImport();
+        }
+        // print bill
+        private void Print(Panel pnl)
+        {
+            PrinterSettings ps = new PrinterSettings();
+            panelPrint = pnl;
+            getPrintarea(pnl);
+            printPreviewDialog1.Document = printDocument1;
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+            printPreviewDialog1.ShowDialog();
+        }
+        private Bitmap memoryimg;
+        private void getPrintarea(Panel pnl)
+        {
+            memoryimg = new Bitmap(pnl.Width, pnl.Height);
+            pnl.DrawToBitmap(memoryimg, new Rectangle(0, 0, pnl.Width, pnl.Height));
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Rectangle pagearea = e.PageBounds;
+            e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.panelPrint.Width/2), this.panelPrint.Location.Y);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Print(this.panelPrint);
+        }
+
+        //print bill import
+        private void PrintImport(Panel pnl)
+        {
+            PrinterSettings ps = new PrinterSettings();
+            panelPrintImport = pnl;
+            getPrintareaImport(pnl);
+            printPreviewDialog2.Document = printDocument2;
+            printDocument2.PrintPage += new PrintPageEventHandler(printDocument2_PrintPage);
+            printPreviewDialog2.ShowDialog();
+        }
+        private Bitmap memoryimgImport;
+        private void getPrintareaImport(Panel pnl)
+        {
+            memoryimgImport = new Bitmap(pnl.Width, pnl.Height);
+            pnl.DrawToBitmap(memoryimgImport, new Rectangle(0, 0, pnl.Width, pnl.Height));
+        }
+       
+        private void printDocument2_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Rectangle pagearea = e.PageBounds;
+            e.Graphics.DrawImage(memoryimgImport, (pagearea.Width / 2) - (this.panelPrintImport.Width / 2), this.panelPrintImport.Location.Y);
+        }
+        private void btn_print_import_Click(object sender, EventArgs e)
+        {
+            PrintImport(this.panelPrintImport);
         }
     }
 }

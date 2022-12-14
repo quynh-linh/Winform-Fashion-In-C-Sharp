@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillGui));
             this.TabControlBill = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage_phieu_xuat = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewBill = new System.Windows.Forms.DataGridView();
-            this.bill_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bill_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namecustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bill_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelPrint = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanelBill = new System.Windows.Forms.FlowLayoutPanel();
             this.label_total_bill = new System.Windows.Forms.Label();
@@ -49,8 +45,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btn_refesh = new Guna.UI2.WinForms.Guna2Button();
+            this.DateTimePicker_search = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewBill = new System.Windows.Forms.DataGridView();
+            this.bill_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bill_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namecustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bill_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_phieu_nhap = new System.Windows.Forms.TabPage();
+            this.btn_refesh_import = new Guna.UI2.WinForms.Guna2Button();
+            this.DateTimePickerSearchImport = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_import_bill = new System.Windows.Forms.DataGridView();
             this.ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +67,11 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namencc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label19 = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.panelPrintImport = new System.Windows.Forms.Panel();
+            this.btn_print_import = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanelBillImport = new System.Windows.Forms.FlowLayoutPanel();
             this.label_total_import = new System.Windows.Forms.Label();
@@ -68,22 +82,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.DateTimePicker_search = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btn_refesh = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_refesh_import = new Guna.UI2.WinForms.Guna2Button();
-            this.DateTimePickerSearchImport = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
             this.TabControlBill.SuspendLayout();
             this.tabPage_phieu_xuat.SuspendLayout();
+            this.panelPrint.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).BeginInit();
             this.tabPage_phieu_nhap.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_import_bill)).BeginInit();
+            this.panelPrintImport.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControlBill
@@ -118,23 +127,12 @@
             // 
             // tabPage_phieu_xuat
             // 
+            this.tabPage_phieu_xuat.Controls.Add(this.guna2Button1);
+            this.tabPage_phieu_xuat.Controls.Add(this.panelPrint);
             this.tabPage_phieu_xuat.Controls.Add(this.btn_refesh);
             this.tabPage_phieu_xuat.Controls.Add(this.DateTimePicker_search);
             this.tabPage_phieu_xuat.Controls.Add(this.label11);
-            this.tabPage_phieu_xuat.Controls.Add(this.guna2Button1);
             this.tabPage_phieu_xuat.Controls.Add(this.panel1);
-            this.tabPage_phieu_xuat.Controls.Add(this.label2);
-            this.tabPage_phieu_xuat.Controls.Add(this.flowLayoutPanelBill);
-            this.tabPage_phieu_xuat.Controls.Add(this.label_total_bill);
-            this.tabPage_phieu_xuat.Controls.Add(this.label9);
-            this.tabPage_phieu_xuat.Controls.Add(this.label_date_bill);
-            this.tabPage_phieu_xuat.Controls.Add(this.label_staff_bill);
-            this.tabPage_phieu_xuat.Controls.Add(this.label_customer_bill);
-            this.tabPage_phieu_xuat.Controls.Add(this.label_ma_bill);
-            this.tabPage_phieu_xuat.Controls.Add(this.label8);
-            this.tabPage_phieu_xuat.Controls.Add(this.label7);
-            this.tabPage_phieu_xuat.Controls.Add(this.label6);
-            this.tabPage_phieu_xuat.Controls.Add(this.label5);
             this.tabPage_phieu_xuat.Controls.Add(this.label1);
             this.tabPage_phieu_xuat.ForeColor = System.Drawing.Color.Black;
             this.tabPage_phieu_xuat.Location = new System.Drawing.Point(4, 44);
@@ -144,6 +142,233 @@
             this.tabPage_phieu_xuat.TabIndex = 0;
             this.tabPage_phieu_xuat.Text = "Phiếu Xuất";
             this.tabPage_phieu_xuat.UseVisualStyleBackColor = true;
+            // 
+            // panelPrint
+            // 
+            this.panelPrint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPrint.Controls.Add(this.label2);
+            this.panelPrint.Controls.Add(this.flowLayoutPanelBill);
+            this.panelPrint.Controls.Add(this.label_total_bill);
+            this.panelPrint.Controls.Add(this.label9);
+            this.panelPrint.Controls.Add(this.label_date_bill);
+            this.panelPrint.Controls.Add(this.label_staff_bill);
+            this.panelPrint.Controls.Add(this.label_customer_bill);
+            this.panelPrint.Controls.Add(this.label_ma_bill);
+            this.panelPrint.Controls.Add(this.label8);
+            this.panelPrint.Controls.Add(this.label7);
+            this.panelPrint.Controls.Add(this.label6);
+            this.panelPrint.Controls.Add(this.label5);
+            this.panelPrint.Location = new System.Drawing.Point(353, 0);
+            this.panelPrint.Name = "panelPrint";
+            this.panelPrint.Size = new System.Drawing.Size(439, 544);
+            this.panelPrint.TabIndex = 28;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Image = global::GUI.Properties.Resources.print_icon;
+            this.guna2Button1.Location = new System.Drawing.Point(391, 550);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(110, 39);
+            this.guna2Button1.TabIndex = 34;
+            this.guna2Button1.Text = "In Hóa Đơn";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(132, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 25);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Chi tiết phiếu xuất";
+            // 
+            // flowLayoutPanelBill
+            // 
+            this.flowLayoutPanelBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelBill.AutoScroll = true;
+            this.flowLayoutPanelBill.Location = new System.Drawing.Point(2, 176);
+            this.flowLayoutPanelBill.Name = "flowLayoutPanelBill";
+            this.flowLayoutPanelBill.Size = new System.Drawing.Size(435, 324);
+            this.flowLayoutPanelBill.TabIndex = 32;
+            // 
+            // label_total_bill
+            // 
+            this.label_total_bill.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_total_bill.AutoSize = true;
+            this.label_total_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_total_bill.ForeColor = System.Drawing.Color.Black;
+            this.label_total_bill.Location = new System.Drawing.Point(316, 512);
+            this.label_total_bill.Name = "label_total_bill";
+            this.label_total_bill.Size = new System.Drawing.Size(0, 21);
+            this.label_total_bill.TabIndex = 31;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(220, 512);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 21);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Tổng tiền :";
+            // 
+            // label_date_bill
+            // 
+            this.label_date_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_date_bill.AutoSize = true;
+            this.label_date_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_date_bill.ForeColor = System.Drawing.Color.Black;
+            this.label_date_bill.Location = new System.Drawing.Point(308, 105);
+            this.label_date_bill.Name = "label_date_bill";
+            this.label_date_bill.Size = new System.Drawing.Size(0, 13);
+            this.label_date_bill.TabIndex = 29;
+            // 
+            // label_staff_bill
+            // 
+            this.label_staff_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_staff_bill.AutoSize = true;
+            this.label_staff_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_staff_bill.ForeColor = System.Drawing.Color.Black;
+            this.label_staff_bill.Location = new System.Drawing.Point(169, 142);
+            this.label_staff_bill.Name = "label_staff_bill";
+            this.label_staff_bill.Size = new System.Drawing.Size(0, 13);
+            this.label_staff_bill.TabIndex = 28;
+            // 
+            // label_customer_bill
+            // 
+            this.label_customer_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_customer_bill.AutoSize = true;
+            this.label_customer_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_customer_bill.ForeColor = System.Drawing.Color.Black;
+            this.label_customer_bill.Location = new System.Drawing.Point(169, 105);
+            this.label_customer_bill.Name = "label_customer_bill";
+            this.label_customer_bill.Size = new System.Drawing.Size(0, 13);
+            this.label_customer_bill.TabIndex = 27;
+            // 
+            // label_ma_bill
+            // 
+            this.label_ma_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_ma_bill.AutoSize = true;
+            this.label_ma_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ma_bill.ForeColor = System.Drawing.Color.Black;
+            this.label_ma_bill.Location = new System.Drawing.Point(169, 65);
+            this.label_ma_bill.Name = "label_ma_bill";
+            this.label_ma_bill.Size = new System.Drawing.Size(0, 13);
+            this.label_ma_bill.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(242, 105);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Thời gian :";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(89, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Thu ngân :";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(89, 105);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Khách hàng :";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(89, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Mã hóa đơn :";
+            // 
+            // btn_refesh
+            // 
+            this.btn_refesh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_refesh.BorderRadius = 5;
+            this.btn_refesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_refesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_refesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_refesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_refesh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_refesh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_refesh.ForeColor = System.Drawing.Color.Black;
+            this.btn_refesh.Image = global::GUI.Properties.Resources.refresh;
+            this.btn_refesh.Location = new System.Drawing.Point(313, 56);
+            this.btn_refesh.Name = "btn_refesh";
+            this.btn_refesh.Size = new System.Drawing.Size(34, 34);
+            this.btn_refesh.TabIndex = 27;
+            this.btn_refesh.Click += new System.EventHandler(this.btn_refesh_Click);
+            // 
+            // DateTimePicker_search
+            // 
+            this.DateTimePicker_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateTimePicker_search.BorderRadius = 5;
+            this.DateTimePicker_search.Checked = true;
+            this.DateTimePicker_search.CustomFormat = " ";
+            this.DateTimePicker_search.FillColor = System.Drawing.Color.White;
+            this.DateTimePicker_search.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.DateTimePicker_search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DateTimePicker_search.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateTimePicker_search.Location = new System.Drawing.Point(59, 55);
+            this.DateTimePicker_search.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePicker_search.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePicker_search.Name = "DateTimePicker_search";
+            this.DateTimePicker_search.Size = new System.Drawing.Size(234, 34);
+            this.DateTimePicker_search.TabIndex = 26;
+            this.DateTimePicker_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DateTimePicker_search.Value = new System.DateTime(2022, 12, 1, 0, 0, 0, 0);
+            this.DateTimePicker_search.ValueChanged += new System.EventHandler(this.DateTimePicker_search_ValueChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(8, 62);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 19);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Tìm :";
             // 
             // panel1
             // 
@@ -216,143 +441,6 @@
             this.bill_Total.Name = "bill_Total";
             this.bill_Total.Visible = false;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(559, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 25);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Chi tiết phiếu xuất";
-            // 
-            // flowLayoutPanelBill
-            // 
-            this.flowLayoutPanelBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelBill.AutoScroll = true;
-            this.flowLayoutPanelBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanelBill.Location = new System.Drawing.Point(354, 189);
-            this.flowLayoutPanelBill.Name = "flowLayoutPanelBill";
-            this.flowLayoutPanelBill.Size = new System.Drawing.Size(435, 302);
-            this.flowLayoutPanelBill.TabIndex = 18;
-            // 
-            // label_total_bill
-            // 
-            this.label_total_bill.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label_total_bill.AutoSize = true;
-            this.label_total_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_total_bill.ForeColor = System.Drawing.Color.Black;
-            this.label_total_bill.Location = new System.Drawing.Point(668, 537);
-            this.label_total_bill.Name = "label_total_bill";
-            this.label_total_bill.Size = new System.Drawing.Size(0, 21);
-            this.label_total_bill.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(572, 537);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 21);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Tổng tiền :";
-            // 
-            // label_date_bill
-            // 
-            this.label_date_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_date_bill.AutoSize = true;
-            this.label_date_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_date_bill.ForeColor = System.Drawing.Color.Black;
-            this.label_date_bill.Location = new System.Drawing.Point(660, 116);
-            this.label_date_bill.Name = "label_date_bill";
-            this.label_date_bill.Size = new System.Drawing.Size(0, 13);
-            this.label_date_bill.TabIndex = 15;
-            // 
-            // label_staff_bill
-            // 
-            this.label_staff_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_staff_bill.AutoSize = true;
-            this.label_staff_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_staff_bill.ForeColor = System.Drawing.Color.Black;
-            this.label_staff_bill.Location = new System.Drawing.Point(521, 153);
-            this.label_staff_bill.Name = "label_staff_bill";
-            this.label_staff_bill.Size = new System.Drawing.Size(0, 13);
-            this.label_staff_bill.TabIndex = 14;
-            // 
-            // label_customer_bill
-            // 
-            this.label_customer_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_customer_bill.AutoSize = true;
-            this.label_customer_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_customer_bill.ForeColor = System.Drawing.Color.Black;
-            this.label_customer_bill.Location = new System.Drawing.Point(521, 116);
-            this.label_customer_bill.Name = "label_customer_bill";
-            this.label_customer_bill.Size = new System.Drawing.Size(0, 13);
-            this.label_customer_bill.TabIndex = 13;
-            // 
-            // label_ma_bill
-            // 
-            this.label_ma_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_ma_bill.AutoSize = true;
-            this.label_ma_bill.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ma_bill.ForeColor = System.Drawing.Color.Black;
-            this.label_ma_bill.Location = new System.Drawing.Point(521, 76);
-            this.label_ma_bill.Name = "label_ma_bill";
-            this.label_ma_bill.Size = new System.Drawing.Size(0, 13);
-            this.label_ma_bill.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(594, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Thời gian :";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(441, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Thu ngân :";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(441, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Khách hàng :";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(441, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Mã hóa đơn :";
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -367,21 +455,12 @@
             // 
             // tabPage_phieu_nhap
             // 
+            this.tabPage_phieu_nhap.Controls.Add(this.btn_print_import);
+            this.tabPage_phieu_nhap.Controls.Add(this.panelPrintImport);
             this.tabPage_phieu_nhap.Controls.Add(this.btn_refesh_import);
             this.tabPage_phieu_nhap.Controls.Add(this.DateTimePickerSearchImport);
             this.tabPage_phieu_nhap.Controls.Add(this.label4);
-            this.tabPage_phieu_nhap.Controls.Add(this.guna2Button2);
             this.tabPage_phieu_nhap.Controls.Add(this.panel2);
-            this.tabPage_phieu_nhap.Controls.Add(this.label3);
-            this.tabPage_phieu_nhap.Controls.Add(this.flowLayoutPanelBillImport);
-            this.tabPage_phieu_nhap.Controls.Add(this.label_total_import);
-            this.tabPage_phieu_nhap.Controls.Add(this.label10);
-            this.tabPage_phieu_nhap.Controls.Add(this.label_time_import);
-            this.tabPage_phieu_nhap.Controls.Add(this.label_ncc_import);
-            this.tabPage_phieu_nhap.Controls.Add(this.label_ma_import);
-            this.tabPage_phieu_nhap.Controls.Add(this.label15);
-            this.tabPage_phieu_nhap.Controls.Add(this.label17);
-            this.tabPage_phieu_nhap.Controls.Add(this.label18);
             this.tabPage_phieu_nhap.Controls.Add(this.label19);
             this.tabPage_phieu_nhap.Location = new System.Drawing.Point(4, 44);
             this.tabPage_phieu_nhap.Name = "tabPage_phieu_nhap";
@@ -390,6 +469,56 @@
             this.tabPage_phieu_nhap.TabIndex = 1;
             this.tabPage_phieu_nhap.Text = "Phiếu Nhập";
             this.tabPage_phieu_nhap.UseVisualStyleBackColor = true;
+            // 
+            // btn_refesh_import
+            // 
+            this.btn_refesh_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_refesh_import.BorderRadius = 5;
+            this.btn_refesh_import.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_refesh_import.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_refesh_import.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_refesh_import.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_refesh_import.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_refesh_import.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_refesh_import.ForeColor = System.Drawing.Color.Black;
+            this.btn_refesh_import.Image = global::GUI.Properties.Resources.refresh;
+            this.btn_refesh_import.Location = new System.Drawing.Point(311, 59);
+            this.btn_refesh_import.Name = "btn_refesh_import";
+            this.btn_refesh_import.Size = new System.Drawing.Size(34, 34);
+            this.btn_refesh_import.TabIndex = 40;
+            this.btn_refesh_import.Click += new System.EventHandler(this.btn_refesh_import_Click);
+            // 
+            // DateTimePickerSearchImport
+            // 
+            this.DateTimePickerSearchImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateTimePickerSearchImport.BorderRadius = 5;
+            this.DateTimePickerSearchImport.Checked = true;
+            this.DateTimePickerSearchImport.CustomFormat = " ";
+            this.DateTimePickerSearchImport.FillColor = System.Drawing.Color.White;
+            this.DateTimePickerSearchImport.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.DateTimePickerSearchImport.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DateTimePickerSearchImport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateTimePickerSearchImport.Location = new System.Drawing.Point(57, 58);
+            this.DateTimePickerSearchImport.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePickerSearchImport.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePickerSearchImport.Name = "DateTimePickerSearchImport";
+            this.DateTimePickerSearchImport.Size = new System.Drawing.Size(234, 34);
+            this.DateTimePickerSearchImport.TabIndex = 39;
+            this.DateTimePickerSearchImport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DateTimePickerSearchImport.Value = new System.DateTime(2022, 12, 1, 0, 0, 0, 0);
+            this.DateTimePickerSearchImport.ValueChanged += new System.EventHandler(this.DateTimePickerSearchImport_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(6, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 19);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Tìm :";
             // 
             // panel2
             // 
@@ -462,120 +591,6 @@
             this.tongtien.Name = "tongtien";
             this.tongtien.Visible = false;
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(559, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 25);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Chi tiết phiếu nhập";
-            // 
-            // flowLayoutPanelBillImport
-            // 
-            this.flowLayoutPanelBillImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelBillImport.AutoScroll = true;
-            this.flowLayoutPanelBillImport.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanelBillImport.Location = new System.Drawing.Point(353, 192);
-            this.flowLayoutPanelBillImport.Name = "flowLayoutPanelBillImport";
-            this.flowLayoutPanelBillImport.Size = new System.Drawing.Size(435, 302);
-            this.flowLayoutPanelBillImport.TabIndex = 34;
-            // 
-            // label_total_import
-            // 
-            this.label_total_import.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label_total_import.AutoSize = true;
-            this.label_total_import.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_total_import.ForeColor = System.Drawing.Color.Black;
-            this.label_total_import.Location = new System.Drawing.Point(673, 540);
-            this.label_total_import.Name = "label_total_import";
-            this.label_total_import.Size = new System.Drawing.Size(0, 21);
-            this.label_total_import.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(577, 540);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 21);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Tổng tiền :";
-            // 
-            // label_time_import
-            // 
-            this.label_time_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_time_import.AutoSize = true;
-            this.label_time_import.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_time_import.ForeColor = System.Drawing.Color.Black;
-            this.label_time_import.Location = new System.Drawing.Point(659, 148);
-            this.label_time_import.Name = "label_time_import";
-            this.label_time_import.Size = new System.Drawing.Size(0, 13);
-            this.label_time_import.TabIndex = 31;
-            // 
-            // label_ncc_import
-            // 
-            this.label_ncc_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_ncc_import.AutoSize = true;
-            this.label_ncc_import.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ncc_import.ForeColor = System.Drawing.Color.Black;
-            this.label_ncc_import.Location = new System.Drawing.Point(514, 148);
-            this.label_ncc_import.Name = "label_ncc_import";
-            this.label_ncc_import.Size = new System.Drawing.Size(0, 13);
-            this.label_ncc_import.TabIndex = 29;
-            // 
-            // label_ma_import
-            // 
-            this.label_ma_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_ma_import.AutoSize = true;
-            this.label_ma_import.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ma_import.ForeColor = System.Drawing.Color.Black;
-            this.label_ma_import.Location = new System.Drawing.Point(514, 108);
-            this.label_ma_import.Name = "label_ma_import";
-            this.label_ma_import.Size = new System.Drawing.Size(0, 13);
-            this.label_ma_import.TabIndex = 28;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(584, 148);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Thời gian :";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(423, 148);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(81, 13);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Nhà cung cấp :";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(423, 108);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 13);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Mã hóa đơn :";
-            // 
             // label19
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -588,143 +603,185 @@
             this.label19.TabIndex = 23;
             this.label19.Text = "Danh sách phiếu nhập";
             // 
-            // label11
+            // printPreviewDialog1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(8, 62);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 19);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Tìm :";
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // DateTimePicker_search
+            // printDocument1
             // 
-            this.DateTimePicker_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // panelPrintImport
+            // 
+            this.panelPrintImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DateTimePicker_search.BorderRadius = 5;
-            this.DateTimePicker_search.Checked = true;
-            this.DateTimePicker_search.CustomFormat = " ";
-            this.DateTimePicker_search.FillColor = System.Drawing.Color.White;
-            this.DateTimePicker_search.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.DateTimePicker_search.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DateTimePicker_search.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker_search.Location = new System.Drawing.Point(59, 55);
-            this.DateTimePicker_search.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DateTimePicker_search.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DateTimePicker_search.Name = "DateTimePicker_search";
-            this.DateTimePicker_search.Size = new System.Drawing.Size(234, 34);
-            this.DateTimePicker_search.TabIndex = 26;
-            this.DateTimePicker_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DateTimePicker_search.Value = new System.DateTime(2022, 12, 1, 0, 0, 0, 0);
-            this.DateTimePicker_search.ValueChanged += new System.EventHandler(this.DateTimePicker_search_ValueChanged);
+            this.panelPrintImport.Controls.Add(this.label3);
+            this.panelPrintImport.Controls.Add(this.flowLayoutPanelBillImport);
+            this.panelPrintImport.Controls.Add(this.label_total_import);
+            this.panelPrintImport.Controls.Add(this.label10);
+            this.panelPrintImport.Controls.Add(this.label_time_import);
+            this.panelPrintImport.Controls.Add(this.label_ncc_import);
+            this.panelPrintImport.Controls.Add(this.label_ma_import);
+            this.panelPrintImport.Controls.Add(this.label15);
+            this.panelPrintImport.Controls.Add(this.label17);
+            this.panelPrintImport.Controls.Add(this.label18);
+            this.panelPrintImport.Location = new System.Drawing.Point(351, 0);
+            this.panelPrintImport.Name = "panelPrintImport";
+            this.panelPrintImport.Size = new System.Drawing.Size(441, 546);
+            this.panelPrintImport.TabIndex = 41;
             // 
-            // btn_refesh
+            // btn_print_import
             // 
-            this.btn_refesh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_refesh.BorderRadius = 5;
-            this.btn_refesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_refesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_refesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_refesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_refesh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_refesh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_refesh.ForeColor = System.Drawing.Color.Black;
-            this.btn_refesh.Image = global::GUI.Properties.Resources.refresh;
-            this.btn_refesh.Location = new System.Drawing.Point(313, 56);
-            this.btn_refesh.Name = "btn_refesh";
-            this.btn_refesh.Size = new System.Drawing.Size(34, 34);
-            this.btn_refesh.TabIndex = 27;
-            this.btn_refesh.Click += new System.EventHandler(this.btn_refesh_Click);
+            this.btn_print_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_print_import.BorderRadius = 20;
+            this.btn_print_import.BorderThickness = 1;
+            this.btn_print_import.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_print_import.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_print_import.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_print_import.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_print_import.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_print_import.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_print_import.ForeColor = System.Drawing.Color.Black;
+            this.btn_print_import.Image = global::GUI.Properties.Resources.print_icon;
+            this.btn_print_import.Location = new System.Drawing.Point(366, 552);
+            this.btn_print_import.Name = "btn_print_import";
+            this.btn_print_import.Size = new System.Drawing.Size(110, 39);
+            this.btn_print_import.TabIndex = 48;
+            this.btn_print_import.Text = "In Hóa Đơn";
+            this.btn_print_import.Click += new System.EventHandler(this.btn_print_import_Click);
             // 
-            // guna2Button1
+            // label3
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = global::GUI.Properties.Resources.print_icon;
-            this.guna2Button1.Location = new System.Drawing.Point(411, 519);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(110, 39);
-            this.guna2Button1.TabIndex = 21;
-            this.guna2Button1.Text = "In Hóa Đơn";
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(140, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 25);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Chi tiết phiếu nhập";
             // 
-            // guna2Button2
+            // flowLayoutPanelBillImport
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.BorderRadius = 20;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Image = global::GUI.Properties.Resources.print_icon;
-            this.guna2Button2.Location = new System.Drawing.Point(408, 522);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(110, 39);
-            this.guna2Button2.TabIndex = 37;
-            this.guna2Button2.Text = "In Hóa Đơn";
+            this.flowLayoutPanelBillImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelBillImport.AutoScroll = true;
+            this.flowLayoutPanelBillImport.Location = new System.Drawing.Point(3, 145);
+            this.flowLayoutPanelBillImport.Name = "flowLayoutPanelBillImport";
+            this.flowLayoutPanelBillImport.Size = new System.Drawing.Size(435, 327);
+            this.flowLayoutPanelBillImport.TabIndex = 46;
             // 
-            // btn_refesh_import
+            // label_total_import
             // 
-            this.btn_refesh_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_refesh_import.BorderRadius = 5;
-            this.btn_refesh_import.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_refesh_import.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_refesh_import.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_refesh_import.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_refesh_import.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_refesh_import.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_refesh_import.ForeColor = System.Drawing.Color.Black;
-            this.btn_refesh_import.Image = global::GUI.Properties.Resources.refresh;
-            this.btn_refesh_import.Location = new System.Drawing.Point(311, 59);
-            this.btn_refesh_import.Name = "btn_refesh_import";
-            this.btn_refesh_import.Size = new System.Drawing.Size(34, 34);
-            this.btn_refesh_import.TabIndex = 40;
-            this.btn_refesh_import.Click += new System.EventHandler(this.btn_refesh_import_Click);
+            this.label_total_import.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_total_import.AutoSize = true;
+            this.label_total_import.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_total_import.ForeColor = System.Drawing.Color.Black;
+            this.label_total_import.Location = new System.Drawing.Point(323, 499);
+            this.label_total_import.Name = "label_total_import";
+            this.label_total_import.Size = new System.Drawing.Size(0, 21);
+            this.label_total_import.TabIndex = 45;
             // 
-            // DateTimePickerSearchImport
+            // label10
             // 
-            this.DateTimePickerSearchImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DateTimePickerSearchImport.BorderRadius = 5;
-            this.DateTimePickerSearchImport.Checked = true;
-            this.DateTimePickerSearchImport.CustomFormat = " ";
-            this.DateTimePickerSearchImport.FillColor = System.Drawing.Color.White;
-            this.DateTimePickerSearchImport.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.DateTimePickerSearchImport.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DateTimePickerSearchImport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePickerSearchImport.Location = new System.Drawing.Point(57, 58);
-            this.DateTimePickerSearchImport.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DateTimePickerSearchImport.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DateTimePickerSearchImport.Name = "DateTimePickerSearchImport";
-            this.DateTimePickerSearchImport.Size = new System.Drawing.Size(234, 34);
-            this.DateTimePickerSearchImport.TabIndex = 39;
-            this.DateTimePickerSearchImport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DateTimePickerSearchImport.Value = new System.DateTime(2022, 12, 1, 0, 0, 0, 0);
-            this.DateTimePickerSearchImport.ValueChanged += new System.EventHandler(this.DateTimePickerSearchImport_ValueChanged);
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(227, 499);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 21);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Tổng tiền :";
             // 
-            // label4
+            // label_time_import
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(6, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 19);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Tìm :";
+            this.label_time_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_time_import.AutoSize = true;
+            this.label_time_import.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_time_import.ForeColor = System.Drawing.Color.Black;
+            this.label_time_import.Location = new System.Drawing.Point(309, 101);
+            this.label_time_import.Name = "label_time_import";
+            this.label_time_import.Size = new System.Drawing.Size(0, 13);
+            this.label_time_import.TabIndex = 43;
+            // 
+            // label_ncc_import
+            // 
+            this.label_ncc_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_ncc_import.AutoSize = true;
+            this.label_ncc_import.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ncc_import.ForeColor = System.Drawing.Color.Black;
+            this.label_ncc_import.Location = new System.Drawing.Point(164, 101);
+            this.label_ncc_import.Name = "label_ncc_import";
+            this.label_ncc_import.Size = new System.Drawing.Size(0, 13);
+            this.label_ncc_import.TabIndex = 42;
+            // 
+            // label_ma_import
+            // 
+            this.label_ma_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_ma_import.AutoSize = true;
+            this.label_ma_import.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ma_import.ForeColor = System.Drawing.Color.Black;
+            this.label_ma_import.Location = new System.Drawing.Point(164, 61);
+            this.label_ma_import.Name = "label_ma_import";
+            this.label_ma_import.Size = new System.Drawing.Size(0, 13);
+            this.label_ma_import.TabIndex = 41;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(234, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 13);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Thời gian :";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(73, 101);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 13);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Nhà cung cấp :";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(73, 61);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 13);
+            this.label18.TabIndex = 38;
+            this.label18.Text = "Mã hóa đơn :";
+            // 
+            // printPreviewDialog2
+            // 
+            this.printPreviewDialog2.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog2.Enabled = true;
+            this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
+            this.printPreviewDialog2.Name = "printPreviewDialog2";
+            this.printPreviewDialog2.Visible = false;
+            // 
+            // printDocument2
+            // 
+            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
             // 
             // BillGui
             // 
@@ -739,12 +796,16 @@
             this.TabControlBill.ResumeLayout(false);
             this.tabPage_phieu_xuat.ResumeLayout(false);
             this.tabPage_phieu_xuat.PerformLayout();
+            this.panelPrint.ResumeLayout(false);
+            this.panelPrint.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).EndInit();
             this.tabPage_phieu_nhap.ResumeLayout(false);
             this.tabPage_phieu_nhap.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_import_bill)).EndInit();
+            this.panelPrintImport.ResumeLayout(false);
+            this.panelPrintImport.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -755,38 +816,14 @@
         internal Guna.UI2.WinForms.Guna2TabControl TabControlBill;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewBill;
-        private System.Windows.Forms.Label label_total_bill;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label_date_bill;
-        private System.Windows.Forms.Label label_staff_bill;
-        private System.Windows.Forms.Label label_customer_bill;
-        private System.Windows.Forms.Label label_ma_bill;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn bill_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn bill_Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn namecustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn bill_Total;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBill;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv_import_bill;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBillImport;
-        private System.Windows.Forms.Label label_total_import;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label_time_import;
-        private System.Windows.Forms.Label label_ncc_import;
-        private System.Windows.Forms.Label label_ma_import;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
@@ -799,5 +836,35 @@
         private Guna.UI2.WinForms.Guna2Button btn_refesh_import;
         private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePickerSearchImport;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelPrint;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBill;
+        private System.Windows.Forms.Label label_total_bill;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_date_bill;
+        private System.Windows.Forms.Label label_staff_bill;
+        private System.Windows.Forms.Label label_customer_bill;
+        private System.Windows.Forms.Label label_ma_bill;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private Guna.UI2.WinForms.Guna2Button btn_print_import;
+        private System.Windows.Forms.Panel panelPrintImport;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBillImport;
+        private System.Windows.Forms.Label label_total_import;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label_time_import;
+        private System.Windows.Forms.Label label_ncc_import;
+        private System.Windows.Forms.Label label_ma_import;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
+        private System.Drawing.Printing.PrintDocument printDocument2;
     }
 }

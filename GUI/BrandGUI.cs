@@ -238,10 +238,19 @@ namespace GUI
                 }
             }
         }
+        // search brand
 
-        private void btn_searchBrand_Click(object sender, EventArgs e)
+        private void txt_Search_TextChanged(object sender, EventArgs e)
         {
-
+            string keyword = txt_Search.Text;
+            if (!string.IsNullOrEmpty(keyword))
+            {
+               dgv_brand.DataSource = brBUS.searchBrand(keyword);
+            }
+            else
+            {
+                dgv_brand.DataSource = brBUS.getBrand();
+            }
         }
     }
 }
