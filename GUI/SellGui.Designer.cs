@@ -69,7 +69,7 @@
             this.guna2Panel1.Controls.Add(this.TbSearch);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(572, 646);
+            this.guna2Panel1.Size = new System.Drawing.Size(528, 646);
             this.guna2Panel1.TabIndex = 1;
             // 
             // guna2ComboBox1
@@ -103,7 +103,7 @@
             this.guna2Panel2.Controls.Add(this.FlpSanPham);
             this.guna2Panel2.Location = new System.Drawing.Point(0, 93);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(569, 553);
+            this.guna2Panel2.Size = new System.Drawing.Size(525, 553);
             this.guna2Panel2.TabIndex = 3;
             // 
             // FlpSanPham
@@ -115,7 +115,7 @@
             this.FlpSanPham.Location = new System.Drawing.Point(3, 3);
             this.FlpSanPham.Name = "FlpSanPham";
             this.FlpSanPham.Padding = new System.Windows.Forms.Padding(10);
-            this.FlpSanPham.Size = new System.Drawing.Size(563, 547);
+            this.FlpSanPham.Size = new System.Drawing.Size(519, 547);
             this.FlpSanPham.TabIndex = 0;
             // 
             // label1
@@ -153,7 +153,7 @@
             this.TbSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.TbSearch.PlaceholderText = "Tìm kiếm";
             this.TbSearch.SelectedText = "";
-            this.TbSearch.Size = new System.Drawing.Size(373, 36);
+            this.TbSearch.Size = new System.Drawing.Size(329, 36);
             this.TbSearch.TabIndex = 1;
             this.TbSearch.TextChanged += new System.EventHandler(this.TbSearch_TextChanged);
             // 
@@ -170,9 +170,9 @@
             this.guna2Panel3.Controls.Add(this.guna2TextBox2);
             this.guna2Panel3.Controls.Add(this.flp_oder);
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
-            this.guna2Panel3.Location = new System.Drawing.Point(575, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(534, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(311, 646);
+            this.guna2Panel3.Size = new System.Drawing.Size(352, 646);
             this.guna2Panel3.TabIndex = 2;
             // 
             // guna2Button3
@@ -188,7 +188,7 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = global::GUI.Properties.Resources.icon_search;
-            this.guna2Button3.Location = new System.Drawing.Point(257, 12);
+            this.guna2Button3.Location = new System.Drawing.Point(298, 12);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(44, 36);
             this.guna2Button3.TabIndex = 0;
@@ -200,7 +200,7 @@
             this.guna2TextBox3.BorderRadius = 5;
             this.guna2TextBox3.BorderThickness = 2;
             this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "Tên khách hàng :";
+            this.guna2TextBox3.DefaultText = "";
             this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -214,7 +214,7 @@
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.ReadOnly = true;
             this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(291, 36);
+            this.guna2TextBox3.Size = new System.Drawing.Size(332, 36);
             this.guna2TextBox3.TabIndex = 24;
             // 
             // guna2TextBox2
@@ -240,7 +240,7 @@
             this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox2.PlaceholderText = "Số điện thoại";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(241, 36);
+            this.guna2TextBox2.Size = new System.Drawing.Size(282, 36);
             this.guna2TextBox2.TabIndex = 5;
             // 
             // flp_oder
@@ -249,7 +249,7 @@
             this.flp_oder.BackColor = System.Drawing.Color.White;
             this.flp_oder.Location = new System.Drawing.Point(3, 93);
             this.flp_oder.Name = "flp_oder";
-            this.flp_oder.Size = new System.Drawing.Size(308, 348);
+            this.flp_oder.Size = new System.Drawing.Size(346, 348);
             this.flp_oder.TabIndex = 23;
             // 
             // guna2Panel4
@@ -270,7 +270,7 @@
             this.guna2Panel4.Controls.Add(this.guna2Button1);
             this.guna2Panel4.Location = new System.Drawing.Point(3, 447);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(308, 199);
+            this.guna2Panel4.Size = new System.Drawing.Size(349, 199);
             this.guna2Panel4.TabIndex = 22;
             // 
             // guna2TextBox1
@@ -291,7 +291,7 @@
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(169, 26);
+            this.guna2TextBox1.Size = new System.Drawing.Size(203, 26);
             this.guna2TextBox1.TabIndex = 29;
             this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             this.guna2TextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox1_KeyPress);
@@ -348,9 +348,9 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.FillColor = System.Drawing.Color.HotPink;
-            this.guna2Button2.Location = new System.Drawing.Point(171, 147);
+            this.guna2Button2.Location = new System.Drawing.Point(195, 147);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(127, 40);
+            this.guna2Button2.Size = new System.Drawing.Size(144, 40);
             this.guna2Button2.TabIndex = 25;
             this.guna2Button2.Text = "HỦY";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -366,7 +366,6 @@
             this.label4.Size = new System.Drawing.Size(29, 20);
             this.label4.TabIndex = 24;
             this.label4.Text = "0đ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -398,7 +397,7 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.HotPink;
             this.guna2Button1.Location = new System.Drawing.Point(18, 147);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(124, 40);
+            this.guna2Button1.Size = new System.Drawing.Size(141, 40);
             this.guna2Button1.TabIndex = 19;
             this.guna2Button1.Text = "THANH TOÁN";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);

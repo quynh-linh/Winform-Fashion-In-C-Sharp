@@ -30,8 +30,9 @@ namespace GUI
         {
 
             lb_nameOder.Text = bill_BUS.get_Name_Product(data.Product_Id) + " (" + data.Size + ")";
-            lbl_Quantity_X_Price.Text = " X " + data.Quantity;
-            lb_priceOder.Text = data.Price.ToString("#,#,#") + "đ";
+            lbl_Quantity_X_Price.Text = data.Quantity + " X " + data.Price.ToString("#,#,#") + "đ";
+            double total = data.Price * data.Quantity;
+            lb_priceOder.Text = total.ToString("#,#,#") + "đ";
             if (data.Percent > 0)
             {
                 guna2CircleButton1.Text = "-" + data.Percent + "%";

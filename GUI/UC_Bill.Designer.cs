@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(252, 56);
+            this.label1.Location = new System.Drawing.Point(220, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 11;
@@ -57,7 +57,7 @@
             this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(333, 3);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(301, 3);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.PressedDepth = 0;
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -70,7 +70,7 @@
             this.lb_priceOder.AutoSize = true;
             this.lb_priceOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_priceOder.ForeColor = System.Drawing.Color.Black;
-            this.lb_priceOder.Location = new System.Drawing.Point(330, 56);
+            this.lb_priceOder.Location = new System.Drawing.Point(298, 56);
             this.lb_priceOder.Name = "lb_priceOder";
             this.lb_priceOder.Size = new System.Drawing.Size(62, 15);
             this.lb_priceOder.TabIndex = 8;
@@ -90,7 +90,7 @@
             // 
             // lb_nameOder
             // 
-            this.lb_nameOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nameOder.ForeColor = System.Drawing.Color.Black;
             this.lb_nameOder.Location = new System.Drawing.Point(21, 12);
             this.lb_nameOder.Name = "lb_nameOder";

@@ -24,7 +24,6 @@ namespace GUI
         DiscountDTO discount = new DiscountDTO();
         List<RadioButton> list_Size;
         List<int> size_Id;
-        UC_Sell_Item uc;
         SellGui sellGUI;
         int initClick = 0;
         int sl = 1;
@@ -210,26 +209,32 @@ namespace GUI
 
         private void btn_buy_Click(object sender, EventArgs e)
         {
-            //SP đã có trong bill thì cập nhật số lượng của sp
-            if (checkOrderExits(this.product) != null)
+            if (Convert.ToInt16(tb_quantityProduct.Text) == 0)
+                MessageBox.Show("Hết hàng!!");
+            else
             {
-                int index = sellGUI.listOder.IndexOf(checkOrderExits(this.product));
-                sellGUI.list_Quantity_Choice.RemoveAt(index);
-                sellGUI.list_Quantity_Choice.Insert(index, int.Parse(tb_quantityProduct.Text));
-            }
-            else//SP k có trong bill thì thêm mới sp
-            {
-                if (this.percent > 0)
-                    this.product.Product_Price = this.price_Discount;
-                else this.product.Product_Price = this.product.Product_Price + 0.05 * this.product.Product_Price;
-                this.sellGUI.listOder.Add(this.product);
-                this.sellGUI.list_Quantity_Choice.Add(int.Parse(tb_quantityProduct.Text));
-            }
+                //SP đã có trong bill thì cập nhật số lượng của sp
+                if (checkOrderExits(this.product) != null)
+                {
+                    int index = sellGUI.listOder.IndexOf(checkOrderExits(this.product));
+                    sellGUI.list_Quantity_Choice.RemoveAt(index);
+                    sellGUI.list_Quantity_Choice.Insert(index, int.Parse(tb_quantityProduct.Text));
+                }
+                else//SP k có trong bill thì thêm mới sp
+                {
+                    if (this.percent > 0)
+                        this.product.Product_Price = this.price_Discount;
+                    else this.product.Product_Price = this.product.Product_Price + 0.05 * this.product.Product_Price;
+                    this.sellGUI.listOder.Add(this.product);
+                    this.sellGUI.list_Quantity_Choice.Add(int.Parse(tb_quantityProduct.Text));
+                }
 
-            //do du lieu oder vo flowlayout
-            this.sellGUI.addItemOder(this.sellGUI.listOder, this.sellGUI.list_Quantity_Choice);   
+                //do du lieu oder vo flowlayout
+                this.sellGUI.addItemOder(this.sellGUI.listOder, this.sellGUI.list_Quantity_Choice);
 
-            this.Hide();  
+                this.Hide();
+            }
+            
         }
 
         private void rdb_sizeS_CheckedChanged(object sender, EventArgs e)

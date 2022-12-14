@@ -14,6 +14,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Speech.Synthesis.TtsEngine;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -99,7 +100,7 @@ namespace GUI
                 guna2TextBox2.Text = "";
                 guna2TextBox3.Text = "";
                 guna2TextBox1.Text = "";
-                label2.Text = "";
+                label2.Text = "0đ";
             }
         }
 
@@ -143,7 +144,7 @@ namespace GUI
                 String bill_Id = autoGenerateId();
                 DateTime time = DateTime.Now;
                 String customer_Id = "null";
-                if (!guna2TextBox3.Text.Equals("Tên khách hàng :")&& !guna2TextBox3.Text.Equals("")) customer_Id = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "id");
+                if (!guna2TextBox3.Text.Equals("")) customer_Id = customerBUS.get_Customer_By_Phone(guna2TextBox2.Text, "id");
                 Bill_DTO bill = new Bill_DTO(bill_Id, this.totalPrice, time.ToString("dd/MM/yyyy hh:mm:ss"), id_Staff, customer_Id);
                 if (bill_BUS.insert_Bill(bill))
                 {
@@ -156,7 +157,8 @@ namespace GUI
                         else if (p.Size_id == 3) size = "L";
                         else if (p.Size_id == 4) size = "XL";
                         int percent = discountBUS.check_Product_Discount(p.Product_Id, p.Product_Name, "name");
-                        Bill_Detail_DTO bill_Detail = new Bill_Detail_DTO(bill_Id,p.Product_Id, size, (int)list_Quantity_Choice[i], p.Product_Price + p.Product_Price * 5/100, percent);
+                        double price = discountBUS.get_Product_By_Id(p.Product_Id).Product_Price;
+                        Bill_Detail_DTO bill_Detail = new Bill_Detail_DTO(bill_Id,p.Product_Id, size, (int)list_Quantity_Choice[i], price + price*5/100, percent);
                         bill_BUS.insert_Detail_Bill(bill_Detail);
                         bill_BUS.update_Quantity_After_Payment(p.Product_Id, (int)list_Quantity_Choice[i]);
                     }
@@ -259,7 +261,6 @@ namespace GUI
             pdfDoc.Open();
 
             PdfContentByte cb = writer.DirectContent;
-
             BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
             cb.SetColorFill(BaseColor.DARK_GRAY);
             cb.SetFontAndSize(bf, 15);
@@ -336,9 +337,9 @@ namespace GUI
                     cb.BeginText();
                     text = STT + ". " + pd.Product_Name + " (" + s +")";
                     y = y - 50;
-                    cb.ShowTextAligned(Element.ALIGN_LEFT, text, 90, y, 0);
+                    cb.ShowTextAligned(Element.ALIGN_LEFT, text, 70, y, 0);
                     y = y - 50;
-                    text = bill_Dtail.Quantity + "";
+                    text = bill_Dtail.Quantity + "X";
                     cb.ShowTextAligned(Element.ALIGN_CENTER, text, 100, y , 0);
                     text = bill_Dtail.Price.ToString("#,#,#") ;
                     cb.ShowTextAligned(Element.ALIGN_CENTER, text+ " VND", 200, y, 0);
@@ -349,7 +350,6 @@ namespace GUI
                         text = ((bill_Dtail.Price - bill_Dtail.Price * bill_Dtail.Percent / 100) * bill_Dtail.Quantity).ToString("#,#,#") ;
                         cb.ShowTextAligned(Element.ALIGN_CENTER, text+ " VND", 500, y, 0);
                     }
-
                     else
                     {
                         text = (bill_Dtail.Price * bill_Dtail.Quantity).ToString("#,#,#") ;
@@ -360,17 +360,14 @@ namespace GUI
             }
 
 
-            if (y <= 400)
+            if (y < 250)
             {
                 y = 800;
                 pdfDoc.Add(new Paragraph());
                 pdfDoc.NewPage();
             }
             cb.BeginText();
-            BaseFont bf1 = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-            cb.SetColorFill(BaseColor.DARK_GRAY);
-            cb.SetFontAndSize(bf1, 15);
-            text = "---------------------------------------------------------------------------------------------------------------";
+            text = "-------------------------------------------------------------------------------------------------------";
             y = y - 50;
             cb.ShowTextAligned(Element.ALIGN_LEFT, text, 50, y, 0);
             text = "Total : " + b.Total.ToString("#,#,#") ;

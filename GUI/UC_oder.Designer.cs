@@ -38,11 +38,11 @@
             // 
             // lb_nameOder
             // 
-            this.lb_nameOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameOder.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nameOder.ForeColor = System.Drawing.Color.White;
             this.lb_nameOder.Location = new System.Drawing.Point(6, 9);
             this.lb_nameOder.Name = "lb_nameOder";
-            this.lb_nameOder.Size = new System.Drawing.Size(162, 34);
+            this.lb_nameOder.Size = new System.Drawing.Size(201, 49);
             this.lb_nameOder.TabIndex = 0;
             this.lb_nameOder.Text = "name san pham";
             this.lb_nameOder.Click += new System.EventHandler(this.lb_nameOder_Click);
@@ -52,7 +52,7 @@
             this.lb_priceOder.AutoSize = true;
             this.lb_priceOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_priceOder.ForeColor = System.Drawing.Color.White;
-            this.lb_priceOder.Location = new System.Drawing.Point(174, 43);
+            this.lb_priceOder.Location = new System.Drawing.Point(210, 54);
             this.lb_priceOder.Name = "lb_priceOder";
             this.lb_priceOder.Size = new System.Drawing.Size(62, 15);
             this.lb_priceOder.TabIndex = 2;
@@ -72,7 +72,7 @@
             this.btn_deleteOder.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_deleteOder.ForeColor = System.Drawing.Color.Black;
             this.btn_deleteOder.HoverState.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_deleteOder.Location = new System.Drawing.Point(242, 27);
+            this.btn_deleteOder.Location = new System.Drawing.Point(278, 27);
             this.btn_deleteOder.Name = "btn_deleteOder";
             this.btn_deleteOder.Size = new System.Drawing.Size(31, 31);
             this.btn_deleteOder.TabIndex = 3;
@@ -84,7 +84,7 @@
             this.lbl_Quantity_X_Price.AutoSize = true;
             this.lbl_Quantity_X_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Quantity_X_Price.ForeColor = System.Drawing.Color.White;
-            this.lbl_Quantity_X_Price.Location = new System.Drawing.Point(6, 43);
+            this.lbl_Quantity_X_Price.Location = new System.Drawing.Point(6, 54);
             this.lbl_Quantity_X_Price.Name = "lbl_Quantity_X_Price";
             this.lbl_Quantity_X_Price.Size = new System.Drawing.Size(27, 15);
             this.lbl_Quantity_X_Price.TabIndex = 1;
@@ -100,7 +100,7 @@
             this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(174, 5);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(213, 9);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.PressedDepth = 0;
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -114,7 +114,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(95, 43);
+            this.label1.Location = new System.Drawing.Point(111, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 5;
@@ -135,7 +135,7 @@
             this.Controls.Add(this.lb_nameOder);
             this.Name = "UC_oder";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Size = new System.Drawing.Size(285, 89);
+            this.Size = new System.Drawing.Size(323, 89);
             this.Click += new System.EventHandler(this.lb_nameOder_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
