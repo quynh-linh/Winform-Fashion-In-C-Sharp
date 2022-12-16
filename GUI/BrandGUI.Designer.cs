@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_brand = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_MaBrand = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_brand)).BeginInit();
@@ -69,20 +69,46 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2Panel2.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel2.BorderRadius = 5;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.txt_Search);
             this.guna2Panel2.Controls.Add(this.dgv_brand);
             this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Location = new System.Drawing.Point(4, 128);
+            this.guna2Panel2.Location = new System.Drawing.Point(4, 114);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(799, 469);
+            this.guna2Panel2.Size = new System.Drawing.Size(799, 483);
             this.guna2Panel2.TabIndex = 3;
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.BorderColor = System.Drawing.Color.White;
+            this.txt_Search.BorderRadius = 5;
+            this.txt_Search.BorderThickness = 2;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.DefaultText = "";
+            this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.IconRight = global::GUI.Properties.Resources.icon_search;
+            this.txt_Search.IconRightOffset = new System.Drawing.Point(15, 0);
+            this.txt_Search.Location = new System.Drawing.Point(495, 4);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.PasswordChar = '\0';
+            this.txt_Search.PlaceholderText = "Tìm kiếm";
+            this.txt_Search.SelectedText = "";
+            this.txt_Search.Size = new System.Drawing.Size(294, 36);
+            this.txt_Search.TabIndex = 19;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // dgv_brand
             // 
-            this.dgv_brand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgv_brand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_brand.BackgroundColor = System.Drawing.Color.White;
             this.dgv_brand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -93,7 +119,7 @@
             this.dgv_brand.Name = "dgv_brand";
             this.dgv_brand.RowHeadersVisible = false;
             this.dgv_brand.RowHeadersWidth = 51;
-            this.dgv_brand.Size = new System.Drawing.Size(793, 420);
+            this.dgv_brand.Size = new System.Drawing.Size(793, 434);
             this.dgv_brand.TabIndex = 11;
             this.dgv_brand.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_brand_CellClick);
             // 
@@ -130,7 +156,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.btn_exportExcelBrand);
@@ -315,31 +340,6 @@
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập mã";
-            // 
-            // txt_Search
-            // 
-            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Search.BorderColor = System.Drawing.Color.White;
-            this.txt_Search.BorderRadius = 15;
-            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Search.DefaultText = "";
-            this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.IconRight = global::GUI.Properties.Resources.icon_search;
-            this.txt_Search.IconRightOffset = new System.Drawing.Point(15, 0);
-            this.txt_Search.Location = new System.Drawing.Point(495, 4);
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.PasswordChar = '\0';
-            this.txt_Search.PlaceholderText = "Tìm kiếm";
-            this.txt_Search.SelectedText = "";
-            this.txt_Search.Size = new System.Drawing.Size(294, 36);
-            this.txt_Search.TabIndex = 19;
-            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // BrandGUI
             // 

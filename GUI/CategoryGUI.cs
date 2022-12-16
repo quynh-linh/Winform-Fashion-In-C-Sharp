@@ -20,6 +20,8 @@ namespace GUI
                 btn_Fix.Enabled = false;
             }
             txt_Id_Category.Text = "CT" + categoryBUS.count();
+            dataGridViewCategory.AllowUserToAddRows = false;
+            dataGridViewCategory.RowHeadersVisible = false;
         }
 
         private void CategoryGUI_Load(object sender, EventArgs e)

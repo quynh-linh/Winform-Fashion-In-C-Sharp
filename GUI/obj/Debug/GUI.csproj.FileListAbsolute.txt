@@ -416,3 +416,5 @@ C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.Fod
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill.resources
 C:\Users\Qmanh\Documents\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_import.resources
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill.resources
+D:\C#\QLTT\Winform-Fashion-In-C-Sharp\GUI\obj\Debug\GUI.UC_Bill_import.resources

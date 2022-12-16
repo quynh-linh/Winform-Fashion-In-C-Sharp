@@ -37,7 +37,7 @@ namespace GUI
                 if (checkPassword(password) || checkUser(username))
                 {
                     String equal = loginBUS.checkLogin(username, password);
-                    if ( equal.Equals("Đăng nhập thành công"))
+                    if (equal.Equals("Đăng nhập thành công"))
                     {
                         MessageBox.Show(equal);
                         Home h = new Home(account_BUS.loginAccount(username, password));

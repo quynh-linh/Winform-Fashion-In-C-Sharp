@@ -40,7 +40,6 @@
             this.sizename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2ImageButton();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -98,7 +97,6 @@
             this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.guna2Panel3.BorderThickness = 1;
             this.guna2Panel3.Controls.Add(this.dataGridView);
-            this.guna2Panel3.Controls.Add(this.btnSearch);
             this.guna2Panel3.Controls.Add(this.textBoxSearch);
             this.guna2Panel3.Controls.Add(this.label8);
             this.guna2Panel3.Location = new System.Drawing.Point(4, 347);
@@ -202,21 +200,6 @@
             this.image.MinimumWidth = 6;
             this.image.Name = "image";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSearch.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSearch.Image = global::GUI.Properties.Resources.find;
-            this.btnSearch.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnSearch.ImageRotate = 0F;
-            this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSearch.Location = new System.Drawing.Point(755, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSearch.Size = new System.Drawing.Size(41, 29);
-            this.btnSearch.TabIndex = 21;
-            // 
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -231,13 +214,14 @@
             this.textBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxSearch.IconRight = global::GUI.Properties.Resources.icon_search;
             this.textBoxSearch.Location = new System.Drawing.Point(537, 5);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.PasswordChar = '\0';
             this.textBoxSearch.PlaceholderText = "";
             this.textBoxSearch.SelectedText = "";
-            this.textBoxSearch.Size = new System.Drawing.Size(217, 28);
+            this.textBoxSearch.Size = new System.Drawing.Size(258, 28);
             this.textBoxSearch.TabIndex = 21;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -714,7 +698,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.DataGridView dataGridView;
-        private Guna.UI2.WinForms.Guna2ImageButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox textBoxSearch;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

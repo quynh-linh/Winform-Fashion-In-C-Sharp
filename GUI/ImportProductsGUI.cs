@@ -928,5 +928,11 @@ namespace GUI
                 dataGridViewSanPham.DataSource = productsBUS.getProducts();
             }
         }
+
+        private void reLoadDataGridViewProduct(object sender, EventArgs e)
+        {
+            dataGridViewSanPham.DataSource = importProductBUS.getProducts();
+            guna2TextBoxSearchNameProduct.Text = "";
+        }
     }
 }

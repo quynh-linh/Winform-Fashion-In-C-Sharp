@@ -60,10 +60,10 @@
             this.panel9.Controls.Add(this.iconButton3);
             this.panel9.Controls.Add(this.iconButton2);
             this.panel9.Controls.Add(this.iconButton1);
-            this.panel9.Location = new System.Drawing.Point(11, 14);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Location = new System.Drawing.Point(8, 11);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(259, 41);
+            this.panel9.Size = new System.Drawing.Size(194, 33);
             this.panel9.TabIndex = 7;
             // 
             // iconButton3
@@ -74,10 +74,10 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(171, 2);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton3.Location = new System.Drawing.Point(128, 2);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(83, 34);
+            this.iconButton3.Size = new System.Drawing.Size(62, 28);
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Text = "Nhập vào";
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -91,10 +91,10 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(85, 2);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton2.Location = new System.Drawing.Point(64, 2);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(77, 34);
+            this.iconButton2.Size = new System.Drawing.Size(58, 28);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "Bán ra";
             this.iconButton2.UseVisualStyleBackColor = false;
@@ -108,10 +108,10 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(4, 2);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton1.Location = new System.Drawing.Point(3, 2);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(76, 34);
+            this.iconButton1.Size = new System.Drawing.Size(57, 28);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "Tổng";
             this.iconButton1.UseVisualStyleBackColor = false;
@@ -119,6 +119,7 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel6.BorderColor = System.Drawing.Color.White;
             this.guna2Panel6.BorderRadius = 5;
             this.guna2Panel6.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
@@ -126,10 +127,10 @@
             this.guna2Panel6.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel6.Controls.Add(this.customerSize);
             this.guna2Panel6.Controls.Add(this.textBox8);
-            this.guna2Panel6.Location = new System.Drawing.Point(713, 110);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel6.Location = new System.Drawing.Point(535, 89);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(327, 341);
+            this.guna2Panel6.Size = new System.Drawing.Size(245, 277);
             this.guna2Panel6.TabIndex = 8;
             // 
             // guna2PictureBox2
@@ -137,10 +138,10 @@
             this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2PictureBox2.Image = global::GUI.Properties.Resources.profile;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(31, 91);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(23, 74);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(152, 151);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(114, 123);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 8;
             this.guna2PictureBox2.TabStop = false;
@@ -151,10 +152,10 @@
             this.customerSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.customerSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerSize.ForeColor = System.Drawing.SystemColors.Info;
-            this.customerSize.Location = new System.Drawing.Point(225, 148);
-            this.customerSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerSize.Location = new System.Drawing.Point(169, 120);
+            this.customerSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerSize.Name = "customerSize";
-            this.customerSize.Size = new System.Drawing.Size(57, 38);
+            this.customerSize.Size = new System.Drawing.Size(43, 30);
             this.customerSize.TabIndex = 5;
             this.customerSize.Text = "100";
             // 
@@ -164,15 +165,16 @@
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox8.Location = new System.Drawing.Point(75, 12);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox8.Location = new System.Drawing.Point(56, 10);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(189, 35);
+            this.textBox8.Size = new System.Drawing.Size(142, 28);
             this.textBox8.TabIndex = 4;
             this.textBox8.Text = "Khách hàng";
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel4.BorderColor = System.Drawing.Color.White;
             this.guna2Panel4.BorderRadius = 5;
             this.guna2Panel4.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
@@ -180,10 +182,10 @@
             this.guna2Panel4.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel4.Controls.Add(this.textBox3);
             this.guna2Panel4.Controls.Add(this.textBox4);
-            this.guna2Panel4.Location = new System.Drawing.Point(361, 110);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel4.Location = new System.Drawing.Point(271, 89);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(335, 341);
+            this.guna2Panel4.Size = new System.Drawing.Size(251, 277);
             this.guna2Panel4.TabIndex = 10;
             // 
             // guna2PictureBox3
@@ -191,10 +193,10 @@
             this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2PictureBox3.Image = global::GUI.Properties.Resources.profile;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(27, 91);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 74);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(152, 151);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(114, 123);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 7;
             this.guna2PictureBox3.TabStop = false;
@@ -205,10 +207,10 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Location = new System.Drawing.Point(233, 148);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Location = new System.Drawing.Point(175, 120);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(57, 38);
+            this.textBox3.Size = new System.Drawing.Size(43, 30);
             this.textBox3.TabIndex = 5;
             this.textBox3.Text = "100";
             // 
@@ -218,16 +220,17 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Location = new System.Drawing.Point(104, 12);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Location = new System.Drawing.Point(78, 10);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 35);
+            this.textBox4.Size = new System.Drawing.Size(122, 28);
             this.textBox4.TabIndex = 4;
             this.textBox4.Text = "Nhân viên";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // guna2Panel5
             // 
+            this.guna2Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel5.BorderColor = System.Drawing.Color.White;
             this.guna2Panel5.BorderRadius = 5;
             this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
@@ -235,10 +238,10 @@
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.Controls.Add(this.productQuantity);
             this.guna2Panel5.Controls.Add(this.textBox6);
-            this.guna2Panel5.Location = new System.Drawing.Point(15, 110);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel5.Location = new System.Drawing.Point(11, 89);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(307, 341);
+            this.guna2Panel5.Size = new System.Drawing.Size(230, 277);
             this.guna2Panel5.TabIndex = 9;
             // 
             // guna2PictureBox1
@@ -246,10 +249,10 @@
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2PictureBox1.Image = global::GUI.Properties.Resources.profile;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(21, 91);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 74);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(153, 151);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(115, 123);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
@@ -260,10 +263,10 @@
             this.productQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productQuantity.ForeColor = System.Drawing.SystemColors.Info;
-            this.productQuantity.Location = new System.Drawing.Point(197, 148);
-            this.productQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.productQuantity.Location = new System.Drawing.Point(148, 120);
+            this.productQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.productQuantity.Name = "productQuantity";
-            this.productQuantity.Size = new System.Drawing.Size(57, 38);
+            this.productQuantity.Size = new System.Drawing.Size(43, 30);
             this.productQuantity.TabIndex = 5;
             this.productQuantity.Text = "100";
             this.productQuantity.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
@@ -274,15 +277,18 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox6.Location = new System.Drawing.Point(75, 12);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox6.Location = new System.Drawing.Point(56, 10);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 35);
+            this.textBox6.Size = new System.Drawing.Size(122, 28);
             this.textBox6.TabIndex = 4;
             this.textBox6.Text = "Sản phẩm";
             // 
             // panelChildForm
             // 
+            this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.panelChildForm.BorderColor = System.Drawing.Color.White;
             this.panelChildForm.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
@@ -292,19 +298,19 @@
             this.panelChildForm.Controls.Add(this.guna2Panel6);
             this.panelChildForm.Controls.Add(this.panel9);
             this.panelChildForm.Location = new System.Drawing.Point(1, 1);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1067, 486);
+            this.panelChildForm.Size = new System.Drawing.Size(800, 395);
             this.panelChildForm.TabIndex = 13;
             // 
             // ChartHomeGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1068, 487);
+            this.ClientSize = new System.Drawing.Size(801, 396);
             this.Controls.Add(this.panelChildForm);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChartHomeGUI";
             this.Text = "ChartHomeGUI";
             this.panel9.ResumeLayout(false);

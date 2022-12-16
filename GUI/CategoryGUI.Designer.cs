@@ -232,11 +232,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(425, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 21);
+            this.label2.Size = new System.Drawing.Size(65, 21);
             this.label2.TabIndex = 15;
             this.label2.Text = "Tên loại";
             // 
@@ -266,11 +266,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = "Mã loại";
             // 
@@ -311,9 +311,9 @@
             this.guna2Panel2.Controls.Add(this.txt_Search);
             this.guna2Panel2.Controls.Add(this.dataGridViewCategory);
             this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 129);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 117);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(802, 470);
+            this.guna2Panel2.Size = new System.Drawing.Size(805, 482);
             this.guna2Panel2.TabIndex = 14;
             // 
             // txt_Search
@@ -321,7 +321,8 @@
             this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Search.BorderColor = System.Drawing.Color.White;
-            this.txt_Search.BorderRadius = 15;
+            this.txt_Search.BorderRadius = 5;
+            this.txt_Search.BorderThickness = 2;
             this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Search.DefaultText = "";
             this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -338,7 +339,7 @@
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Tìm kiếm";
             this.txt_Search.SelectedText = "";
-            this.txt_Search.Size = new System.Drawing.Size(294, 36);
+            this.txt_Search.Size = new System.Drawing.Size(297, 36);
             this.txt_Search.TabIndex = 18;
             this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
@@ -355,7 +356,7 @@
             this.dataGridViewCategory.Location = new System.Drawing.Point(3, 52);
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidth = 51;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(796, 415);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(799, 427);
             this.dataGridViewCategory.TabIndex = 16;
             this.dataGridViewCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellClick);
             // 

@@ -60,10 +60,10 @@
             this.panelChildForm.BorderColor = System.Drawing.Color.White;
             this.panelChildForm.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.panelChildForm.BorderThickness = 1;
-            this.panelChildForm.Location = new System.Drawing.Point(5, 206);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelChildForm.Location = new System.Drawing.Point(4, 115);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1051, 490);
+            this.panelChildForm.Size = new System.Drawing.Size(788, 479);
             this.panelChildForm.TabIndex = 11;
             // 
             // guna2Panel3
@@ -77,10 +77,10 @@
             this.guna2Panel3.BorderThickness = 1;
             this.guna2Panel3.Controls.Add(this.panel10);
             this.guna2Panel3.Controls.Add(this.panel7);
-            this.guna2Panel3.Location = new System.Drawing.Point(5, 2);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(4, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1051, 134);
+            this.guna2Panel3.Size = new System.Drawing.Size(790, 109);
             this.guna2Panel3.TabIndex = 10;
             // 
             // panel10
@@ -90,11 +90,11 @@
             this.panel10.Controls.Add(this.iconButton6);
             this.panel10.Controls.Add(this.iconButton5);
             this.panel10.Controls.Add(this.iconButton4);
-            this.panel10.Location = new System.Drawing.Point(13, 9);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Location = new System.Drawing.Point(10, 7);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(20);
-            this.panel10.Size = new System.Drawing.Size(1008, 53);
+            this.panel10.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
+            this.panel10.Size = new System.Drawing.Size(778, 43);
             this.panel10.TabIndex = 8;
             // 
             // iconButton7
@@ -105,10 +105,10 @@
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton7.IconColor = System.Drawing.Color.Black;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(587, 6);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton7.Location = new System.Drawing.Point(440, 5);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(162, 34);
+            this.iconButton7.Size = new System.Drawing.Size(122, 28);
             this.iconButton7.TabIndex = 5;
             this.iconButton7.Text = "Doanh Thu";
             this.iconButton7.UseVisualStyleBackColor = false;
@@ -122,10 +122,10 @@
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(311, 6);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton6.Location = new System.Drawing.Point(233, 5);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(270, 34);
+            this.iconButton6.Size = new System.Drawing.Size(202, 28);
             this.iconButton6.TabIndex = 4;
             this.iconButton6.Text = "Khách hàng mua sản phẩm";
             this.iconButton6.UseVisualStyleBackColor = false;
@@ -139,10 +139,10 @@
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(128, 6);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton5.Location = new System.Drawing.Point(96, 5);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(177, 34);
+            this.iconButton5.Size = new System.Drawing.Size(133, 28);
             this.iconButton5.TabIndex = 3;
             this.iconButton5.Text = "Sản phẩm bán ra";
             this.iconButton5.UseVisualStyleBackColor = false;
@@ -156,10 +156,10 @@
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(9, 6);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton4.Location = new System.Drawing.Point(7, 5);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(113, 34);
+            this.iconButton4.Size = new System.Drawing.Size(85, 28);
             this.iconButton4.TabIndex = 1;
             this.iconButton4.Text = "Tổng quát";
             this.iconButton4.UseVisualStyleBackColor = false;
@@ -170,29 +170,29 @@
             this.panel7.Controls.Add(this.panel2);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.panel1);
-            this.panel7.Location = new System.Drawing.Point(8, 66);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Location = new System.Drawing.Point(6, 54);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1013, 57);
+            this.panel7.Size = new System.Drawing.Size(782, 46);
             this.panel7.TabIndex = 7;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dateTo);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(411, 9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(308, 7);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 42);
+            this.panel2.Size = new System.Drawing.Size(290, 34);
             this.panel2.TabIndex = 2;
             // 
             // dateTo
             // 
             this.dateTo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTo.Location = new System.Drawing.Point(59, 9);
-            this.dateTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTo.Location = new System.Drawing.Point(44, 7);
+            this.dateTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTo.Name = "dateTo";
-            this.dateTo.Size = new System.Drawing.Size(324, 29);
+            this.dateTo.Size = new System.Drawing.Size(244, 25);
             this.dateTo.TabIndex = 2;
             this.dateTo.ValueChanged += new System.EventHandler(this.dateTo_ValueChanged);
             // 
@@ -201,10 +201,10 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(5, 9);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(4, 7);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(48, 29);
+            this.textBox2.Size = new System.Drawing.Size(37, 25);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Đến";
             // 
@@ -213,10 +213,10 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(820, 13);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(615, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 36);
+            this.button2.Size = new System.Drawing.Size(89, 29);
             this.button2.TabIndex = 6;
             this.button2.Text = "Làm mới";
             this.button2.UseVisualStyleBackColor = false;
@@ -226,10 +226,10 @@
             // 
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.dateFrom);
-            this.panel1.Location = new System.Drawing.Point(5, 9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(4, 7);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 42);
+            this.panel1.Size = new System.Drawing.Size(285, 34);
             this.panel1.TabIndex = 1;
             // 
             // textBox1
@@ -237,20 +237,20 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(3, 9);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(2, 7);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 29);
+            this.textBox1.Size = new System.Drawing.Size(34, 25);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Từ";
             // 
             // dateFrom
             // 
             this.dateFrom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFrom.Location = new System.Drawing.Point(53, 9);
-            this.dateFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateFrom.Location = new System.Drawing.Point(40, 7);
+            this.dateFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(324, 29);
+            this.dateFrom.Size = new System.Drawing.Size(244, 25);
             this.dateFrom.TabIndex = 2;
             this.dateFrom.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -262,19 +262,18 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1060, 734);
+            this.guna2Panel1.Size = new System.Drawing.Size(795, 596);
             this.guna2Panel1.TabIndex = 7;
             // 
             // ChartGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1060, 734);
+            this.ClientSize = new System.Drawing.Size(795, 596);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChartGUI";
             this.Text = "ChartGUI";
             this.Load += new System.EventHandler(this.ChartGUI_Load);

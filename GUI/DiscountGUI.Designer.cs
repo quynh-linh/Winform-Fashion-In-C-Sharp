@@ -138,11 +138,11 @@
             this.maDiscount,
             this.sale_percent,
             this.status});
-            this.dgv_discount.Location = new System.Drawing.Point(7, 59);
+            this.dgv_discount.Location = new System.Drawing.Point(6, 59);
             this.dgv_discount.Name = "dgv_discount";
             this.dgv_discount.ReadOnly = true;
             this.dgv_discount.RowHeadersWidth = 51;
-            this.dgv_discount.Size = new System.Drawing.Size(458, 183);
+            this.dgv_discount.Size = new System.Drawing.Size(455, 183);
             this.dgv_discount.TabIndex = 30;
             this.dgv_discount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_discount_CellClick);
             // 
@@ -564,7 +564,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(458, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(455, 281);
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
