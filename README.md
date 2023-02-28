@@ -31,3 +31,12 @@ Database:
 * Manage promotional codes: Administrators can create promotional codes, edit or delete them for existing products in the store or add promotional codes for customers to use.
 
 ## Steps to run the website:
+1. Clone from github
+2. Start running the application and move to the folder configuration src -> DAO -> MySQLConnection.cs, change your name according to your MySQL
+3. Add database_jav.sql (Assests-> Database) in the database folder to MySQL
+4. Then start the application
+
+## [Project Demo Link](https://www.youtube.com/watch?v=fe7uRrCEjwE)
+## Some features of the site:
+### Make sure to star the repository if you find it helpful!
+<a href="https://github.com/Quynh-Linh-IT/Winform-Fashion-In-C-Sharp/stargazers"><img src="https://img.shields.io/github/stars/Quynh-Linh-IT/Winform-Fashion-In-C-Sharp?color=yellow" alt="Stars Badge"/></a>
