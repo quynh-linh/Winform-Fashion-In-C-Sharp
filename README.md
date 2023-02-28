@@ -6,7 +6,7 @@ ID          | Full Name
 3120410278    Nguyen Thanh Quynh Linh
 3120410316    Quan  Van Manh
 3120410300    Doan Thanh Loi
-3120410476    Bùi Mạnh Thành
+3120410476    Bui Manh Thanh
 ```
 ## Project Description:
 Currently, most of the private retail fashion sales management stores do not have management software, the methods are done manually, mainly by bookkeeping. In order to reduce manual operations, bring accuracy and high efficiency in business management. With the above goal, the focus of. For this topic, we will study and develop the software "Fashion sales management" which is a practical topic and meets the needs of management.
